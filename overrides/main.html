@@ -18,6 +18,17 @@ window.addEventListener('scroll', function() {
   document.getElementById('progressBar').style.width = scrolled + '%';
 });
 
+// Make the right sidebar (TOC) sticky
+window.addEventListener('DOMContentLoaded', function() {
+  const rightSidebar = document.querySelector('.md-sidebar--secondary');
+  if (rightSidebar) {
+    rightSidebar.style.position = 'sticky';
+    rightSidebar.style.top = '20px';
+    rightSidebar.style.maxHeight = 'calc(100vh - 40px)';
+    rightSidebar.style.overflowY = 'auto';
+  }
+});
+
 // Progress tracking checkboxes
 document.addEventListener('DOMContentLoaded', function() {
   // Find all h2 headers and add checkboxes

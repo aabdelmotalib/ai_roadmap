@@ -1,0 +1,2259 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive 6-phase learning roadmap from Python foundations to production ML systems">
+      
+      
+        <meta name="author" content="AI Engineering Community">
+      
+      
+      
+        <link rel="prev" href="../scaling/">
+      
+      
+        <link rel="next" href="../../phase5/overview/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>Phase 4 Milestone - AI Full Stack Engineer Roadmap</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#phase-4-milestone-production-kubernetes-platform" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-header__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Full Stack Engineer Roadmap
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Phase 4 Milestone
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        
+  
+    
+  
+  Setup Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase0/overview/" class="md-tabs__link">
+          
+  
+  Phase 0 — Foundation Warmup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase1/overview/" class="md-tabs__link">
+          
+  
+  Phase 1 — AI Systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase2/overview/" class="md-tabs__link">
+          
+  
+  Phase 2 — Docker & Cloud
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase3/overview/" class="md-tabs__link">
+          
+  
+  Phase 3 — MLOps Tooling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  Phase 4 — Scaling & Kubernetes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase5/overview/" class="md-tabs__link">
+          
+  
+  Phase 5 — Portfolio & Job Readiness
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../appendix/math-lite/" class="md-tabs__link">
+          
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-nav__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    AI Full Stack Engineer Roadmap
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 0 — Foundation Warmup
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 0 — Foundation Warmup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Mastery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/fastapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI Deep Dive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/databases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Databases (SQL + NoSQL + Redis)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux & Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 0 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 1 — AI Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 1 — AI Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/llm-apis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM APIs & Prompt Engineering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/embeddings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embeddings & Vector Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/rag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RAG Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Agents & Tool Use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/fine-tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fine-Tuning (LoRA & PEFT)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluation & Benchmarking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security & Prompt Injection Defense
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/cost-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cost & Performance Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 1 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 2 — Docker & Cloud
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 2 — Docker & Cloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose for AI Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Deployment (EC2 + S3 + ECS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/secrets-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secrets Management & Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 2 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 3 — MLOps Tooling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 3 — MLOps Tooling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/mlflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLflow Experiment Tracking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/dvc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DVC Data Versioning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/wandb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weights & Biases (W&B)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/cicd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI/CD for AI Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 3 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 4 — Scaling & Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 4 — Scaling & Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes Core Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-on-k8s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying AI Services on K8s
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autoscaling & Observability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Phase 4 Milestone
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Phase 4 Milestone
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exit-criteria-checklist-20-items" class="md-nav__link">
+    Exit Criteria Checklist (20+ Items)
+  </a>
+  
+    <nav class="md-nav" aria-label="Exit Criteria Checklist (20+ Items)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kubernetes-fundamentals" class="md-nav__link">
+    Kubernetes Fundamentals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stateful-services" class="md-nav__link">
+    Stateful Services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networking-service-discovery" class="md-nav__link">
+    Networking &amp; Service Discovery
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-management" class="md-nav__link">
+    Configuration Management
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autoscaling" class="md-nav__link">
+    Autoscaling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observability" class="md-nav__link">
+    Observability
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#production-operations" class="md-nav__link">
+    Production Operations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capstone-project-production-k8s-ai-platform" class="md-nav__link">
+    Capstone Project: Production K8s AI Platform
+  </a>
+  
+    <nav class="md-nav" aria-label="Capstone Project: Production K8s AI Platform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deliverables" class="md-nav__link">
+    Deliverables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#success-criteria-all-must-pass" class="md-nav__link">
+    Success Criteria (All Must Pass)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-assessment-rubric" class="md-nav__link">
+    Self-Assessment Rubric
+  </a>
+  
+    <nav class="md-nav" aria-label="Self-Assessment Rubric">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beginner-not-ready-for-production" class="md-nav__link">
+    Beginner (Not Ready for Production)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#competent-ready-for-team" class="md-nav__link">
+    Competent (Ready for Team)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hire-ready-expert-level" class="md-nav__link">
+    Hire-Ready (Expert Level)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-a-failed-milestone-looks-like" class="md-nav__link">
+    What a Failed Milestone Looks Like
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-reasons-people-rush-phase-4" class="md-nav__link">
+    Common Reasons People Rush Phase 4
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Reasons People Rush Phase 4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#k8s-is-too-complex-ill-stick-with-docker-compose" class="md-nav__link">
+    "K8s is too complex, I'll stick with Docker Compose"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#we-can-skip-monitoring-ill-just-check-cpu-usage-manually" class="md-nav__link">
+    "We can skip monitoring, I'll just check CPU usage manually"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minikube-is-good-enough-no-need-for-eks" class="md-nav__link">
+    "Minikube is good enough, no need for EKS"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#well-optimize-cost-later-just-spin-up-large-nodes" class="md-nav__link">
+    "We'll optimize cost later, just spin up large nodes"
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bridge-to-phase-5" class="md-nav__link">
+    Bridge to Phase 5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-week-phase-4-review-checklist" class="md-nav__link">
+    1-Week Phase 4 Review Checklist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-checkpoint" class="md-nav__link">
+    Final Checkpoint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-resources" class="md-nav__link">
+    21. Resources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 5 — Portfolio & Job Readiness
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 5 — Portfolio & Job Readiness
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Portfolio Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/resume/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resume & LinkedIn Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/system-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI System Design Interviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/mock-interviews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mock Interview Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/salary-negotiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Salary & Negotiation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/math-lite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math-Lite Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/tooling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tooling & Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/study-planner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Study Planner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/project-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Showcase Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/whats-next/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What's Next (Post-Roadmap)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="phase-4-milestone-production-kubernetes-platform">Phase 4 Milestone: Production Kubernetes Platform</h1>
+<p><strong>You can now operate AI systems at massive scale on Kubernetes.</strong></p>
+<p>This milestone validates you can run, scale, monitor, and operate production-grade AI infrastructure.</p>
+<hr />
+<h2 id="exit-criteria-checklist-20-items">Exit Criteria Checklist (20+ Items)</h2>
+<h3 id="kubernetes-fundamentals">Kubernetes Fundamentals</h3>
+<ul>
+<li>[ ] Understand Pod, Deployment, Service, ConfigMap, Secret concepts</li>
+<li>[ ] Know difference between Deployment (stateless) and StatefulSet (stateful)</li>
+<li>[ ] Have created Deployments, Services, ConfigMaps, Secrets from scratch</li>
+<li>[ ] Understand readinessProbe vs livenessProbe (and when you need each)</li>
+<li>[ ] Know kubectl get, describe, logs, exec, scale commands</li>
+<li>[ ] Understand Namespaces and created multiple namespaces</li>
+<li>[ ] Successfully deployed to Minikube and EKS</li>
+</ul>
+<h3 id="stateful-services">Stateful Services</h3>
+<ul>
+<li>[ ] Deployed Qdrant with StatefulSet (persistent storage)</li>
+<li>[ ] Deployed PostgreSQL with StatefulSet (persistent storage)</li>
+<li>[ ] Understand ordered scaling (StatefulSet-0 before StatefulSet-1)</li>
+<li>[ ] Created PersistentVolumeClaims and verified data persists after pod deletion</li>
+</ul>
+<h3 id="networking-service-discovery">Networking &amp; Service Discovery</h3>
+<ul>
+<li>[ ] Pods can reach each other by service hostname (api ↔ qdrant ↔ postgres)</li>
+<li>[ ] Created Ingress and routed external traffic</li>
+<li>[ ] Understand pod anti-affinity (spread across nodes)</li>
+<li>[ ] Know difference between ClusterIP, NodePort, LoadBalancer services</li>
+</ul>
+<h3 id="configuration-management">Configuration Management</h3>
+<ul>
+<li>[ ] Stored non-secret config in ConfigMaps</li>
+<li>[ ] Stored API keys in Secrets (not in image, not in ConfigMap)</li>
+<li>[ ] Know how to inject both into containers</li>
+</ul>
+<h3 id="autoscaling">Autoscaling</h3>
+<ul>
+<li>[ ] Created HPA (Horizontal Pod Autoscaler)</li>
+<li>[ ] Successfully scaled pods under load</li>
+<li>[ ] Understand min/max replicas and CPU target</li>
+</ul>
+<h3 id="observability">Observability</h3>
+<ul>
+<li>[ ] Deployed Prometheus and collected metrics</li>
+<li>[ ] Created Grafana dashboard with API latency, error rate, pod count</li>
+<li>[ ] Set up Grafana alerts (latency &gt; 10s, error rate &gt; 1%)</li>
+<li>[ ] Read Prometheus queries (PromQL)</li>
+</ul>
+<h3 id="production-operations">Production Operations</h3>
+<ul>
+<li>[ ] Deployed to AWS EKS</li>
+<li>[ ] Understand node groups (on-demand vs spot)</li>
+<li>[ ] Know how to debug pods (logs, describe, exec, rollout)</li>
+<li>[ ] Performed rolling update and rollback</li>
+</ul>
+<hr />
+<h2 id="capstone-project-production-k8s-ai-platform">Capstone Project: Production K8s AI Platform</h2>
+<p><strong>What you'll build:</strong> Complete AI stack on Minikube (dev) and EKS (production) with:
+- API auto-scaling
+- Stateful services (Qdrant, PostgreSQL)
+- Monitoring and alerts
+- Graceful degradation (health checks, timeouts)</p>
+<h3 id="architecture">Architecture</h3>
+<div class="highlight"><pre><span></span><code>Internet
+  ↓
+AWS Load Balancer
+  ↓
+Ingress (Nginx)
+  ↓
+API Service
+  ↓
+API Deployment (3-20 replicas, HPA-scaled on CPU)
+  ↓
+Qdrant StatefulSet (3 replicas, persistent storage)
+PostgreSQL StatefulSet (1 replica, backup job)
+Redis Deployment (caching)
+  ↓
+Prometheus (metrics)
+Grafana (dashboards, alerts)
+</code></pre></div>
+<h3 id="requirements">Requirements</h3>
+<p>✅ <strong>Minikube Setup:</strong>
+- [ ] All services running (API, Qdrant, PostgreSQL, Redis)
+- [ ] Health checks passing
+- [ ] API can reach backend services
+- [ ] Persistent storage verified</p>
+<p>✅ <strong>Scaling:</strong>
+- [ ] HPA created with CPU target 70%
+- [ ] Load test: generate 1000 req/sec
+- [ ] API replicas scale from 3 to 15+
+- [ ] Latency stays &lt; 5s during scale</p>
+<p>✅ <strong>Monitoring:</strong>
+- [ ] Prometheus scrapes metrics from all services
+- [ ] Grafana dashboard shows:
+  - Request rate (requests/sec)
+  - P99 latency (should be &lt; 10s)
+  - Error rate (should be &lt; 0.5%)
+  - Pod count (should match HPA state)
+  - Token usage (should trend to estimate cost)
+- [ ] Alerts working (email or Slack)</p>
+<p>✅ <strong>Production Deployment (EKS):</strong>
+- [ ] Cluster created with 3 on-demand + 5 spot nodes
+- [ ] All manifests deployed to EKS
+- [ ] Services accessible via Ingress DNS
+- [ ] TLS certificate (self-signed for demo)
+- [ ] All monitoring running</p>
+<p>✅ <strong>Resilience:</strong>
+- [ ] Delete a pod, watch it restart
+- [ ] Delete a node, pods reschedule to other nodes
+- [ ] Update image, rolling update completes with zero downtime
+- [ ] Database survives pod restart (persistent volume)</p>
+<h3 id="deliverables">Deliverables</h3>
+<div class="highlight"><pre><span></span><code>├── k8s/
+│   ├── dev/                        (Minikube manifests)
+│   │   ├── namespace.yaml
+│   │   ├── configmaps.yaml
+│   │   ├── secrets.sh
+│   │   ├── deployments/
+│   │   │   ├── api.yaml
+│   │   │   ├── redis.yaml
+│   │   │   └── ingress.yaml
+│   │   ├── statefulsets/
+│   │   │   ├── qdrant.yaml
+│   │   │   └── postgres.yaml
+│   │   ├── services.yaml
+│   │   └── hpa.yaml
+│   │
+│   └── prod/                       (EKS manifests)
+│       ├── namespace.yaml
+│       ├── kustomization.yaml      (differentiate from dev)
+│       ├── all YAML files (same structure as dev, different resources)
+│       ├── monitoring/
+│       │   ├── prometheus-values.yaml
+│       │   └── grafana-values.yaml
+│       └── ingress-prod.yaml
+│
+├── helm/                           (Optional: Helm chart for deployment)
+│   ├── Chart.yaml
+│   ├── values.yaml
+│   ├── templates/
+│   │   ├── api.yaml
+│   │   ├── qdrant.yaml
+│   │   ├── postgres.yaml
+│   │   └── ...
+│
+├── terraform/                      (Optional: AWS infrastructure as code)
+│   ├── main.tf
+│   ├── vpc.tf
+│   ├── eks.tf
+│   └── variables.tf
+│
+├── scripts/
+│   ├── deploy-minikube.sh
+│   ├── deploy-eks.sh
+│   ├── load-test.sh               (Apache Bench or similar)
+│   ├── cleanup.sh
+│   └── verify-health.sh
+│
+├── Dockerfile
+├── main.py                         (FastAPI with all endpoints)
+├── requirements.txt
+│
+└── README.md                       (Complete documentation)
+    ├── Architecture diagram
+    ├── How to deploy (step-by-step)
+    ├ How to run load test
+    ├─ How to monitor
+    └─ Troubleshooting guide
+</code></pre></div>
+<h3 id="success-criteria-all-must-pass">Success Criteria (All Must Pass)</h3>
+<p>✅ <strong>Minikube:</strong>
+- [ ] Deploy with one command: <code>./deploy-minikube.sh</code>
+- [ ] All pods running and healthy: <code>kubectl get pods</code>
+- [ ] Health check passes: <code>curl localhost:8000/health</code>
+- [ ] Can scale to 10 replicas: <code>kubectl scale deployment api --replicas=10</code>
+- [ ] Latency &lt; 500ms under normal load</p>
+<p>✅ <strong>EKS:</strong>
+- [ ] Deploy with: <code>./deploy-eks.sh</code>
+- [ ] Cluster auto-scales nodes (starts with 3, scales to max 8)
+- [ ] Ingress accessible via public DNS
+- [ ] TLS working (openssl s_client -connect domain:443)
+- [ ] Graceful shutdown (drain, terminate, reschedule on other node)</p>
+<p>✅ <strong>Monitoring:</strong>
+- [ ] Prometheus scrapes metrics (http://prometheus:9090/targets)
+- [ ] Grafana dashboard loads (http://grafana:3000)
+- [ ] Alert fired when latency spikes (test by overloading)</p>
+<p>✅ <strong>Documentation:</strong>
+- [ ] README explains every component
+- [ ] Scripts have clear comments
+- [ ] Troubleshooting guide covers 10+ common issues
+- [ ] Deployment diagram in Mermaid format</p>
+<hr />
+<h2 id="self-assessment-rubric">Self-Assessment Rubric</h2>
+<h3 id="beginner-not-ready-for-production">Beginner (Not Ready for Production)</h3>
+<p><strong>Indicators:</strong>
+- Can deploy Minikube, but not EKS
+- Don't fully understand why StatefulSet for databases
+- Monitoring setup but don't read the metrics
+- Health checks not configured properly
+- Scaling doesn't work or is manual</p>
+<p><strong>Example:</strong> "I deployed API on K8s but Qdrant lost data when the pod crashed because I didn't use persistent storage."</p>
+<h3 id="competent-ready-for-team">Competent (Ready for Team)</h3>
+<p><strong>Indicators:</strong>
+- Deployed full stack to both Minikube and EKS
+- Understand Deployment vs StatefulSet and apply correctly
+- Health checks configured (readiness + liveness)
+- Prometheus + Grafana working, reading metrics
+- HPA auto-scales correctly
+- Can debug pod issues (logs, describe, exec)
+- Documented deployment process</p>
+<p><strong>Example:</strong> "I deployed API + Qdrant + PostgreSQL + monitoring to EKS. It auto-scales from 3 to 20 pods under load. If a pod crashes, K8s restarts it. I can see metrics in Grafana and respond to alerts."</p>
+<h3 id="hire-ready-expert-level">Hire-Ready (Expert Level)</h3>
+<p><strong>Indicators:</strong>
+- Everything above, plus:
+- Optimizations: cost-aware (spot instances for batch), performance tuning
+- Advanced: custom metrics (scaling on token usage, not just CPU)
+- KEDA for event-driven scaling
+- IRSA for no-credential pod access
+- GitOps setup (ArgoCD) for infra-as-code
+- Disaster recovery tested (backup/restore)
+- Security hardened (RBAC, network policies, secrets encryption)</p>
+<p><strong>Example:</strong> "I run EKS cluster with 60% spot instances (save money), scale API on both CPU and token usage (prediction), monitor cost in real-time, have automated backups, and can deploy new version with single git commit (ArgoCD)."</p>
+<hr />
+<h2 id="what-a-failed-milestone-looks-like">What a Failed Milestone Looks Like</h2>
+<p>❌ <strong>You're not ready if:</strong></p>
+<ol>
+<li>"Qdrant pods start but lose vectors when they restart" — no persistent volume</li>
+<li>"Services can't find each other" — DNS or service creation wrong</li>
+<li>"HPA creates pods but API still slow" — other bottleneck (network, DB connection pool)</li>
+<li>"Deployed to EKS but no monitoring" — flying blind, can't respond to incidents</li>
+<li>"Health checks never pass" — misunderstanding of readiness probe delay</li>
+<li>"Can scale to 100 replicas but node runs out of memory" — no resource limits</li>
+<li>"Rolling update causes 30% error spike" — pod shutdown not graceful</li>
+<li>"Can't debug pod crashes" — don't know kubectl describe/logs workflow</li>
+</ol>
+<hr />
+<h2 id="common-reasons-people-rush-phase-4">Common Reasons People Rush Phase 4</h2>
+<h3 id="k8s-is-too-complex-ill-stick-with-docker-compose">"K8s is too complex, I'll stick with Docker Compose"</h3>
+<p><strong>Consequence:</strong> As your system grows to 10+ services with traffic spikes, manual scaling/updates become exhausting. Team paged at 3am for human-triggered scale-up.</p>
+<p><strong>Reality:</strong> K8s has steep curve but payoff is huge. Invest the 3-4 weeks now.</p>
+<h3 id="we-can-skip-monitoring-ill-just-check-cpu-usage-manually">"We can skip monitoring, I'll just check CPU usage manually"</h3>
+<p><strong>Consequence:</strong> System degrades slowly. You don't notice latency creep from 200ms to 5s. Customers complain. You lose trust.</p>
+<p><strong>Reality:</strong> Monitoring is non-negotiable for production. Set it up from day 1.</p>
+<h3 id="minikube-is-good-enough-no-need-for-eks">"Minikube is good enough, no need for EKS"</h3>
+<p><strong>Consequence:</strong> Deploys work locally, fail on EKS (storage classes, networking, security contexts different). Spend days debugging prod-only issues.</p>
+<p><strong>Reality:</strong> Deploy to both. Find issues in EKS early, not after customers hit them.</p>
+<h3 id="well-optimize-cost-later-just-spin-up-large-nodes">"We'll optimize cost later, just spin up large nodes"</h3>
+<p><strong>Consequence:</strong> Monthly bill: $3K. Should be $800 with spot instances + node consolidation.</p>
+<p><strong>Reality:</strong> Design for cost from the beginning. Spot instances, scale-to-zero for batch, autoscaling.</p>
+<hr />
+<h2 id="bridge-to-phase-5">Bridge to Phase 5</h2>
+<p>You've now built:
+<strong>Phases 1-3:</strong> AI systems (LLMs, RAG, agents, evaluation, MLOps)
+<strong>Phase 4:</strong> Infrastructure (Kubernetes, autoscaling, monitoring)</p>
+<p>Next: <strong>Phase 5 (Portfolio &amp; Jobs)</strong> teaches you to package all this into a comprehensive portfolio and land the job.</p>
+<p>Your portfolio will showcase:
+- Phase 1: AI system evaluation (RAGAS, metrics, analysis)
+- Phase 2: Deployment on AWS (Docker, ECS, Lambda)
+- Phase 3: Experiment tracking (MLflow, GitHub Actions)
+- Phase 4: K8s infrastructure (EKS, monitoring, autoscaling)</p>
+<p>→ <strong><a href="../../phase5/overview/">Phase 5: Portfolio &amp; Jobs →</a></strong></p>
+<hr />
+<h2 id="1-week-phase-4-review-checklist">1-Week Phase 4 Review Checklist</h2>
+<ul>
+<li>[x] Day 1: K8s fundamentals (pods, deployments, services, minikube)</li>
+<li>[x] Day 2: Deploy FastAPI and expose service</li>
+<li>[x] Day 3: Deploy Qdrant and PostgreSQL with persistent storage</li>
+<li>[x] Day 4: Configure ingress and external routing</li>
+<li>[x] Day 5: Set up HPA and Prometheus metrics</li>
+<li>[x] Day 6: Create Grafana dashboard and alerts</li>
+<li>[x] Day 7: Deploy to EKS and verify in production</li>
+</ul>
+<hr />
+<h2 id="final-checkpoint">Final Checkpoint</h2>
+<p>Before moving to Phase 5, verify:</p>
+<ul>
+<li>[ ] Can deploy any Docker image to K8s</li>
+<li>[ ] Can scale API from 3 to 100 replicas</li>
+<li>[ ] Can route traffic with Ingress</li>
+<li>[ ] Can debug any pod issue (logs, networking, storage)</li>
+<li>[ ] Understand HPA metrics and scaling decisions</li>
+<li>[ ] Can read Prometheus queries and Grafana dashboards</li>
+<li>[ ] EKS deployment works without local minikube</li>
+<li>[ ] Documentation is complete and someone else can follow it</li>
+</ul>
+<p><strong>If all pass, you're ready for Phase 5.</strong></p>
+<p><strong>If not, pick the problem area and spend extra week on it. K8s is hard; better to master it now.</strong></p>
+<hr />
+<h2 id="21-resources">21. Resources</h2>
+<ul>
+<li><strong>Kubernetes Official:</strong> https://kubernetes.io/docs/</li>
+<li><strong>EKS Documentation:</strong> https://docs.aws.amazon.com/eks/</li>
+<li><strong>Helm Charts:</strong> https://artifacthub.io/</li>
+<li><strong>Prometheus Queries:</strong> https://prometheus.io/docs/prometheus/latest/querying/basics/</li>
+<li><strong>Grafana Dashboards:</strong> https://grafana.com/grafana/dashboards/</li>
+<li><strong>Real-world K8s:</strong> https://www.cncf.io/ (Cloud Native Computing Foundation)</li>
+</ul>
+<hr />
+<p><strong>Congratulations on Phase 4.</strong> You're now a Kubernetes-capable AI engineer. You can operate at scale.</p>
+<p>→ <strong><a href="../../phase5/overview/">Phase 5: Portfolio &amp; Jobs →</a></strong></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.integrate"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>

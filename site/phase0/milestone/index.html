@@ -1,0 +1,2567 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive 6-phase learning roadmap from Python foundations to production ML systems">
+      
+      
+        <meta name="author" content="AI Engineering Community">
+      
+      
+      
+        <link rel="prev" href="../linux/">
+      
+      
+        <link rel="next" href="../../phase1/overview/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>Phase 0 Milestone - AI Full Stack Engineer Roadmap</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#phase-0-milestone-production-ready-ai-backend" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-header__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Full Stack Engineer Roadmap
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Phase 0 Milestone
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        
+  
+    
+  
+  Setup Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  Phase 0 — Foundation Warmup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase1/overview/" class="md-tabs__link">
+          
+  
+  Phase 1 — AI Systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase2/overview/" class="md-tabs__link">
+          
+  
+  Phase 2 — Docker & Cloud
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase3/overview/" class="md-tabs__link">
+          
+  
+  Phase 3 — MLOps Tooling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase4/overview/" class="md-tabs__link">
+          
+  
+  Phase 4 — Scaling & Kubernetes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase5/overview/" class="md-tabs__link">
+          
+  
+  Phase 5 — Portfolio & Job Readiness
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../appendix/math-lite/" class="md-tabs__link">
+          
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-nav__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    AI Full Stack Engineer Roadmap
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 0 — Foundation Warmup
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 0 — Foundation Warmup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Mastery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fastapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI Deep Dive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../databases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Databases (SQL + NoSQL + Redis)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux & Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Phase 0 Milestone
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Phase 0 Milestone
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exit-criteria-checklist" class="md-nav__link">
+    Exit Criteria Checklist
+  </a>
+  
+    <nav class="md-nav" aria-label="Exit Criteria Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-mastery" class="md-nav__link">
+    Python Mastery
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fastapi" class="md-nav__link">
+    FastAPI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#databases" class="md-nav__link">
+    Databases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-operations" class="md-nav__link">
+    Linux &amp; Operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-ci" class="md-nav__link">
+    Testing &amp; CI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-monitoring" class="md-nav__link">
+    Deployment &amp; Monitoring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation-portfolio" class="md-nav__link">
+    Documentation &amp; Portfolio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interview-readiness" class="md-nav__link">
+    Interview Readiness
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capstone-project-document-processing-chat-backend" class="md-nav__link">
+    Capstone Project: Document Processing &amp; Chat Backend
+  </a>
+  
+    <nav class="md-nav" aria-label="Capstone Project: Document Processing & Chat Backend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-statement" class="md-nav__link">
+    Problem Statement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-youll-build" class="md-nav__link">
+    What You'll Build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tech-stack" class="md-nav__link">
+    Tech Stack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-endpoints-to-implement" class="md-nav__link">
+    API Endpoints to Implement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detailed-specifications" class="md-nav__link">
+    Detailed Specifications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#success-criteria-definition-of-done" class="md-nav__link">
+    Success Criteria (Definition of "Done")
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-structure" class="md-nav__link">
+    Project Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stretch-goals-if-you-finish-early" class="md-nav__link">
+    Stretch Goals (If you finish early)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-assessment-rubric" class="md-nav__link">
+    Self-Assessment Rubric
+  </a>
+  
+    <nav class="md-nav" aria-label="Self-Assessment Rubric">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beginner-i-finished-the-cutscenes" class="md-nav__link">
+    Beginner: "I Finished the Cutscenes"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#competent-i-built-this-and-understand-it" class="md-nav__link">
+    Competent: "I Built This and Understand It"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hire-ready-id-hire-you" class="md-nav__link">
+    Hire-Ready: "I'd Hire You"
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-a-failed-milestone-looks-like" class="md-nav__link">
+    What a Failed Milestone Looks Like
+  </a>
+  
+    <nav class="md-nav" aria-label="What a Failed Milestone Looks Like">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-quality-red-flags" class="md-nav__link">
+    Code Quality Red Flags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-red-flags" class="md-nav__link">
+    Deployment Red Flags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-red-flags" class="md-nav__link">
+    Database Red Flags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-red-flags" class="md-nav__link">
+    Architecture Red Flags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-reasons-people-rush-phase-0-and-why-it-backfires" class="md-nav__link">
+    Common Reasons People Rush Phase 0 (And Why It Backfires)
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Reasons People Rush Phase 0 (And Why It Backfires)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reason-1-i-already-know-python" class="md-nav__link">
+    Reason 1: "I already know Python"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reason-2-ill-learn-the-database-stuff-when-i-need-it" class="md-nav__link">
+    Reason 2: "I'll learn the database stuff when I need it"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reason-3-testing-slows-me-down" class="md-nav__link">
+    Reason 3: "Testing slows me down"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reason-4-ill-deploy-later" class="md-nav__link">
+    Reason 4: "I'll deploy later"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reason-5-async-is-complicated-ill-skip-it" class="md-nav__link">
+    Reason 5: "Async is complicated, I'll skip it"
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-happens-in-phase-1" class="md-nav__link">
+    What Happens in Phase 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-requirements" class="md-nav__link">
+    Final Requirements
+  </a>
+  
+    <nav class="md-nav" aria-label="Final Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-repository" class="md-nav__link">
+    GitHub Repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployability" class="md-nav__link">
+    Deployability
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#honesty" class="md-nav__link">
+    Honesty
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exit-interview-ask-yourself-these-questions" class="md-nav__link">
+    Exit Interview: Ask Yourself These Questions
+  </a>
+  
+    <nav class="md-nav" aria-label="Exit Interview: Ask Yourself These Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fastapi_1" class="md-nav__link">
+    FastAPI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#databases_1" class="md-nav__link">
+    Databases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operations" class="md-nav__link">
+    Operations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#youre-ready-phase-1-awaits" class="md-nav__link">
+    You're Ready. Phase 1 Awaits.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-go-phase-1-preview" class="md-nav__link">
+    Before You Go: Phase 1 Preview
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 1 — AI Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 1 — AI Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/llm-apis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM APIs & Prompt Engineering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/embeddings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embeddings & Vector Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/rag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RAG Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Agents & Tool Use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/fine-tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fine-Tuning (LoRA & PEFT)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluation & Benchmarking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security & Prompt Injection Defense
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/cost-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cost & Performance Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 1 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 2 — Docker & Cloud
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 2 — Docker & Cloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose for AI Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Deployment (EC2 + S3 + ECS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/secrets-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secrets Management & Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 2 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 3 — MLOps Tooling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 3 — MLOps Tooling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/mlflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLflow Experiment Tracking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/dvc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DVC Data Versioning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/wandb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weights & Biases (W&B)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/cicd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI/CD for AI Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 3 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 4 — Scaling & Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 4 — Scaling & Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes Core Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/ai-on-k8s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying AI Services on K8s
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autoscaling & Observability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 4 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 5 — Portfolio & Job Readiness
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 5 — Portfolio & Job Readiness
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Portfolio Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/resume/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resume & LinkedIn Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/system-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI System Design Interviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/mock-interviews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mock Interview Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/salary-negotiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Salary & Negotiation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/math-lite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math-Lite Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/tooling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tooling & Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/study-planner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Study Planner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/project-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Showcase Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/whats-next/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What's Next (Post-Roadmap)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="phase-0-milestone-production-ready-ai-backend">Phase 0 Milestone: Production-Ready AI Backend</h1>
+<p>Congratulations. You've learned Python patterns, FastAPI, databases, and Linux operations. Now you'll build something real: a production-grade AI backend that serves as the foundation for your entire 6-phase journey.</p>
+<p>This isn't a tutorial project. It's a portfolio piece.</p>
+<hr />
+<h2 id="exit-criteria-checklist">Exit Criteria Checklist</h2>
+<p>Before moving to Phase 1, you must be able to do ALL of these. Not 90%. Not "close enough." All.</p>
+<h3 id="python-mastery">Python Mastery</h3>
+<ul>
+<li>[ ] Write type hints in complete functions (arguments, return types, generics). Run <code>mypy --strict</code> with zero errors.</li>
+<li>[ ] Build a Pydantic v2 model with <code>Field</code>, <code>@field_validator</code>, and <code>@model_validator</code>. Validate cross-field constraints.</li>
+<li>[ ] Write an async function that fetches data 100 times in parallel using <code>asyncio.gather</code>. Explain why it's faster than sequential.</li>
+<li>[ ] Build a async context manager (<code>async with</code>) that properly cleans up resources.</li>
+<li>[ ] Write a decorator that retries a function up to 3 times with exponential backoff.</li>
+<li>[ ] Write pytest tests for async functions using <code>@pytest.mark.asyncio</code> with <code>AsyncMock</code>.</li>
+<li>[ ] Use dependency injection (not global state). Explain why testability matters.</li>
+<li>[ ] Create a Python package with src layout, <strong>init</strong>.py, and install with <code>pip install -e .</code>.</li>
+</ul>
+<h3 id="fastapi">FastAPI</h3>
+<ul>
+<li>[ ] Build an API with at least 5 endpoints (POST, GET, DELETE). Request/response models are Pydantic.</li>
+<li>[ ] Implement API key authentication. Verify it blocks unauthorized requests.</li>
+<li>[ ] Add rate limiting (max 10 requests per minute). Verify requests are blocked after limit.</li>
+<li>[ ] Implement streaming response for a slow operation (generator + StreamingResponse).</li>
+<li>[ ] Use <code>Depends()</code> for dependency injection. Verify mocking works in tests.</li>
+<li>[ ] Implement custom exception handler that returns structured error JSON.</li>
+<li>[ ] Add CORS middleware. Verify it allows requests from specific domains.</li>
+<li>[ ] Write tests using TestClient. All tests pass.</li>
+</ul>
+<h3 id="databases">Databases</h3>
+<ul>
+<li>[ ] Create PostgreSQL schema with 5+ tables. Include proper types, constraints, indexes.</li>
+<li>[ ] Write SQLAlchemy ORM models matching the schema. Define relationships.</li>
+<li>[ ] Write at least 3 async queries: insert, update, semantic search with embeddings.</li>
+<li>[ ] Create an Alembic migration. Apply and rollback successfully.</li>
+<li>[ ] Store and query embeddings using pgvector. Cosine similarity search returns correct results.</li>
+<li>[ ] Set up Redis caching. Cache an expensive operation with TTL. Verify it works.</li>
+<li>[ ] Write a function that handles database transactions (begin, commit, rollback).</li>
+</ul>
+<h3 id="linux-operations">Linux &amp; Operations</h3>
+<ul>
+<li>[ ] Deploy FastAPI app using systemd (not terminal). Verify <code>systemctl status</code> shows it's running.</li>
+<li>[ ] Configure nginx reverse proxy. Verify requests go through nginx not directly to port 8000.</li>
+<li>[ ] Set up HTTPS with Let's Encrypt. Certificate auto-renews.</li>
+<li>[ ] View application logs using <code>journalctl -u myapp -f</code>. Logs are structured.</li>
+<li>[ ] Create a health check endpoint. Monitor script tests it via curl.</li>
+<li>[ ] SSH into a server using keys (no password). Understand host key verification.</li>
+<li>[ ] Use tmux to run a background job. Detach, reconnect, verify it's still running.</li>
+<li>[ ] Check resource usage (CPU, memory, disk) using top, free, df. Know how to increase limits.</li>
+</ul>
+<h3 id="testing-ci">Testing &amp; CI</h3>
+<ul>
+<li>[ ] Build a pytest test suite with 20+ tests. All pass locally.</li>
+<li>[ ] Use fixtures for setup/teardown. Dependency injection in tests.</li>
+<li>[ ] Mock external services (LLM API, database). Tests don't call real APIs.</li>
+<li>[ ] Test error cases (403, 404, 500). Verify error responses are correct.</li>
+<li>[ ] Measure test coverage. At least 70% of code is tested.</li>
+</ul>
+<h3 id="deployment-monitoring">Deployment &amp; Monitoring</h3>
+<ul>
+<li>[ ] Create .env and .env.example files. Secrets are separated from code.</li>
+<li>[ ] Write a Dockerfile. Build it. Run it. Verify app works in container.</li>
+<li>[ ] Create docker-compose.yml with postgres, redis, your app. Everything starts together.</li>
+<li>[ ] Set up structured logging. JSON logs with timestamp, level, message.</li>
+<li>[ ] Create monitoring script that checks service health every minute. Auto-restart if down.</li>
+</ul>
+<h3 id="documentation-portfolio">Documentation &amp; Portfolio</h3>
+<ul>
+<li>[ ] Commit all code to GitHub. Clean commit history (not 1000 messy commits).</li>
+<li>[ ] Write a README.md that explains: what it does, how to install, how to run, example API calls.</li>
+<li>[ ] Document API endpoints in OpenAPI (FastAPI auto-generates this).</li>
+<li>[ ] Have runnable code examples. Someone can clone, <code>poetry install</code>, <code>docker-compose up</code>, and it works.</li>
+</ul>
+<h3 id="interview-readiness">Interview Readiness</h3>
+<ul>
+<li>[ ] Can explain your architecture decisions: "I chose PostgreSQL + Redis because..."</li>
+<li>[ ] Can explain trade-offs: "FastAPI has faster startup than Django, but Django has more database ORM features..."</li>
+<li>[ ] Can discuss what you'd do differently: "I'd use async task queue for background jobs instead of BackgroundTasks..."</li>
+<li>[ ] Can describe what breaks at scale: "At 1M requests/day, I'd add caching and database replication..."</li>
+</ul>
+<hr />
+<h2 id="capstone-project-document-processing-chat-backend">Capstone Project: Document Processing &amp; Chat Backend</h2>
+<h3 id="problem-statement">Problem Statement</h3>
+<p>You're building the backend for an AI document analyst. Users upload documents (PDFs, text), the system processes them (chunks, embeddings), and answers questions about them.</p>
+<p>This is a RAG (Retrieval-Augmented Generation) system backend.</p>
+<h3 id="what-youll-build">What You'll Build</h3>
+<p>A FastAPI service with:
+- <strong>Document Upload API</strong> — Accept documents, process asynchronously
+- <strong>Chat API</strong> — Query documents, get answers with semantically relevant context
+- <strong>Database</strong> — PostgreSQL + pgvector for embeddings + Redis for caching
+- <strong>Authentication</strong> — API key based (expandable to JWT)
+- <strong>Rate Limiting</strong> — Fair access for all users
+- <strong>Monitoring</strong> — Health checks, structured logs
+- <strong>Deployment</strong> — Docker, systemd, nginx, HTTPS</p>
+<h3 id="tech-stack">Tech Stack</h3>
+<p><strong>Required:</strong>
+- FastAPI (API framework)
+- PostgreSQL (structured data)
+- pgvector (semantic search)
+- Redis (caching)
+- SQLAlchemy 2.0 (async ORM)
+- Pydantic v2 (validation)
+- pytest (testing)
+- Docker + docker-compose (containerization)
+- nginx (reverse proxy)
+- systemd (service management)</p>
+<p><strong>Optional (for LLM integration):</strong>
+- OpenAI (or Anthropic/Groq) for embeddings &amp; chat
+- Instructor (structured LLM outputs)</p>
+<h3 id="api-endpoints-to-implement">API Endpoints to Implement</h3>
+<p><strong>Authentication:</strong>
+<div class="highlight"><pre><span></span><code>POST /auth/api-key
+  Create API key for user. Return: {&quot;api_key&quot;: &quot;...&quot;}
+
+Headers required on all other endpoints:
+  X-API-Key: &lt;value&gt;
+</code></pre></div></p>
+<p><strong>Document Management:</strong>
+<div class="highlight"><pre><span></span><code>POST /documents
+  Upload a document.
+  Request: {&quot;title&quot;: str, &quot;content&quot;: str}
+  Response: {&quot;id&quot;: str, &quot;status&quot;: &quot;processing&quot;}
+
+GET /documents/{doc_id}
+  Retrieve document metadata + chunks
+
+DELETE /documents/{doc_id}
+  Delete document + chunks + embeddings
+
+GET /documents
+  List user&#39;s documents
+
+POST /documents/{doc_id}/chunks
+  Force re-chunking (admin only)
+</code></pre></div></p>
+<p><strong>Chat / Semantic Search:</strong>
+<div class="highlight"><pre><span></span><code>POST /chat
+  Query documents with conversation context
+  Request: {&quot;message&quot;: str, &quot;session_id&quot;: str}
+  Response: {&quot;response&quot;: str, &quot;context&quot;: [chunks]}
+
+GET /history/{session_id}
+  Get conversation history
+
+DELETE /history/{session_id}
+  Clear conversation
+</code></pre></div></p>
+<p><strong>System:</strong>
+<div class="highlight"><pre><span></span><code>GET /health
+  Liveness check. Return: {&quot;status&quot;: &quot;healthy&quot;}
+
+GET /metrics
+  Usage metrics (documents, chunks, messages)
+</code></pre></div></p>
+<h3 id="detailed-specifications">Detailed Specifications</h3>
+<p><strong>Document Processing Pipeline</strong>
+1. User uploads document → saved to PostgreSQL
+2. Background task chunks it (512-char overlapping)
+3. Chunks stored in PostgreSQL
+4. Each chunk embedded by OpenAI API (cached in Redis)
+5. Embeddings stored in PostgreSQL + pgvector
+6. Ready for semantic search</p>
+<p><strong>Chat Flow</strong>
+1. User sends message → query embedded
+2. Semantic search finds top-5 similar chunks
+3. Chunks sent as context to LLM
+4. LLM generates response
+5. Response cached to avoid recomputation
+6. Conversation saved to PostgreSQL</p>
+<p><strong>Database Schema</strong>
+<div class="highlight"><pre><span></span><code><span class="n">users</span><span class="w"> </span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">,</span><span class="w"> </span><span class="n">api_key_hash</span><span class="p">,</span><span class="w"> </span><span class="n">created_at</span><span class="p">)</span>
+<span class="n">documents</span><span class="w"> </span><span class="p">(</span><span class="n">doc_id</span><span class="p">,</span><span class="w"> </span><span class="n">user_id</span><span class="p">,</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">content</span><span class="p">,</span><span class="w"> </span><span class="n">created_at</span><span class="p">)</span>
+<span class="n">chunks</span><span class="w"> </span><span class="p">(</span><span class="n">chunk_id</span><span class="p">,</span><span class="w"> </span><span class="n">doc_id</span><span class="p">,</span><span class="w"> </span><span class="n">content</span><span class="p">,</span><span class="w"> </span><span class="n">start_pos</span><span class="p">,</span><span class="w"> </span><span class="n">created_at</span><span class="p">)</span>
+<span class="n">embeddings</span><span class="w"> </span><span class="p">(</span><span class="n">embedding_id</span><span class="p">,</span><span class="w"> </span><span class="n">chunk_id</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="p">,</span><span class="w"> </span><span class="n">created_at</span><span class="p">)</span>
+<span class="n">sessions</span><span class="w"> </span><span class="p">(</span><span class="n">session_id</span><span class="p">,</span><span class="w"> </span><span class="n">user_id</span><span class="p">,</span><span class="w"> </span><span class="n">created_at</span><span class="p">)</span>
+<span class="n">messages</span><span class="w"> </span><span class="p">(</span><span class="n">message_id</span><span class="p">,</span><span class="w"> </span><span class="n">session_id</span><span class="p">,</span><span class="w"> </span><span class="k">role</span><span class="p">,</span><span class="w"> </span><span class="n">content</span><span class="p">,</span><span class="w"> </span><span class="n">created_at</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>Authentication</strong>
+- API key in <code>X-API-Key</code> header
+- Hash API keys (never store plaintext)
+- Rate limit per user (10 requests/minute free tier)
+- Rate limit per API key</p>
+<h3 id="success-criteria-definition-of-done">Success Criteria (Definition of "Done")</h3>
+<ul>
+<li>[ ] Code compiles. Zero type errors (mypy --strict).</li>
+<li>[ ] All tests pass (pytest). Coverage &gt; 70%.</li>
+<li>[ ] All 6 API endpoint categories implemented.</li>
+<li>[ ] Document upload → chunking → embedding works end-to-end.</li>
+<li>[ ] Chat returns semantic-relevant context.</li>
+<li>[ ] Runs in Docker with <code>docker-compose up</code>.</li>
+<li>[ ] Accessible at https://localhost with self-signed cert (or http in dev).</li>
+<li>[ ] Deploys on Linux server with nginx, systemd, HTTPS.</li>
+<li>[ ] Health check endpoint responds in &lt;100ms.</li>
+<li>[ ] Logs are structured JSON. No sensitive data in logs.</li>
+<li>[ ] README explains everything. Someone unfamiliar can deploy it.</li>
+</ul>
+<h3 id="project-structure">Project Structure</h3>
+<div class="highlight"><pre><span></span><code>my-ai-backend/
+├── src/
+│   ├── myapp/
+│   │   ├── __init__.py
+│   │   ├── main.py                 # FastAPI app
+│   │   ├── config.py               # Settings from .env
+│   │   ├── schemas.py              # Pydantic models
+│   │   ├── database.py             # SQLAlchemy setup
+│   │   ├── redis_client.py         # Redis setup
+│   │   ├── auth/
+│   │   │   ├── __init__.py
+│   │   │   └── security.py         # API key verification
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   ├── embedding_service.py   # Chunk embedding
+│   │   │   ├── chat_service.py        # LLM calls
+│   │   │   └── document_service.py    # Document processing
+│   │   ├── routes/
+│   │   │   ├── __init__.py
+│   │   │   ├── auth.py
+│   │   │   ├── documents.py
+│   │   │   ├── chat.py
+│   │   │   └── health.py
+│   │   ├── models.py               # SQLAlchemy models
+│   │   └── utils/
+│   │       ├── __init__.py
+│   │       └── logging.py          # Structured logging
+│   ├── tests/
+│   │   ├── __init__.py
+│   │   ├── conftest.py             # Pytest fixtures
+│   │   ├── test_auth.py
+│   │   ├── test_documents.py
+│   │   ├── test_chat.py
+│   │   └── test_integration.py
+├── migrations/                      # Alembic
+├── docker-compose.yml
+├── Dockerfile
+├── pyproject.toml
+├── .env.example
+├── .gitignore
+├── .pre-commit-config.yaml
+├── Makefile
+├── deploy/
+│   ├── ai-api.service              # systemd service
+│   └── nginx.conf                  # nginx config
+├── README.md
+└── LICENSE
+</code></pre></div>
+<h3 id="stretch-goals-if-you-finish-early">Stretch Goals (If you finish early)</h3>
+<ul>
+<li>[ ] MongoDB for raw document storage (not just PostgreSQL)</li>
+<li>[ ] Scheduled batch re-indexing of documents</li>
+<li>[ ] Kubernetes deployment (Phase 4 content, but you could preview)</li>
+<li>[ ] Webhook notifications on document processing complete</li>
+<li>[ ] Audit logging (who accessed what, when)</li>
+<li>[ ] Fine-tuning pipeline (cheap embedding model vs premium)</li>
+<li>[ ] Analytics dashboard (document stats, query patterns)</li>
+</ul>
+<hr />
+<h2 id="self-assessment-rubric">Self-Assessment Rubric</h2>
+<h3 id="beginner-i-finished-the-cutscenes">Beginner: "I Finished the Cutscenes"</h3>
+<p>You completed the project following instructions but don't deeply understand the pieces.</p>
+<p><strong>Indicators:</strong>
+- Can deploy the project with the exact commands from README, but if something breaks, you're stuck
+- Understand what each tool does (FastAPI, PostgreSQL) but can't explain trade-offs
+- Tests exist but you don't write new ones confidently
+- Database queries mostly copied from examples. Don't understand JOINs
+- Don't know why you chose PostgreSQL instead of MongoDB
+- Can list systemd commands but don't know what <code>/etc/systemd/system/</code> is
+- Logs exist but you don't monitor them</p>
+<p><strong>You are at this level if:</strong>
+- Copy/paste code to make things work
+- Don't modify dependencies without it breaking
+- Tests fail when you add a feature</p>
+<p><strong>To level up:</strong> Understand every line of code. Modify something. Understand why it breaks. Fix it.</p>
+<hr />
+<h3 id="competent-i-built-this-and-understand-it">Competent: "I Built This and Understand It"</h3>
+<p>You built the project and could explain it to another engineer.</p>
+<p><strong>Indicators:</strong>
+- Understand each component and how it fits together
+- Can explain: "I chose PostgreSQL because transactions matter. MongoDB for raw documents because schema is flexible."
+- Tests comprehensive, would catch real bugs
+- SQL queries correct (JOINs work, N+1 is avoided, indexes used)
+- Chose reasonable defaults (pool_size, cache TTL, rate limits)
+- Systemd service works, logs are clean, monitoring alerts make sense
+- Deployed it yourself, not just followed instructions</p>
+<p><strong>You are at this level if:</strong>
+- Can modify the codebase without breakage
+- Write new tests for new features
+- Understand the failure modes ("If this fails, the app will...")</p>
+<p><strong>To level up:</strong> Think about scale. "What breaks at 1M requests/day?"</p>
+<hr />
+<h3 id="hire-ready-id-hire-you">Hire-Ready: "I'd Hire You"</h3>
+<p>You built something production-grade. An engineer looking at your code wouldn't have notes.</p>
+<p><strong>Indicators:</strong>
+- Code is self-documenting. Types everywhere, docstrings explain <em>why</em> not <em>what</em>
+- Error handling is comprehensive. Edge cases handled. User sees helpful messages.
+- Performance is thoughtful. Indexes are there. Caching strategy is clear. N+1 is impossible.
+- Security is baked in. Secrets never in code. Rate limiting prevents abuse.
+- Deployment is automated. Docs are complete. Someone unfamiliar can deploy in 15 minutes.
+- Testing demonstrates mastery. 80%+ coverage. Fixtures prevent duplicate setup. Mocks are used correctly.
+- Architecture decisions are justified. "We use Redis instead of application cache because..."</p>
+<p><strong>You are at this level if:</strong>
+- Your code could go to production as-is
+- You've thought about "what breaks at scale" and handled it
+- You'd review another person's code and catch real issues
+- You could explain this architecture in a technical interview</p>
+<hr />
+<h2 id="what-a-failed-milestone-looks-like">What a Failed Milestone Looks Like</h2>
+<p>If you're exhibiting these signs, you haven't passed Phase 0. Do not move to Phase 1.</p>
+<h3 id="code-quality-red-flags">Code Quality Red Flags</h3>
+<ul>
+<li>[ ] <strong>Mypy has errors.</strong> Types are incomplete or wrong. <code>mypy --strict</code> doesn't pass.</li>
+<li>[ ] <strong>Tests don't run.</strong> Test suite is broken or incomplete. Coverage &lt; 50%.</li>
+<li>[ ] <strong>Global state everywhere.</strong> No dependency injection. Hard to test.</li>
+<li>[ ] <strong>Blocking operations in async code.</strong> Event loop freezes. API hangs.</li>
+<li>[ ] <strong>No error handling.</strong> Unhandled exceptions crawl in logs.</li>
+<li>[ ] <strong>SQL injection possible.</strong> String formatting instead of parameterized queries.</li>
+<li>[ ] <strong>Secrets in code.</strong> API keys in pyproject.toml or hardcoded strings.</li>
+</ul>
+<h3 id="deployment-red-flags">Deployment Red Flags</h3>
+<ul>
+<li>[ ] <strong>Only works locally.</strong> Deployment fails.</li>
+<li>[ ] <strong>Deployment is manual.</strong> "Type these 5 commands" instead of automation.</li>
+<li>[ ] <strong>Cannot reproduce environment.</strong> Dockerfile doesn't match pyproject.toml.</li>
+<li>[ ] <strong>No monitoring.</strong> App crashes silently.</li>
+<li>[ ] <strong>No logs.</strong> Nothing appears in journalctl. No way to debug.</li>
+<li>[ ] <strong>Permissions are broken.</strong> systemd service fails with permission denied.</li>
+</ul>
+<h3 id="database-red-flags">Database Red Flags</h3>
+<ul>
+<li>[ ] <strong>No indexes.</strong> Queries are slow (&gt;1 second for 1k rows).</li>
+<li>[ ] <strong>N+1 queries.</strong> Load 10 users, then query each user's documents = 11 queries.</li>
+<li>[ ] <strong>Migrations don't work.</strong> <code>alembic upgrade head</code> fails.</li>
+<li>[ ] <strong>Embeddings not stored efficiently.</strong> Vectors as JSON strings instead of pgvector.</li>
+<li>[ ] <strong>No pagination.</strong> Loading entire datasets into memory.</li>
+</ul>
+<h3 id="architecture-red-flags">Architecture Red Flags</h3>
+<ul>
+<li>[ ] <strong>No caching.</strong> Every request hits database.</li>
+<li>[ ] <strong>SynchronousAPI calls.</strong> Each request blocks for 2 seconds waiting for database.</li>
+<li>[ ] <strong>No rate limiting.</strong> Single client can send 1M requests.</li>
+<li>[ ] <strong>Hardcoded configuration.</strong> Change environment = manual code edits.</li>
+<li>[ ] <strong>No auth.</strong> Anyone can call any endpoint.</li>
+</ul>
+<hr />
+<h2 id="common-reasons-people-rush-phase-0-and-why-it-backfires">Common Reasons People Rush Phase 0 (And Why It Backfires)</h2>
+<h3 id="reason-1-i-already-know-python">Reason 1: "I already know Python"</h3>
+<p><strong>The trap:</strong> Python syntax ≠ production Python. You know loops and functions, but you've never written type hints, async functions, or proper OOP.</p>
+<p><strong>Where it breaks in Phase 1:</strong> You build an LLM client that's not async. When you call OpenAI API 10 times, it's sequential (20 seconds). Should be parallel (2 seconds). You blame the library. Actually, you didn't understand async.</p>
+<p><strong>Cost:</strong> 1 week rebuilding the LLM client with proper async.</p>
+<hr />
+<h3 id="reason-2-ill-learn-the-database-stuff-when-i-need-it">Reason 2: "I'll learn the database stuff when I need it"</h3>
+<p><strong>The trap:</strong> Thinking "I'll use PostgreSQL basics for now, advanced stuff later."</p>
+<p><strong>Where it breaks in Phase 1:</strong> You're storing embeddings. You find yourself with a slow semantic search (full table scan). You add an index, but it doesn't help because you're using text columns instead of pgvector. You rewrite the schema. All embedded vectors are orphaned.</p>
+<p><strong>Cost:</strong> 3 days rewriting. Data loss. Embarrassment in code review.</p>
+<hr />
+<h3 id="reason-3-testing-slows-me-down">Reason 3: "Testing slows me down"</h3>
+<p><strong>The trap:</strong> "Tests are optional. I'll add them later."</p>
+<p><strong>Where it breaks in Phase 1:</strong> You add a feature. It works locally. Deployed to staging, it breaks. You don't know which change broke it. Spent 6 hours debugging because you have no tests to isolate the issue.</p>
+<p><strong>Cost:</strong> 6 hours debugging. Loss of confidence. Tests would have caught it in 30 seconds.</p>
+<hr />
+<h3 id="reason-4-ill-deploy-later">Reason 4: "I'll deploy later"</h3>
+<p><strong>The trap:</strong> "I'll ship locally first, then figure out deployment."</p>
+<p><strong>Where it breaks in Phase 1:</strong> Code works locally. Deployment fails. Secrets are hardcoded. Database connection string is wrong. Service won't start.</p>
+<p>**Now you're learning deployment AND Phase 1 content simultaneously. Brain overload.</p>
+<p><strong>Cost:</strong> 2 weeks of frustration.</p>
+<hr />
+<h3 id="reason-5-async-is-complicated-ill-skip-it">Reason 5: "Async is complicated, I'll skip it"</h3>
+<p><strong>The trap:</strong> Not learning asyncio, using synchronous libraries instead.</p>
+<p><strong>Where it breaks in Phase 1:</strong> Every LLM API is async (OpenAI, Anthropic, Groq). Your code is sync. You can't call them properly. You spend 2 weeks learning async under deadline pressure.</p>
+<p><strong>Cost:</strong> 2 weeks of painful learning at the worst time.</p>
+<hr />
+<h2 id="what-happens-in-phase-1">What Happens in Phase 1</h2>
+<p>Phase 1 is where you learn LLM integration, embeddings, RAG pipelines, fine-tuning, and evaluation.</p>
+<p>If you skipped Phase 0 foundations:</p>
+<ul>
+<li><strong>Weak Python?</strong> → Async code becomes incomprehensible</li>
+<li><strong>Weak FastAPI?</strong> → Streaming LLM responses hangs the server</li>
+<li><strong>Weak databases?</strong> → Embeddings don't store/retrieve correctly</li>
+<li><strong>Weak operations?</strong> → Your service crashes in production and you don't know why</li>
+</ul>
+<p><strong>Result:</strong> You're learning Phase 0 content while building Phase 1 content. You fall 4 weeks behind.</p>
+<hr />
+<h2 id="final-requirements">Final Requirements</h2>
+<p>Before claiming you've completed Phase 0:</p>
+<h3 id="github-repository">GitHub Repository</h3>
+<ul>
+<li>[ ] Code is on GitHub (public or private, link in resume)</li>
+<li>[ ] README explains what the project does</li>
+<li>[ ] README has setup instructions</li>
+<li>[ ] README has example API calls</li>
+<li>[ ] Code is clean (use <code>make format</code> before pushing)</li>
+<li>[ ] Commit history is readable (not 100 commits named "fix")</li>
+</ul>
+<h3 id="documentation">Documentation</h3>
+<ul>
+<li>[ ] API endpoints documented (FastAPI's /docs auto-generates this)</li>
+<li>[ ] Database schema documented (comment in schema.sql or models.py)</li>
+<li>[ ] Architecture documented (README with diagram or text explanation)</li>
+<li>[ ] Deployment documented (how to run on Linux server)</li>
+</ul>
+<h3 id="deployability">Deployability</h3>
+<ul>
+<li>[ ] Clone repo on fresh machine → <code>poetry install</code> → <code>poetry run pytest</code> → all tests pass</li>
+<li>[ ] <code>docker-compose up</code> → all services start → API responds</li>
+<li>[ ] Deployment docs are clear enough for someone else to follow</li>
+</ul>
+<h3 id="honesty">Honesty</h3>
+<ul>
+<li>[ ] You wrote most of the code (don't claim copy-paste examples)</li>
+<li>[ ] You can explain every line</li>
+<li>[ ] You didn't use AI to avoid thinking (use AI to learn faster, not to skip learning)</li>
+</ul>
+<hr />
+<h2 id="exit-interview-ask-yourself-these-questions">Exit Interview: Ask Yourself These Questions</h2>
+<p>Before moving to Phase 1, sit down and answer these honestly. If you can't:</p>
+<h3 id="python">Python</h3>
+<ul>
+<li>"Why did I use Pydantic instead of dataclasses?"</li>
+<li>"How would I add a validator that ensures embedding length?"</li>
+<li>"Why is <code>asyncio.gather</code> faster than a for loop with await?"</li>
+</ul>
+<h3 id="fastapi_1">FastAPI</h3>
+<ul>
+<li>"What would I do if I got 1000 requests/second?"</li>
+<li>"How does dependency injection make testing easier?"</li>
+<li>"Why shouldn't I use global variables?"</li>
+</ul>
+<h3 id="databases_1">Databases</h3>
+<ul>
+<li>"Why does this query need an index?"</li>
+<li>"What's the difference between pgvector and storing embeddings as JSON?"</li>
+<li>"How would I migrate a million rows to a new schema?"</li>
+</ul>
+<h3 id="operations">Operations</h3>
+<ul>
+<li>"How do I know if a production service is working right now?"</li>
+<li>"What happens if the server runs out of disk space?"</li>
+<li>"How do I update the code without downtime?"</li>
+</ul>
+<p>If you can answer all of these with specifics (not vague), you're ready for Phase 1.</p>
+<hr />
+<h2 id="youre-ready-phase-1-awaits">You're Ready. Phase 1 Awaits.</h2>
+<p>You've built something production-grade. You understand the foundations. Your AI backend is real.</p>
+<p>Celebrate for 1 day.</p>
+<p>Then: Open Phase 1.</p>
+<p>→ <strong><a href="../../phase1/overview/">Phase 1: AI Systems (LLMs, RAG, Fine-tuning) →</a></strong></p>
+<hr />
+<h2 id="before-you-go-phase-1-preview">Before You Go: Phase 1 Preview</h2>
+<p>Phase 1 builds directly on this foundation. You'll:</p>
+<ol>
+<li><strong>Call LLM APIs</strong> (OpenAI, Anthropic, Groq) from your FastAPI service</li>
+<li><strong>Build embeddings pipeline</strong> (chunk documents, embed, store in pgvector)</li>
+<li><strong>Implement RAG</strong> (retrieve relevant chunks, send to LLM for generation)</li>
+<li><strong>Build evaluation framework</strong> (grade your system's outputs)</li>
+<li><strong>Fine-tune models</strong> (LoRA, train on custom data)</li>
+<li><strong>Handle AI-specific failures</strong> (timeouts, API errors, hallucinations)</li>
+</ol>
+<p>All with the foundation you just built.</p>
+<p>See you in Phase 1. You've got this.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.integrate"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>

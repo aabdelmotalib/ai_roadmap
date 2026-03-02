@@ -1,0 +1,2424 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive 6-phase learning roadmap from Python foundations to production ML systems">
+      
+      
+        <meta name="author" content="AI Engineering Community">
+      
+      
+      
+        <link rel="prev" href="../fine-tuning/">
+      
+      
+        <link rel="next" href="../security/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>Evaluation & Benchmarking - AI Full Stack Engineer Roadmap</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#evaluation-benchmarking" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-header__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Full Stack Engineer Roadmap
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Evaluation & Benchmarking
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        
+  
+    
+  
+  Setup Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase0/overview/" class="md-tabs__link">
+          
+  
+  Phase 0 — Foundation Warmup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  Phase 1 — AI Systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase2/overview/" class="md-tabs__link">
+          
+  
+  Phase 2 — Docker & Cloud
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase3/overview/" class="md-tabs__link">
+          
+  
+  Phase 3 — MLOps Tooling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase4/overview/" class="md-tabs__link">
+          
+  
+  Phase 4 — Scaling & Kubernetes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase5/overview/" class="md-tabs__link">
+          
+  
+  Phase 5 — Portfolio & Job Readiness
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../appendix/math-lite/" class="md-tabs__link">
+          
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-nav__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    AI Full Stack Engineer Roadmap
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 0 — Foundation Warmup
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 0 — Foundation Warmup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Mastery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/fastapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI Deep Dive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/databases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Databases (SQL + NoSQL + Redis)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux & Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 0 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 1 — AI Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 1 — AI Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../llm-apis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM APIs & Prompt Engineering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../embeddings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embeddings & Vector Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RAG Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Agents & Tool Use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fine-tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fine-Tuning (LoRA & PEFT)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Evaluation & Benchmarking
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Evaluation & Benchmarking
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    Why This Matters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptual-explanation" class="md-nav__link">
+    Conceptual Explanation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-examples-ragas-framework" class="md-nav__link">
+    Code Examples: RAGAS Framework
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Examples: RAGAS Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-and-setup" class="md-nav__link">
+    Install and Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-evaluation" class="md-nav__link">
+    Basic Evaluation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llm-as-judge" class="md-nav__link">
+    LLM-as-Judge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ab-testing-prompts" class="md-nav__link">
+    A/B Testing Prompts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-comparison" class="md-nav__link">
+    Tools Comparison
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-framework" class="md-nav__link">
+    Decision Framework
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-build-evaluation-pipeline" class="md-nav__link">
+    Step-by-Step: Build Evaluation Pipeline
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step: Build Evaluation Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-collect-golden-dataset" class="md-nav__link">
+    1. Collect Golden Dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-run-your-system" class="md-nav__link">
+    2. Run Your System
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-evaluate" class="md-nav__link">
+    3. Evaluate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-monitor" class="md-nav__link">
+    4. Monitor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-project-eval-dashboard" class="md-nav__link">
+    Practical Project: Eval Dashboard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-checklist-bad-evaluation-scores" class="md-nav__link">
+    Debugging Checklist: Bad Evaluation Scores
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging Checklist: Bad Evaluation Scores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#faithfulness-low-075" class="md-nav__link">
+    Faithfulness Low (&lt; 0.75)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#answer-relevancy-low-080" class="md-nav__link">
+    Answer Relevancy Low (&lt; 0.80)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context-recall-low-070" class="md-nav__link">
+    Context Recall Low (&lt; 0.70)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-mistakes" class="md-nav__link">
+    Common Mistakes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-realism" class="md-nav__link">
+    Production Realism
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cost-performance" class="md-nav__link">
+    Cost &amp; Performance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-anthropic-constitutional-ai" class="md-nav__link">
+    Case Study: Anthropic Constitutional AI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interview-cheat-sheet" class="md-nav__link">
+    Interview Cheat Sheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-review-questions" class="md-nav__link">
+    10 Review Questions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flashcards" class="md-nav__link">
+    Flashcards
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teach-it-back-prompt" class="md-nav__link">
+    Teach-It-Back Prompt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-week-checklist" class="md-nav__link">
+    1-Week Checklist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-page" class="md-nav__link">
+    Next Page
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security & Prompt Injection Defense
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cost-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cost & Performance Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 1 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 2 — Docker & Cloud
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 2 — Docker & Cloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose for AI Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Deployment (EC2 + S3 + ECS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/secrets-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secrets Management & Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 2 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 3 — MLOps Tooling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 3 — MLOps Tooling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/mlflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLflow Experiment Tracking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/dvc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DVC Data Versioning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/wandb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weights & Biases (W&B)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/cicd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI/CD for AI Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 3 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 4 — Scaling & Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 4 — Scaling & Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes Core Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/ai-on-k8s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying AI Services on K8s
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autoscaling & Observability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 4 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 5 — Portfolio & Job Readiness
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 5 — Portfolio & Job Readiness
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Portfolio Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/resume/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resume & LinkedIn Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/system-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI System Design Interviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/mock-interviews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mock Interview Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/salary-negotiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Salary & Negotiation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/math-lite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math-Lite Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/tooling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tooling & Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/study-planner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Study Planner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/project-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Showcase Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/whats-next/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What's Next (Post-Roadmap)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="evaluation-benchmarking">Evaluation &amp; Benchmarking</h1>
+<p>What you don't measure, you can't improve. What you don't evaluate, hallucinating LLM ships to production.</p>
+<hr />
+<h2 id="why-this-matters">Why This Matters</h2>
+<p><strong>Real incident:</strong> Company shipped RAG without RAGAS eval. Chatbot hallucinated on 30% of queries. Customer noticed, left bad review.</p>
+<p><strong>Real incident 2:</strong> Fine-tuned model improved on test set but degraded on production queries. They didn't evaluate against general knowledge.</p>
+<p>Evaluation separates working systems from broken ones.</p>
+<hr />
+<h2 id="conceptual-explanation">Conceptual Explanation</h2>
+<p><strong>Evaluation is grading your AI's homework.</strong></p>
+<p>Without evaluation: "This looks good" (subjective).
+With evaluation: "Faithfulness 0.87, Answer Relevancy 0.92" (measurable).</p>
+<p>Three levels:
+1. <strong>Automated metrics</strong> (RAGAS, BLEU) — quick, cheap, but proxy measures
+2. <strong>LLM-as-judge</strong> (Claude scores your output) — better than metrics, costs money
+3. <strong>Human evaluation</strong> (expert reviews) — gold standard, very expensive</p>
+<hr />
+<h2 id="code-examples-ragas-framework">Code Examples: RAGAS Framework</h2>
+<h3 id="install-and-setup">Install and Setup</h3>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>ragas<span class="w"> </span>datasets
+</code></pre></div>
+<h3 id="basic-evaluation">Basic Evaluation</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ragas</span> <span class="kn">import</span> <span class="n">evaluate</span>
+<span class="kn">from</span> <span class="nn">ragas.metrics</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">faithfulness</span><span class="p">,</span>
+    <span class="n">answer_relevancy</span><span class="p">,</span>
+    <span class="n">context_recall</span><span class="p">,</span>
+    <span class="n">context_precision</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">datasets</span> <span class="kn">import</span> <span class="n">Dataset</span>
+
+<span class="c1"># Your RAG outputs</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;question&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;What&#39;s our return policy?&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;How do I reset my password?&quot;</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;answer&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;30 days from purchase...&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Click forgot password...&quot;</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;contexts&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">[[</span><span class="s2">&quot;30 days from purchase for full refund...&quot;</span><span class="p">]],</span>
+        <span class="p">[[</span><span class="s2">&quot;Go to login, click forgot password...&quot;</span><span class="p">]]</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;ground_truth&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;30 days full refund&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Click forgot password on login&quot;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">Dataset</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># Evaluate</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="n">evaluate</span><span class="p">(</span>
+    <span class="n">dataset</span><span class="p">,</span>
+    <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">faithfulness</span><span class="p">,</span> <span class="n">answer_relevancy</span><span class="p">,</span> <span class="n">context_recall</span><span class="p">,</span> <span class="n">context_precision</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Faithfulness: </span><span class="si">{</span><span class="n">scores</span><span class="p">[</span><span class="s1">&#39;faithfulness&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># 0-1, how grounded is answer?</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Answer Relevancy: </span><span class="si">{</span><span class="n">scores</span><span class="p">[</span><span class="s1">&#39;answer_relevancy&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># 0-1, does it answer?</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Context Recall: </span><span class="si">{</span><span class="n">scores</span><span class="p">[</span><span class="s1">&#39;context_recall&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># 0-1, did we retrieve right docs?</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Context Precision: </span><span class="si">{</span><span class="n">scores</span><span class="p">[</span><span class="s1">&#39;context_precision&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># 0-1, were docs useful?</span>
+</code></pre></div>
+<h3 id="llm-as-judge">LLM-as-Judge</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">openai</span> <span class="kn">import</span> <span class="n">AsyncOpenAI</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">evaluate_with_llm</span><span class="p">(</span>
+    <span class="n">question</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">answer</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">context</span><span class="p">:</span> <span class="nb">str</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Use GPT-4 to grade answer.&quot;&quot;&quot;</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">AsyncOpenAI</span><span class="p">()</span>
+
+    <span class="n">prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;Grade this answer on 1-10:</span>
+<span class="s2">    Q: </span><span class="si">{</span><span class="n">question</span><span class="si">}</span>
+<span class="s2">    Context: </span><span class="si">{</span><span class="n">context</span><span class="si">}</span>
+<span class="s2">    Answer: </span><span class="si">{</span><span class="n">answer</span><span class="si">}</span>
+
+<span class="s2">    Score 10 = perfect, based on context</span>
+<span class="s2">    Score 1 = completely wrong/hallucinated</span>
+
+<span class="s2">    Respond with: SCORE: 8, REASON: answer accurately reflects context&quot;&quot;&quot;</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o&quot;</span><span class="p">,</span>
+        <span class="n">messages</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">prompt</span><span class="p">}]</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Parse response</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="n">reason</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;score&quot;</span><span class="p">:</span> <span class="n">score</span><span class="p">,</span> <span class="s2">&quot;reason&quot;</span><span class="p">:</span> <span class="n">reason</span><span class="p">}</span>
+
+<span class="c1"># Evaluate 100 examples</span>
+<span class="n">test_set</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span>  <span class="c1"># Your Q&amp;A pairs</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">q</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">test_set</span><span class="p">:</span>
+    <span class="n">eval_result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evaluate_with_llm</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+    <span class="n">scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">eval_result</span><span class="p">[</span><span class="s2">&quot;score&quot;</span><span class="p">])</span>
+
+<span class="n">avg_score</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average score: </span><span class="si">{</span><span class="n">avg_score</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">/10&quot;</span><span class="p">)</span>
+<span class="c1"># Alert if &lt; 7</span>
+</code></pre></div>
+<h3 id="ab-testing-prompts">A/B Testing Prompts</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">ab_test_prompts</span><span class="p">(</span><span class="n">test_queries</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Compare two prompts.&quot;&quot;&quot;</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">AsyncOpenAI</span><span class="p">()</span>
+
+    <span class="n">prompt_a</span> <span class="o">=</span> <span class="s2">&quot;You are a helpful assistant. Be concise.&quot;</span>
+    <span class="n">prompt_b</span> <span class="o">=</span> <span class="s2">&quot;You are a helpful assistant. Provide detailed answers with examples.&quot;</span>
+
+    <span class="n">results_a</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">results_b</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">query</span> <span class="ow">in</span> <span class="n">test_queries</span><span class="p">:</span>
+        <span class="c1"># Test prompt A</span>
+        <span class="n">response_a</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+            <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o&quot;</span><span class="p">,</span>
+            <span class="n">system_prompt</span><span class="o">=</span><span class="n">prompt_a</span><span class="p">,</span>
+            <span class="n">messages</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">query</span><span class="p">}]</span>
+        <span class="p">)</span>
+        <span class="n">results_a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">response_a</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+
+        <span class="c1"># Test prompt B</span>
+        <span class="n">response_b</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+            <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o&quot;</span><span class="p">,</span>
+            <span class="n">system_prompt</span><span class="o">=</span><span class="n">prompt_b</span><span class="p">,</span>
+            <span class="n">messages</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">query</span><span class="p">}]</span>
+        <span class="p">)</span>
+        <span class="n">results_b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">response_b</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+
+    <span class="c1"># Evaluate both</span>
+    <span class="n">scores_a</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="k">await</span> <span class="n">evaluate_with_llm</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()[</span><span class="s2">&quot;score&quot;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">q</span><span class="p">,</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">test_queries</span><span class="p">,</span> <span class="n">results_a</span><span class="p">)</span>
+    <span class="p">]</span>
+    <span class="n">scores_b</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="k">await</span> <span class="n">evaluate_with_llm</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()[</span><span class="s2">&quot;score&quot;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">q</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">test_queries</span><span class="p">,</span> <span class="n">results_b</span><span class="p">)</span>
+    <span class="p">]</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">&quot;prompt_a_avg&quot;</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="n">scores_a</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">scores_a</span><span class="p">),</span>
+        <span class="s2">&quot;prompt_b_avg&quot;</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="n">scores_b</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">scores_b</span><span class="p">),</span>
+        <span class="s2">&quot;winner&quot;</span><span class="p">:</span> <span class="s2">&quot;A&quot;</span> <span class="k">if</span> <span class="nb">sum</span><span class="p">(</span><span class="n">scores_a</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">sum</span><span class="p">(</span><span class="n">scores_b</span><span class="p">)</span> <span class="k">else</span> <span class="s2">&quot;B&quot;</span>
+    <span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="tools-comparison">Tools Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Cost</th>
+<th>Speed</th>
+<th>Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RAGAS</strong></td>
+<td>$0</td>
+<td>fast</td>
+<td>Medium (proxy metrics)</td>
+</tr>
+<tr>
+<td><strong>LLM-as-Judge</strong></td>
+<td>$0.01-0.10/eval</td>
+<td>medium</td>
+<td>High</td>
+</tr>
+<tr>
+<td><strong>Human</strong></td>
+<td>$10-100/eval</td>
+<td>slow</td>
+<td>Gold standard</td>
+</tr>
+<tr>
+<td><strong>Custom Model</strong></td>
+<td>varies</td>
+<td>fast</td>
+<td>Domain-specific</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="decision-framework">Decision Framework</h2>
+<div class="highlight"><pre><span></span><code>Evaluating RAG or generation?
+  ├─ RAG: Use RAGAS (faithfulness, context recall)
+  └─ Generation: Use LLM-as-judge (custom rubric)
+
+100+ examples or &lt;100?
+  ├─ 100+: Start with RAGAS, supplement with LLM-judge
+  └─ &lt;100: LLM-judge only (RAGAS needs data to be reliable)
+
+Budget?
+  ├─ &lt;$1: RAGAS free
+  ├─ $10: LLM-judge 10 evals
+  └─ &gt;$100: Human eval
+</code></pre></div>
+<hr />
+<h2 id="step-by-step-build-evaluation-pipeline">Step-by-Step: Build Evaluation Pipeline</h2>
+<h3 id="1-collect-golden-dataset">1. Collect Golden Dataset</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create 50 gold-standard Q&amp;A pairs</span>
+<span class="n">golden_data</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;question&quot;</span><span class="p">:</span> <span class="s2">&quot;What&#39;s return policy?&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;answer&quot;</span><span class="p">:</span> <span class="s2">&quot;30 days&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expected_sources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;policy.pdf&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;rating&quot;</span><span class="p">:</span> <span class="s2">&quot;excellent&quot;</span>
+    <span class="p">},</span>
+    <span class="c1"># ... 49 more</span>
+<span class="p">]</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;golden_test_set.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">golden_data</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="2-run-your-system">2. Run Your System</h3>
+<div class="highlight"><pre><span></span><code><span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">golden_data</span><span class="p">:</span>
+    <span class="c1"># Call your RAG system</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">rag_pipeline</span><span class="o">.</span><span class="n">ask</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s2">&quot;question&quot;</span><span class="p">])</span>
+    <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+        <span class="s2">&quot;question&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;question&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;predicted_answer&quot;</span><span class="p">:</span> <span class="n">response</span><span class="p">[</span><span class="s2">&quot;answer&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;expected_answer&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;answer&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;sources_used&quot;</span><span class="p">:</span> <span class="n">response</span><span class="p">[</span><span class="s2">&quot;sources&quot;</span><span class="p">]</span>
+    <span class="p">})</span>
+</code></pre></div>
+<h3 id="3-evaluate">3. Evaluate</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># RAGAS</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">Dataset</span><span class="o">.</span><span class="n">from_dict</span><span class="p">({</span>
+    <span class="s2">&quot;question&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;question&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">results</span><span class="p">],</span>
+    <span class="s2">&quot;answer&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;predicted_answer&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">results</span><span class="p">],</span>
+    <span class="s2">&quot;ground_truth&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;expected_answer&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">results</span><span class="p">],</span>
+    <span class="s2">&quot;contexts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;sources_used&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">results</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">scores</span> <span class="o">=</span> <span class="n">evaluate</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">scores</span><span class="p">[</span><span class="s2">&quot;faithfulness&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.80</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Alert: RAG is hallucinating&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="4-monitor">4. Monitor</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Log metrics over time</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="n">metrics</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(),</span>
+    <span class="s2">&quot;faithfulness&quot;</span><span class="p">:</span> <span class="n">scores</span><span class="p">[</span><span class="s2">&quot;faithfulness&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;answer_relevancy&quot;</span><span class="p">:</span> <span class="n">scores</span><span class="p">[</span><span class="s2">&quot;answer_relevancy&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;num_examples&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;eval_history.jsonl&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">metrics</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Alert if metric drops</span>
+<span class="n">prev_faithfulness</span> <span class="o">=</span> <span class="mf">0.85</span>
+<span class="k">if</span> <span class="n">scores</span><span class="p">[</span><span class="s2">&quot;faithfulness&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">prev_faithfulness</span> <span class="o">-</span> <span class="mf">0.05</span><span class="p">:</span>
+    <span class="n">send_alert</span><span class="p">(</span><span class="s2">&quot;RAG quality dropped!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="practical-project-eval-dashboard">Practical Project: Eval Dashboard</h2>
+<p><strong>Build:</strong> Dashboard showing RAGAS scores over time.</p>
+<p><strong>Metrics:</strong>
+- Faithfulness (is answer grounded?)
+- Answer Relevancy (does it answer question?)
+- Context Recall (did we retrieve right docs?)
+- Context Precision (were retrieved docs useful?)</p>
+<p><strong>Alert:</strong> If any metric drops 5% in last week, alert team.</p>
+<hr />
+<h2 id="debugging-checklist-bad-evaluation-scores">Debugging Checklist: Bad Evaluation Scores</h2>
+<h3 id="faithfulness-low-075">Faithfulness Low (&lt; 0.75)</h3>
+<ul>
+<li>Retrieval is weak (wrong docs) → improve chunking/retrieval</li>
+<li>LLM is hallucinating → add "refuse if not in context" to system prompt</li>
+<li>Context is confusing → improve doc preprocessing</li>
+</ul>
+<h3 id="answer-relevancy-low-080">Answer Relevancy Low (&lt; 0.80)</h3>
+<ul>
+<li>Query and answer mismatch → better prompt engineering</li>
+<li>LLM not understanding question → try clearer phrasing</li>
+<li>Model is too weak → upgrade to GPT-4o from 3.5</li>
+</ul>
+<h3 id="context-recall-low-070">Context Recall Low (&lt; 0.70)</h3>
+<ul>
+<li>Retrieval is missing relevant docs → rerank, improve embedding model</li>
+<li>Documents aren't in database → re-index</li>
+<li>Query is poorly matched to docs → query expansion</li>
+</ul>
+<hr />
+<h2 id="common-mistakes">Common Mistakes</h2>
+<div class="admonition danger">
+<p class="admonition-title">Mistake 1: No Evaluation, Just Vibes</p>
+</div>
+<p>You think system is good. It's not, you just didn't test enough cases.</p>
+<p><strong>Don't:</strong> Deploy without metrics.
+<strong>Do:</strong> RAGAS on 50+ examples before deploy.</p>
+<div class="admonition danger">
+<p class="admonition-title">Mistake 2: Evaluating on Training Data</p>
+</div>
+<p>You evaluate on same queries you optimized for. Overfitting.</p>
+<p><strong>Don't:</strong> Test on train set.
+<strong>Do:</strong> Hold out separate test set.</p>
+<div class="admonition danger">
+<p class="admonition-title">Mistake 3: Metric Doesn't Matter</p>
+</div>
+<p>You're optimizing for wrong metric. Faithfulness is 0.95 but answer is useless.</p>
+<p><strong>Don't:</strong> Trust single metric.
+<strong>Do:</strong> Evaluate multiple angles (faithfulness, relevancy, latency).</p>
+<p>!!! danger "Mistake 4: Evaluator LLM Is Weak**</p>
+<p>You use GPT-3.5 to judge. It's lenient. Misleading scores.</p>
+<p><strong>Don't:</strong> Use cheap models for eval.
+<strong>Do:</strong> Use GPT-4o with detailed rubric.</p>
+<p>!!! danger "Mistake 5: No Baseline**</p>
+<p>You don't know if fine-tuned model helped. No before/after comparison.</p>
+<p><strong>Don't:</strong> Skip baseline evaluation.
+<strong>Do:</strong> Eval base + fine-tuned side-by-side.</p>
+<hr />
+<h2 id="production-realism">Production Realism</h2>
+<p><strong>Tutorial:</strong> RAGAS score of 0.85, ship it.</p>
+<p><strong>Production:</strong>
+- Baseline evaluation (base model score)
+- A/B testing new version vs baseline
+- Statistical significance testing (maybe just lucky)
+- Continuous monitoring (scores over time)
+- Alert thresholds
+- Rollback plan if it degrades</p>
+<hr />
+<h2 id="cost-performance">Cost &amp; Performance</h2>
+<p><strong>Evaluating 100 examples:</strong>
+- RAGAS: $0 (free)
+- LLM-as-judge (GPT-4o): $0.50-1.00
+- Human eval (contractor): $500-1000</p>
+<p><strong>Continuous eval in production:</strong>
+- Sample 10 queries/day
+- LLM-judge scores: $0.05/day = $18/year
+- Alert if faithfulness drops</p>
+<hr />
+<h2 id="case-study-anthropic-constitutional-ai">Case Study: Anthropic Constitutional AI</h2>
+<p><strong>Problem:</strong> Fine-tune Claude to be helpful, harmless, honest.</p>
+<p><strong>Solution:</strong> Evaluate on 1000+ dimensions using LLM-as-judge.</p>
+<p><strong>Result:</strong> More aligned AI, measurable improvements.</p>
+<hr />
+<h2 id="interview-cheat-sheet">Interview Cheat Sheet</h2>
+<p><strong>Concept 1: RAGAS</strong>
+<em>Q: What's RAGAS?</em>
+<em>A: Framework for evaluating RAG systems. Measures faithfulness (grounded in context), answer relevancy, context recall, context precision.</em></p>
+<p><strong>Concept 2: Faithfulness</strong>
+<em>Q: High faithfulness means?</em>
+<em>A: Answer is grounded in retrieved context. Didn't hallucinate.</em></p>
+<p><strong>Concept 3: LLM-as-Judge</strong>
+<em>Q: Can LLM evaluate AI?</em>
+<em>A: Yes, surprisingly well. Give detailed rubric, LLM grades. Beats simple metrics.</em></p>
+<p><strong>Concept 4: A/B Testing</strong>
+<em>Q: Why A/B test?</em>
+<em>A: New prompt/model might just be lucky. A/B on 50+ queries shows if really better.</em></p>
+<p><strong>Concept 5: Monitoring</strong>
+<em>Q: When evaluate?</em>
+<em>A: Before deploy (one-time). In production (continuous, alerting).</em></p>
+<hr />
+<h2 id="10-review-questions">10 Review Questions</h2>
+<ol>
+<li>RAGAS has 4 metrics. Which one measures if answer came from context?</li>
+<li>Faithfulness 0.92, Answer Relevancy 0.60. Who's the problem?</li>
+<li>You evaluate on training queries. What bias?</li>
+<li>LLM-as-judge: why detailed rubric matters?</li>
+<li>A/B test 10 examples. Margin 51% vs 49%. Conclusion?</li>
+<li>Metric dropped from 0.85 to 0.80. Alert?</li>
+<li>Evaluate base model, score 0.70. Fine-tune, score 0.68. Conclusion?</li>
+<li>Golden test set: how many examples?</li>
+<li>Continuous eval in production: frequency?</li>
+<li>No eval before deploy. Risk?</li>
+</ol>
+<hr />
+<h2 id="flashcards">Flashcards</h2>
+<p><strong>Card 1: RAGAS</strong>
+<em>Q: Framework for?</em>
+<em>A: RAG system evaluation (faithfulness, relevancy, recall, precision).</em></p>
+<p><strong>Card 2: Faithfulness</strong>
+<em>Q: Definition?</em>
+<em>A: Is answer grounded in context? Or hallucinated?</em></p>
+<p><strong>Card 3: LLM Judge</strong>
+<em>Q: How grade?</em>
+<em>A: Give rubric to GPT-4, it scores 1-10, explains.</em></p>
+<p><strong>Card 4: Golden Set</strong>
+<em>Q: Size?</em>
+<em>A: 50-200 examples of perfect Q&amp;A.</em></p>
+<p><strong>Card 5: Baseline</strong>
+<em>Q: Why compare to baseline?</em>
+<em>A: Know if improvement is real or lucky.</em></p>
+<p><strong>Card 6: Alert</strong>
+<em>Q: When alert on metric drop?</em>
+<em>A: Usually 5% drop triggers investigation.</em></p>
+<p><strong>Card 7: A/B Testing</strong>
+<em>Q: Min sample size?</em>
+<em>A: 30-50 examples for statistical confidence.</em></p>
+<p><strong>Card 8: Continuous Eval</strong>
+<em>Q: Frequency?</em>
+<em>A: Sample 10 queries/day, track metrics.</em></p>
+<p><strong>Card 9: Cost</strong>
+<em>Q: Evaluate 1000 examples with LLM-judge?</em>
+<em>A: $10-20 (depends on model).</em></p>
+<p><strong>Card 10: Rollback</strong>
+<em>Q: New version is worse. Action?</em>
+<em>A: Rollback immediately, investigate offline.</em></p>
+<hr />
+<h2 id="teach-it-back-prompt">Teach-It-Back Prompt</h2>
+<p><strong>Explain evaluation to a non-technical stakeholder:</strong></p>
+<p>"We built an AI support bot. It seems good, but is it really? How do we measure?"</p>
+<p><strong>Model Answer:</strong></p>
+<p>"We pick 50 real customer questions. For each, we: (1) run our bot, get answer, (2) grade it 1-10 (does it answer correctly, is it grounded, not making stuff up?), (3) average scores.</p>
+<p>If average = 8/10, we're good. If 5/10, something's broken.</p>
+<p>We also compare: old bot gets 6/10, new bot gets 8/10. So new is better.</p>
+<p>And we keep measuring: every week, sample 10 questions, grade them. If scores suddenly drop, we know something broke and can fix it immediately."</p>
+<hr />
+<h2 id="1-week-checklist">1-Week Checklist</h2>
+<ul>
+<li>[ ] Built golden test set (50+ examples)</li>
+<li>[ ] Installed RAGAS</li>
+<li>[ ] Evaluated RAG system (measured faithfulness, relevancy)</li>
+<li>[ ] Scores acceptable (&gt; 0.80)?</li>
+<li>[ ] Created LLM-as-judge routine</li>
+<li>[ ] Compared base vs fine-tuned on same test set</li>
+<li>[ ] Created monitoring script (tracks scores over time)</li>
+<li>[ ] A/B tested two prompts</li>
+<li>[ ] Winner is statistically significant?</li>
+<li>[ ] Set up alert for metric drop</li>
+<li>[ ] Documented metrics and thresholds</li>
+<li>[ ] Explained scores to team</li>
+</ul>
+<hr />
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://github.com/explodinggradients/ragas">RAGAS Documentation</a></li>
+<li><a href="https://www.youtube.com/watch?v=r0dGLvs_ycs">Evaluating LLMs</a></li>
+<li><a href="https://github.com/microsoft/promptflow-evals">LLM Eval Metrics</a></li>
+</ul>
+<hr />
+<h2 id="next-page">Next Page</h2>
+<p>You can measure AI quality now.</p>
+<p>Next: security. Keep it safe.</p>
+<p>→ <strong><a href="../security/">AI Security &amp; Defense →</a></strong></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.integrate"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>

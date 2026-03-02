@@ -1,0 +1,2415 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive 6-phase learning roadmap from Python foundations to production ML systems">
+      
+      
+        <meta name="author" content="AI Engineering Community">
+      
+      
+      
+        <link rel="prev" href="../salary-negotiation/">
+      
+      
+        <link rel="next" href="../../appendix/math-lite/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>Final Milestone - AI Full Stack Engineer Roadmap</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#phase-5-milestone-land-the-job" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-header__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Full Stack Engineer Roadmap
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Final Milestone
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        
+  
+    
+  
+  Setup Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase0/overview/" class="md-tabs__link">
+          
+  
+  Phase 0 — Foundation Warmup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase1/overview/" class="md-tabs__link">
+          
+  
+  Phase 1 — AI Systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase2/overview/" class="md-tabs__link">
+          
+  
+  Phase 2 — Docker & Cloud
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase3/overview/" class="md-tabs__link">
+          
+  
+  Phase 3 — MLOps Tooling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase4/overview/" class="md-tabs__link">
+          
+  
+  Phase 4 — Scaling & Kubernetes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  Phase 5 — Portfolio & Job Readiness
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../appendix/math-lite/" class="md-tabs__link">
+          
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-nav__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    AI Full Stack Engineer Roadmap
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 0 — Foundation Warmup
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 0 — Foundation Warmup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Mastery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/fastapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI Deep Dive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/databases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Databases (SQL + NoSQL + Redis)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux & Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 0 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 1 — AI Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 1 — AI Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/llm-apis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM APIs & Prompt Engineering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/embeddings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embeddings & Vector Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/rag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RAG Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Agents & Tool Use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/fine-tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fine-Tuning (LoRA & PEFT)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluation & Benchmarking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security & Prompt Injection Defense
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/cost-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cost & Performance Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 1 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 2 — Docker & Cloud
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 2 — Docker & Cloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose for AI Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Deployment (EC2 + S3 + ECS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/secrets-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secrets Management & Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 2 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 3 — MLOps Tooling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 3 — MLOps Tooling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/mlflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLflow Experiment Tracking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/dvc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DVC Data Versioning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/wandb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weights & Biases (W&B)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/cicd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI/CD for AI Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 3 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 4 — Scaling & Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 4 — Scaling & Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes Core Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/ai-on-k8s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying AI Services on K8s
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autoscaling & Observability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 4 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 5 — Portfolio & Job Readiness
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 5 — Portfolio & Job Readiness
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Portfolio Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resume/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resume & LinkedIn Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI System Design Interviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mock-interviews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mock Interview Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../salary-negotiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Salary & Negotiation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Final Milestone
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Final Milestone
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#final-readiness-checklist-30-items" class="md-nav__link">
+    Final Readiness Checklist (30+ Items)
+  </a>
+  
+    <nav class="md-nav" aria-label="Final Readiness Checklist (30+ Items)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-portfolio-30" class="md-nav__link">
+    GitHub Portfolio (30%)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resume-linkedin-25" class="md-nav__link">
+    Resume &amp; LinkedIn (25%)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interview-preparation-25" class="md-nav__link">
+    Interview Preparation (25%)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#job-search-strategy-20" class="md-nav__link">
+    Job Search Strategy (20%)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capstone-the-portfolio-audit" class="md-nav__link">
+    Capstone: The Portfolio Audit
+  </a>
+  
+    <nav class="md-nav" aria-label="Capstone: The Portfolio Audit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-quality-scorecard" class="md-nav__link">
+    Project Quality Scorecard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-project-checks-week-before-job-search" class="md-nav__link">
+    Final Project Checks (Week Before Job Search)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-assessment-job-ready-levels" class="md-nav__link">
+    Self-Assessment: Job-Ready Levels
+  </a>
+  
+    <nav class="md-nav" aria-label="Self-Assessment: Job-Ready Levels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beginner-not-ready-yet-need-1-2-more-weeks" class="md-nav__link">
+    Beginner (Not Ready Yet — Need 1-2 More Weeks)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#competent-ready-for-job-market-go-for-it" class="md-nav__link">
+    Competent (Ready for Job Market — Go for It)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hire-ready-stand-out-expect-multiple-offers" class="md-nav__link">
+    Hire-Ready (Stand Out — Expect Multiple Offers)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-job-search-process" class="md-nav__link">
+    The Job Search Process
+  </a>
+  
+    <nav class="md-nav" aria-label="The Job Search Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#week-1-final-prep" class="md-nav__link">
+    Week 1: Final Prep
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-2-apply" class="md-nav__link">
+    Week 2: Apply
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-3-interviews-start" class="md-nav__link">
+    Week 3: Interviews Start
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-4-offers-arrive" class="md-nav__link">
+    Week 4: Offers Arrive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-5-6-decision-negotiation" class="md-nav__link">
+    Week 5-6: Decision &amp; Negotiation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-not-ready-for-job-market-looks-like" class="md-nav__link">
+    What Not-Ready-For-Job-Market Looks Like
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#job-search-red-flags" class="md-nav__link">
+    Job Search Red Flags
+  </a>
+  
+    <nav class="md-nav" aria-label="Job Search Red Flags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#company-red-flags-skip-these" class="md-nav__link">
+    Company Red Flags (Skip These)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interview-red-flags" class="md-nav__link">
+    Interview Red Flags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expected-outcomes" class="md-nav__link">
+    Expected Outcomes
+  </a>
+  
+    <nav class="md-nav" aria-label="Expected Outcomes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timeline-realistic" class="md-nav__link">
+    Timeline (Realistic)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callback-rates-our-experience" class="md-nav__link">
+    Callback Rates (Our Experience)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-job-in-ai-role-whats-normal" class="md-nav__link">
+    First Job in AI Role: What's Normal
+  </a>
+  
+    <nav class="md-nav" aria-label="First Job in AI Role: What's Normal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#month-1-onboarding" class="md-nav__link">
+    Month 1: Onboarding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#month-3-ramping" class="md-nav__link">
+    Month 3: Ramping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#month-6-contributing" class="md-nav__link">
+    Month 6: Contributing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#month-12-strategic" class="md-nav__link">
+    Month 12: Strategic
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bridge-after-this-roadmap" class="md-nav__link">
+    Bridge: After This Roadmap
+  </a>
+  
+    <nav class="md-nav" aria-label="Bridge: After This Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-comes-after-phase-5" class="md-nav__link">
+    What Comes After Phase 5
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-last-thing" class="md-nav__link">
+    One Last Thing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-checklist-before-first-day" class="md-nav__link">
+    Final Checklist Before First Day
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#congratulations" class="md-nav__link">
+    Congratulations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/math-lite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math-Lite Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/tooling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tooling & Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/study-planner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Study Planner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/project-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Showcase Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/whats-next/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What's Next (Post-Roadmap)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="phase-5-milestone-land-the-job">Phase 5 Milestone: Land the Job</h1>
+<p>You've learned everything. Now close the deal.</p>
+<p>This milestone validates you're <strong>ready to interview, negotiate, and accept the right role.</strong></p>
+<hr />
+<h2 id="final-readiness-checklist-30-items">Final Readiness Checklist (30+ Items)</h2>
+<h3 id="github-portfolio-30">GitHub Portfolio (30%)</h3>
+<ul>
+<li>[ ] 3-4 pinned projects on GitHub (polished)</li>
+<li>[ ] Each project has complete README (architecture, metrics, setup)</li>
+<li>[ ] Each project has Loom demo video (2 minutes or less)</li>
+<li>[ ] Code has meaningful commit history (conventionalcommits)</li>
+<li>[ ] CI/CD working (test badge, coverage badge)</li>
+<li>[ ] All projects README link to other projects</li>
+<li>[ ] Profile README complete and updated</li>
+<li>[ ] No incomplete or outdated projects visible</li>
+<li>[ ] Code is professional (no debug prints, no TODOs)</li>
+<li>[ ] All projects have working, tested code</li>
+</ul>
+<h3 id="resume-linkedin-25">Resume &amp; LinkedIn (25%)</h3>
+<ul>
+<li>[ ] Resume one page, ATS-friendly (no fancy formatting)</li>
+<li>[ ] Skills section ordered by hirability (Python → ML → Cloud)</li>
+<li>[ ] Experience using CAR format (Challenge → Action → Result)</li>
+<li>[ ] Projects section highlights your 3 best builds</li>
+<li>[ ] All numbers quantified (not "improved", but "40% improvement")</li>
+<li>[ ] LinkedIn profile 100% complete</li>
+<li>[ ] LinkedIn headline has skills + differentiator + role</li>
+<li>[ ] LinkedIn about section: who you are + what you build + what's next</li>
+<li>[ ] Connection requests to 50+ AI engineers/recruiters</li>
+<li>[ ] Cover letter template ready (customize per company)</li>
+</ul>
+<h3 id="interview-preparation-25">Interview Preparation (25%)</h3>
+<ul>
+<li>[ ] Can explain 20+ conceptual questions (RAG, fine-tuning, etc.)</li>
+<li>[ ] Can design 4+ AI systems end-to-end (architecture + latency + costs)</li>
+<li>[ ] Can code 10+ AI-specific challenges (similarity, caching, retrieval)</li>
+<li>[ ] Done 5+ mock interviews (with peers or Pramp)</li>
+<li>[ ] Can answer 5 behavioral questions with STAR format</li>
+<li>[ ] Prepared 10 questions to ask interviewers</li>
+<li>[ ] Know your market rate ±$10K</li>
+<li>[ ] Know your non-negotiables (remote? equity? team size?)</li>
+<li>[ ] Can discuss your projects in depth (know every decision)</li>
+</ul>
+<h3 id="job-search-strategy-20">Job Search Strategy (20%)</h3>
+<ul>
+<li>[ ] Target list of 20+ companies (dream list + realistic list)</li>
+<li>[ ] Have 2-3 personal connections at target companies (referrals &gt; cold)</li>
+<li>[ ] Application tracker (Google Sheet with status)</li>
+<li>[ ] Plan to send 50-100 applications in 2 weeks</li>
+<li>[ ] Customize cover letter for each application (not template)</li>
+<li>[ ] Active in AI community (Twitter/Discord, visible to recruiters)</li>
+<li>[ ] Network with 10+ recruiters (they have pipelines)</li>
+<li>[ ] Know your timezone negotiation (remote work location impact)</li>
+</ul>
+<hr />
+<h2 id="capstone-the-portfolio-audit">Capstone: The Portfolio Audit</h2>
+<p><strong>Objective:</strong> Ensure every project is portfolio-ready and interconnected.</p>
+<h3 id="project-quality-scorecard">Project Quality Scorecard</h3>
+<p>For each of your 8 projects, score 0-10:</p>
+<table>
+<thead>
+<tr>
+<th>Project</th>
+<th>README Completeness</th>
+<th>Code Quality</th>
+<th>Demo</th>
+<th>Metrics</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RAG System</td>
+<td>9</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>9.0</td>
+</tr>
+<tr>
+<td>Fine-tuning</td>
+<td>8</td>
+<td>9</td>
+<td>8</td>
+<td>9</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>FastAPI</td>
+<td>7</td>
+<td>9</td>
+<td>7</td>
+<td>8</td>
+<td>7.75</td>
+</tr>
+<tr>
+<td>Deployment</td>
+<td>8</td>
+<td>8</td>
+<td>8</td>
+<td>9</td>
+<td>8.25</td>
+</tr>
+<tr>
+<td>MLOps</td>
+<td>6</td>
+<td>7</td>
+<td>5</td>
+<td>7</td>
+<td>6.25</td>
+</tr>
+<tr>
+<td>K8s</td>
+<td>7</td>
+<td>8</td>
+<td>6</td>
+<td>8</td>
+<td>7.25</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>Avg:</strong></td>
+<td><strong>7.86</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Target:</strong> Each project &gt;8.0. If &lt;7.0, needs more work.</p>
+<h3 id="final-project-checks-week-before-job-search">Final Project Checks (Week Before Job Search)</h3>
+<p><strong>For each project:</strong>
+- [ ] Clone repo fresh, follow setup instructions (do they work?)
+- [ ] Run tests (do they pass?)
+- [ ] Check last commit date (recent? or stale?)
+- [ ] Count commits (50+ is good, shows iteration)
+- [ ] View issues/PRs (outstanding issues would be red flag)
+- [ ] Count stars (good projects have 20-50+)
+- [ ] Have you gotten feedback? (mention in interview)</p>
+<p><strong>For portfolio overall:</strong>
+- [ ] Can you explain each project's purpose in &lt;30 seconds?
+- [ ] Can you go deep into any project for 10 minutes?
+- [ ] Can you discuss tradeoffs you made?
+- [ ] Can you show before/after of time/cost/quality?</p>
+<hr />
+<h2 id="self-assessment-job-ready-levels">Self-Assessment: Job-Ready Levels</h2>
+<h3 id="beginner-not-ready-yet-need-1-2-more-weeks">Beginner (Not Ready Yet — Need 1-2 More Weeks)</h3>
+<p><strong>Indicators:</strong>
+- Portfolio incomplete (projects without complete READMEs)
+- No demo videos
+- Resume still generic
+- Mock interviews score &lt;50%
+- Can't confidently answer 80% of conceptual questions</p>
+<p><strong>Example:</strong> "I have projects but the READMEs are minimal and I haven't recorded demos. I get nervous in interviews."</p>
+<p><strong>Action:</strong> Spend 2 more weeks polishing. Don't start job search yet; you'll waste time on rejections.</p>
+<h3 id="competent-ready-for-job-market-go-for-it">Competent (Ready for Job Market — Go for It)</h3>
+<p><strong>Indicators:</strong>
+- 3-4 strong projects on GitHub
+- Complete READMEs with metrics
+- Loom demos visible
+- Resume tailored to AI roles
+- Mock interview score 70%+
+- Can answer most conceptual questions
+- Know your target companies</p>
+<p><strong>Example:</strong> "Portfolio is strong, resume highlights my best work with metrics.  I'm prepared for interviews and know what I'm looking for. Ready to apply."</p>
+<p><strong>Action:</strong> Start applying. Target 50-100 applications. Expect 5-10% callback rate.</p>
+<h3 id="hire-ready-stand-out-expect-multiple-offers">Hire-Ready (Stand Out — Expect Multiple Offers)</h3>
+<p><strong>Indicators:</strong>
+- Portfolio exceptional (projects have 50+ stars, shipped to production)
+- Metrics impressive (RAGAS scores, latency numbers, cost optimization)
+- Mock interview score 80%+
+- Can handle all behavioral questions smoothly
+- Active in AI community (Twitter, Discord, visible)
+- Have warm connections at target companies
+- Know market extremely well, negotiate confidently</p>
+<p><strong>Example:</strong> "Portfolio is production-grade — systems I built hold real users and metrics. I have referrals at 3 dream companies. Done system design interviews. Confident I'll get offers from tier-1 companies."</p>
+<p><strong>Action:</strong> Apply strategically. You can afford to be picky. Aim for best team/equity, not highest salary.</p>
+<hr />
+<h2 id="the-job-search-process">The Job Search Process</h2>
+<h3 id="week-1-final-prep">Week 1: Final Prep</h3>
+<div class="highlight"><pre><span></span><code>Mon: Polish README for 2-3 key projects
+Tue: Record Loom demos
+Wed: Resume final edit, LinkedIn push
+Thu: Mock interview (identify weak areas)
+Fri: Update target company list
+</code></pre></div>
+<p><strong>By Friday:</strong> Fully ready to apply.</p>
+<h3 id="week-2-apply">Week 2: Apply</h3>
+<div class="highlight"><pre><span></span><code>Mon-Wed: Send 10-15 applications/day
+(Customize cover letter for each!)
+
+Thu-Fri: Follow up with warm connections
+(LinkedIn message: &quot;Just applied, thought you should know!&quot;)
+</code></pre></div>
+<p><strong>Target: 50-100 applications by Friday.</strong></p>
+<h3 id="week-3-interviews-start">Week 3: Interviews Start</h3>
+<div class="highlight"><pre><span></span><code>Expect: Callbacks from first 20-30 applications
+First calls: Recruiter screen (30 min) → schedule deeper interviews
+Pace: 2-3 interviews per day on average
+</code></pre></div>
+<h3 id="week-4-offers-arrive">Week 4: Offers Arrive</h3>
+<div class="highlight"><pre><span></span><code>Company A: Offer received (counter-offer template ready)
+Company B: Final interviews scheduled
+Company C: Rejected (OK, move on)
+
+Typical: 20% callback → 30% pass phone screen → 40% pass final → 50% offer
+
+So 100 apps → 20 phone screens → 6 pass → 3 offers → pick best
+</code></pre></div>
+<h3 id="week-5-6-decision-negotiation">Week 5-6: Decision &amp; Negotiation</h3>
+<div class="highlight"><pre><span></span><code>You likely have 2-3 offers
+Negotiate each (use template from Phase 5)
+Choose best fit (not just salary)
+Give notice at current job
+</code></pre></div>
+<hr />
+<h2 id="what-not-ready-for-job-market-looks-like">What Not-Ready-For-Job-Market Looks Like</h2>
+<p>❌ <strong>Portfolio is incomplete</strong>
+- "I have the projects but README is just code"
+- "Demo video would take time, I'll skip"
+- Fix: Spend 1 week on READMEs and demos. Non-negotiable.</p>
+<p>❌ <strong>Resume is generic</strong>
+- "I know machine learning and Python"
+- Should be: "Deployed RAG system with 0.87 RAGAS faithfulness, 45ms latency, scaled to 1000 QPS"
+- Fix: Rewrite each bullet with specific metrics.</p>
+<p>❌ <strong>Can't discuss your own projects in detail</strong>
+- "I built RAG but don't remember the chunking strategy"
+- Fix: Go back to your code. Own it. Understand every decision.</p>
+<p>❌ <strong>No way to reach you</strong>
+- Email hard to find, LinkedIn incomplete, GitHub profile bare
+- Fix: Make it easy. Bio links, consistent username everywhere.</p>
+<hr />
+<h2 id="job-search-red-flags">Job Search Red Flags</h2>
+<h3 id="company-red-flags-skip-these">Company Red Flags (Skip These)</h3>
+<ul>
+<li>Posting for "AI engineer" but vague requirements (don't know what they want)</li>
+<li>Salary posted as "competitive" (not a number = pay less)</li>
+<li>No mention of team size or tech stack (chaotic org)</li>
+<li>"Move fast and break things" culture (burnout city)</li>
+<li>VCs, not product (research jobs, not production)</li>
+<li>Required on-site for "company culture" (inflexible, probably bad)</li>
+</ul>
+<h3 id="interview-red-flags">Interview Red Flags</h3>
+<ul>
+<li>No portfolio discussion (they don't care about your work)</li>
+<li>All questions from LeetCode (no system design = junior company)</li>
+<li>Asked personal questions (age, marital status, etc. = illegal + immature)</li>
+<li>Vague about the actual role (bait and switch)</li>
+<li>No technical depth from interviewers (they can't evaluate you fairly)</li>
+</ul>
+<hr />
+<h2 id="expected-outcomes">Expected Outcomes</h2>
+<h3 id="timeline-realistic">Timeline (Realistic)</h3>
+<div class="highlight"><pre><span></span><code>Day 1: Decide to start job search
+Days 1-3: Final portfolio prep
+Days 4-11: 100 applications sent
+Days 12-17: First callbacks
+Days 18-31: Interview loop (sometimes multiple)
+Days 32-38: Offer negotiations
+Days 39-45: Accepted role, give notice
+Days 46-60: Transition period
+Day 60+: First day at new job
+</code></pre></div>
+<p><strong>Total: 2-3 months for full cycle.</strong></p>
+<h3 id="callback-rates-our-experience">Callback Rates (Our Experience)</h3>
+<div class="highlight"><pre><span></span><code>100 cold applications → 5-10 callbacks (5-10%)
+With referrals: 50 applications → 10-15 callbacks (20-30%)
+
+Callbacks that pass phone screen: 30-40%
+Phone screens that pass final loop: 40-50%
+Final loops that extend offers: 50-70%
+
+So 100 cold apps → 5 callbacks → 2 phone passes → 1 final → 0.5 offers
+With 50 referrals → 15 callbacks → 6 phone passes → 3 finals → 2 offers
+</code></pre></div>
+<p><strong>Key:</strong> Referrals are 4x better than cold applications.</p>
+<hr />
+<h2 id="first-job-in-ai-role-whats-normal">First Job in AI Role: What's Normal</h2>
+<h3 id="month-1-onboarding">Month 1: Onboarding</h3>
+<ul>
+<li>Meet team, understand codebase</li>
+<li>You'll feel dumb ("How does this work?") ← normal</li>
+<li>Pair with senior engineer</li>
+<li>First project: small, self-contained</li>
+</ul>
+<h3 id="month-3-ramping">Month 3: Ramping</h3>
+<ul>
+<li>Completing projects without help</li>
+<li>Understanding team dynamics</li>
+<li>Building relationships</li>
+<li>Prove yourself reliable</li>
+</ul>
+<h3 id="month-6-contributing">Month 6: Contributing</h3>
+<ul>
+<li>Leading small projects</li>
+<li>Mentoring others (even if just 1 person)</li>
+<li>Opinions are respected</li>
+<li>Consider asking for raise (often not automatic)</li>
+</ul>
+<h3 id="month-12-strategic">Month 12: Strategic</h3>
+<ul>
+<li>Clear growth path in your mind</li>
+<li>Company's evaluation of you is clear (good/bad/neutral)</li>
+<li>Decide: stay and push for promotion, or job search?</li>
+</ul>
+<hr />
+<h2 id="bridge-after-this-roadmap">Bridge: After This Roadmap</h2>
+<p><strong>You are now a capable AI engineer.</strong> You understand:</p>
+<p>✅ <strong>AI systems:</strong> Building (Phases 1), deploying (Phase 2), iterating (Phase 3)
+✅ <strong>Operations:</strong> Running at scale (Phase 4)
+✅ <strong>Interviewing:</strong> Thinking like a senior (Phase 5)</p>
+<h3 id="what-comes-after-phase-5">What Comes After Phase 5</h3>
+<p><strong>For the next 2-3 years:</strong>
+- <strong>Year 1 (JuniorSenior):</strong> Ship projects, gain confidence, learn team dynamics
+- <strong>Year 2 (Senior):</strong> Technical leadership, mentor others, drive decisions
+- <strong>Year 3 (Staff):</strong> Shape strategy, influence company-wide architecture</p>
+<p><strong>Optional future learning:</strong>
+- <strong>Distributed systems:</strong> Multi-region, sharding, consensus
+- <strong>Advanced ML:</strong> GANs, reinforcement learning, edge AI
+- <strong>Research:</strong> Reading papers, contributing to open source
+- <strong>Leadership:</strong> Managing teams (if that path appeals)</p>
+<p>This roadmap is the foundation. Build on it.</p>
+<hr />
+<h2 id="one-last-thing">One Last Thing</h2>
+<p>You've spent <strong>20+ weeks</strong> on this roadmap.</p>
+<p><strong>20 weeks</strong> of evenings/weekends, pushing through, shipping projects.</p>
+<p>Most people don't do this. Most people read blogs and say "I'll start tomorrow."</p>
+<p>You didn't. You built real systems. You have proof.</p>
+<p>So when you're in an interview and they ask "Tell me about a time you shipped something," you'll have literally 5-10 answers. Real ones.</p>
+<p>That's your edge.</p>
+<p>Own it.</p>
+<hr />
+<h2 id="final-checklist-before-first-day">Final Checklist Before First Day</h2>
+<ol>
+<li>[ ] GitHub: portfolio visible, PRs show your best work</li>
+<li>[ ] LinkedIn:500+ connections, endorsements for key skills</li>
+<li>[ ] Resume: on file with hiring manager, printed copies for interviews</li>
+<li>[ ] Mock interviews: done 5+, comfortable with format</li>
+<li>[ ] Portfolio audit: all projects working, READMEs current</li>
+<li>[ ] System design: practiced 4+ scenarios, comfortable explaining</li>
+<li>[ ] Salary negotiation: know your number, practiced counter-offer</li>
+<li>[ ] Network: 10+ warm connections in your target companies</li>
+<li>[ ] Applications: ready to send in bulk (templates prepared)</li>
+<li>[ ] Mindset: confident, but humble. Ready to learn.</li>
+</ol>
+<hr />
+<h2 id="congratulations">Congratulations</h2>
+<p><strong>You've completed the AI Full Stack Engineer Roadmap.</strong></p>
+<p>5 phases. 20+ weeks. Foundational to senior.</p>
+<p>From learning LLM APIs to operating K8s clusters at scale.</p>
+<p>From algorithm to system.</p>
+<p>Now: <strong>go build something.</strong></p>
+<p>Ship it.</p>
+<p>Get users.</p>
+<p>Iterate.</p>
+<p>Hire people.</p>
+<p>Build the future.</p>
+<hr />
+<h2 id="resources">Resources</h2>
+<ul>
+<li><strong>Job Boards:</strong> Levels.fyi, HN Jobs, LinkedIn Jobs</li>
+<li><strong>Salary Data:</strong> Levels.fyi (best), Blind (biased), Glassdoor</li>
+<li><strong>Recruiting:</strong> Ask in AI Discord communities (people help people)</li>
+<li><strong>Interview Prep:</strong> Pramp (free mock interviews), LeetCode (coding)</li>
+<li><strong>Negotiation:</strong> Levels.fyi salary comparison, 10% raise rule</li>
+</ul>
+<hr />
+<p><strong>Go. Apply. Negotiate. Ship. 🚀</strong></p>
+<p>You've got this.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.integrate"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>

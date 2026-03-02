@@ -1,0 +1,3398 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive 6-phase learning roadmap from Python foundations to production ML systems">
+      
+      
+        <meta name="author" content="AI Engineering Community">
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../phase0/overview/">
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>Setup Guide - AI Full Stack Engineer Roadmap</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#development-environment-setup-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="AI Full Stack Engineer Roadmap" class="md-header__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Full Stack Engineer Roadmap
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Setup Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Setup Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../phase0/overview/" class="md-tabs__link">
+          
+  
+  Phase 0 — Foundation Warmup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../phase1/overview/" class="md-tabs__link">
+          
+  
+  Phase 1 — AI Systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../phase2/overview/" class="md-tabs__link">
+          
+  
+  Phase 2 — Docker & Cloud
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../phase3/overview/" class="md-tabs__link">
+          
+  
+  Phase 3 — MLOps Tooling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../phase4/overview/" class="md-tabs__link">
+          
+  
+  Phase 4 — Scaling & Kubernetes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../phase5/overview/" class="md-tabs__link">
+          
+  
+  Phase 5 — Portfolio & Job Readiness
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../appendix/math-lite/" class="md-tabs__link">
+          
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AI Full Stack Engineer Roadmap" class="md-nav__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    AI Full Stack Engineer Roadmap
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Setup Guide
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Setup Guide
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-why-environment-setup-matters-in-production" class="md-nav__link">
+    1. Why Environment Setup Matters in Production
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Why Environment Setup Matters in Production">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-50000-mistake" class="md-nav__link">
+    The $50,000 Mistake
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-actually-breaks" class="md-nav__link">
+    What Actually Breaks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-system-requirements" class="md-nav__link">
+    2. System Requirements
+  </a>
+  
+    <nav class="md-nav" aria-label="2. System Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#minimum-requirements" class="md-nav__link">
+    Minimum Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-for-gpufine-tuning-work" class="md-nav__link">
+    Recommended (for GPU/fine-tuning work)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-fallback" class="md-nav__link">
+    Cloud Fallback
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-complete-tool-installation" class="md-nav__link">
+    3. Complete Tool Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Complete Tool Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-pyenv-python-version-management" class="md-nav__link">
+    3.1 pyenv: Python Version Management
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 pyenv: Python Version Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-python-3117" class="md-nav__link">
+    Install Python 3.11.7
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-poetry-python-dependency-management" class="md-nav__link">
+    3.2 Poetry: Python Dependency Management
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Poetry: Python Dependency Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_1" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-poetry" class="md-nav__link">
+    Configure Poetry
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-docker" class="md-nav__link">
+    3.3 Docker
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_2" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-kubectl-kubernetes-cli" class="md-nav__link">
+    3.4 kubectl: Kubernetes CLI
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 kubectl: Kubernetes CLI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_3" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-aws-cli-v2" class="md-nav__link">
+    3.5 AWS CLI v2
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5 AWS CLI v2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_4" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-aws" class="md-nav__link">
+    Configure AWS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-git" class="md-nav__link">
+    3.6 Git
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6 Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_5" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-git" class="md-nav__link">
+    Configure Git
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-httpie-modern-curl-alternative" class="md-nav__link">
+    3.7 httpie: Modern curl Alternative
+  </a>
+  
+    <nav class="md-nav" aria-label="3.7 httpie: Modern curl Alternative">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_6" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-jq-json-processor" class="md-nav__link">
+    3.8 jq: JSON Processor
+  </a>
+  
+    <nav class="md-nav" aria-label="3.8 jq: JSON Processor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_7" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-usage" class="md-nav__link">
+    Example Usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-tmux-terminal-multiplexer" class="md-nav__link">
+    3.9 tmux: Terminal Multiplexer
+  </a>
+  
+    <nav class="md-nav" aria-label="3.9 tmux: Terminal Multiplexer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_8" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-usage" class="md-nav__link">
+    Quick Usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-vs-code-setup" class="md-nav__link">
+    4. VS Code Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="4. VS Code Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-essential-extensions" class="md-nav__link">
+    4.1 Essential Extensions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-settingsjson-configuration" class="md-nav__link">
+    4.2 settings.json Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-complete-env-template" class="md-nav__link">
+    5. Complete .env Template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-free-credits-gpu-access-guide" class="md-nav__link">
+    6. Free Credits &amp; GPU Access Guide
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Free Credits & GPU Access Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llm-apis" class="md-nav__link">
+    LLM APIs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-compute" class="md-nav__link">
+    Cloud Compute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu-access-for-fine-tuning" class="md-nav__link">
+    GPU Access (for fine-tuning)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommendation-for-this-roadmap" class="md-nav__link">
+    Recommendation for This Roadmap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-github-setup" class="md-nav__link">
+    7. GitHub Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="7. GitHub Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-ssh-key-configuration" class="md-nav__link">
+    7.1 SSH Key Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-first-repository-structure" class="md-nav__link">
+    7.2 First Repository Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-gitignore-template" class="md-nav__link">
+    7.3 .gitignore Template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-create-github-repository" class="md-nav__link">
+    7.4 Create GitHub Repository
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-makefile-template" class="md-nav__link">
+    8. Makefile Template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-pre-commit-hooks-setup" class="md-nav__link">
+    9. Pre-commit Hooks Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Pre-commit Hooks Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-create-pre-commit-configyaml" class="md-nav__link">
+    9.1 Create .pre-commit-config.yaml
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-install-pre-commit" class="md-nav__link">
+    9.2 Install Pre-commit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-verify-your-setup" class="md-nav__link">
+    10. Verify Your Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-debugging-setup-issues" class="md-nav__link">
+    11. Debugging Setup Issues
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Debugging Setup Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-1-pyenv-command-not-found" class="md-nav__link">
+    Issue 1: pyenv: command not found
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-2-poetry-command-not-found" class="md-nav__link">
+    Issue 2: poetry: command not found
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-3-docker-daemon-not-running" class="md-nav__link">
+    Issue 3: Docker daemon not running
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-4-aws-configure-fails-to-save-credentials" class="md-nav__link">
+    Issue 4: aws configure fails to save credentials
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-5-git-ssh-key-not-working" class="md-nav__link">
+    Issue 5: Git SSH key not working
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-6-vs-code-cant-find-python-interpreter" class="md-nav__link">
+    Issue 6: VS Code can't find Python interpreter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-7-pre-commit-hook-fails-on-commit" class="md-nav__link">
+    Issue 7: Pre-commit hook fails on commit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-8-poetrylock-conflicts" class="md-nav__link">
+    Issue 8: poetry.lock conflicts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-9-database_url-not-recognized" class="md-nav__link">
+    Issue 9: DATABASE_URL not recognized
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-10-port-8000-already-in-use" class="md-nav__link">
+    Issue 10: Port 8000 already in use
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-next-steps" class="md-nav__link">
+    12. Next Steps
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 0 — Foundation Warmup
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 0 — Foundation Warmup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase0/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase0/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Mastery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase0/fastapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI Deep Dive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase0/databases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Databases (SQL + NoSQL + Redis)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase0/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux & Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase0/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 0 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 1 — AI Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 1 — AI Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase1/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase1/llm-apis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM APIs & Prompt Engineering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase1/embeddings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embeddings & Vector Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase1/rag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RAG Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase1/agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Agents & Tool Use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase1/fine-tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fine-Tuning (LoRA & PEFT)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase1/evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluation & Benchmarking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase1/security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security & Prompt Injection Defense
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase1/cost-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cost & Performance Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase1/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 1 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 2 — Docker & Cloud
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 2 — Docker & Cloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase2/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase2/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase2/compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose for AI Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase2/aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Deployment (EC2 + S3 + ECS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase2/secrets-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secrets Management & Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase2/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 2 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 3 — MLOps Tooling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 3 — MLOps Tooling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase3/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase3/mlflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLflow Experiment Tracking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase3/dvc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DVC Data Versioning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase3/wandb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weights & Biases (W&B)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase3/cicd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI/CD for AI Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase3/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 3 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 4 — Scaling & Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 4 — Scaling & Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase4/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase4/kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes Core Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase4/ai-on-k8s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying AI Services on K8s
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase4/scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autoscaling & Observability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase4/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 4 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 5 — Portfolio & Job Readiness
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 5 — Portfolio & Job Readiness
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase5/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase5/github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Portfolio Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase5/resume/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resume & LinkedIn Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase5/system-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI System Design Interviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase5/mock-interviews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mock Interview Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase5/salary-negotiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Salary & Negotiation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase5/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix/math-lite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math-Lite Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix/tooling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tooling & Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix/study-planner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Study Planner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix/project-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Showcase Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix/whats-next/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What's Next (Post-Roadmap)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="development-environment-setup-guide">Development Environment Setup Guide</h1>
+<p>This guide is for Linux developers. You'll get a production-grade development environment in about 1 hour.</p>
+<hr />
+<h2 id="1-why-environment-setup-matters-in-production">1. Why Environment Setup Matters in Production</h2>
+<p>Skip this section if you want. But read the true story first.</p>
+<h3 id="the-50000-mistake">The $50,000 Mistake</h3>
+<p>A team at a fintech startup had a microservice that processed financial transactions. It worked perfectly on their laptops. They deployed it to AWS Lambda using Python 3.9.</p>
+<p>Six months later, production broke. Not a code bug—a dependency version mismatch. The Lambda runtime was upgraded to Python 3.11, but the team's local environment was still 3.9. An obscure library (<code>dataclasses-json</code>) behaved differently. Transaction amounts got rounded incorrectly. Over two weeks, they lost $50,000 in misprocessed fees.</p>
+<p><strong>The fix:</strong> 30 minutes of environment pinning. Exact Python version. Exact dependency versions. Docker for consistency. They could have had it day one.</p>
+<h3 id="what-actually-breaks">What Actually Breaks</h3>
+<p>When developers skip proper environment setup:</p>
+<ul>
+<li><strong>Version mismatches</strong> — Works on your machine, fails on the server</li>
+<li><strong>Missing credentials</strong> — You accidentally commit API keys</li>
+<li><strong>Inconsistent dependencies</strong> — <code>pip install</code> gives different results on different days</li>
+<li><strong>Hard-to-reproduce bugs</strong> — "It works for me" becomes a meme on your team</li>
+<li><strong>Slow deployments</strong> — No Docker means rebuilding everything from scratch each time</li>
+<li><strong>Security vulnerabilities</strong> — Old versions of libraries with known exploits</li>
+</ul>
+<p>This roadmap prevents all of that on day one.</p>
+<hr />
+<h2 id="2-system-requirements">2. System Requirements</h2>
+<h3 id="minimum-requirements">Minimum Requirements</h3>
+<ul>
+<li><strong>RAM:</strong> 16GB (8GB possible but painful)</li>
+<li><strong>Disk:</strong> 50GB free (for Docker images, datasets, models)</li>
+<li><strong>CPU:</strong> Any modern processor (Intel 4th gen+, AMD Ryzen)</li>
+<li><strong>OS:</strong> Linux (Ubuntu 20.04+ recommended)</li>
+</ul>
+<h3 id="recommended-for-gpufine-tuning-work">Recommended (for GPU/fine-tuning work)</h3>
+<ul>
+<li><strong>GPU:</strong> NVIDIA RTX 3060 Ti or better; or use cloud GPUs (lambdalabs.com, vast.ai, cloud providers)</li>
+<li><strong>RAM:</strong> 32GB</li>
+<li><strong>NVMe SSD:</strong> 256GB+ (for model weights)</li>
+</ul>
+<h3 id="cloud-fallback">Cloud Fallback</h3>
+<p>Don't have a powerful machine? Use:
+- <strong>Google Colab</strong> — Free T4 GPU (12 hours/session)
+- <strong>AWS SageMaker</strong> — Free tier includes some GPU compute
+- <strong>Vast.ai</strong> — Rent GPU by the hour (~$0.30/hour for good hardware)</p>
+<hr />
+<h2 id="3-complete-tool-installation">3. Complete Tool Installation</h2>
+<h3 id="31-pyenv-python-version-management">3.1 pyenv: Python Version Management</h3>
+<p><strong>What it is:</strong> Lets you install and switch between Python versions. Critical because different projects need different Python versions, and the system Python is often outdated.</p>
+<p><strong>Why we use it:</strong> Production systems specify exact Python versions. You need the ability to test against 3.9, 3.10, 3.11, and 3.12. <code>pyenv</code> makes this trivial.</p>
+<h4 id="installation">Installation</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install dependencies</span>
+sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>build-essential<span class="w"> </span>libssl-dev<span class="w"> </span>zlib1g-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>libbz2-dev<span class="w"> </span>libreadline-dev<span class="w"> </span>libsqlite3-dev<span class="w"> </span>curl<span class="w"> </span>libncursesw5-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>xz-utils<span class="w"> </span>tk-dev<span class="w"> </span>libxml2-dev<span class="w"> </span>libxmlsec1-dev<span class="w"> </span>libffi-dev<span class="w"> </span>liblzma-dev
+
+<span class="c1"># Install pyenv</span>
+curl<span class="w"> </span>https://pyenv.run<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+
+<span class="c1"># Add to ~/.bashrc</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export PYENV_ROOT=&quot;$HOME/.pyenv&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export PATH=&quot;$PYENV_ROOT/bin:$PATH&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;eval &quot;$(pyenv init --path)&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;eval &quot;$(pyenv init -)&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+
+<span class="nb">exec</span><span class="w"> </span><span class="nv">$SHELL</span>
+</code></pre></div>
+<h4 id="install-python-3117">Install Python 3.11.7</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># This takes 5-10 minutes on first run (compiles Python)</span>
+pyenv<span class="w"> </span>install<span class="w"> </span><span class="m">3</span>.11.7
+
+<span class="c1"># Make it your default</span>
+pyenv<span class="w"> </span>global<span class="w"> </span><span class="m">3</span>.11.7
+
+<span class="c1"># Verify</span>
+python<span class="w"> </span>--version<span class="w">  </span><span class="c1"># Should print: Python 3.11.7</span>
+</code></pre></div>
+<hr />
+<h3 id="32-poetry-python-dependency-management">3.2 Poetry: Python Dependency Management</h3>
+<p><strong>What it is:</strong> Replaces <code>pip</code> and <code>requirements.txt</code>. Creates <code>pyproject.toml</code> and <code>poetry.lock</code> for reproducible installs across machines.</p>
+<p><strong>Why we use it:</strong> Every project you build has dependencies. Poetry locks exact versions. A colleague clones your repo, runs <code>poetry install</code>, and gets <em>exactly</em> the same versions. No "works on my machine" arguments.</p>
+<h4 id="installation_1">Installation</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install poetry</span>
+curl<span class="w"> </span>-sSL<span class="w"> </span>https://install.python-poetry.org<span class="w"> </span><span class="p">|</span><span class="w"> </span>python3<span class="w"> </span>-
+
+<span class="c1"># Add to PATH</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.local/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export PATH=&quot;$HOME/.local/bin:$PATH&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+
+<span class="c1"># Verify</span>
+poetry<span class="w"> </span>--version
+</code></pre></div>
+<h4 id="configure-poetry">Configure Poetry</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># This makes virtual environments live in the project folder</span>
+<span class="c1"># (easier to manage, easier for Docker)</span>
+poetry<span class="w"> </span>config<span class="w"> </span>virtualenvs.in-project<span class="w"> </span><span class="nb">true</span>
+
+<span class="c1"># Verify</span>
+poetry<span class="w"> </span>config<span class="w"> </span>--list<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="k">in</span>-project
+</code></pre></div>
+<hr />
+<h3 id="33-docker">3.3 Docker</h3>
+<p><strong>What it is:</strong> Containerization. Your app, its dependencies, and the OS all bundled together. Run on your laptop, AWS, Kubernetes—everywhere looks identical.</p>
+<p><strong>Why we use it:</strong> Phase 2 is all about Docker. You'll containerize every project. No Docker = can't deploy anything beyond Phase 1.</p>
+<h4 id="installation_2">Installation</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Add Docker repository</span>
+curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span>-o<span class="w"> </span>get-docker.sh
+sudo<span class="w"> </span>sh<span class="w"> </span>get-docker.sh
+
+<span class="c1"># Add user to docker group (so you don&#39;t need sudo every time)</span>
+sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="nv">$USER</span>
+
+<span class="c1"># Apply group changes</span>
+newgrp<span class="w"> </span>docker
+
+<span class="c1"># Verify</span>
+docker<span class="w"> </span>--version
+docker<span class="w"> </span>run<span class="w"> </span>hello-world
+</code></pre></div>
+<hr />
+<h3 id="34-kubectl-kubernetes-cli">3.4 kubectl: Kubernetes CLI</h3>
+<p><strong>What it is:</strong> Command-line tool for managing Kubernetes clusters. You'll use this in Phase 4 to deploy services.</p>
+<p><strong>Why we use it:</strong> Phase 4 assumes you can <code>kubectl apply</code> configurations to a cluster.</p>
+<h4 id="installation_3">Installation</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Download latest kubectl</span>
+curl<span class="w"> </span>-LO<span class="w"> </span><span class="s2">&quot;https://dl.k8s.io/release/</span><span class="k">$(</span>curl<span class="w"> </span>-L<span class="w"> </span>-s<span class="w"> </span>https://dl.k8s.io/release/stable.txt<span class="k">)</span><span class="s2">/bin/linux/amd64/kubectl&quot;</span>
+
+<span class="c1"># Make executable</span>
+chmod<span class="w"> </span>+x<span class="w"> </span>kubectl
+sudo<span class="w"> </span>mv<span class="w"> </span>kubectl<span class="w"> </span>/usr/local/bin/
+
+kubectl<span class="w"> </span>version<span class="w"> </span>--client
+</code></pre></div>
+<hr />
+<h3 id="35-aws-cli-v2">3.5 AWS CLI v2</h3>
+<p><strong>What it is:</strong> Command-line interface for AWS. Upload files, manage EC2 instances, configure S3 buckets without touching the console.</p>
+<p><strong>Why we use it:</strong> Phase 2 is on AWS. You'll use <code>aws s3 cp</code>, <code>aws ec2 describe-instances</code>, <code>aws iam</code>, etc.</p>
+<h4 id="installation_4">Installation</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Download and extract</span>
+curl<span class="w"> </span><span class="s2">&quot;https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip&quot;</span><span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;awscliv2.zip&quot;</span>
+unzip<span class="w"> </span>awscliv2.zip
+sudo<span class="w"> </span>./aws/install
+
+<span class="c1"># Verify</span>
+aws<span class="w"> </span>--version
+</code></pre></div>
+<h4 id="configure-aws">Configure AWS</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># This prompts for your AWS credentials (get from AWS Console)</span>
+aws<span class="w"> </span>configure
+
+<span class="c1"># You&#39;ll be asked for:</span>
+<span class="c1"># AWS Access Key ID: [paste your key]</span>
+<span class="c1"># AWS Secret Access Key: [paste your secret]</span>
+<span class="c1"># Default region: us-east-1</span>
+<span class="c1"># Default output format: json</span>
+
+<span class="c1"># Verify</span>
+aws<span class="w"> </span>sts<span class="w"> </span>get-caller-identity<span class="w">  </span><span class="c1"># Should print your AWS account info</span>
+</code></pre></div>
+<hr />
+<h3 id="36-git">3.6 Git</h3>
+<p><strong>What it is:</strong> Version control. You already use this, but we need to configure it properly.</p>
+<p><strong>Why we use it:</strong> Every project in this roadmap lives in a Git repo.</p>
+<h4 id="installation_5">Installation</h4>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>git
+git<span class="w"> </span>--version
+</code></pre></div>
+<h4 id="configure-git">Configure Git</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Set your identity (appears in every commit)</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Your Name&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;your.email@example.com&quot;</span>
+
+<span class="c1"># Set default branch (GitHub moved away from &#39;master&#39;)</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>init.defaultBranch<span class="w"> </span>main
+
+<span class="c1"># Set up SSH (so you don&#39;t type passwords)</span>
+ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your.email@example.com&quot;</span><span class="w">  </span><span class="c1"># Press Enter 3x to skip passphrase</span>
+cat<span class="w"> </span>~/.ssh/id_ed25519.pub<span class="w">  </span><span class="c1"># Copy this output</span>
+
+<span class="c1"># Paste the key into GitHub: Settings → SSH and GPG Keys → New SSH Key</span>
+<span class="c1"># Test the connection:</span>
+ssh<span class="w"> </span>-T<span class="w"> </span>git@github.com<span class="w">  </span><span class="c1"># Should print: &quot;Hi [username]! You&#39;ve successfully authenticated&quot;</span>
+</code></pre></div>
+<hr />
+<h3 id="37-httpie-modern-curl-alternative">3.7 httpie: Modern curl Alternative</h3>
+<p><strong>What it is:</strong> Makes testing APIs super easy. <code>curl</code> is powerful but verbose. <code>httpie</code> is beautiful.</p>
+<p><strong>Why we use it:</strong> Phase 1 you'll be testing APIs constantly. <code>http POST localhost:8000/chat message="hello"</code> is way better than <code>curl -X POST ...</code>.</p>
+<h4 id="installation_6">Installation</h4>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>httpie
+http<span class="w"> </span>--version
+</code></pre></div>
+<hr />
+<h3 id="38-jq-json-processor">3.8 jq: JSON Processor</h3>
+<p><strong>What it is:</strong> Extracts and transforms JSON on the command line.</p>
+<p><strong>Why we use it:</strong> LLM APIs return nested JSON. <code>jq</code> extracts exact fields you need.</p>
+<h4 id="installation_7">Installation</h4>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>jq
+jq<span class="w"> </span>--version
+</code></pre></div>
+<h4 id="example-usage">Example Usage</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Extract a field from JSON</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;{&quot;message&quot;: &quot;hello&quot;, &quot;status&quot;: 200}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span><span class="s1">&#39;.message&#39;</span>
+<span class="c1"># Output: &quot;hello&quot;</span>
+
+<span class="c1"># Format API response</span>
+http<span class="w"> </span>https://api.example.com/data<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span><span class="s1">&#39;.results[] | {id, name}&#39;</span>
+</code></pre></div>
+<hr />
+<h3 id="39-tmux-terminal-multiplexer">3.9 tmux: Terminal Multiplexer</h3>
+<p><strong>What it is:</strong> Run multiple terminal sessions in one window. Long training jobs run in the background while you work.</p>
+<p><strong>Why we use it:</strong> Phase 3+ you'll have long-running jobs. <code>tmux</code> keeps them alive even if your terminal closes.</p>
+<h4 id="installation_8">Installation</h4>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>tmux
+tmux<span class="w"> </span>--version
+</code></pre></div>
+<h4 id="quick-usage">Quick Usage</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Start a new session</span>
+tmux<span class="w"> </span>new-session<span class="w"> </span>-s<span class="w"> </span>train
+
+<span class="c1"># Now you&#39;re in tmux. Run your training:</span>
+python<span class="w"> </span>train.py
+
+<span class="c1"># Detach (leave training running): Ctrl+B then D</span>
+<span class="c1"># List sessions</span>
+tmux<span class="w"> </span>list-sessions
+
+<span class="c1"># Reconnect</span>
+tmux<span class="w"> </span>attach-session<span class="w"> </span>-t<span class="w"> </span>train
+
+<span class="c1"># Kill session</span>
+tmux<span class="w"> </span>kill-session<span class="w"> </span>-t<span class="w"> </span>train
+</code></pre></div>
+<hr />
+<h2 id="4-vs-code-setup">4. VS Code Setup</h2>
+<h3 id="41-essential-extensions">4.1 Essential Extensions</h3>
+<p>Open VS Code → Extensions (Ctrl+Shift+X) → Search and install:</p>
+<table>
+<thead>
+<tr>
+<th>Extension ID</th>
+<th>Install</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ms-python.python</code></td>
+<td>Python extension (debugging, linting)</td>
+</tr>
+<tr>
+<td><code>ms-python.pylance</code></td>
+<td>Fast type checking and IntelliSense</td>
+</tr>
+<tr>
+<td><code>ms-python.black-formatter</code></td>
+<td>Code formatting (Black)</td>
+</tr>
+<tr>
+<td><code>charliermarsh.ruff</code></td>
+<td>Ultra-fast linting (Ruff)</td>
+</tr>
+<tr>
+<td><code>ms-azuretools.vscode-docker</code></td>
+<td>Docker management from VS Code</td>
+</tr>
+<tr>
+<td><code>eamodio.gitlens</code></td>
+<td>Git integration (blame, history)</td>
+</tr>
+<tr>
+<td><code>rangav.vscode-thunder-client</code></td>
+<td>API testing (like Postman)</td>
+</tr>
+<tr>
+<td><code>humao.rest-client</code></td>
+<td>Send HTTP requests from <code>.http</code> files</td>
+</tr>
+<tr>
+<td><code>ms-toolsai.jupyter</code></td>
+<td>Jupyter notebook support</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-settingsjson-configuration">4.2 settings.json Configuration</h3>
+<p>Open Command Palette (Ctrl+Shift+P) → "Preferences: Open Settings (JSON)" → Paste this:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Python environment</span>
+<span class="w">  </span><span class="nt">&quot;python.defaultInterpreterPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}/.venv/bin/python&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;python.linting.enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+
+<span class="w">  </span><span class="c1">// Ruff linting (fast, comprehensive)</span>
+<span class="w">  </span><span class="nt">&quot;python.linting.ruffEnabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;python.linting.ruffArgs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;--line-length=100&quot;</span><span class="p">],</span>
+
+<span class="w">  </span><span class="c1">// Type checking with Pylance</span>
+<span class="w">  </span><span class="nt">&quot;python.analysis.typeCheckingMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;strict&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;[python]&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Black formatter on save</span>
+<span class="w">    </span><span class="nt">&quot;editor.defaultFormatter&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ms-python.black-formatter&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;editor.formatOnSave&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;editor.codeActionsOnSave&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;source.organizeImports&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;explicit&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+
+<span class="w">  </span><span class="c1">// Formatting options</span>
+<span class="w">  </span><span class="nt">&quot;editor.rulers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">100</span><span class="p">],</span><span class="w">  </span><span class="c1">// Visual line at 100 chars</span>
+<span class="w">  </span><span class="nt">&quot;editor.trimAutoWhitespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;files.trimTrailingWhitespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;files.insertFinalNewline&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+
+<span class="w">  </span><span class="c1">// Git</span>
+<span class="w">  </span><span class="nt">&quot;[git-commit]&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;editor.rulers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">72</span><span class="p">]</span><span class="w">  </span><span class="c1">// Enforce commit message length</span>
+<span class="w">  </span><span class="p">},</span>
+
+<span class="w">  </span><span class="c1">// Markdown</span>
+<span class="w">  </span><span class="nt">&quot;[markdown]&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;editor.wordWrap&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;on&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;editor.insertSpaces&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;editor.tabSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">  </span><span class="p">},</span>
+
+<span class="w">  </span><span class="c1">// General</span>
+<span class="w">  </span><span class="nt">&quot;editor.fontSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;editor.fontFamily&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&#39;Monaco&#39;, &#39;Courier New&#39;, monospace&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;editor.wordWrap&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;off&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;editor.insertSpaces&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;editor.tabSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;files.exclude&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;**/__pycache__&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;**/.pytest_cache&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;**/.mypy_cache&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;**/.ruff_cache&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;**/.venv&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;search.exclude&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;**/.venv&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;**/node_modules&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="5-complete-env-template">5. Complete .env Template</h2>
+<p>Create a <code>.env.example</code> file in every project. This shows what environment variables are needed without exposing secrets.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create the template</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>.env.example<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s"># ============================================</span>
+<span class="s"># LLM APIs</span>
+<span class="s"># ============================================</span>
+<span class="s">OPENAI_API_KEY=your_key_here</span>
+<span class="s">OPENAI_MODEL=gpt-4-turbo</span>
+<span class="s">ANTHROPIC_API_KEY=your_key_here</span>
+<span class="s">COHERE_API_KEY=your_key_here</span>
+<span class="s">HUGGINGFACE_TOKEN=your_token_here</span>
+
+<span class="s"># ============================================</span>
+<span class="s"># Vector Databases</span>
+<span class="s"># ============================================</span>
+<span class="s">QDRANT_URL=http://localhost:6333</span>
+<span class="s">QDRANT_API_KEY=your_key_here</span>
+<span class="s">PINECONE_API_KEY=your_key_here</span>
+<span class="s">PINECONE_ENV=gcp-starter</span>
+
+<span class="s"># ============================================</span>
+<span class="s"># Relational Databases</span>
+<span class="s"># ============================================</span>
+<span class="s"># Format: postgresql+asyncpg://user:password@host:port/database</span>
+<span class="s">DATABASE_URL=postgresql+asyncpg://postgres:password@localhost:5432/aiapp</span>
+<span class="s">MONGODB_URI=mongodb+srv://user:password@cluster.mongodb.net/dbname</span>
+<span class="s">REDIS_URL=redis://localhost:6379</span>
+<span class="s">REDIS_PASSWORD=</span>
+
+<span class="s"># ============================================</span>
+<span class="s"># AWS</span>
+<span class="s"># ============================================</span>
+<span class="s">AWS_ACCESS_KEY_ID=your_key_here</span>
+<span class="s">AWS_SECRET_ACCESS_KEY=your_secret_here</span>
+<span class="s">AWS_DEFAULT_REGION=us-east-1</span>
+<span class="s">AWS_ACCOUNT_ID=123456789012</span>
+<span class="s">S3_BUCKET_NAME=my-ai-bucket</span>
+<span class="s">S3_REGION=us-east-1</span>
+
+<span class="s"># ============================================</span>
+<span class="s"># MLOps Tools</span>
+<span class="s"># ============================================</span>
+<span class="s">MLFLOW_TRACKING_URI=http://localhost:5000</span>
+<span class="s">MLFLOW_EXPERIMENT_NAME=default</span>
+<span class="s">WANDB_API_KEY=your_key_here</span>
+<span class="s">WANDB_PROJECT=ai-roadmap</span>
+<span class="s">WANDB_ENTITY=your-username</span>
+
+<span class="s"># ============================================</span>
+<span class="s"># Application Configuration</span>
+<span class="s"># ============================================</span>
+<span class="s">APP_ENV=development</span>
+<span class="s">APP_NAME=ai_full_stack</span>
+<span class="s">APP_VERSION=0.1.0</span>
+<span class="s">SECRET_KEY=your-secret-key-change-in-production</span>
+<span class="s">DEBUG=true</span>
+<span class="s">LOG_LEVEL=INFO</span>
+
+<span class="s"># ============================================</span>
+<span class="s"># Service Endpoints (Development)</span>
+<span class="s"># ============================================</span>
+<span class="s">API_BASE_URL=http://localhost:8000</span>
+<span class="s">DATABASE_ECHO=false  # Set true to see SQL queries in logs</span>
+<span class="s">EOF</span>
+
+<span class="c1"># See the example (don&#39;t check it into git!)</span>
+cat<span class="w"> </span>.env.example
+
+<span class="c1"># Create the actual .env (git will ignore this)</span>
+cp<span class="w"> </span>.env.example<span class="w"> </span>.env
+</code></pre></div>
+<p>Then in your code:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># Load from .env file</span>
+<span class="n">load_dotenv</span><span class="p">()</span>
+
+<span class="c1"># Access variables</span>
+<span class="n">api_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;OPENAI_API_KEY&quot;</span><span class="p">)</span>
+<span class="n">db_url</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;DATABASE_URL&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Critical:</strong> Add to <code>.gitignore</code>:</p>
+<div class="highlight"><pre><span></span><code>.env
+.env.local
+.env.*.local
+</code></pre></div>
+<p>Never commit real secrets. Ever.</p>
+<hr />
+<h2 id="6-free-credits-gpu-access-guide">6. Free Credits &amp; GPU Access Guide</h2>
+<p>You're not paying $1000/month for cloud compute. Here's what's free:</p>
+<h3 id="llm-apis">LLM APIs</h3>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Free Tier</th>
+<th>How to Claim</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OpenAI</strong></td>
+<td>$5 credit (new accounts only)</td>
+<td>Sign up at openai.com; credit expires after 3 months</td>
+</tr>
+<tr>
+<td><strong>Anthropic</strong></td>
+<td>Apply for free tier access</td>
+<td><a href="https://www.anthropic.com/earlyaccess">Apply here</a>; get $100 credits</td>
+</tr>
+<tr>
+<td><strong>HuggingFace</strong></td>
+<td>Free inference API</td>
+<td>No credit card needed; limited requests/day</td>
+</tr>
+<tr>
+<td><strong>Google Colab</strong></td>
+<td>Free T4 GPU (12 hours/session)</td>
+<td>colab.research.google.com; runs Jupyter notebooks</td>
+</tr>
+<tr>
+<td><strong>Groq</strong></td>
+<td>Free API (very fast)</td>
+<td><a href="https://console.groq.com">Free tier</a>; limited requests</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cloud-compute">Cloud Compute</h3>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Free Tier</th>
+<th>How to Claim</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS</strong></td>
+<td>12 months free tier (includes EC2, S3, RDS)</td>
+<td><a href="https://aws.amazon.com/free/">Free tier</a>; credit card required; track usage carefully</td>
+</tr>
+<tr>
+<td><strong>Google Cloud</strong></td>
+<td>$300 credit (90 days)</td>
+<td><a href="https://cloud.google.com/free">Free tier</a>; credit card required</td>
+</tr>
+<tr>
+<td><strong>Azure</strong></td>
+<td>$200 credit (30 days)</td>
+<td><a href="https://azure.microsoft.com/free">Free tier</a>; credit card required</td>
+</tr>
+<tr>
+<td><strong>Heroku</strong></td>
+<td>Discontinued free tier; use Railway or Fly.io instead</td>
+<td>Railway.app offers free tier; Fly.io offers $3 credit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gpu-access-for-fine-tuning">GPU Access (for fine-tuning)</h3>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Cost</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Google Colab Pro</strong></td>
+<td>$10/month</td>
+<td>Best value; T4 GPU (up to 8 hours), TPU (limited)</td>
+</tr>
+<tr>
+<td><strong>Kaggle</strong></td>
+<td>Free</td>
+<td>30 hours/week free GPU; no guarantee on type</td>
+</tr>
+<tr>
+<td><strong>Vast.ai</strong></td>
+<td>~$0.30-0.60/hour</td>
+<td>Rent consumer GPUs; cheapest for small jobs</td>
+</tr>
+<tr>
+<td><strong>Lambda Labs</strong></td>
+<td>~$0.29-0.38/hour</td>
+<td>Professional GPUs (RTX 6000); better for serious work</td>
+</tr>
+<tr>
+<td><strong>RunPod</strong></td>
+<td>~$0.07-0.40/hour</td>
+<td>Spot pricing (unreliable but dirt cheap)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="recommendation-for-this-roadmap">Recommendation for This Roadmap</h3>
+<p><strong>Phase 0-2:</strong> Stick with free tier. No fine-tuning needed yet.</p>
+<p><strong>Phase 1 (fine-tuning arrives):</strong> Use Google Colab Pro ($10/month) or Kaggle (free).</p>
+<p><strong>Phase 3-4:</strong> Get a $10/month Colab Pro subscription or open an AWS account (track bills closely).</p>
+<hr />
+<h2 id="7-github-setup">7. GitHub Setup</h2>
+<h3 id="71-ssh-key-configuration">7.1 SSH Key Configuration</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Generate SSH key (nothing is secret; use email)</span>
+ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your.email@example.com&quot;</span>
+
+<span class="c1"># Accept defaults (just press Enter 3 times)</span>
+<span class="c1"># This creates ~/.ssh/id_ed25519 and ~/.ssh/id_ed25519.pub</span>
+
+<span class="c1"># Copy the public key</span>
+cat<span class="w"> </span>~/.ssh/id_ed25519.pub
+
+<span class="c1"># Go to GitHub.com → Settings → SSH and GPG Keys → New SSH Key</span>
+<span class="c1"># Paste the output from above</span>
+
+<span class="c1"># Test the connection</span>
+ssh<span class="w"> </span>-T<span class="w"> </span>git@github.com
+<span class="c1"># Expected: &quot;Hi [your-username]! You&#39;ve successfully authenticated, but GitHub does not provide shell access.&quot;</span>
+</code></pre></div>
+<h3 id="72-first-repository-structure">7.2 First Repository Structure</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create the project directory</span>
+mkdir<span class="w"> </span>my-ai-project
+<span class="nb">cd</span><span class="w"> </span>my-ai-project
+git<span class="w"> </span>init
+
+<span class="c1"># Create the structure</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>src/myapp<span class="w"> </span>tests<span class="w"> </span>docs<span class="w"> </span>notebooks<span class="w"> </span>data<span class="w"> </span>models
+
+<span class="c1"># Create core files</span>
+touch<span class="w"> </span>README.md<span class="w"> </span>pyproject.toml<span class="w"> </span>Makefile<span class="w"> </span>.gitignore<span class="w"> </span>.pre-commit-config.yaml
+</code></pre></div>
+<h3 id="73-gitignore-template">7.3 .gitignore Template</h3>
+<div class="highlight"><pre><span></span><code>cat<span class="w"> </span>&gt;<span class="w"> </span>.gitignore<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s"># Python</span>
+<span class="s">__pycache__/</span>
+<span class="s">*.py[cod]</span>
+<span class="s">*$py.class</span>
+<span class="s">*.so</span>
+<span class="s">.Python</span>
+<span class="s">env/</span>
+<span class="s">venv/</span>
+<span class="s">ENV/</span>
+<span class="s">build/</span>
+<span class="s">develop-eggs/</span>
+<span class="s">dist/</span>
+<span class="s">downloads/</span>
+<span class="s">eggs/</span>
+<span class="s">.eggs/</span>
+<span class="s">lib/</span>
+<span class="s">lib64/</span>
+<span class="s">parts/</span>
+<span class="s">sdist/</span>
+<span class="s">var/</span>
+<span class="s">wheels/</span>
+<span class="s">*.egg-info/</span>
+<span class="s">.installed.cfg</span>
+<span class="s">*.egg</span>
+
+<span class="s"># Testing</span>
+<span class="s">.pytest_cache/</span>
+<span class="s">.coverage</span>
+<span class="s">htmlcov/</span>
+<span class="s">.tox/</span>
+<span class="s">.hypothesis/</span>
+
+<span class="s"># Type checking</span>
+<span class="s">.mypy_cache/</span>
+<span class="s">.dmypy.json</span>
+<span class="s">dmypy.json</span>
+<span class="s">.pyre/</span>
+<span class="s">.ruff_cache/</span>
+
+<span class="s"># IDEs</span>
+<span class="s">.vscode/</span>
+<span class="s">.idea/</span>
+<span class="s">*.swp</span>
+<span class="s">*.swo</span>
+<span class="s">*~</span>
+
+<span class="s"># Environment</span>
+<span class="s">.env</span>
+<span class="s">.env.local</span>
+<span class="s">.env.*.local</span>
+
+<span class="s"># Data &amp; Models (don&#39;t commit large files)</span>
+<span class="s">data/raw/</span>
+<span class="s">data/processed/</span>
+<span class="s">models/</span>
+<span class="s">*.pickle</span>
+<span class="s">*.pkl</span>
+<span class="s">*.joblib</span>
+
+<span class="s"># OS</span>
+<span class="s">.DS_Store</span>
+<span class="s">.DS_Store?</span>
+<span class="s">._*</span>
+<span class="s">.Spotlight-V100</span>
+<span class="s">.Trashes</span>
+<span class="s">ehthumbs.db</span>
+<span class="s">Thumbs.db</span>
+
+<span class="s"># Misc</span>
+<span class="s">.cache/</span>
+<span class="s">tmp/</span>
+<span class="s">temp/</span>
+<span class="s">EOF</span>
+
+cat<span class="w"> </span>.gitignore
+</code></pre></div>
+<h3 id="74-create-github-repository">7.4 Create GitHub Repository</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Option A: Using GitHub CLI (easiest)</span>
+apt-get<span class="w"> </span>install<span class="w"> </span>gh
+gh<span class="w"> </span>auth<span class="w"> </span>login<span class="w">  </span><span class="c1"># Follow prompts</span>
+gh<span class="w"> </span>repo<span class="w"> </span>create<span class="w"> </span>my-ai-project<span class="w"> </span>--public<span class="w"> </span>--source<span class="o">=</span>.<span class="w"> </span>--remote<span class="o">=</span>origin<span class="w"> </span>--push
+
+<span class="c1"># Option B: Manual (via GitHub web)</span>
+<span class="c1"># 1. Go to GitHub.com → New repository</span>
+<span class="c1"># 2. Name: my-ai-project</span>
+<span class="c1"># 3. Public (so portfolio is visible)</span>
+<span class="c1"># 4. Don&#39;t initialize with README (you have one)</span>
+<span class="c1"># 5. Copy the SSH URL</span>
+git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>git@github.com:YOUR-USERNAME/my-ai-project.git
+git<span class="w"> </span>branch<span class="w"> </span>-M<span class="w"> </span>main
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+<hr />
+<h2 id="8-makefile-template">8. Makefile Template</h2>
+<p>Create a <code>Makefile</code> in your project root. This centralizes common commands.</p>
+<div class="highlight"><pre><span></span><code><span class="c"># AI Full Stack Roadmap Project Makefile</span>
+<span class="c"># Run: make [target]</span>
+
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">help</span> <span class="n">install</span> <span class="n">serve</span> <span class="n">test</span> <span class="n">lint</span> <span class="n">format</span> <span class="n">typecheck</span> <span class="n">security</span> <span class="n">docker</span>-<span class="n">build</span> <span class="n">docker</span>-<span class="n">run</span> <span class="n">clean</span>
+
+<span class="c"># Default target</span>
+<span class="nf">help</span><span class="o">:</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;Available targets:&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make install        - Install dependencies with poetry&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make serve          - Run FastAPI server (auto-reload)&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make test           - Run tests with coverage&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make lint           - Check code style (ruff) and formatting (black)&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make format         - Format code (black) and fix linting (ruff)&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make typecheck      - Type checking with mypy&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make security       - Security scan with bandit&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make docker-build   - Build Docker image&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make docker-run     - Run Docker container locally&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make deploy         - Deploy to production (placeholder)&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make clean          - Remove cache and build artifacts&quot;</span>
+
+<span class="c"># Install project dependencies</span>
+<span class="nf">install</span><span class="o">:</span>
+<span class="w">    </span>poetry<span class="w"> </span>install
+
+<span class="c"># Run the FastAPI development server</span>
+<span class="c"># uvicorn auto-reloads on file changes</span>
+<span class="nf">serve</span><span class="o">:</span>
+<span class="w">    </span>poetry<span class="w"> </span>run<span class="w"> </span>uvicorn<span class="w"> </span>src.myapp.main:app<span class="w"> </span>--reload<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8000</span>
+
+<span class="c"># Run tests with coverage report</span>
+<span class="nf">test</span><span class="o">:</span>
+<span class="w">    </span>poetry<span class="w"> </span>run<span class="w"> </span>pytest<span class="w"> </span>tests/<span class="w"> </span>-v<span class="w"> </span>--cov<span class="o">=</span>src<span class="w"> </span>--cov-report<span class="o">=</span>html<span class="w"> </span>--cov-report<span class="o">=</span>term-missing
+
+<span class="c"># Lint code (check style without modifying)</span>
+<span class="nf">lint</span><span class="o">:</span>
+<span class="w">    </span>poetry<span class="w"> </span>run<span class="w"> </span>ruff<span class="w"> </span>check<span class="w"> </span>src/<span class="w"> </span>tests/
+<span class="w">    </span>poetry<span class="w"> </span>run<span class="w"> </span>black<span class="w"> </span>--check<span class="w"> </span>src/<span class="w"> </span>tests/
+
+<span class="c"># Format code (actually modify files)</span>
+<span class="nf">format</span><span class="o">:</span>
+<span class="w">    </span>poetry<span class="w"> </span>run<span class="w"> </span>black<span class="w"> </span>src/<span class="w"> </span>tests/
+<span class="w">    </span>poetry<span class="w"> </span>run<span class="w"> </span>ruff<span class="w"> </span>check<span class="w"> </span>--fix<span class="w"> </span>src/<span class="w"> </span>tests/
+
+<span class="c"># Type checking with mypy</span>
+<span class="nf">typecheck</span><span class="o">:</span>
+<span class="w">    </span>poetry<span class="w"> </span>run<span class="w"> </span>mypy<span class="w"> </span>src/
+
+<span class="c"># Security scanning with bandit</span>
+<span class="nf">security</span><span class="o">:</span>
+<span class="w">    </span>poetry<span class="w"> </span>run<span class="w"> </span>bandit<span class="w"> </span>-r<span class="w"> </span>src/<span class="w"> </span>--level<span class="w"> </span>medium
+
+<span class="c"># Build Docker image</span>
+<span class="nf">docker-build</span><span class="o">:</span>
+<span class="w">    </span>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>my-ai-project:latest<span class="w"> </span>.
+
+<span class="c"># Run Docker container locally</span>
+<span class="nf">docker-run</span><span class="o">:</span>
+<span class="w">    </span>docker<span class="w"> </span>run<span class="w"> </span>--env-file<span class="w"> </span>.env<span class="w"> </span>-p<span class="w"> </span><span class="m">8000</span>:8000<span class="w"> </span>my-ai-project:latest
+
+<span class="c"># Deploy placeholder (you&#39;ll fill in your deployment script)</span>
+<span class="nf">deploy</span><span class="o">:</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;Deployment script not yet configured&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;Add your deployment commands here&quot;</span>
+
+<span class="c"># Clean up temporary files</span>
+<span class="nf">clean</span><span class="o">:</span>
+<span class="w">    </span>find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span>-name<span class="w"> </span>__pycache__<span class="w"> </span>-exec<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span><span class="o">{}</span><span class="w"> </span>+<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+<span class="w">    </span>find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span>-name<span class="w"> </span>.pytest_cache<span class="w"> </span>-exec<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span><span class="o">{}</span><span class="w"> </span>+<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+<span class="w">    </span>find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span>-name<span class="w"> </span>.mypy_cache<span class="w"> </span>-exec<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span><span class="o">{}</span><span class="w"> </span>+<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+<span class="w">    </span>find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span>-name<span class="w"> </span>.ruff_cache<span class="w"> </span>-exec<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span><span class="o">{}</span><span class="w"> </span>+<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+<span class="w">    </span>find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span>-name<span class="w"> </span>htmlcov<span class="w"> </span>-exec<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span><span class="o">{}</span><span class="w"> </span>+<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+<span class="w">    </span>find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.pyc&quot;</span><span class="w"> </span>-delete
+<span class="w">    </span>find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;.coverage&quot;</span><span class="w"> </span>-delete
+<span class="w">    </span>rm<span class="w"> </span>-rf<span class="w"> </span>dist/<span class="w"> </span>build/<span class="w"> </span>*.egg-info/
+
+<span class="nv">.DEFAULT_GOAL</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">help</span>
+</code></pre></div>
+<p>Usage:</p>
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span><span class="nb">help</span><span class="w">          </span><span class="c1"># List all targets</span>
+make<span class="w"> </span>install<span class="w">       </span><span class="c1"># Install dependencies</span>
+make<span class="w"> </span>serve<span class="w">         </span><span class="c1"># Start dev server</span>
+make<span class="w"> </span>format<span class="w">        </span><span class="c1"># Format code</span>
+make<span class="w"> </span><span class="nb">test</span><span class="w">          </span><span class="c1"># Run tests</span>
+</code></pre></div>
+<hr />
+<h2 id="9-pre-commit-hooks-setup">9. Pre-commit Hooks Setup</h2>
+<p>Pre-commit hooks automatically check your code before each commit. Catch bugs locally instead of in CI.</p>
+<h3 id="91-create-pre-commit-configyaml">9.1 Create .pre-commit-config.yaml</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># .pre-commit-config.yaml</span>
+<span class="c1"># Install: pre-commit install</span>
+<span class="c1"># Uninstall: pre-commit uninstall</span>
+
+<span class="nt">repos</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Code formatting (Black)</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/psf/black</span>
+<span class="w">    </span><span class="nt">rev</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">24.1.1</span>
+<span class="w">    </span><span class="nt">hooks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">black</span>
+<span class="w">        </span><span class="nt">language_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3.11</span>
+<span class="w">        </span><span class="nt">args</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">--line-length=100</span><span class="p p-Indicator">]</span>
+
+<span class="w">  </span><span class="c1"># Fast linting (Ruff)</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/astral-sh/ruff-pre-commit</span>
+<span class="w">    </span><span class="nt">rev</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v0.1.11</span>
+<span class="w">    </span><span class="nt">hooks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ruff</span>
+<span class="w">        </span><span class="nt">args</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">--fix</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">--line-length=100</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ruff-format</span>
+
+<span class="w">  </span><span class="c1"># Type checking (MyPy)</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/pre-commit/mirrors-mypy</span>
+<span class="w">    </span><span class="nt">rev</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.8.0</span>
+<span class="w">    </span><span class="nt">hooks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mypy</span>
+<span class="w">        </span><span class="nt">additional_dependencies</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">types-all</span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="nt">args</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">--strict</span><span class="p p-Indicator">]</span>
+
+<span class="w">  </span><span class="c1"># Security scanning (Bandit)</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/PyCQA/bandit</span>
+<span class="w">    </span><span class="nt">rev</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.7.5</span>
+<span class="w">    </span><span class="nt">hooks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bandit</span>
+<span class="w">        </span><span class="nt">args</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">--level</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">medium</span><span class="p p-Indicator">]</span>
+
+<span class="w">  </span><span class="c1"># General file checks</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/pre-commit/pre-commit-hooks</span>
+<span class="w">    </span><span class="nt">rev</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v4.5.0</span>
+<span class="w">    </span><span class="nt">hooks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">check-yaml</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">check-json</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">check-toml</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end-of-file-fixer</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trailing-whitespace</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mixed-line-ending</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">debug-statements</span>
+</code></pre></div>
+<h3 id="92-install-pre-commit">9.2 Install Pre-commit</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install pre-commit package</span>
+poetry<span class="w"> </span>add<span class="w"> </span>--group<span class="w"> </span>dev<span class="w"> </span>pre-commit
+
+<span class="c1"># Install the git hooks</span>
+pre-commit<span class="w"> </span>install
+
+<span class="c1"># Test it (runs on all files)</span>
+pre-commit<span class="w"> </span>run<span class="w"> </span>--all-files
+
+<span class="c1"># Now, pre-commit runs automatically on git commit</span>
+<span class="c1"># To skip (rarely): git commit --no-verify</span>
+</code></pre></div>
+<hr />
+<h2 id="10-verify-your-setup">10. Verify Your Setup</h2>
+<p>Create <code>verify_setup.py</code> in your project root. Run it to check everything.</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Verify that all required tools and dependencies are installed.</span>
+<span class="sd">Usage: python verify_setup.py</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+
+<span class="c1"># Colors for output</span>
+<span class="n">GREEN</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[92m&quot;</span>
+<span class="n">RED</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[91m&quot;</span>
+<span class="n">YELLOW</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[93m&quot;</span>
+<span class="n">RESET</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[0m&quot;</span>
+
+<span class="k">def</span> <span class="nf">check_command</span><span class="p">(</span><span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">version_arg</span><span class="o">=</span><span class="s2">&quot;--version&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Check if a command exists and is executable.&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+            <span class="p">[</span><span class="n">cmd</span><span class="p">,</span> <span class="n">version_arg</span><span class="p">],</span>
+            <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="mi">5</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">returncode</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">except</span> <span class="p">(</span><span class="ne">FileNotFoundError</span><span class="p">,</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">TimeoutExpired</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+<span class="k">def</span> <span class="nf">check_file</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Check if a file exists.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">check_env_var</span><span class="p">(</span><span class="n">var_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Check if an environment variable is set.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="n">var_name</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+
+<span class="k">def</span> <span class="nf">print_result</span><span class="p">(</span><span class="n">check_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">passed</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">details</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Print a check result with color.&quot;&quot;&quot;</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">GREEN</span><span class="si">}</span><span class="s2">✓</span><span class="si">{</span><span class="n">RESET</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="n">passed</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">RED</span><span class="si">}</span><span class="s2">✗</span><span class="si">{</span><span class="n">RESET</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">check_name</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">if</span> <span class="n">details</span><span class="p">:</span>
+        <span class="n">message</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot; (</span><span class="si">{</span><span class="n">details</span><span class="si">}</span><span class="s2">)&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run all verification checks.&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🔍 AI Full Stack Engineer Setup Verification&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">60</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">checks_passed</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">checks_failed</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># System Tools</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">YELLOW</span><span class="si">}</span><span class="s2">📦 System Tools</span><span class="si">{</span><span class="n">RESET</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">tools</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="s2">&quot;git&quot;</span><span class="p">,</span> <span class="s2">&quot;docker&quot;</span><span class="p">,</span> <span class="s2">&quot;kubectl&quot;</span><span class="p">,</span> <span class="s2">&quot;aws&quot;</span><span class="p">,</span> <span class="s2">&quot;poetry&quot;</span><span class="p">,</span> <span class="s2">&quot;tmux&quot;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">tool</span> <span class="ow">in</span> <span class="n">tools</span><span class="p">:</span>
+        <span class="n">passed</span> <span class="o">=</span> <span class="n">check_command</span><span class="p">(</span><span class="n">tool</span><span class="p">)</span>
+        <span class="n">print_result</span><span class="p">(</span><span class="n">tool</span><span class="o">.</span><span class="n">capitalize</span><span class="p">(),</span> <span class="n">passed</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">passed</span><span class="p">:</span>
+            <span class="n">checks_passed</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">checks_failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="c1"># Python Version</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">YELLOW</span><span class="si">}</span><span class="s2">🐍 Python Environment</span><span class="si">{</span><span class="n">RESET</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+            <span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="s2">&quot;--version&quot;</span><span class="p">],</span>
+            <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">text</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">)</span>
+        <span class="n">version</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">passed</span> <span class="o">=</span> <span class="s2">&quot;3.11&quot;</span> <span class="ow">in</span> <span class="n">version</span>
+        <span class="n">print_result</span><span class="p">(</span><span class="s2">&quot;Python version&quot;</span><span class="p">,</span> <span class="n">passed</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">passed</span><span class="p">:</span>
+            <span class="n">checks_passed</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">checks_failed</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="n">print_result</span><span class="p">(</span><span class="s2">&quot;Python version&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;Could not determine version&quot;</span><span class="p">)</span>
+        <span class="n">checks_failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="c1"># Project files</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">YELLOW</span><span class="si">}</span><span class="s2">📁 Project Structure</span><span class="si">{</span><span class="n">RESET</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">required_files</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;pyproject.toml&quot;</span><span class="p">,</span> <span class="s2">&quot;Poetry configuration&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;.gitignore&quot;</span><span class="p">,</span> <span class="s2">&quot;Git ignore file&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;.env.example&quot;</span><span class="p">,</span> <span class="s2">&quot;Environment template&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;Makefile&quot;</span><span class="p">,</span> <span class="s2">&quot;Build automation&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;.pre-commit-config.yaml&quot;</span><span class="p">,</span> <span class="s2">&quot;Pre-commit hooks&quot;</span><span class="p">),</span>
+    <span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">file_path</span><span class="p">,</span> <span class="n">description</span> <span class="ow">in</span> <span class="n">required_files</span><span class="p">:</span>
+        <span class="n">passed</span> <span class="o">=</span> <span class="n">check_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+        <span class="n">print_result</span><span class="p">(</span><span class="n">description</span><span class="p">,</span> <span class="n">passed</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="n">file_path</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">passed</span><span class="p">:</span>
+            <span class="n">checks_passed</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">checks_failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="c1"># Environment variables</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">YELLOW</span><span class="si">}</span><span class="s2">🔐 Environment Variables</span><span class="si">{</span><span class="n">RESET</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">load_dotenv</span><span class="p">()</span>  <span class="c1"># Load from .env file</span>
+
+    <span class="n">env_vars</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;OPENAI_API_KEY&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;DATABASE_URL&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;REDIS_URL&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;AWS_ACCESS_KEY_ID&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">env_vars</span><span class="p">:</span>
+        <span class="n">passed</span> <span class="o">=</span> <span class="n">check_env_var</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;configured&quot;</span> <span class="k">if</span> <span class="n">passed</span> <span class="k">else</span> <span class="s2">&quot;not configured&quot;</span>
+        <span class="n">print_result</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">passed</span><span class="p">,</span> <span class="n">status</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">passed</span><span class="p">:</span>
+            <span class="n">checks_passed</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">checks_failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="c1"># Summary</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">YELLOW</span><span class="si">}</span><span class="s2">Summary</span><span class="si">{</span><span class="n">RESET</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Checks passed: </span><span class="si">{</span><span class="n">GREEN</span><span class="si">}{</span><span class="n">checks_passed</span><span class="si">}{</span><span class="n">RESET</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Checks failed: </span><span class="si">{</span><span class="n">RED</span><span class="si">}{</span><span class="n">checks_failed</span><span class="si">}{</span><span class="n">RESET</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">checks_failed</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">GREEN</span><span class="si">}</span><span class="s2">✓ Your environment is ready!</span><span class="si">{</span><span class="n">RESET</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Run: make help&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">RED</span><span class="si">}</span><span class="s2">✗ Fix the above issues before proceeding</span><span class="si">{</span><span class="n">RESET</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</code></pre></div>
+<p>Run it:</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>verify_setup.py
+</code></pre></div>
+<p>Add to Makefile:</p>
+<div class="highlight"><pre><span></span><code><span class="nf">verify</span><span class="o">:</span>
+<span class="w">    </span>poetry<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>verify_setup.py
+</code></pre></div>
+<hr />
+<h2 id="11-debugging-setup-issues">11. Debugging Setup Issues</h2>
+<h3 id="issue-1-pyenv-command-not-found">Issue 1: <code>pyenv: command not found</code></h3>
+<p><strong>Problem:</strong> <code>pyenv</code> installation didn't work.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check if it&#39;s installed</span>
+which<span class="w"> </span>pyenv
+
+<span class="c1"># If not found, reinstall</span>
+curl<span class="w"> </span>https://pyenv.run<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+
+<span class="c1"># Make sure it&#39;s in PATH (check ~/.bashrc)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export PATH=&quot;$HOME/.pyenv/bin:$PATH&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<span class="nb">exec</span><span class="w"> </span><span class="nv">$SHELL</span>
+</code></pre></div></p>
+<hr />
+<h3 id="issue-2-poetry-command-not-found">Issue 2: <code>poetry: command not found</code></h3>
+<p><strong>Problem:</strong> Poetry is installed but not in PATH.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check installation</span>
+python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>show<span class="w"> </span>poetry
+
+<span class="c1"># Add to PATH</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.local/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export PATH=&quot;$HOME/.local/bin:$PATH&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<span class="nb">exec</span><span class="w"> </span><span class="nv">$SHELL</span>
+
+<span class="c1"># Reinstall if needed</span>
+curl<span class="w"> </span>-sSL<span class="w"> </span>https://install.python-poetry.org<span class="w"> </span><span class="p">|</span><span class="w"> </span>python3<span class="w"> </span>-
+</code></pre></div></p>
+<hr />
+<h3 id="issue-3-docker-daemon-not-running">Issue 3: Docker daemon not running</h3>
+<p><strong>Problem:</strong> <code>docker run</code> fails with "Cannot connect to Docker daemon"</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Start Docker daemon</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>docker
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>docker<span class="w">  </span><span class="c1"># Start on boot</span>
+</code></pre></div></p>
+<hr />
+<h3 id="issue-4-aws-configure-fails-to-save-credentials">Issue 4: <code>aws configure</code> fails to save credentials</h3>
+<p><strong>Problem:</strong> AWS CLI won't authenticate.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check if credentials are saved</span>
+cat<span class="w"> </span>~/.aws/credentials
+cat<span class="w"> </span>~/.aws/config
+
+<span class="c1"># Reconfigure</span>
+aws<span class="w"> </span>configure
+
+<span class="c1"># Test</span>
+aws<span class="w"> </span>sts<span class="w"> </span>get-caller-identity
+</code></pre></div></p>
+<hr />
+<h3 id="issue-5-git-ssh-key-not-working">Issue 5: Git SSH key not working</h3>
+<p><strong>Problem:</strong> <code>ssh -T git@github.com</code> fails.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Generate key (if not already done)</span>
+ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your.email@example.com&quot;</span>
+
+<span class="c1"># Copy public key to GitHub</span>
+cat<span class="w"> </span>~/.ssh/id_ed25519.pub<span class="w">  </span><span class="c1"># Copy this</span>
+
+<span class="c1"># Go to: GitHub Settings → SSH and GPG Keys → New SSH Key → Paste</span>
+
+<span class="c1"># Test</span>
+ssh<span class="w"> </span>-T<span class="w"> </span>git@github.com
+<span class="c1"># Expected: &quot;Hi [username]! You&#39;ve successfully authenticated...&quot;</span>
+</code></pre></div></p>
+<hr />
+<h3 id="issue-6-vs-code-cant-find-python-interpreter">Issue 6: VS Code can't find Python interpreter</h3>
+<p><strong>Problem:</strong> Red squiggles everywhere, IntelliSense doesn't work.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># In VS Code, open Command Palette (Ctrl+Shift+P)</span>
+<span class="c1"># Type: &quot;Python: Select Interpreter&quot;</span>
+<span class="c1"># Choose: &quot;./venv/bin/python&quot; or the pyenv version</span>
+
+<span class="c1"># Or manually set in settings.json:</span>
+<span class="s2">&quot;python.defaultInterpreterPath&quot;</span>:<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">workspaceFolder</span><span class="si">}</span><span class="s2">/.venv/bin/python&quot;</span>
+</code></pre></div></p>
+<hr />
+<h3 id="issue-7-pre-commit-hook-fails-on-commit">Issue 7: Pre-commit hook fails on commit</h3>
+<p><strong>Problem:</strong> <code>git commit</code> fails because pre-commit hooks found issues.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># This is actually good! It caught issues.</span>
+<span class="c1"># See the output to fix code</span>
+
+<span class="c1"># Then try again</span>
+git<span class="w"> </span>add<span class="w"> </span>-A
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Fix linting issues&quot;</span>
+
+<span class="c1"># If you really want to skip (rarely):</span>
+git<span class="w"> </span>commit<span class="w"> </span>--no-verify
+</code></pre></div></p>
+<hr />
+<h3 id="issue-8-poetrylock-conflicts">Issue 8: poetry.lock conflicts</h3>
+<p><strong>Problem:</strong> Multiple developers add different dependencies; lockfile is messy.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Update and clean lock</span>
+poetry<span class="w"> </span>update
+
+<span class="c1"># If poetry install fails</span>
+rm<span class="w"> </span>poetry.lock
+poetry<span class="w"> </span>install
+</code></pre></div></p>
+<hr />
+<h3 id="issue-9-database_url-not-recognized">Issue 9: <code>DATABASE_URL</code> not recognized</h3>
+<p><strong>Problem:</strong> Code can't connect to database.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check .env file exists</span>
+ls<span class="w"> </span>-la<span class="w"> </span>.env
+
+<span class="c1"># Verify DATABASE_URL is there</span>
+cat<span class="w"> </span>.env<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>DATABASE_URL
+
+<span class="c1"># Test manually</span>
+poetry<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import os; from dotenv import load_dotenv; load_dotenv(); print(os.getenv(&#39;DATABASE_URL&#39;))&quot;</span>
+</code></pre></div></p>
+<hr />
+<h3 id="issue-10-port-8000-already-in-use">Issue 10: Port 8000 already in use</h3>
+<p><strong>Problem:</strong> <code>make serve</code> fails; "Address already in use"</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Find process using port 8000</span>
+lsof<span class="w"> </span>-iTCP:8000
+
+<span class="c1"># Kill the process</span>
+<span class="nb">kill</span><span class="w"> </span>-9<span class="w"> </span>&lt;PID&gt;
+
+<span class="c1"># Or use a different port</span>
+poetry<span class="w"> </span>run<span class="w"> </span>uvicorn<span class="w"> </span>src.myapp.main:app<span class="w"> </span>--reload<span class="w"> </span>--port<span class="w"> </span><span class="m">8001</span>
+</code></pre></div></p>
+<hr />
+<h2 id="12-next-steps">12. Next Steps</h2>
+<p><strong>Your environment is ready.</strong> Here's what's next:</p>
+<ol>
+<li><strong>Create your first project repository</strong> (follow section 7 above)</li>
+<li><strong>Initialize Poetry</strong> (run <code>poetry init</code> in the project directory)</li>
+<li><strong>Set up pre-commit hooks</strong> (section 9 above)</li>
+<li><strong>Read Phase 0 Overview</strong> — Start building</li>
+<li><strong>Join the community</strong> — Slack, Discord, or GitHub Discussions</li>
+</ol>
+<p>You're 1 hour away from writing production-grade AI code.</p>
+<p>Let's go. <a href="../phase0/overview.md">Phase 0 Overview →</a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.integrate"], "search": "../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>

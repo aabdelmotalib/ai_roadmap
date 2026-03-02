@@ -1,0 +1,128 @@
+site_name: "AI Full Stack Engineer Roadmap"
+site_description: "A comprehensive 6-phase learning roadmap from Python foundations to production ML systems"
+site_author: "AI Engineering Community"
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  palette:
+    # Light mode
+    - scheme: default
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - toc.integrate
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+
+plugins:
+  - search
+  # - tags:
+  #     tags_file: tags.md
+
+markdown_extensions:
+  # Text formatting
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      use_pygments: true
+      pygments_style: material
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+
+nav:
+  - Home: index.md
+  - Setup Guide: setup.md
+  - Phase 0 — Foundation Warmup:
+    - Overview: phase0/overview.md
+    - Python Mastery: phase0/python.md
+    - FastAPI Deep Dive: phase0/fastapi.md
+    - Databases (SQL + NoSQL + Redis): phase0/databases.md
+    - Linux & Networking: phase0/linux.md
+    - Phase 0 Milestone: phase0/milestone.md
+  - Phase 1 — AI Systems:
+    - Overview: phase1/overview.md
+    - LLM APIs & Prompt Engineering: phase1/llm-apis.md
+    - Embeddings & Vector Search: phase1/embeddings.md
+    - RAG Pipelines: phase1/rag.md
+    - AI Agents & Tool Use: phase1/agents.md
+    - Fine-Tuning (LoRA & PEFT): phase1/fine-tuning.md
+    - Evaluation & Benchmarking: phase1/evaluation.md
+    - Security & Prompt Injection Defense: phase1/security.md
+    - Cost & Performance Optimization: phase1/cost-performance.md
+    - Phase 1 Milestone: phase1/milestone.md
+  - Phase 2 — Docker & Cloud:
+    - Overview: phase2/overview.md
+    - Docker Fundamentals: phase2/docker.md
+    - Docker Compose for AI Systems: phase2/compose.md
+    - AWS Deployment (EC2 + S3 + ECS): phase2/aws.md
+    - Secrets Management & Monitoring: phase2/secrets-monitoring.md
+    - Phase 2 Milestone: phase2/milestone.md
+  - Phase 3 — MLOps Tooling:
+    - Overview: phase3/overview.md
+    - MLflow Experiment Tracking: phase3/mlflow.md
+    - DVC Data Versioning: phase3/dvc.md
+    - Weights & Biases (W&B): phase3/wandb.md
+    - CI/CD for AI Pipelines: phase3/cicd.md
+    - Phase 3 Milestone: phase3/milestone.md
+  - Phase 4 — Scaling & Kubernetes:
+    - Overview: phase4/overview.md
+    - Kubernetes Core Concepts: phase4/kubernetes.md
+    - Deploying AI Services on K8s: phase4/ai-on-k8s.md
+    - Autoscaling & Observability: phase4/scaling.md
+    - Phase 4 Milestone: phase4/milestone.md
+  - Phase 5 — Portfolio & Job Readiness:
+    - Overview: phase5/overview.md
+    - GitHub Portfolio Strategy: phase5/github.md
+    - Resume & LinkedIn Optimization: phase5/resume.md
+    - AI System Design Interviews: phase5/system-design.md
+    - Mock Interview Questions: phase5/mock-interviews.md
+    - Salary & Negotiation: phase5/salary-negotiation.md
+    - Final Milestone: phase5/milestone.md
+  - Appendix:
+    - Math-Lite Guide: appendix/math-lite.md
+    - Tooling & Productivity: appendix/tooling.md
+    - Study Planner: appendix/study-planner.md
+    - Project Showcase Template: appendix/project-template.md
+    - What's Next (Post-Roadmap): appendix/whats-next.md

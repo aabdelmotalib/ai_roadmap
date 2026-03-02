@@ -1,0 +1,3370 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive 6-phase learning roadmap from Python foundations to production ML systems">
+      
+      
+        <meta name="author" content="AI Engineering Community">
+      
+      
+      
+        <link rel="prev" href="../databases/">
+      
+      
+        <link rel="next" href="../milestone/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>Linux & Networking - AI Full Stack Engineer Roadmap</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#linux-networking-for-ai-engineers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-header__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Full Stack Engineer Roadmap
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Linux & Networking
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        
+  
+    
+  
+  Setup Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  Phase 0 — Foundation Warmup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase1/overview/" class="md-tabs__link">
+          
+  
+  Phase 1 — AI Systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase2/overview/" class="md-tabs__link">
+          
+  
+  Phase 2 — Docker & Cloud
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase3/overview/" class="md-tabs__link">
+          
+  
+  Phase 3 — MLOps Tooling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase4/overview/" class="md-tabs__link">
+          
+  
+  Phase 4 — Scaling & Kubernetes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase5/overview/" class="md-tabs__link">
+          
+  
+  Phase 5 — Portfolio & Job Readiness
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../appendix/math-lite/" class="md-tabs__link">
+          
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-nav__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    AI Full Stack Engineer Roadmap
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 0 — Foundation Warmup
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 0 — Foundation Warmup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Mastery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fastapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI Deep Dive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../databases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Databases (SQL + NoSQL + Redis)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Linux & Networking
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Linux & Networking
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-why-this-matters-in-production" class="md-nav__link">
+    1. Why This Matters in Production
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-conceptual-explanation-the-unix-philosophy" class="md-nav__link">
+    2. Conceptual Explanation: The Unix Philosophy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-code-examples-essential-commands" class="md-nav__link">
+    3. Code Examples: Essential Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Code Examples: Essential Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-file-system-navigation" class="md-nav__link">
+    3.1 File System Navigation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-process-management" class="md-nav__link">
+    3.2 Process Management
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-systemd-running-services" class="md-nav__link">
+    3.3 Systemd: Running Services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-ssh-remote-access" class="md-nav__link">
+    3.4 SSH: Remote Access
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-environment-variables-configuration" class="md-nav__link">
+    3.5 Environment Variables &amp; Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-curlhttpie-testing-apis" class="md-nav__link">
+    3.6 curl/httpie: Testing APIs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-networking-ports-firewall" class="md-nav__link">
+    3.7 Networking: Ports &amp; Firewall
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-logs-finding-monitoring" class="md-nav__link">
+    3.8 Logs: Finding &amp; Monitoring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-nginx-reverse-proxy-load-balancer" class="md-nav__link">
+    3.9 nginx: Reverse Proxy &amp; Load Balancer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-lets-encrypt-free-ssl-certificates" class="md-nav__link">
+    3.10 Let's Encrypt: Free SSL Certificates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-monitoring-resource-usage" class="md-nav__link">
+    3.11 Monitoring: Resource Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-tmux-terminal-multiplexing" class="md-nav__link">
+    3.12 tmux: Terminal Multiplexing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-architecture-diagram-linux-system-stack" class="md-nav__link">
+    4. Architecture Diagram: Linux System Stack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-tools-section-essential-linux-tools" class="md-nav__link">
+    5. Tools Section: Essential Linux Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-decision-framework-when-to-use-what" class="md-nav__link">
+    6. Decision Framework: When to Use What
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-step-by-step-deploying-fastapi-on-linux" class="md-nav__link">
+    7. Step-by-Step: Deploying FastAPI on Linux
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Step-by-Step: Deploying FastAPI on Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-systemd-service" class="md-nav__link">
+    Step 1: Create systemd Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-enable-start" class="md-nav__link">
+    Step 2: Enable &amp; Start
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-configure-nginx" class="md-nav__link">
+    Step 3: Configure nginx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-enable-test" class="md-nav__link">
+    Step 4: Enable &amp; Test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-verify" class="md-nav__link">
+    Step 5: Verify
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-practical-project-monitoring-dashboard" class="md-nav__link">
+    8. Practical Project: Monitoring Dashboard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-debugging-playbook-10-linux-errors" class="md-nav__link">
+    9. Debugging Playbook: 10 Linux Errors
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Debugging Playbook: 10 Linux Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-1-permission-denied-when-running-command" class="md-nav__link">
+    Error 1: "Permission denied" when running command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-2-address-already-in-use" class="md-nav__link">
+    Error 2: "Address already in use"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-3-systemd-service-failed-to-start" class="md-nav__link">
+    Error 3: "systemd service failed to start"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-4-disk-quota-exceeded" class="md-nav__link">
+    Error 4: "disk quota exceeded"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-5-ssh-connection-refused" class="md-nav__link">
+    Error 5: "SSH: connection refused"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-6-command-not-found" class="md-nav__link">
+    Error 6: "command not found"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-7-too-many-open-files" class="md-nav__link">
+    Error 7: "too many open files"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-8-ssl-certificate-problem" class="md-nav__link">
+    Error 8: "SSL certificate problem"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-9-cannot-connect-to-database" class="md-nav__link">
+    Error 9: "Cannot connect to database"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-10-nginx-emerg-bind-to-failed" class="md-nav__link">
+    Error 10: "nginx: [emerg] bind() to failed"
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-common-mistakes-linux-administration" class="md-nav__link">
+    10. Common Mistakes: Linux Administration
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Common Mistakes: Linux Administration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mistake-1-running-app-directly-not-systemd" class="md-nav__link">
+    Mistake 1: Running App Directly (Not systemd)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-2-ignoring-logs" class="md-nav__link">
+    Mistake 2: Ignoring Logs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-3-ssh-without-keys" class="md-nav__link">
+    Mistake 3: SSH Without Keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-4-one-endpoint-behind-firewall" class="md-nav__link">
+    Mistake 4: One Endpoint Behind firewall
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-5-not-monitoring-resources" class="md-nav__link">
+    Mistake 5: Not Monitoring Resources
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-production-realism-local-vs-production" class="md-nav__link">
+    11. Production Realism: Local vs Production
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Production Realism: Local vs Production">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-deployment" class="md-nav__link">
+    Local Deployment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#production-deployment" class="md-nav__link">
+    Production Deployment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-cost-performance-considerations" class="md-nav__link">
+    12. Cost &amp; Performance Considerations
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Cost & Performance Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#server-sizing" class="md-nav__link">
+    Server Sizing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-when-it-matters" class="md-nav__link">
+    Monitoring When It Matters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-security-considerations" class="md-nav__link">
+    13. Security Considerations
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Security Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh-security" class="md-nav__link">
+    SSH Security
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firewall-rules" class="md-nav__link">
+    Firewall Rules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secret-management" class="md-nav__link">
+    Secret Management
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-case-study-netflix-deployment" class="md-nav__link">
+    14. Case Study: Netflix Deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-interview-cheat-sheet-linuxops" class="md-nav__link">
+    15. Interview Cheat Sheet: Linux/Ops
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Interview Cheat Sheet: Linux/Ops">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concept-1-systemd-service-lifecycle" class="md-nav__link">
+    Concept 1: systemd Service Lifecycle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-2-port-forwarding-vs-reverse-proxy" class="md-nav__link">
+    Concept 2: Port Forwarding vs Reverse Proxy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-3-log-rotation" class="md-nav__link">
+    Concept 3: Log Rotation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-4-process-signals" class="md-nav__link">
+    Concept 4: Process Signals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-5-open-file-descriptors" class="md-nav__link">
+    Concept 5: Open File Descriptors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-review-questions" class="md-nav__link">
+    16. Review Questions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-flashcards" class="md-nav__link">
+    17. Flashcards
+  </a>
+  
+    <nav class="md-nav" aria-label="17. Flashcards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#card-1" class="md-nav__link">
+    Card 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-2" class="md-nav__link">
+    Card 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-3" class="md-nav__link">
+    Card 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-4" class="md-nav__link">
+    Card 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-5" class="md-nav__link">
+    Card 5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-6" class="md-nav__link">
+    Card 6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-7" class="md-nav__link">
+    Card 7
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-8" class="md-nav__link">
+    Card 8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-9" class="md-nav__link">
+    Card 9
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-10" class="md-nav__link">
+    Card 10
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-teach-it-back-prompt" class="md-nav__link">
+    18. Teach-It-Back Prompt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-1-week-review-checklist" class="md-nav__link">
+    19. 1-Week Review Checklist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-resources" class="md-nav__link">
+    20. Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-next-capstone-project" class="md-nav__link">
+    21. Next: Capstone Project
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 0 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 1 — AI Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 1 — AI Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/llm-apis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM APIs & Prompt Engineering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/embeddings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embeddings & Vector Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/rag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RAG Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Agents & Tool Use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/fine-tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fine-Tuning (LoRA & PEFT)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluation & Benchmarking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security & Prompt Injection Defense
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/cost-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cost & Performance Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 1 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 2 — Docker & Cloud
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 2 — Docker & Cloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose for AI Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Deployment (EC2 + S3 + ECS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/secrets-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secrets Management & Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 2 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 3 — MLOps Tooling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 3 — MLOps Tooling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/mlflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLflow Experiment Tracking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/dvc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DVC Data Versioning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/wandb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weights & Biases (W&B)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/cicd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI/CD for AI Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 3 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 4 — Scaling & Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 4 — Scaling & Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes Core Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/ai-on-k8s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying AI Services on K8s
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autoscaling & Observability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 4 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 5 — Portfolio & Job Readiness
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 5 — Portfolio & Job Readiness
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Portfolio Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/resume/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resume & LinkedIn Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/system-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI System Design Interviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/mock-interviews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mock Interview Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/salary-negotiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Salary & Negotiation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/math-lite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math-Lite Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/tooling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tooling & Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/study-planner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Study Planner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/project-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Showcase Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/whats-next/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What's Next (Post-Roadmap)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="linux-networking-for-ai-engineers">Linux &amp; Networking for AI Engineers</h1>
+<p>Linux is where your code runs. Understanding it means the difference between "it works on my machine" and "it works in production."</p>
+<hr />
+<h2 id="1-why-this-matters-in-production">1. Why This Matters in Production</h2>
+<p>An AI startup deployed their model server on EC2. One month later, the server filled with core dumps from crashed training processes. No one was monitoring disk space.</p>
+<p>Result: Service went down. They lost data. Recovery took 8 hours.</p>
+<p>Cost: $50k per hour in lost business = $400k total loss.</p>
+<p><strong>Production reality:</strong>
+- Logs grow unbounded. Disks fill. Services crash.
+- A single hung process can freeze your entire server.
+- A misconfigured firewall can make your service invisible.
+- SSH key management is how you actually log in to servers.
+- systemd is how production services are managed (not <code>python server.py</code> in a terminal).</p>
+<hr />
+<h2 id="2-conceptual-explanation-the-unix-philosophy">2. Conceptual Explanation: The Unix Philosophy</h2>
+<p>Unix (Linux, macOS) is built on one principle: <strong>Do one thing, and do it well.</strong></p>
+<p>Each tool has a single job:
+- <code>ls</code> — list files
+- <code>grep</code> — find patterns
+- <code>curl</code> — transfer data
+- <code>sed</code> — text transformation</p>
+<p>You <strong>compose</strong> them together:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Find all Python files modified in the last hour, count them</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.py&quot;</span><span class="w"> </span>-mmin<span class="w"> </span>-60<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+
+<span class="c1"># Find hung processes, kill them</span>
+ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>python<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span>grep<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $2}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span><span class="nb">kill</span><span class="w"> </span>-9
+</code></pre></div>
+<p>This composability is your superpower. Master it, and you can write one command to solve problems that would take pages of code.</p>
+<hr />
+<h2 id="3-code-examples-essential-commands">3. Code Examples: Essential Commands</h2>
+<h3 id="31-file-system-navigation">3.1 File System Navigation</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Where am I?</span>
+<span class="nb">pwd</span>
+<span class="c1"># Output: /home/user/ai_project</span>
+
+<span class="c1"># List files with details</span>
+ls<span class="w"> </span>-lah
+<span class="c1"># -l: long format (permissions, owner, size, date)</span>
+<span class="c1"># -a: all (including hidden)</span>
+<span class="c1"># -h: human-readable (KB/MB instead of bytes)</span>
+
+<span class="c1"># Find files by name (searches everything under current dir)</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.py&quot;</span><span class="w"> </span>-type<span class="w"> </span>f
+<span class="c1"># Find Python files modified in the last day</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.py&quot;</span><span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-mtime<span class="w"> </span>-1
+
+<span class="c1"># Find large files (over 100MB)</span>
+find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-size<span class="w"> </span>+100M
+<span class="c1"># Get disk usage per directory</span>
+du<span class="w"> </span>-sh<span class="w"> </span>*<span class="w">  </span><span class="c1"># Human-readable, summarize</span>
+
+<span class="c1"># Total disk usage</span>
+df<span class="w"> </span>-h<span class="w">  </span><span class="c1"># Remaining space</span>
+
+<span class="c1"># Count lines of code</span>
+find<span class="w"> </span>src/<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.py&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>wc<span class="w"> </span>-l
+</code></pre></div>
+<h3 id="32-process-management">3.2 Process Management</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># List all processes</span>
+ps<span class="w"> </span>aux
+<span class="c1"># USER, PID, CPU%, MEM%, VSZ, RSS, TTY, STAT, START, TIME, COMMAND</span>
+
+<span class="c1"># Find a specific process (don&#39;t grep grep)</span>
+ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>python<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span>grep
+
+<span class="c1"># Interactive process viewer (like Task Manager)</span>
+top<span class="w">  </span><span class="c1"># Shows real-time CPU, memory, process list</span>
+<span class="c1"># Press &#39;q&#39; to quit</span>
+
+<span class="c1"># Kill a process (graceful)</span>
+<span class="nb">kill</span><span class="w"> </span><span class="m">12345</span><span class="w">  </span><span class="c1"># Process exits cleanly</span>
+
+<span class="c1"># Force-kill a process (immediately)</span>
+<span class="nb">kill</span><span class="w"> </span>-9<span class="w"> </span><span class="m">12345</span><span class="w">  </span><span class="c1"># Process dies instantly (dangerous)</span>
+
+<span class="c1"># Run a command that survives terminal close (background)</span>
+nohup<span class="w"> </span>python<span class="w"> </span>train.py<span class="w"> </span>&gt;<span class="w"> </span>training.log<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="c1"># nohup: survives terminal close</span>
+<span class="c1"># &amp;: run in background</span>
+<span class="c1"># &gt;training.log: stdout to file</span>
+<span class="c1"># 2&gt;&amp;1: stderr to same file</span>
+
+<span class="c1"># List background jobs</span>
+<span class="nb">jobs</span>
+
+<span class="c1"># Bring job to foreground</span>
+<span class="nb">fg</span><span class="w"> </span>%1<span class="w">  </span><span class="c1"># Job number 1</span>
+
+<span class="c1"># Process priority (nice = politeness to other processes)</span>
+nice<span class="w"> </span>-n<span class="w"> </span><span class="m">10</span><span class="w"> </span>python<span class="w"> </span>train.py<span class="w">  </span><span class="c1"># Lower priority (10)</span>
+nice<span class="w"> </span>-n<span class="w"> </span>-10<span class="w"> </span>python<span class="w"> </span>train.py<span class="w">  </span><span class="c1"># Higher priority (-10)</span>
+
+<span class="c1"># Change running process priority</span>
+renice<span class="w"> </span>+10<span class="w"> </span>-p<span class="w"> </span><span class="m">12345</span><span class="w">  </span><span class="c1"># Make PID 12345 lower priority</span>
+
+<span class="c1"># Monitor processes in real-time</span>
+watch<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="s1">&#39;ps aux | head -20&#39;</span><span class="w">  </span><span class="c1"># Update every 1 second</span>
+</code></pre></div>
+<h3 id="33-systemd-running-services">3.3 Systemd: Running Services</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Service that starts at boot and restarts on crash</span>
+<span class="c1"># File: /etc/systemd/system/ai-api.service</span>
+<span class="o">[</span>Unit<span class="o">]</span>
+<span class="nv">Description</span><span class="o">=</span>AI<span class="w"> </span>Backend<span class="w"> </span>API
+<span class="nv">After</span><span class="o">=</span>network.target<span class="w"> </span>postgresql.service
+<span class="nv">Wants</span><span class="o">=</span>postgresql.service
+
+<span class="o">[</span>Service<span class="o">]</span>
+<span class="nv">Type</span><span class="o">=</span>notify
+<span class="nv">User</span><span class="o">=</span>ai_user
+<span class="nv">WorkingDirectory</span><span class="o">=</span>/home/ai_user/ai_backend
+<span class="nv">Environment</span><span class="o">=</span><span class="s2">&quot;PATH=/home/ai_user/.local/bin:/usr/local/bin:/usr/bin&quot;</span>
+<span class="nv">EnvironmentFile</span><span class="o">=</span>/home/ai_user/.env
+<span class="nv">ExecStart</span><span class="o">=</span>/home/ai_user/.local/bin/poetry<span class="w"> </span>run<span class="w"> </span>uvicorn<span class="w"> </span>src.main:app<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8000</span>
+<span class="nv">Restart</span><span class="o">=</span>always
+<span class="nv">RestartSec</span><span class="o">=</span><span class="m">10</span>
+<span class="nv">StandardOutput</span><span class="o">=</span>journal
+<span class="nv">StandardError</span><span class="o">=</span>journal
+
+<span class="o">[</span>Install<span class="o">]</span>
+<span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
+
+<span class="c1"># Commands</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload<span class="w">  </span><span class="c1"># Load new service files</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>ai-api<span class="w">  </span><span class="c1"># Start service</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>ai-api<span class="w">  </span><span class="c1"># Start at boot</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>ai-api<span class="w">  </span><span class="c1"># Check status</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>ai-api<span class="w">  </span><span class="c1"># View logs (tail)</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>ai-api<span class="w">  </span><span class="c1"># Restart service</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>ai-api<span class="w">  </span><span class="c1"># Stop service</span>
+</code></pre></div>
+<h3 id="34-ssh-remote-access">3.4 SSH: Remote Access</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Generate SSH key (one-time)</span>
+ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your.email@example.com&quot;</span>
+<span class="c1"># Creates: ~/.ssh/id_ed25519 (private key) + ~/.ssh/id_ed25519.pub (public key)</span>
+
+<span class="c1"># Copy public key to server</span>
+ssh-copy-id<span class="w"> </span>-i<span class="w"> </span>~/.ssh/id_ed25519.pub<span class="w"> </span>user@server.example.com
+<span class="c1"># Or manually append to ~/.ssh/authorized_keys on server</span>
+
+<span class="c1"># Connect to server</span>
+ssh<span class="w"> </span>user@server.example.com
+
+<span class="c1"># Config file for shortcuts (~/.ssh/config)</span>
+Host<span class="w"> </span>ai-prod
+<span class="w">    </span>HostName<span class="w"> </span>server.example.com
+<span class="w">    </span>User<span class="w"> </span>deploy_user
+<span class="w">    </span>IdentityFile<span class="w"> </span>~/.ssh/id_ed25519
+<span class="w">    </span>Port<span class="w"> </span><span class="m">22</span>
+
+<span class="c1"># Now just: ssh ai-prod</span>
+
+<span class="c1"># Copy file from server to local</span>
+scp<span class="w"> </span>user@server.example.com:/path/to/file<span class="w"> </span>~/local/path
+
+<span class="c1"># Copy directory recursively</span>
+scp<span class="w"> </span>-r<span class="w"> </span>user@server.example.com:/path/to/dir<span class="w"> </span>~/local/path
+
+<span class="c1"># Sync entire directories (rsync is better)</span>
+rsync<span class="w"> </span>-azP<span class="w"> </span>user@server.example.com:/remote/models/<span class="w"> </span>./models/
+<span class="c1"># -a: archive (preserve permissions)</span>
+<span class="c1"># -z: compress during transfer</span>
+<span class="c1"># -P: progress</span>
+
+<span class="c1"># SSH tunneling (forward port from server)</span>
+ssh<span class="w"> </span>-L<span class="w"> </span><span class="m">5432</span>:localhost:5432<span class="w"> </span>user@server.example.com
+<span class="c1"># Now: localhost:5432 → server&#39;s PostgreSQL</span>
+
+<span class="c1"># Keep connection alive (for long-running jobs)</span>
+ssh<span class="w"> </span>-o<span class="w"> </span><span class="nv">ServerAliveInterval</span><span class="o">=</span><span class="m">300</span><span class="w"> </span>user@server.example.com<span class="w">  </span><span class="c1"># Send keepalive every 5 min</span>
+</code></pre></div>
+<h3 id="35-environment-variables-configuration">3.5 Environment Variables &amp; Configuration</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Set variable (session only)</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">API_KEY</span><span class="o">=</span><span class="s2">&quot;sk-1234567890&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$API_KEY</span>
+
+<span class="c1"># Read from .env file</span>
+<span class="nb">set</span><span class="w"> </span>-a
+<span class="nb">source</span><span class="w"> </span>.env.example
+<span class="nb">set</span><span class="w"> </span>+a
+<span class="c1"># Now all variables in .env are available</span>
+
+<span class="c1"># Check if variable is set</span>
+<span class="o">[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$API_KEY</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Variable not set&quot;</span>
+
+<span class="c1"># Use in scripts</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$OPENAI_API_KEY</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;ERROR: OPENAI_API_KEY is not set&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="c1"># Default fallback</span>
+<span class="nv">ENVIRONMENT</span><span class="o">=</span><span class="si">${</span><span class="nv">ENV</span><span class="k">:-</span><span class="nv">development</span><span class="si">}</span><span class="w">  </span><span class="c1"># Use ENV, default to development</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Running in: </span><span class="nv">$ENVIRONMENT</span><span class="s2">&quot;</span>
+</code></pre></div>
+<h3 id="36-curlhttpie-testing-apis">3.6 curl/httpie: Testing APIs</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># GET request (curl)</span>
+curl<span class="w"> </span>https://api.example.com/data
+
+<span class="c1"># GET with header (API key)</span>
+curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;X-API-Key: secret123&quot;</span><span class="w"> </span>https://api.example.com/data
+
+<span class="c1"># POST with JSON (curl)</span>
+curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://api.example.com/documents<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;title&quot;:&quot;Test&quot;,&quot;content&quot;:&quot;...&quot;}&#39;</span>
+
+<span class="c1"># httpie (much cleaner)</span>
+http<span class="w"> </span>GET<span class="w"> </span>https://api.example.com/data
+http<span class="w"> </span>POST<span class="w"> </span>https://api.example.com/documents<span class="w"> </span><span class="nv">title</span><span class="o">=</span><span class="s2">&quot;Test&quot;</span><span class="w"> </span><span class="nv">content</span><span class="o">=</span><span class="s2">&quot;...&quot;</span>
+http<span class="w"> </span>-b<span class="w"> </span>POST<span class="w"> </span>https://api.example.com/documents<span class="w"> </span>&lt;<span class="w"> </span>data.json
+
+<span class="c1"># Save response to file</span>
+curl<span class="w"> </span>https://api.example.com/data<span class="w"> </span>&gt;<span class="w"> </span>response.json
+
+<span class="c1"># Follow redirects</span>
+curl<span class="w"> </span>-L<span class="w"> </span>https://api.example.com/data
+
+<span class="c1"># Show response headers</span>
+curl<span class="w"> </span>-i<span class="w"> </span>https://api.example.com/data<span class="w">  </span><span class="c1"># Includes headers + body</span>
+curl<span class="w"> </span>-I<span class="w"> </span>https://api.example.com/data<span class="w">  </span><span class="c1"># Headers only</span>
+
+<span class="c1"># Bearer token</span>
+curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer YOUR_TOKEN&quot;</span><span class="w"> </span>https://api.example.com/protected
+</code></pre></div>
+<h3 id="37-networking-ports-firewall">3.7 Networking: Ports &amp; Firewall</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check if a port is open</span>
+nc<span class="w"> </span>-zv<span class="w"> </span>localhost<span class="w"> </span><span class="m">8000</span><span class="w">  </span><span class="c1"># Connection successful if open</span>
+
+<span class="c1"># List all listening ports</span>
+netstat<span class="w"> </span>-tlnp<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>LISTEN
+<span class="c1"># or (newer)</span>
+ss<span class="w"> </span>-tlnp<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>LISTEN
+
+<span class="c1"># Check specific service</span>
+lsof<span class="w"> </span>-iTCP:8000<span class="w"> </span>-sTCP:LISTEN
+
+<span class="c1"># Open firewall port (Ubuntu)</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">8000</span>/tcp
+sudo<span class="w"> </span>ufw<span class="w"> </span><span class="nb">enable</span>
+
+<span class="c1"># Check firewall status</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>status
+
+<span class="c1"># Test connectivity to server</span>
+ping<span class="w"> </span>server.example.com
+<span class="c1"># Shows if server is reachable and latency</span>
+
+<span class="c1"># Trace route to server</span>
+traceroute<span class="w"> </span>server.example.com
+<span class="c1"># Shows all hops between you and server</span>
+
+<span class="c1"># Test DNS resolution</span>
+nslookup<span class="w"> </span>server.example.com
+<span class="c1"># or</span>
+dig<span class="w"> </span>server.example.com
+</code></pre></div>
+<h3 id="38-logs-finding-monitoring">3.8 Logs: Finding &amp; Monitoring</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># View application logs (systemd)</span>
+sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w"> </span>ai-api<span class="w"> </span>-f
+<span class="c1"># -f: follow (like tail)</span>
+
+<span class="c1"># Last 100 lines</span>
+sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w"> </span>ai-api<span class="w"> </span>-n<span class="w"> </span><span class="m">100</span>
+
+<span class="c1"># Logs from last hour</span>
+sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w"> </span>ai-api<span class="w"> </span>--since<span class="w"> </span><span class="s2">&quot;1 hour ago&quot;</span>
+
+<span class="c1"># Errors only</span>
+sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w"> </span>ai-api<span class="w"> </span>-p<span class="w"> </span>err
+
+<span class="c1"># Search for pattern</span>
+grep<span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="w"> </span>/var/log/application.log
+
+<span class="c1"># Real-time log monitoring</span>
+tail<span class="w"> </span>-f<span class="w"> </span>/var/log/application.log
+
+<span class="c1"># Monitor multiple logs</span>
+tail<span class="w"> </span>-f<span class="w"> </span>/var/log/syslog<span class="w"> </span>/var/log/application.log
+
+<span class="c1"># Count occurrences of error</span>
+grep<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;ERROR&quot;</span><span class="w"> </span>application.log
+
+<span class="c1"># Find errors in last 24 hours</span>
+find<span class="w"> </span>/var/log<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.log&quot;</span><span class="w"> </span>-mtime<span class="w"> </span>-1<span class="w"> </span>-exec<span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;ERROR&quot;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
+</code></pre></div>
+<h3 id="39-nginx-reverse-proxy-load-balancer">3.9 nginx: Reverse Proxy &amp; Load Balancer</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># /etc/nginx/sites-available/ai-api</span>
+<span class="k">upstream</span><span class="w"> </span><span class="s">ai_backend</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1"># Direct requests to FastAPI backend server</span>
+<span class="w">    </span><span class="kn">server</span><span class="w"> </span><span class="n">127.0.0.1</span><span class="p">:</span><span class="mi">8000</span><span class="p">;</span>
+<span class="w">    </span><span class="kn">server</span><span class="w"> </span><span class="n">127.0.0.1</span><span class="p">:</span><span class="mi">8001</span><span class="p">;</span><span class="w">  </span><span class="c1"># Load balance across 2 instances</span>
+<span class="p">}</span>
+
+<span class="k">server</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kn">listen</span><span class="w"> </span><span class="mi">80</span><span class="p">;</span><span class="w">  </span><span class="c1"># Listen on port 80 (HTTP)</span>
+<span class="w">    </span><span class="kn">server_name</span><span class="w"> </span><span class="s">api.example.com</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1"># Redirect HTTP to HTTPS</span>
+<span class="w">    </span><span class="kn">return</span><span class="w"> </span><span class="mi">301</span><span class="w"> </span><span class="s">https://</span><span class="nv">$host$request_uri</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">server</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kn">listen</span><span class="w"> </span><span class="mi">443</span><span class="w"> </span><span class="s">ssl</span><span class="w"> </span><span class="s">http2</span><span class="p">;</span>
+<span class="w">    </span><span class="kn">server_name</span><span class="w"> </span><span class="s">api.example.com</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1"># SSL certificates (see Let&#39;s Encrypt section)</span>
+<span class="w">    </span><span class="kn">ssl_certificate</span><span class="w"> </span><span class="s">/etc/letsencrypt/live/api.example.com/fullchain.pem</span><span class="p">;</span>
+<span class="w">    </span><span class="kn">ssl_certificate_key</span><span class="w"> </span><span class="s">/etc/letsencrypt/live/api.example.com/privkey.pem</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1"># Proxy requests to FastAPI</span>
+<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://ai_backend</span><span class="p">;</span>
+<span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Host</span><span class="w"> </span><span class="nv">$host</span><span class="p">;</span>
+<span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Real-IP</span><span class="w"> </span><span class="nv">$remote_addr</span><span class="p">;</span>
+<span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Forwarded-For</span><span class="w"> </span><span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+<span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Forwarded-Proto</span><span class="w"> </span><span class="nv">$scheme</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1"># WebSocket support (for streaming)</span>
+<span class="w">        </span><span class="kn">proxy_http_version</span><span class="w"> </span><span class="mi">1</span><span class="s">.1</span><span class="p">;</span>
+<span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Upgrade</span><span class="w"> </span><span class="nv">$http_upgrade</span><span class="p">;</span>
+<span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Connection</span><span class="w"> </span><span class="s">&quot;upgrade&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1"># Health check endpoint</span>
+<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/health</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kn">access_log</span><span class="w"> </span><span class="no">off</span><span class="p">;</span><span class="w">  </span><span class="c1"># Don&#39;t log health checks</span>
+<span class="w">        </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://ai_backend</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># Enable the config</span>
+<span class="k">sudo</span><span class="w"> </span><span class="s">ln</span><span class="w"> </span><span class="s">-s</span><span class="w"> </span><span class="s">/etc/nginx/sites-available/ai-api</span><span class="w"> </span><span class="s">/etc/nginx/sites-enabled/ai-api</span>
+<span class="s">sudo</span><span class="w"> </span><span class="s">nginx</span><span class="w"> </span><span class="s">-t</span><span class="w">  </span><span class="c1"># Test config</span>
+<span class="s">sudo</span><span class="w"> </span><span class="s">systemctl</span><span class="w"> </span><span class="s">reload</span><span class="w"> </span><span class="s">nginx</span>
+</code></pre></div>
+<h3 id="310-lets-encrypt-free-ssl-certificates">3.10 Let's Encrypt: Free SSL Certificates</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install certbot</span>
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>certbot<span class="w"> </span>python3-certbot-nginx
+
+<span class="c1"># Obtain certificate (automatic nginx config)</span>
+sudo<span class="w"> </span>certbot<span class="w"> </span>--nginx<span class="w"> </span>-d<span class="w"> </span>api.example.com
+
+<span class="c1"># Obtain certificate (manual)</span>
+sudo<span class="w"> </span>certbot<span class="w"> </span>certonly<span class="w"> </span>--standalone<span class="w"> </span>-d<span class="w"> </span>api.example.com
+
+<span class="c1"># Auto-renewal (runs daily)</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>certbot.timer
+
+<span class="c1"># Renew manually</span>
+sudo<span class="w"> </span>certbot<span class="w"> </span>renew
+
+<span class="c1"># Check certificate expiry</span>
+openssl<span class="w"> </span>x509<span class="w"> </span>-in<span class="w"> </span>/etc/letsencrypt/live/api.example.com/fullchain.pem<span class="w"> </span>-noout<span class="w"> </span>-dates
+</code></pre></div>
+<h3 id="311-monitoring-resource-usage">3.11 Monitoring: Resource Usage</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Real-time CPU/Memory (interactive)</span>
+top
+<span class="c1"># Press &#39;M&#39; to sort by memory</span>
+<span class="c1"># Press &#39;P&#39; to sort by CPU</span>
+
+<span class="c1"># Disk usage</span>
+df<span class="w"> </span>-h<span class="w">  </span><span class="c1"># Filesystem usage</span>
+
+du<span class="w"> </span>-sh<span class="w"> </span>/var/log<span class="w">  </span><span class="c1"># Specific directory</span>
+
+<span class="c1"># Network I/O</span>
+iftop<span class="w">  </span><span class="c1"># Real-time network usage (install: apt-get install iftop)</span>
+
+<span class="c1"># CPU cores</span>
+nproc<span class="w">  </span><span class="c1"># Number of CPU cores</span>
+lscpu<span class="w">  </span><span class="c1"># Detailed CPU info</span>
+
+<span class="c1"># Memory info</span>
+free<span class="w"> </span>-h<span class="w">  </span><span class="c1"># Used, available memory</span>
+
+cat<span class="w"> </span>/proc/cpuinfo<span class="w">  </span><span class="c1"># Detailed CPU info</span>
+
+<span class="c1"># GPU usage (if available)</span>
+nvidia-smi<span class="w">  </span><span class="c1"># NVIDIA GPU stats</span>
+</code></pre></div>
+<h3 id="312-tmux-terminal-multiplexing">3.12 tmux: Terminal Multiplexing</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Start new session</span>
+tmux<span class="w"> </span>new-session<span class="w"> </span>-s<span class="w"> </span>training
+
+<span class="c1"># Now you&#39;re in tmux. Start your long-running job</span>
+python<span class="w"> </span>train.py
+
+<span class="c1"># Detach (leave job running): Ctrl+B then D</span>
+<span class="c1"># Session keeps running even if you disconnect</span>
+
+<span class="c1"># List sessions</span>
+tmux<span class="w"> </span>list-sessions
+
+<span class="c1"># Reattach to session</span>
+tmux<span class="w"> </span>attach-session<span class="w"> </span>-s<span class="w"> </span>training
+
+<span class="c1"># Kill session</span>
+tmux<span class="w"> </span>kill-session<span class="w"> </span>-s<span class="w"> </span>training
+
+<span class="c1"># Create window in session</span>
+tmux<span class="w"> </span>new-window<span class="w"> </span>-t<span class="w"> </span>training<span class="w"> </span>-n<span class="w"> </span>worker2
+
+<span class="c1"># Kill window</span>
+tmux<span class="w"> </span>kill-window<span class="w"> </span>-t<span class="w"> </span>training:1
+
+<span class="c1"># Split pane (horizontal)</span>
+<span class="c1"># Ctrl+B then %</span>
+
+<span class="c1"># Split pane (vertical)</span>
+<span class="c1"># Ctrl+B then &quot;</span>
+
+<span class="c1"># Move between panes</span>
+<span class="c1"># Ctrl+B then Arrow keys</span>
+
+<span class="c1"># Sample tmux.conf (persistent config)</span>
+<span class="c1"># ~/.tmux.conf</span>
+<span class="nb">set</span><span class="w"> </span>-g<span class="w"> </span>mouse<span class="w"> </span>on<span class="w">  </span><span class="c1"># Enable mouse support</span>
+<span class="nb">bind</span><span class="w"> </span>r<span class="w"> </span>source-file<span class="w"> </span>~/.tmux.conf<span class="w">  </span><span class="c1"># Reload config with Ctrl+B R</span>
+
+<span class="c1"># Basic commands</span>
+Ctrl+B<span class="w"> </span>C<span class="w">  </span><span class="c1"># Create new window</span>
+Ctrl+B<span class="w"> </span>N<span class="w">  </span><span class="c1"># Next window</span>
+Ctrl+B<span class="w"> </span>P<span class="w">  </span><span class="c1"># Previous window</span>
+Ctrl+B<span class="w"> </span>D<span class="w">  </span><span class="c1"># Detach</span>
+Ctrl+B<span class="w"> </span><span class="o">[</span><span class="w">  </span><span class="c1"># Enter copy mode (scroll)</span>
+</code></pre></div>
+<hr />
+<h2 id="4-architecture-diagram-linux-system-stack">4. Architecture Diagram: Linux System Stack</h2>
+<pre class="mermaid"><code>graph TB
+    A["Application&lt;br/&gt;Python/FastAPI"] --&gt; B["systemd&lt;br/&gt;Service Management"]
+    B --&gt; C["Linux Kernel&lt;br/&gt;Process, Memory, I/O"]
+    C --&gt; D["Hardware&lt;br/&gt;CPU, RAM, Disk"]
+
+    E["nginx&lt;br/&gt;Reverse Proxy"] --&gt; F["Networking Stack&lt;br/&gt;TCP/IP"]
+    F --&gt; G["Firewall&lt;br/&gt;UFW/iptables"]
+
+    H["Monitoring&lt;br/&gt;logs, metrics"] --&gt; I["Logging&lt;br/&gt;systemd journal"]
+
+    A --&gt; E
+    B --&gt; I
+    C --&gt; D
+    G --&gt; D</code></pre>
+<hr />
+<h2 id="5-tools-section-essential-linux-tools">5. Tools Section: Essential Linux Tools</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>systemd</strong></td>
+<td>Service management</td>
+<td><code>systemctl start service</code></td>
+</tr>
+<tr>
+<td><strong>journalctl</strong></td>
+<td>Log viewing</td>
+<td><code>journalctl -u service -f</code></td>
+</tr>
+<tr>
+<td><strong>nginx</strong></td>
+<td>Reverse proxy</td>
+<td>Proxy FastAPI to port 80</td>
+</tr>
+<tr>
+<td><strong>certbot</strong></td>
+<td>SSL certificates</td>
+<td>Automatic HTTPS</td>
+</tr>
+<tr>
+<td><strong>tmux</strong></td>
+<td>Terminal sessions</td>
+<td>Keep training jobs alive</td>
+</tr>
+<tr>
+<td><strong>curl/httpie</strong></td>
+<td>API testing</td>
+<td>Test endpoints</td>
+</tr>
+<tr>
+<td><strong>ssh</strong></td>
+<td>Remote access</td>
+<td>Connect to servers</td>
+</tr>
+<tr>
+<td><strong>rsync</strong></td>
+<td>File sync</td>
+<td>Copy large model files</td>
+</tr>
+<tr>
+<td><strong>top/htop</strong></td>
+<td>Process monitoring</td>
+<td>Watch CPU/memory</td>
+</tr>
+<tr>
+<td><strong>lsof</strong></td>
+<td>File descriptor listing</td>
+<td>Debug port conflicts</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-decision-framework-when-to-use-what">6. Decision Framework: When to Use What</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Tool/Command</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Run app at startup</td>
+<td>systemd service</td>
+<td>Automatic restart, logging</td>
+</tr>
+<tr>
+<td>Test API endpoint</td>
+<td>curl or httpie</td>
+<td>Quick, no dependencies</td>
+</tr>
+<tr>
+<td>View recent errors</td>
+<td><code>journalctl -f</code></td>
+<td>Real-time, filtered</td>
+</tr>
+<tr>
+<td>SSH to server</td>
+<td>SSH key + config</td>
+<td>Secure, no passwords</td>
+</tr>
+<tr>
+<td>Monitor GPU</td>
+<td>nvidia-smi</td>
+<td>Real-time streaming data</td>
+</tr>
+<tr>
+<td>Copy model files</td>
+<td>rsync (not scp)</td>
+<td>Much faster for large dirs</td>
+</tr>
+<tr>
+<td>Proxy traffic</td>
+<td>nginx</td>
+<td>Load balancing, SSL</td>
+</tr>
+<tr>
+<td>Get HTTPS cert</td>
+<td>Let's Encrypt/certbot</td>
+<td>Free, automatic renewal</td>
+</tr>
+<tr>
+<td>Long-running job</td>
+<td>tmux session</td>
+<td>Survives disconnection</td>
+</tr>
+<tr>
+<td>Find process crash</td>
+<td>systemd logs</td>
+<td>Full backtrace + context</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-step-by-step-deploying-fastapi-on-linux">7. Step-by-Step: Deploying FastAPI on Linux</h2>
+<h3 id="step-1-create-systemd-service">Step 1: Create systemd Service</h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/systemd/system/ai-api.service
+</code></pre></div>
+<p>Paste:
+<div class="highlight"><pre><span></span><code><span class="k">[Unit]</span>
+<span class="na">Description</span><span class="o">=</span><span class="s">AI FastAPI Server</span>
+<span class="na">After</span><span class="o">=</span><span class="s">network.target</span>
+<span class="na">Wants</span><span class="o">=</span><span class="s">postgresql.service redis-server.service</span>
+
+<span class="k">[Service]</span>
+<span class="na">Type</span><span class="o">=</span><span class="s">notify</span>
+<span class="na">User</span><span class="o">=</span><span class="s">ai_user</span>
+<span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">/home/ai_user/myapp</span>
+<span class="na">Environment</span><span class="o">=</span><span class="s">&quot;PATH=/home/ai_user/.local/bin&quot;</span>
+<span class="na">EnvironmentFile</span><span class="o">=</span><span class="s">/home/ai_user/myapp/.env</span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/home/ai_user/.local/bin/poetry run uvicorn src.main:app --host 0.0.0.0 --port 8000 --workers 4</span>
+<span class="na">Restart</span><span class="o">=</span><span class="s">always</span>
+<span class="na">RestartSec</span><span class="o">=</span><span class="s">5</span>
+
+<span class="na">StandardOutput</span><span class="o">=</span><span class="s">append:/var/log/ai-api.log</span>
+<span class="na">StandardError</span><span class="o">=</span><span class="s">append:/var/log/ai-api.log</span>
+
+<span class="k">[Install]</span>
+<span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</code></pre></div></p>
+<h3 id="step-2-enable-start">Step 2: Enable &amp; Start</h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>ai-api
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>ai-api
+sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>ai-api
+
+<span class="c1"># View logs</span>
+sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w"> </span>ai-api<span class="w"> </span>-f
+</code></pre></div>
+<h3 id="step-3-configure-nginx">Step 3: Configure nginx</h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/nginx/sites-available/api
+</code></pre></div>
+<p>Paste:
+<div class="highlight"><pre><span></span><code><span class="k">upstream</span><span class="w"> </span><span class="s">backend</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kn">server</span><span class="w"> </span><span class="n">127.0.0.1</span><span class="p">:</span><span class="mi">8000</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="k">server</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kn">listen</span><span class="w"> </span><span class="mi">80</span><span class="p">;</span><span class="w"> </span><span class="kn">server_name</span><span class="w"> </span><span class="s">api.example.com</span><span class="p">;</span>
+<span class="w">    </span><span class="kn">return</span><span class="w"> </span><span class="mi">301</span><span class="w"> </span><span class="s">https://</span><span class="nv">$host$request_uri</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">server</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kn">listen</span><span class="w"> </span><span class="mi">443</span><span class="w"> </span><span class="s">ssl</span><span class="w"> </span><span class="s">http2</span><span class="p">;</span><span class="w"> </span><span class="kn">server_name</span><span class="w"> </span><span class="s">api.example.com</span><span class="p">;</span>
+<span class="w">    </span><span class="kn">ssl_certificate</span><span class="w"> </span><span class="s">/etc/letsencrypt/live/api.example.com/fullchain.pem</span><span class="p">;</span>
+<span class="w">    </span><span class="kn">ssl_certificate_key</span><span class="w"> </span><span class="s">/etc/letsencrypt/live/api.example.com/privkey.pem</span><span class="p">;</span>
+<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://backend</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="step-4-enable-test">Step 4: Enable &amp; Test</h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/etc/nginx/sites-available/api<span class="w"> </span>/etc/nginx/sites-enabled/
+sudo<span class="w"> </span>nginx<span class="w"> </span>-t
+sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>nginx
+</code></pre></div>
+<h3 id="step-5-verify">Step 5: Verify</h3>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>https://api.example.com/health
+<span class="c1"># Should return healthy</span>
+</code></pre></div>
+<hr />
+<h2 id="8-practical-project-monitoring-dashboard">8. Practical Project: Monitoring Dashboard</h2>
+<p><strong>Goal:</strong> Create scripts to monitor your deployed service.</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># monitor.sh - Health check script</span>
+
+<span class="c1"># Check if service is running</span>
+systemctl<span class="w"> </span>is-active<span class="w"> </span>--quiet<span class="w"> </span>ai-api
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;ALERT: ai-api is not running&quot;</span>
+<span class="w">    </span>systemctl<span class="w"> </span>restart<span class="w"> </span>ai-api
+<span class="k">fi</span>
+
+<span class="c1"># Check disk space</span>
+<span class="nv">DISK_USAGE</span><span class="o">=</span><span class="k">$(</span>df<span class="w"> </span>/<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;NR==2 {print $5}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">&#39;s/%//&#39;</span><span class="k">)</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$DISK_USAGE</span><span class="w"> </span>-gt<span class="w"> </span><span class="m">80</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;ALERT: Disk usage is </span><span class="nv">$DISK_USAGE</span><span class="s2">%&quot;</span>
+<span class="k">fi</span>
+
+<span class="c1"># Check HTTP endpoint</span>
+<span class="nv">HTTP_CODE</span><span class="o">=</span><span class="k">$(</span>curl<span class="w"> </span>-s<span class="w"> </span>-o<span class="w"> </span>/dev/null<span class="w"> </span>-w<span class="w"> </span><span class="s2">&quot;%{http_code}&quot;</span><span class="w"> </span>https://api.example.com/health<span class="k">)</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$HTTP_CODE</span><span class="s2">&quot;</span><span class="w"> </span>!<span class="o">=</span><span class="w"> </span><span class="s2">&quot;200&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;ALERT: API returned </span><span class="nv">$HTTP_CODE</span><span class="s2">&quot;</span>
+<span class="k">fi</span>
+
+<span class="c1"># Check memory</span>
+<span class="nv">MEM_USAGE</span><span class="o">=</span><span class="k">$(</span>free<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;NR==2 {print int($3/$2 * 100)}&#39;</span><span class="k">)</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$MEM_USAGE</span><span class="w"> </span>-gt<span class="w"> </span><span class="m">85</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;ALERT: Memory usage is </span><span class="nv">$MEM_USAGE</span><span class="s2">%&quot;</span>
+<span class="k">fi</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;All checks passed at </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&quot;</span>
+</code></pre></div>
+<p>Run daily:
+<div class="highlight"><pre><span></span><code><span class="c1"># Add to crontab</span>
+crontab<span class="w"> </span>-e
+<span class="c1"># Add line:</span>
+<span class="m">0</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/home/ai_user/monitor.sh<span class="w"> </span>&gt;&gt;<span class="w"> </span>/var/log/monitor.log<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+</code></pre></div></p>
+<hr />
+<h2 id="9-debugging-playbook-10-linux-errors">9. Debugging Playbook: 10 Linux Errors</h2>
+<h3 id="error-1-permission-denied-when-running-command">Error 1: "Permission denied" when running command</h3>
+<p><strong>Symptom:</strong> <code>permission denied: /usr/local/bin/myapp</code></p>
+<p><strong>Explanation:</strong> File doesn't have execute permission.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>/usr/local/bin/myapp
+<span class="c1"># or</span>
+chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>/usr/local/bin/myapp
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Set permissions correctly on install.</p>
+<hr />
+<h3 id="error-2-address-already-in-use">Error 2: "Address already in use"</h3>
+<p><strong>Symptom:</strong> <code>OSError: [Errno 48] Address already in use: ('::', 8000)</code></p>
+<p><strong>Explanation:</strong> Another process is using port 8000.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code>lsof<span class="w"> </span>-iTCP:8000
+<span class="c1"># Kill the process</span>
+<span class="nb">kill</span><span class="w"> </span>-9<span class="w"> </span>&lt;PID&gt;
+
+<span class="c1"># Or use different port</span>
+uvicorn<span class="w"> </span>main:app<span class="w"> </span>--port<span class="w"> </span><span class="m">8001</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Use unique ports. Configure properly in systemd.</p>
+<hr />
+<h3 id="error-3-systemd-service-failed-to-start">Error 3: "systemd service failed to start"</h3>
+<p><strong>Symptom:</strong> <code>systemctl status myapp</code> shows failed.</p>
+<p><strong>Explanation:</strong> Check the logs.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code>journalctl<span class="w"> </span>-u<span class="w"> </span>myapp<span class="w"> </span>-n<span class="w"> </span><span class="m">50</span><span class="w">  </span><span class="c1"># Last 50 lines</span>
+journalctl<span class="w"> </span>-u<span class="w"> </span>myapp<span class="w"> </span>-p<span class="w"> </span>err<span class="w">  </span><span class="c1"># Errors only</span>
+
+<span class="c1"># Common causes:</span>
+<span class="c1"># 1. Path doesn&#39;t exist (check WorkingDirectory)</span>
+<span class="c1"># 2. User doesn&#39;t have permissions (check User=)</span>
+<span class="c1"># 3. Environment variable missing (check EnvironmentFile)</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Test systemd locally before deploying.</p>
+<hr />
+<h3 id="error-4-disk-quota-exceeded">Error 4: "disk quota exceeded"</h3>
+<p><strong>Symptom:</strong> Can't write files. <code>No space left on device</code></p>
+<p><strong>Explanation:</strong> Disk is full.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code>df<span class="w"> </span>-h<span class="w">  </span><span class="c1"># Check usage</span>
+du<span class="w"> </span>-sh<span class="w"> </span>/var/log<span class="w">  </span><span class="c1"># Find largest directory</span>
+sudo<span class="w"> </span>rm<span class="w"> </span>/var/log/old.log<span class="w">  </span><span class="c1"># Delete old logs</span>
+<span class="c1"># Or set up log rotation</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Monitor disk usage. Set up logrotate.</p>
+<hr />
+<h3 id="error-5-ssh-connection-refused">Error 5: "SSH: connection refused"</h3>
+<p><strong>Symptom:</strong> <code>ssh: connect to host server.example.com port 22: Connection refused</code></p>
+<p><strong>Explanation:</strong> SSH server not running or firewall blocking.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># On server</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>ssh
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>ssh
+
+<span class="c1"># Check firewall</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">22</span>/tcp
+sudo<span class="w"> </span>ufw<span class="w"> </span><span class="nb">enable</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> SSH should auto-start. Enable explicitly in systemd.</p>
+<hr />
+<h3 id="error-6-command-not-found">Error 6: "command not found"</h3>
+<p><strong>Symptom:</strong> <code>python: command not found</code></p>
+<p><strong>Explanation:</strong> Binary not in PATH.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code>which<span class="w"> </span>python<span class="w">  </span><span class="c1"># Show actual path</span>
+python3<span class="w"> </span>main.py<span class="w">  </span><span class="c1"># May need python3 instead of python</span>
+
+<span class="c1"># Or add to PATH</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/usr/local/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export PATH=&quot;/usr/local/bin:$PATH&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Use absolute paths. Check PATH on deployment.</p>
+<hr />
+<h3 id="error-7-too-many-open-files">Error 7: "too many open files"</h3>
+<p><strong>Symptom:</strong> <code>OSError: [Errno 24] Too many open files</code></p>
+<p><strong>Explanation:</strong> Process hit open file limit.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Increase limit</span>
+<span class="nb">ulimit</span><span class="w"> </span>-n<span class="w"> </span><span class="m">65536</span><span class="w">  </span><span class="c1"># Set limit to 65536</span>
+
+<span class="c1"># Make permanent</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;* soft nofile 65536&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/security/limits.conf
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Monitor open file count. Increase limit on deployment.</p>
+<hr />
+<h3 id="error-8-ssl-certificate-problem">Error 8: "SSL certificate problem"</h3>
+<p><strong>Symptom:</strong> <code>curl: (60) SSL certificate problem: unable to get local issuer certificate</code></p>
+<p><strong>Explanation:</strong> SSL cert expired or invalid.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check expiry</span>
+openssl<span class="w"> </span>x509<span class="w"> </span>-in<span class="w"> </span>/etc/ssl/certs/cert.pem<span class="w"> </span>-noout<span class="w"> </span>-dates
+
+<span class="c1"># Renew with Let&#39;s Encrypt</span>
+sudo<span class="w"> </span>certbot<span class="w"> </span>renew
+
+<span class="c1"># Or use curl with insecure (dev only!)</span>
+curl<span class="w"> </span>--insecure<span class="w"> </span>https://localhost:8443
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Set up automatic renewal with certbot.</p>
+<hr />
+<h3 id="error-9-cannot-connect-to-database">Error 9: "Cannot connect to database"</h3>
+<p><strong>Symptom:</strong> Application fails to start. Logs: "Could not connect to PostgreSQL"</p>
+<p><strong>Explanation:</strong> Database URL wrong or database not running.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check database is running</span>
+docker<span class="w"> </span>ps<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>postgres
+
+<span class="c1"># Test connection</span>
+psql<span class="w"> </span><span class="s2">&quot;postgresql://user:pass@localhost:5432/dbname&quot;</span>
+
+<span class="c1"># Check environment variable</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$DATABASE_URL</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Health check DB before starting app.</p>
+<hr />
+<h3 id="error-10-nginx-emerg-bind-to-failed">Error 10: "nginx: [emerg] bind() to failed"</h3>
+<p><strong>Symptom:</strong> nginx won't start. <code>bind() [::]:443 failed</code></p>
+<p><strong>Explanation:</strong> Port 443 already in use or permission denied.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Kill process using port</span>
+lsof<span class="w"> </span>-iTCP:443
+<span class="nb">kill</span><span class="w"> </span>-9<span class="w"> </span>&lt;PID&gt;
+
+<span class="c1"># Or run as root (for ports &lt; 1024)</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>nginx
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Run nginx as root. Use ports &gt; 1024 for unprivileged services.</p>
+<hr />
+<h2 id="10-common-mistakes-linux-administration">10. Common Mistakes: Linux Administration</h2>
+<h3 id="mistake-1-running-app-directly-not-systemd">Mistake 1: Running App Directly (Not systemd)</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong: direct terminal (dies when you disconnect)</span>
+ssh<span class="w"> </span>server.example.com
+python<span class="w"> </span>main.py<span class="w">  </span><span class="c1"># CTRL+C or disconnect → app stops</span>
+
+<span class="c1"># Right: systemd service (restarts automatically)</span>
+systemctl<span class="w"> </span>start<span class="w"> </span>myapp
+<span class="c1"># App runs forever, restarts on crash</span>
+</code></pre></div>
+<hr />
+<h3 id="mistake-2-ignoring-logs">Mistake 2: Ignoring Logs</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong: no logging</span>
+app.run<span class="o">()</span><span class="w">  </span><span class="c1"># Silent failures</span>
+
+<span class="c1"># Right: structured logging to systemd</span>
+logger.info<span class="o">(</span><span class="s2">&quot;Event happened&quot;</span><span class="o">)</span>
+<span class="c1"># Appears in: journalctl -u myapp -f</span>
+</code></pre></div>
+<hr />
+<h3 id="mistake-3-ssh-without-keys">Mistake 3: SSH Without Keys</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong: password-based SSH (vulnerable)</span>
+ssh<span class="w"> </span>user@server.example.com<span class="w">  </span><span class="c1"># Prompts for password</span>
+
+<span class="c1"># Right: SSH key (secure, automatic)</span>
+ssh<span class="w"> </span>-i<span class="w"> </span>~/.ssh/mykey<span class="w"> </span>user@server.example.com
+<span class="c1"># Or configure ~/.ssh/config</span>
+</code></pre></div>
+<hr />
+<h3 id="mistake-4-one-endpoint-behind-firewall">Mistake 4: One Endpoint Behind firewall</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong: forgot to open port</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">22</span><span class="w">  </span><span class="c1"># SSH open</span>
+<span class="c1"># But 8000 (app port) still blocked</span>
+
+<span class="c1"># Right: open all necessary ports</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">22</span>/tcp
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">80</span>/tcp
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">443</span>/tcp
+</code></pre></div>
+<hr />
+<h3 id="mistake-5-not-monitoring-resources">Mistake 5: Not Monitoring Resources</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong: fires up training job, never checks</span>
+python<span class="w"> </span>train.py<span class="w"> </span><span class="p">&amp;</span>
+
+<span class="c1"># Right: monitor before, during, after</span>
+top<span class="w">  </span><span class="c1"># Check max memory needed</span>
+nvidia-smi<span class="w">  </span><span class="c1"># Watch GPU</span>
+<span class="c1"># Then schedule with resource limits:</span>
+<span class="c1"># cpulimit -l 50% python train.py</span>
+</code></pre></div>
+<hr />
+<h2 id="11-production-realism-local-vs-production">11. Production Realism: Local vs Production</h2>
+<h3 id="local-deployment">Local Deployment</h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>myapp
+poetry<span class="w"> </span>install
+uvicorn<span class="w"> </span>src.main:app<span class="w"> </span>--reload<span class="w"> </span>--port<span class="w"> </span><span class="m">8000</span>
+<span class="c1"># Run in foreground, auto-reload on changes</span>
+</code></pre></div>
+<h3 id="production-deployment">Production Deployment</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Application files copied to /home/deploy/myapp</span>
+<span class="c1"># 2. Systemd service installed (/etc/systemd/system/myapp.service)</span>
+<span class="c1"># 3. Environment loaded from /home/deploy/.env (secrets separate)</span>
+<span class="c1"># 4. nginx proxy in front (handles SSL, load balancing)</span>
+<span class="c1"># 5. All logs in journalctl (persistent, searchable)</span>
+<span class="c1"># 6. Health checks running (monitoring)</span>
+<span class="c1"># 7. Auto-restarts on crash</span>
+<span class="c1"># 8. Multiple workers (4-8 processes)</span>
+
+<span class="c1"># Result: bulletproof service that runs 24/7</span>
+</code></pre></div>
+<hr />
+<h2 id="12-cost-performance-considerations">12. Cost &amp; Performance Considerations</h2>
+<h3 id="server-sizing">Server Sizing</h3>
+<div class="highlight"><pre><span></span><code>CPU Cores → Concurrent Users:
+1 core: 1-5 users
+2 cores: 5-10 users
+4 cores: 20-40 users
+8 cores: 50-100 users
+
+Memory → Model Size + Concurrency:
+4GB: small model
+16GB: medium model
+32GB: large model or high concurrency
+64GB: production-grade
+</code></pre></div>
+<h3 id="monitoring-when-it-matters">Monitoring When It Matters</h3>
+<div class="highlight"><pre><span></span><code>Check every:
+- CPU: If training job → every minute
+- Memory: If model loading → continuously
+- Disk: If log generation → hourly
+- Network: If streaming model → seconds
+- DB connections: Always at startup
+</code></pre></div>
+<hr />
+<h2 id="13-security-considerations">13. Security Considerations</h2>
+<h3 id="ssh-security">SSH Security</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Regenerate keys periodically</span>
+ssh-keygen<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>whoami<span class="k">)</span><span class="s2">@</span><span class="k">$(</span>hostname<span class="k">)</span><span class="s2">-</span><span class="k">$(</span>date<span class="w"> </span>-I<span class="k">)</span><span class="s2">&quot;</span>
+
+<span class="c1"># Disable password authentication</span>
+sudo<span class="w"> </span>nano<span class="w"> </span>/etc/ssh/sshd_config
+<span class="c1"># Add: PasswordAuthentication no</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>ssh
+
+<span class="c1"># Fail2ban (auto-block brute force)</span>
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>fail2ban
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>fail2ban
+</code></pre></div>
+<h3 id="firewall-rules">Firewall Rules</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Start with everything blocked</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>default<span class="w"> </span>deny<span class="w"> </span>incoming
+sudo<span class="w"> </span>ufw<span class="w"> </span>default<span class="w"> </span>allow<span class="w"> </span>outgoing
+
+<span class="c1"># Only allow what&#39;s needed</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">22</span>/tcp<span class="w">  </span><span class="c1"># SSH</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">80</span>/tcp<span class="w">  </span><span class="c1"># HTTP</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">443</span>/tcp<span class="w">  </span><span class="c1"># HTTPS</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>from<span class="w"> </span><span class="m">10</span>.0.0.0/8<span class="w"> </span>to<span class="w"> </span>any<span class="w"> </span>port<span class="w"> </span><span class="m">5432</span><span class="w">  </span><span class="c1"># PostgreSQL from internal</span>
+</code></pre></div>
+<h3 id="secret-management">Secret Management</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong: hardcoded in config</span>
+<span class="nv">API_KEY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;sk-1234567890&quot;</span>
+
+<span class="c1"># Right: environment variable</span>
+<span class="nv">API_KEY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>os.getenv<span class="o">(</span><span class="s2">&quot;OPENAI_API_KEY&quot;</span><span class="o">)</span>
+<span class="c1"># Set via:</span>
+<span class="c1"># 1. systemd EnvironmentFile=/path/to/.env</span>
+<span class="c1"># 2. AWS Secrets Manager</span>
+<span class="c1"># 3. HashiCorp Vault</span>
+</code></pre></div>
+<hr />
+<h2 id="14-case-study-netflix-deployment">14. Case Study: Netflix Deployment</h2>
+<p><strong>Why Netflix matters:</strong> Serves 200M+ users, complex deployment.</p>
+<p><strong>Their practices:</strong>
+- Multiple instances behind load balancer
+- Canary deployments (5% of users on new version)
+- Automatic health checks + rollback
+- Centralized logs (not scattered across servers)
+- Monitoring triggers alerts</p>
+<p><strong>Lesson:</strong> Automation is survival. Deploy with confidence, monitor everything.</p>
+<hr />
+<h2 id="15-interview-cheat-sheet-linuxops">15. Interview Cheat Sheet: Linux/Ops</h2>
+<h3 id="concept-1-systemd-service-lifecycle">Concept 1: systemd Service Lifecycle</h3>
+<p><strong>Q:</strong> Explain systemd service startup to shutdown.</p>
+<p><strong>A:</strong> ExecStartPre (setup) → ExecStart (run) → ExecStop (cleanup). If crashes, Restart=always restarts after RestartSec delay.</p>
+<hr />
+<h3 id="concept-2-port-forwarding-vs-reverse-proxy">Concept 2: Port Forwarding vs Reverse Proxy</h3>
+<p><strong>Q:</strong> What's the difference?</p>
+<p><strong>A:</strong> Port forwarding (SSH -L) is temporary, local. Reverse proxy (nginx) is permanent, production, handles SSL.</p>
+<hr />
+<h3 id="concept-3-log-rotation">Concept 3: Log Rotation</h3>
+<p><strong>Q:</strong> Why rotate logs?</p>
+<p><strong>A:</strong> Prevent disk fill. Old logs are compressed/deleted. logrotate handles this automatically.</p>
+<hr />
+<h3 id="concept-4-process-signals">Concept 4: Process Signals</h3>
+<p><strong>Q:</strong> Difference between SIGTERM and SIGKILL?</p>
+<p><strong>A:</strong> SIGTERM (15) = graceful shutdown. SIGKILL (9) = forceful, can't catch. Always SIGTERM first.</p>
+<hr />
+<h3 id="concept-5-open-file-descriptors">Concept 5: Open File Descriptors</h3>
+<p><strong>Q:</strong> What's "too many open files"?</p>
+<p><strong>A:</strong> Each connection (socket, file, pipe) is an FD. Limit is ~1024 by default. Hit it with many concurrent connections. Increase with ulimit.</p>
+<hr />
+<h2 id="16-review-questions">16. Review Questions</h2>
+<ol>
+<li>How do you keep a Python process running after you disconnect from SSH?</li>
+<li>Write a systemd service file for your FastAPI app.</li>
+<li>Explain how nginx proxies requests to your backend.</li>
+<li>How do you renew an SSL certificate with Let's Encrypt?</li>
+<li>What does <code>kill -9 &lt;PID&gt;</code> do vs <code>kill &lt;PID&gt;</code>?</li>
+<li>How do you find which process is using port 8000?</li>
+<li>Explain how tmux keeps a session alive.</li>
+<li>How do you monitor real-time resource usage?</li>
+<li>What's the firewall command to allow port 443?</li>
+<li>How do you tail logs from a systemd service?</li>
+</ol>
+<hr />
+<h2 id="17-flashcards">17. Flashcards</h2>
+<h3 id="card-1">Card 1</h3>
+<p><strong>Front:</strong> How do you make a FastAPI app start automatically on reboot?</p>
+<p><strong>Back:</strong> Create a systemd service in <code>/etc/systemd/system/</code>, use <code>ExecStart=</code>, enable with <code>systemctl enable</code>.</p>
+<hr />
+<h3 id="card-2">Card 2</h3>
+<p><strong>Front:</strong> Why use nginx instead of running FastAPI directly on port 80?</p>
+<p><strong>Back:</strong> Nginx handles SSL termination, load balancing, reverse proxy. FastAPI is for app logic, not infrastructure.</p>
+<hr />
+<h3 id="card-3">Card 3</h3>
+<p><strong>Front:</strong> What's the difference between tail and journalctl?</p>
+<p><strong>Back:</strong> tail shows files. journalctl shows systemd journal (structured, searchable, includes metadata).</p>
+<hr />
+<h3 id="card-4">Card 4</h3>
+<p><strong>Front:</strong> How do you test if a port is open?</p>
+<p><strong>Back:</strong> <code>nc -zv localhost 8000</code> or <code>curl localhost:8000</code>. Or use lsof.</p>
+<hr />
+<h3 id="card-5">Card 5</h3>
+<p><strong>Front:</strong> Why use SSH keys instead of passwords?</p>
+<p><strong>Back:</strong> Keys are automatic, no typos. Passwords are vulnerable to brute force. Keys allow failban/rate limiting.</p>
+<hr />
+<h3 id="card-6">Card 6</h3>
+<p><strong>Front:</strong> What does systemctl daemon-reload do?</p>
+<p><strong>Back:</strong> Tells systemd to re-read service files. Needed after editing .service files.</p>
+<hr />
+<h3 id="card-7">Card 7</h3>
+<p><strong>Front:</strong> How do you increase the open file limit?</p>
+<p><strong>Back:</strong> <code>ulimit -n 65536</code> (temporary) or add to <code>/etc/security/limits.conf</code> (permanent).</p>
+<hr />
+<h3 id="card-8">Card 8</h3>
+<p><strong>Front:</strong> What's the difference between HTTP and HTTPS?</p>
+<p><strong>Back:</strong> HTTP = unencrypted. HTTPS = encrypted with SSL/TLS. Always use HTTPS in production.</p>
+<hr />
+<h3 id="card-9">Card 9</h3>
+<p><strong>Front:</strong> How do you find a process by name?</p>
+<p><strong>Back:</strong> <code>ps aux | grep name | grep -v grep</code> (to avoid matching the grep itself).</p>
+<hr />
+<h3 id="card-10">Card 10</h3>
+<p><strong>Front:</strong> Why is <code>kill -9</code> dangerous?</p>
+<p><strong>Back:</strong> Process can't clean up (close files, release locks). Use <code>kill 15</code> (SIGTERM) first, only use -9 if needed.</p>
+<hr />
+<h2 id="18-teach-it-back-prompt">18. Teach-It-Back Prompt</h2>
+<p>Explain why systemd is better than running <code>python app.py</code> in a tmux session.</p>
+<p><strong>Model Answer:</strong></p>
+<p>"systemd is the OS-level service manager. It starts your app on boot, restarts on crash, captures logs centrally, manages dependencies, and handles graceful shutdown. tmux is a terminal. Kill the terminal, session disappears (unless you detached). systemd persists across reboots and is production-standard. It's the difference between 'works while I'm watching' and 'works forever.'"</p>
+<hr />
+<h2 id="19-1-week-review-checklist">19. 1-Week Review Checklist</h2>
+<ul>
+<li>[ ] Deploy a FastAPI app with systemd (not terminal)</li>
+<li>[ ] Configure nginx reverse proxy in front</li>
+<li>[ ] Set up HTTPS with Let's Encrypt</li>
+<li>[ ] Monitor logs with journalctl</li>
+<li>[ ] Create a health check script</li>
+</ul>
+<hr />
+<h2 id="20-resources">20. Resources</h2>
+<ul>
+<li><a href="https://systemd.io/">systemd documentation</a></li>
+<li><a href="https://nginx.org/en/docs/">nginx documentation</a></li>
+<li><a href="https://letsencrypt.org/getting-started/">Let's Encrypt guide</a></li>
+<li><a href="https://man.openbsd.org/ssh_config">SSH best practices</a></li>
+<li><a href="https://linux.die.net/">Linux command reference</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/">OWASP: Linux hardening</a></li>
+</ul>
+<hr />
+<h2 id="21-next-capstone-project">21. Next: Capstone Project</h2>
+<p>You now have all the pieces. Time to build something real.</p>
+<p>→ <strong><a href="../milestone/">Phase 0 Milestone: Complete Backend →</a></strong></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.integrate"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>

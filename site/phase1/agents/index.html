@@ -1,0 +1,2542 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive 6-phase learning roadmap from Python foundations to production ML systems">
+      
+      
+        <meta name="author" content="AI Engineering Community">
+      
+      
+      
+        <link rel="prev" href="../rag/">
+      
+      
+        <link rel="next" href="../fine-tuning/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>AI Agents & Tool Use - AI Full Stack Engineer Roadmap</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#agents-tool-use" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-header__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Full Stack Engineer Roadmap
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AI Agents & Tool Use
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        
+  
+    
+  
+  Setup Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase0/overview/" class="md-tabs__link">
+          
+  
+  Phase 0 — Foundation Warmup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  Phase 1 — AI Systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase2/overview/" class="md-tabs__link">
+          
+  
+  Phase 2 — Docker & Cloud
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase3/overview/" class="md-tabs__link">
+          
+  
+  Phase 3 — MLOps Tooling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase4/overview/" class="md-tabs__link">
+          
+  
+  Phase 4 — Scaling & Kubernetes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase5/overview/" class="md-tabs__link">
+          
+  
+  Phase 5 — Portfolio & Job Readiness
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../appendix/math-lite/" class="md-tabs__link">
+          
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-nav__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    AI Full Stack Engineer Roadmap
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 0 — Foundation Warmup
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 0 — Foundation Warmup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Mastery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/fastapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI Deep Dive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/databases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Databases (SQL + NoSQL + Redis)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux & Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 0 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 1 — AI Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 1 — AI Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../llm-apis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM APIs & Prompt Engineering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../embeddings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embeddings & Vector Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RAG Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    AI Agents & Tool Use
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    AI Agents & Tool Use
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    Why This Matters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptual-explanation" class="md-nav__link">
+    Conceptual Explanation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-examples-complete-agent-loop" class="md-nav__link">
+    Code Examples: Complete Agent Loop
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Examples: Complete Agent Loop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-tools" class="md-nav__link">
+    Define Tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#react-agent-loop" class="md-nav__link">
+    ReAct Agent Loop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-step-tool-chain" class="md-nav__link">
+    Multi-Step Tool Chain
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-diagram" class="md-nav__link">
+    Architecture Diagram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-you-can-build" class="md-nav__link">
+    Tools You Can Build
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-framework" class="md-nav__link">
+    Decision Framework
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-tutorial-build-a-web-search-agent" class="md-nav__link">
+    Step-by-Step Tutorial: Build a Web Search Agent
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step Tutorial: Build a Web Search Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-install-dependencies" class="md-nav__link">
+    1. Install Dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-web-search-tool" class="md-nav__link">
+    2. Web Search Tool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-agent" class="md-nav__link">
+    3. Agent
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-project-research-agent" class="md-nav__link">
+    Practical Project: Research Agent
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-playbook-agent-failures" class="md-nav__link">
+    Debugging Playbook: Agent Failures
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging Playbook: Agent Failures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-infinite-loop" class="md-nav__link">
+    1. Infinite Loop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-wrong-tool" class="md-nav__link">
+    2. Wrong Tool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-tool-error-not-handled" class="md-nav__link">
+    3. Tool Error Not Handled
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-token-overflow" class="md-nav__link">
+    4. Token Overflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-cost-explosion" class="md-nav__link">
+    5. Cost Explosion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-mistakes" class="md-nav__link">
+    Common Mistakes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-realism" class="md-nav__link">
+    Production Realism
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cost-performance" class="md-nav__link">
+    Cost &amp; Performance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    Security
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-perplexity-ai" class="md-nav__link">
+    Case Study: Perplexity AI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interview-cheat-sheet" class="md-nav__link">
+    Interview Cheat Sheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-review-questions" class="md-nav__link">
+    10 Review Questions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flashcards" class="md-nav__link">
+    Flashcards
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teach-it-back-prompt" class="md-nav__link">
+    Teach-It-Back Prompt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-week-checklist" class="md-nav__link">
+    1-Week Checklist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-page" class="md-nav__link">
+    Next Page
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fine-tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fine-Tuning (LoRA & PEFT)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluation & Benchmarking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security & Prompt Injection Defense
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cost-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cost & Performance Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 1 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 2 — Docker & Cloud
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 2 — Docker & Cloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose for AI Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Deployment (EC2 + S3 + ECS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/secrets-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secrets Management & Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 2 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 3 — MLOps Tooling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 3 — MLOps Tooling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/mlflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLflow Experiment Tracking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/dvc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DVC Data Versioning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/wandb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weights & Biases (W&B)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/cicd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI/CD for AI Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 3 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 4 — Scaling & Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 4 — Scaling & Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes Core Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/ai-on-k8s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying AI Services on K8s
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autoscaling & Observability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 4 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 5 — Portfolio & Job Readiness
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 5 — Portfolio & Job Readiness
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Portfolio Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/resume/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resume & LinkedIn Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/system-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI System Design Interviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/mock-interviews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mock Interview Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/salary-negotiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Salary & Negotiation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/math-lite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math-Lite Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/tooling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tooling & Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/study-planner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Study Planner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/project-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Showcase Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/whats-next/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What's Next (Post-Roadmap)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="agents-tool-use">Agents &amp; Tool Use</h1>
+<p>An agent is an LLM that can call tools and loop until the task is done.</p>
+<p>Without agents: LLM generates one response.
+With agents: LLM decides which tools to use, executes them, gets results, decides next step, loops until goal reached.</p>
+<hr />
+<h2 id="why-this-matters">Why This Matters</h2>
+<p><strong>Real incident:</strong> Company built agent that could search the web. Agent looped 100 times. Cost: $500. Accomplished: nothing.</p>
+<p><strong>Real incident 2:</strong> Support agent had access to database tool. Agent decided to delete records. Deleted customer data by accident.</p>
+<p>Agents are powerful but dangerous. You'll learn to:
+- Define tools safely
+- Implement ReAct pattern (Reason → Act → Observe)
+- Build multi-step workflows
+- Handle failure (infinite loops, wrong tool use)
+- Add memory so agent learns</p>
+<hr />
+<h2 id="conceptual-explanation">Conceptual Explanation</h2>
+<p><strong>Analogy:</strong> You're a project manager with email and access to a spreadsheet.</p>
+<p>Agent = you deciding what needs to happen next.
+Tool = your email (send message) and spreadsheet (update data).</p>
+<p>You get a task: "Find revenue for Q3 and email CEO."</p>
+<ol>
+<li><strong>Reason:</strong> "I need to find Q3 revenue and email CEO."</li>
+<li><strong>Act:</strong> Use spreadsheet tool "find_Q3_revenue()"</li>
+<li><strong>Observe:</strong> Got $2M</li>
+<li><strong>Reason:</strong> "Now I'll email CEO with this."</li>
+<li><strong>Act:</strong> Send email</li>
+<li><strong>Done</strong></li>
+</ol>
+<p>The agent (you) chose which tool to use, decided when to loop, knew when to stop.</p>
+<hr />
+<h2 id="code-examples-complete-agent-loop">Code Examples: Complete Agent Loop</h2>
+<h3 id="define-tools">Define Tools</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
+
+<span class="c1"># Define what tools the LLM can use</span>
+<span class="n">TOOLS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;function&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;function&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;web_search&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Search the web for information&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Search query&quot;</span><span class="p">}</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;query&quot;</span><span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;function&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;function&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;execute_sql&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Execute SQL query on company database&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;sql&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;SQL query&quot;</span><span class="p">}</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;sql&quot;</span><span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;function&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;function&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;send_email&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Send email to recipient&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;to&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">},</span>
+                    <span class="s2">&quot;subject&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">},</span>
+                    <span class="s2">&quot;body&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">}</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="s2">&quot;subject&quot;</span><span class="p">,</span> <span class="s2">&quot;body&quot;</span><span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+
+<span class="c1"># Implement tool handlers</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">web_search</span><span class="p">(</span><span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Search web (placeholder).&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Results for &#39;</span><span class="si">{</span><span class="n">query</span><span class="si">}</span><span class="s2">&#39;: ...&quot;</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">execute_sql</span><span class="p">(</span><span class="n">sql</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Execute SQL (real implementation in production).&quot;&quot;&quot;</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="n">get_database</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">send_email</span><span class="p">(</span><span class="n">to</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">subject</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">body</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Send email.&quot;&quot;&quot;</span>
+    <span class="c1"># Real email service</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;sent&quot;</span><span class="p">,</span> <span class="s2">&quot;to&quot;</span><span class="p">:</span> <span class="n">to</span><span class="p">}</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">handle_tool_call</span><span class="p">(</span><span class="n">tool_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">tool_args</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Execute tool and return result.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">tool_name</span> <span class="o">==</span> <span class="s2">&quot;web_search&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">web_search</span><span class="p">(</span><span class="n">tool_args</span><span class="p">[</span><span class="s2">&quot;query&quot;</span><span class="p">])</span>
+    <span class="k">elif</span> <span class="n">tool_name</span> <span class="o">==</span> <span class="s2">&quot;execute_sql&quot;</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">execute_sql</span><span class="p">(</span><span class="n">tool_args</span><span class="p">[</span><span class="s2">&quot;sql&quot;</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">tool_name</span> <span class="o">==</span> <span class="s2">&quot;send_email&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="k">await</span> <span class="n">send_email</span><span class="p">(</span>
+            <span class="n">tool_args</span><span class="p">[</span><span class="s2">&quot;to&quot;</span><span class="p">],</span>
+            <span class="n">tool_args</span><span class="p">[</span><span class="s2">&quot;subject&quot;</span><span class="p">],</span>
+            <span class="n">tool_args</span><span class="p">[</span><span class="s2">&quot;body&quot;</span><span class="p">]</span>
+        <span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Unknown tool: </span><span class="si">{</span><span class="n">tool_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">})</span>
+</code></pre></div>
+<h3 id="react-agent-loop">ReAct Agent Loop</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">openai</span> <span class="kn">import</span> <span class="n">AsyncOpenAI</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">AsyncOpenAI</span><span class="p">()</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">react_agent</span><span class="p">(</span><span class="n">user_task</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">max_iterations</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Agent that reasons, acts, observes.&quot;&quot;&quot;</span>
+
+    <span class="n">messages</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;system&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;You are a helpful agent with access to tools.</span>
+<span class="s2">            Use tools to accomplish tasks.</span>
+<span class="s2">            Think step by step.</span>
+<span class="s2">            When you know the answer, return it.</span>
+<span class="s2">            If stuck, ask for clarification.</span>
+<span class="s2">            Max iterations: 10 to avoid infinite loops.&quot;&quot;&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">user_task</span><span class="p">}</span>
+    <span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">iteration</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_iterations</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== Iteration </span><span class="si">{</span><span class="n">iteration</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2"> ===&quot;</span><span class="p">)</span>
+
+        <span class="c1"># LLM decides: use tool or return answer</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+            <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o&quot;</span><span class="p">,</span>
+            <span class="n">messages</span><span class="o">=</span><span class="n">messages</span><span class="p">,</span>
+            <span class="n">tools</span><span class="o">=</span><span class="n">TOOLS</span><span class="p">,</span>
+            <span class="n">tool_choice</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span>  <span class="c1"># LLM chooses</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Check if LLM returned answer or wants to use tool</span>
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">finish_reason</span> <span class="o">==</span> <span class="s2">&quot;tool_calls&quot;</span><span class="p">:</span>
+            <span class="c1"># LLM wants to use tool</span>
+            <span class="n">assistant_message</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Agent reasoning: </span><span class="si">{</span><span class="n">assistant_message</span><span class="o">.</span><span class="n">content</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="c1"># Add assistant&#39;s message to history</span>
+            <span class="n">messages</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;assistant&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">assistant_message</span><span class="o">.</span><span class="n">content</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span>
+            <span class="p">})</span>
+
+            <span class="c1"># Handle each tool call</span>
+            <span class="k">for</span> <span class="n">tool_call</span> <span class="ow">in</span> <span class="n">assistant_message</span><span class="o">.</span><span class="n">tool_calls</span><span class="p">:</span>
+                <span class="n">tool_name</span> <span class="o">=</span> <span class="n">tool_call</span><span class="o">.</span><span class="n">function</span><span class="o">.</span><span class="n">name</span>
+                <span class="n">tool_args</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">tool_call</span><span class="o">.</span><span class="n">function</span><span class="o">.</span><span class="n">arguments</span><span class="p">)</span>
+
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tool: </span><span class="si">{</span><span class="n">tool_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Args: </span><span class="si">{</span><span class="n">tool_args</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+                <span class="c1"># Execute tool</span>
+                <span class="n">tool_result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">handle_tool_call</span><span class="p">(</span><span class="n">tool_name</span><span class="p">,</span> <span class="n">tool_args</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Result: </span><span class="si">{</span><span class="n">tool_result</span><span class="p">[:</span><span class="mi">100</span><span class="p">]</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>  <span class="c1"># First 100 chars</span>
+
+                <span class="c1"># Add result back to messages for next iteration</span>
+                <span class="n">messages</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span>
+                        <span class="s2">&quot;tool&quot;</span><span class="p">:</span> <span class="n">tool_name</span><span class="p">,</span>
+                        <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">tool_result</span>
+                    <span class="p">})</span>
+                <span class="p">})</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># LLM returned final answer</span>
+            <span class="n">final_answer</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== Final Answer ===&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">final_answer</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">final_answer</span>
+
+    <span class="k">return</span> <span class="s2">&quot;Max iterations exceeded&quot;</span>
+
+<span class="c1"># Usage</span>
+<span class="n">task</span> <span class="o">=</span> <span class="s2">&quot;Find the Q3 revenue from our database and email CEO@company.com with a summary&quot;</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="k">await</span> <span class="n">react_agent</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="multi-step-tool-chain">Multi-Step Tool Chain</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">calculate_roi_workflow</span><span class="p">(</span><span class="n">investment</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">returns</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Multi-step: calculate metrics, compare, make recommendation.&quot;&quot;&quot;</span>
+
+    <span class="c1"># Step 1: Calculate ROI</span>
+    <span class="n">roi</span> <span class="o">=</span> <span class="p">(</span><span class="n">returns</span><span class="p">[</span><span class="s2">&quot;total&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">investment</span><span class="p">)</span> <span class="o">/</span> <span class="n">investment</span>
+
+    <span class="c1"># Step 2: Compare to benchmarks</span>
+    <span class="n">benchmarks</span> <span class="o">=</span> <span class="k">await</span> <span class="n">web_search</span><span class="p">(</span><span class="s2">&quot;startup ROI benchmarks 2024&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Step 3: Make decision</span>
+    <span class="k">if</span> <span class="n">roi</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">:</span>
+        <span class="n">recommendation</span> <span class="o">=</span> <span class="s2">&quot;STRONG BUY&quot;</span>
+    <span class="k">elif</span> <span class="n">roi</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">recommendation</span> <span class="o">=</span> <span class="s2">&quot;ACCEPTABLE&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">recommendation</span> <span class="o">=</span> <span class="s2">&quot;DO NOT INVEST&quot;</span>
+
+    <span class="c1"># Step 4: Email report</span>
+    <span class="k">await</span> <span class="n">send_email</span><span class="p">(</span>
+        <span class="s2">&quot;investor@company.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ROI Analysis&quot;</span><span class="p">,</span>
+        <span class="sa">f</span><span class="s2">&quot;Investment: $</span><span class="si">{</span><span class="n">investment</span><span class="si">}</span><span class="se">\n</span><span class="s2">ROI: </span><span class="si">{</span><span class="n">roi</span><span class="si">:</span><span class="s2">.1%</span><span class="si">}</span><span class="se">\n</span><span class="s2">Recommendation: </span><span class="si">{</span><span class="n">recommendation</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">&quot;roi&quot;</span><span class="p">:</span> <span class="n">roi</span><span class="p">,</span>
+        <span class="s2">&quot;recommendation&quot;</span><span class="p">:</span> <span class="n">recommendation</span><span class="p">,</span>
+        <span class="s2">&quot;benchmarks&quot;</span><span class="p">:</span> <span class="n">benchmarks</span>
+    <span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="architecture-diagram">Architecture Diagram</h2>
+<pre class="mermaid"><code>graph LR
+    A["User Task"] --&gt; B["LLM Decides"]
+    B --&gt;|"Use Tool?"| C{Tool?}
+    C --&gt;|"Yes"| D["Execute Tool"]
+    D --&gt; E["Get Result"]
+    E --&gt; F["Add to Context"]
+    F --&gt; B
+    C --&gt;|"No"| G["Return Answer"]</code></pre>
+<hr />
+<h2 id="tools-you-can-build">Tools You Can Build</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Example</th>
+<th>Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Web Search</strong></td>
+<td>Find current info</td>
+<td>Hallucination in LLM</td>
+</tr>
+<tr>
+<td><strong>Calculator</strong></td>
+<td>Math operations</td>
+<td>Misformed numbers</td>
+</tr>
+<tr>
+<td><strong>Database Query</strong></td>
+<td>Read data</td>
+<td>SQL injection</td>
+</tr>
+<tr>
+<td><strong>External API</strong></td>
+<td>Call third-party</td>
+<td>Rate limiting</td>
+</tr>
+<tr>
+<td><strong>File System</strong></td>
+<td>Read/write files</td>
+<td>Overwrite wrong file</td>
+</tr>
+<tr>
+<td><strong>Email</strong></td>
+<td>Send messages</td>
+<td>Spam/wrong recipient</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Risk management:</strong> Sandbox tools. Require approval for destructive ops (delete, email, money).</p>
+<hr />
+<h2 id="decision-framework">Decision Framework</h2>
+<p><strong>Should this be an agent?</strong></p>
+<div class="highlight"><pre><span></span><code>Is the task multi-step?
+  ├─ NO: Just call LLM
+  └─ YES: Continue...
+
+Does the task need tool use?
+  ├─ NO: Just call LLM
+  └─ YES: Continue...
+
+Can it fail silently?
+  ├─ YES: Don&#39;t use agent (too risky)
+  └─ NO: Agent acceptable
+</code></pre></div>
+<hr />
+<h2 id="step-by-step-tutorial-build-a-web-search-agent">Step-by-Step Tutorial: Build a Web Search Agent</h2>
+<h3 id="1-install-dependencies">1. Install Dependencies</h3>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>openai<span class="w"> </span>requests<span class="w"> </span>duckduckgo-search
+</code></pre></div>
+<h3 id="2-web-search-tool">2. Web Search Tool</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">duckduckgo_search</span> <span class="kn">import</span> <span class="n">DDGS</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">web_search</span><span class="p">(</span><span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">max_results</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Search web using DuckDuckGo (free).&quot;&quot;&quot;</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">DDGS</span><span class="p">()</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="n">max_results</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">results</span>
+</code></pre></div>
+<h3 id="3-agent">3. Agent</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">search_agent</span><span class="p">(</span><span class="n">question</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Agent that searches web to answer questions.&quot;&quot;&quot;</span>
+
+    <span class="n">messages</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;system&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;You are a helpful assistant that can search the web.&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">question</span><span class="p">}</span>
+    <span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">iteration</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>  <span class="c1"># Max 5 searches</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+            <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o&quot;</span><span class="p">,</span>
+            <span class="n">messages</span><span class="o">=</span><span class="n">messages</span><span class="p">,</span>
+            <span class="n">tools</span><span class="o">=</span><span class="p">[{</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;function&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;function&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;search&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Search the web&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">}</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}]</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">finish_reason</span> <span class="o">==</span> <span class="s2">&quot;tool_calls&quot;</span><span class="p">:</span>
+            <span class="c1"># Search</span>
+            <span class="n">tool_call</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">tool_calls</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">search_query</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">tool_call</span><span class="o">.</span><span class="n">function</span><span class="o">.</span><span class="n">arguments</span><span class="p">)[</span><span class="s2">&quot;query&quot;</span><span class="p">]</span>
+            <span class="n">results</span> <span class="o">=</span> <span class="k">await</span> <span class="n">web_search</span><span class="p">(</span><span class="n">search_query</span><span class="p">)</span>
+
+            <span class="c1"># Add to context</span>
+            <span class="n">messages</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;assistant&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">})</span>
+            <span class="n">messages</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Search results: </span><span class="si">{</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">results</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">})</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Answer</span>
+            <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span>
+
+    <span class="k">return</span> <span class="s2">&quot;Could not find answer&quot;</span>
+
+<span class="c1"># Test</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="k">await</span> <span class="n">search_agent</span><span class="p">(</span><span class="s2">&quot;What&#39;s the capital of France?&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="practical-project-research-agent">Practical Project: Research Agent</h2>
+<p><strong>Problem:</strong> Analysts spend 4 hours researching a topic. Build AI to do it.</p>
+<p><strong>Features:</strong>
+- Web search tool
+- Fact verification (check multiple sources)
+- Report generation
+- Citation tracking</p>
+<p><strong>API:</strong>
+<div class="highlight"><pre><span></span><code>POST /research
+  {&quot;topic&quot;: &quot;AI safety&quot;, &quot;depth&quot;: &quot;comprehensive&quot;}
+  Response: {&quot;report&quot;: &quot;...&quot;, &quot;sources&quot;: [...]}
+</code></pre></div></p>
+<hr />
+<h2 id="debugging-playbook-agent-failures">Debugging Playbook: Agent Failures</h2>
+<h3 id="1-infinite-loop">1. Infinite Loop</h3>
+<p><strong>Symptom:</strong> Agent keeps calling same tool.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">iteration</span> <span class="o">&gt;</span> <span class="n">max_iterations</span><span class="p">:</span>
+    <span class="k">return</span> <span class="s2">&quot;Max iterations exceeded&quot;</span>
+</code></pre></div></p>
+<h3 id="2-wrong-tool">2. Wrong Tool</h3>
+<p><strong>Symptom:</strong> Agent chooses wrong tool for task.</p>
+<p><strong>Fix:</strong> Better system prompt:
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;To search for current events, use web_search.</span>
+<span class="n">To</span> <span class="n">query</span> <span class="n">our</span> <span class="n">database</span><span class="p">,</span> <span class="n">use</span> <span class="n">execute_sql</span><span class="o">.</span>
+<span class="n">Only</span> <span class="n">use</span> <span class="n">send_email</span> <span class="k">for</span> <span class="n">final</span> <span class="n">reports</span><span class="o">.</span><span class="s2">&quot;</span>
+</code></pre></div></p>
+<h3 id="3-tool-error-not-handled">3. Tool Error Not Handled</h3>
+<p><strong>Symptom:</strong> Tool fails, loop crashes.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">handle_tool_call</span><span class="p">(</span><span class="n">tool_name</span><span class="p">,</span> <span class="n">tool_args</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">),</span> <span class="s2">&quot;suggestion&quot;</span><span class="p">:</span> <span class="s2">&quot;try different approach&quot;</span><span class="p">})</span>
+</code></pre></div></p>
+<h3 id="4-token-overflow">4. Token Overflow</h3>
+<p><strong>Symptom:</strong> Long conversation exceeds context limit.</p>
+<p><strong>Fix:</strong> Summarize conversation periodically.</p>
+<h3 id="5-cost-explosion">5. Cost Explosion</h3>
+<p><strong>Symptom:</strong> Agent made 100 API calls for simple task.</p>
+<p><strong>Fix:</strong> Set max iterations, charge user per iteration.</p>
+<hr />
+<h2 id="common-mistakes">Common Mistakes</h2>
+<div class="admonition danger">
+<p class="admonition-title">Mistake 1: No Guardrails</p>
+</div>
+<p>Agent can call any tool. Calls delete tool, destroys data.</p>
+<p><strong>Don't:</strong> Give agent access to everything.
+<strong>Do:</strong> Limit tools per agent. Review dangerous ops.</p>
+<div class="admonition danger">
+<p class="admonition-title">Mistake 2: Infinite Loops</p>
+</div>
+<p>Agent loops forever trying same thing.</p>
+<p><strong>Don't:</strong> No max iteration limit.
+<strong>Do:</strong> Set max = 10, fail gracefully.</p>
+<div class="admonition danger">
+<p class="admonition-title">Mistake 3: Poor Tool Design</p>
+</div>
+<p>Tool has no error handling. Crashes, loop dies.</p>
+<p><strong>Don't:</strong> Simple tool implementation.
+<strong>Do:</strong> Wrap tools with try-except.</p>
+<div class="admonition danger">
+<p class="admonition-title">Mistake 4: No Memory</p>
+</div>
+<p>Agent doesn't remember past context. Repeats same mistakes.</p>
+<p><strong>Don't:</strong> Stateless agents.
+<strong>Do:</strong> Add conversation memory.</p>
+<hr />
+<h2 id="production-realism">Production Realism</h2>
+<p><strong>Tutorial:</strong> Simple loop call LLM, check tool_calls, execute.</p>
+<p><strong>Production:</strong>
+- Tool sandboxing (run in isolated environment)
+- Rate limiting per user
+- Cost tracking (charge per tool call)
+- Approval workflow for destructive ops
+- Detailed logging
+- Error recovery
+- Timeout handling</p>
+<hr />
+<h2 id="cost-performance">Cost &amp; Performance</h2>
+<p><strong>Per iteration cost:</strong>
+- LLM call: $0.001
+- Tool execution: varies
+- 5-iteration task: $0.005</p>
+<p><strong>Latency:</strong>
+- LLM call: 1-2 seconds
+- Tool execution: 1-10 seconds
+- 5 iterations: 10-60 seconds (user waits)</p>
+<p><strong>Optimization:</strong> Use cheaper model (gpt-4o-mini) for simpler tasks.</p>
+<hr />
+<h2 id="security">Security</h2>
+<p><strong>What agent sees:</strong> Messages are logged. Don't expose secrets.</p>
+<p><strong>Tool access:</strong> Require authentication. Scoped permissions.</p>
+<p><strong>Rate limiting:</strong> Max 5 searches per user per minute.</p>
+<hr />
+<h2 id="case-study-perplexity-ai">Case Study: Perplexity AI</h2>
+<p><strong>Problem:</strong> Search + synthesis. Find answer on web, synthesize into report.</p>
+<p><strong>Solution:</strong> Agent with web search tool, decides when to search, writes answer.</p>
+<p><strong>Results:</strong> Users get sourced, current answers without visiting 10 sites.</p>
+<hr />
+<h2 id="interview-cheat-sheet">Interview Cheat Sheet</h2>
+<p><strong>Concept 1: Agents</strong>
+<em>Q: What's an agent?</em>
+<em>A: LLM that loops. Uses tools. Decides next step. Stops when goal reached.</em></p>
+<p><strong>Concept 2: ReAct</strong>
+<em>Q: Reason-Act-Observe pattern?</em>
+<em>A: Reason about task. Act (use tool). Observe result. Loop until done.</em></p>
+<p><strong>Concept 3: Tool Use</strong>
+<em>Q: JSON tool definitions?</em>
+<em>A: Define tools with name, description, parameters. LLM chooses which to call.</em></p>
+<p><strong>Concept 4: Looping</strong>
+<em>Q: How to prevent infinite loops?</em>
+<em>A: Max iteration limit. Check if tool use is repeating. Fail gracefully.</em></p>
+<p><strong>Concept 5: Cost</strong>
+<em>Q: Agent costs more than static prompt?</em>
+<em>A: Yes. Multiple LLM calls, tool calls, overhead. But does more complex work.</em></p>
+<hr />
+<h2 id="10-review-questions">10 Review Questions</h2>
+<ol>
+<li>ReAct = Reason + Act + Observe. How does Observe become Reason?</li>
+<li>Tool definition requires name, description, parameters. Why all three?</li>
+<li>Agent decides "use tool X" but tool fails. What happens?</li>
+<li>How many iterations before agent gives up?</li>
+<li>Agent loops 100 times. Problem?</li>
+<li>Max context window 128K, agent convo is 50K. Room for 1 more tool response?</li>
+<li>Agent calls web_search 5 times same question. Waste. How to prevent?</li>
+<li>Cost: GPT-4o at $0.001/call, agent makes 10 calls. Total?</li>
+<li>Agent emails wrong person. How to prevent?</li>
+<li>Tool returns error "database unreachable." How agent responds?</li>
+</ol>
+<hr />
+<h2 id="flashcards">Flashcards</h2>
+<p><strong>Card 1: Agent Definition</strong>
+<em>Q: Agent vs LLM?</em>
+<em>A: LLM generates once. Agent loops, uses tools, decides next step.</em></p>
+<p><strong>Card 2: Tool Call</strong>
+<em>Q: Can agent call multiple tools in one turn?</em>
+<em>A: Yes, tool_calls is a list.</em></p>
+<p><strong>Card 3: Looping</strong>
+<em>Q: When agent stops looping?</em>
+<em>A: When finish_reason != "tool_calls" (returns answer) or max_iterations reached.</em></p>
+<p><strong>Card 4: Error Handling</strong>
+<em>Q: Tool fails. Agent should?</em>
+<em>A: Return error to agent. Agent decides next move (retry, different tool, give up).</em></p>
+<p><strong>Card 5: Cost</strong>
+<em>Q: Agent per-task cost higher or lower than cached response?</em>
+<em>A: Higher (multiple calls). But does more work.</em></p>
+<p><strong>Card 6: Safety</strong>
+<em>Q: Dangerous tools (delete, email)?</em>
+<em>A: Require approval, sandbox, logging.</em></p>
+<p><strong>Card 7: Memory</strong>
+<em>Q: Agent should remember past conversations?</em>
+<em>A: Yes, add conversation summary to context.</em></p>
+<p><strong>Card 8: Latency</strong>
+<em>Q: User waits during agent loop?</em>
+<em>A: Yes, 10-60 seconds depending on iterations. Use streaming for UX.</em></p>
+<p><strong>Card 9: Tool Design</strong>
+<em>Q: Good tool returns?</em>
+<em>A: JSON or string. Not exception. Error as {"error": "...", "suggestion": "..."}.</em></p>
+<p><strong>Card 10: Limits</strong>
+<em>Q: Max iterations = 10. Agent uses 5. Good?</em>
+<em>A: Good, means agent was efficient.</em></p>
+<hr />
+<h2 id="teach-it-back-prompt">Teach-It-Back Prompt</h2>
+<p><strong>Explain agents to someone new:</strong></p>
+<p>"Company wants AI to answer: 'What's our Q3 revenue?' Build an agent that searches databases, calculates if needed, then answers. Walk through the loop."</p>
+<p><strong>Model Answer:</strong></p>
+<p>"Agent gets question. LLM reads it, decides 'I need to search database.' Calls execute_sql tool with 'SELECT SUM(revenue) WHERE quarter=3'. Gets result: $2M. Agent sees result, LLM reads it, decides 'I have the answer.' Returns 'Your Q3 revenue is $2M.' Done.</p>
+<p>If question was harder ('What's the revenue trend?'), agent might loop: first query gets data, then it calculates, then answers.</p>
+<p>Each loop: LLM call ($X), tool call (free or cheap), result processing. 5 loops = $0.005."</p>
+<hr />
+<h2 id="1-week-checklist">1-Week Checklist</h2>
+<ul>
+<li>[ ] Defined 3+ tools with proper schemas</li>
+<li>[ ] Built agent loop (LLM → tools → observe)</li>
+<li>[ ] Tested with 10 different tasks</li>
+<li>[ ] Verified agent stops (doesn't infinite loop)</li>
+<li>[ ] Added error handling to tools</li>
+<li>[ ] Measured cost per task (should be &lt; $0.01)</li>
+<li>[ ] Measured latency (should be &lt; 10 seconds for 3-step task)</li>
+<li>[ ] Added iteration limit</li>
+<li>[ ] Tested failing tool (agent handles gracefully)</li>
+<li>[ ] Built one end-to-end agent (web search, report generation)</li>
+<li>[ ] Logged all tool calls</li>
+<li>[ ] Deployed locally</li>
+</ul>
+<hr />
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://platform.openai.com/docs/guides/function-calling">OpenAI Function Calling</a></li>
+<li><a href="https://langchain-ai.github.io/langgraph/">LangGraph (multi-agent framework)</a></li>
+<li><a href="https://arxiv.org/abs/2210.03629">ReAct Paper</a></li>
+</ul>
+<hr />
+<h2 id="next-page">Next Page</h2>
+<p>Your AI can act on the world now.</p>
+<p>Next: fine-tuning. Make your AI better at specific tasks.</p>
+<p>→ <strong><a href="../fine-tuning/">Fine-Tuning →</a></strong></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.integrate"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>

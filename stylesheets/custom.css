@@ -1,0 +1,438 @@
+/* ============================================================================
+   AI Full Stack Roadmap - Custom Theme
+   =========================================================================== */
+
+:root {
+  --md-primary-fg-color: #3b82f6;
+  --md-primary-fg-color--light: #60a5fa;
+  --md-primary-fg-color--dark: #1e40af;
+  --md-accent-fg-color: #06b6d4;
+  
+  /* Custom colors */
+  --color-gradient-start: #3b82f6;
+  --color-gradient-end: #8b5cf6;
+  --color-slate-dark: #0f172a;
+  --color-slate-light: #1e293b;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-tip: #3b82f6;
+  --color-warning-bg: #fef3c7;
+  
+  /* Typography */
+  --md-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --line-height-base: 1.7;
+}
+
+/* ============================================================================
+   Global Typography & Layout
+=========================================================================== */
+
+body {
+  font-family: var(--md-font-family);
+  line-height: var(--line-height-base);
+}
+
+/* Dark mode as default */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: var(--color-slate-dark);
+  --md-default-fg-color: #e0e7ff;
+  --md-code-bg-color: #1e293b;
+}
+
+/* Center content with max-width */
+.md-main__inner {
+  max-width: 100%;
+}
+
+.md-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ============================================================================
+   Navigation & Sidebar
+=========================================================================== */
+
+/* Hide top navigation tabs, keep sidebar only */
+.md-tabs {
+  display: none;
+}
+
+.md-sidebar {
+  position: fixed;
+  width: 280px;
+  z-index: 20;
+}
+
+.md-sidebar--primary {
+  width: 280px;
+}
+
+.md-sidebar--secondary {
+  width: 200px;
+  right: 0;
+}
+
+/* Sidebar styling */
+.md-nav {
+  font-size: 0.95rem;
+}
+
+.md-nav__title {
+  padding: 1rem 1.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.5px;
+}
+
+.md-nav__link {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.md-nav__link:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+  transform: translateX(4px);
+}
+
+.md-nav__link--active {
+  border-left: 3px solid var(--md-accent-fg-color);
+  background-color: rgba(6, 182, 212, 0.1);
+  font-weight: 600;
+}
+
+/* ============================================================================
+   Right Sidebar - Table of Contents
+=========================================================================== */
+
+.md-sidebar--secondary {
+  display: block;
+}
+
+.md-toc {
+  padding: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.md-toc__link {
+  display: block;
+  padding: 0.25rem 0;
+  transition: color 0.2s ease;
+}
+
+.md-toc__link:hover {
+  color: var(--md-accent-fg-color);
+}
+
+/* ============================================================================
+   Progress Bar (Sticky Top)
+=========================================================================== */
+
+.progress-bar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #f0f0f0;
+  z-index: 1000;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-gradient-start), var(--color-gradient-end));
+  width: 0%;
+  transition: width 0.2s ease;
+}
+
+/* Dark mode progress bar */
+[data-md-color-scheme="slate"] .progress-bar-container {
+  background: #1e293b;
+}
+
+/* ============================================================================
+   Phase Cards (Homepage)
+=========================================================================== */
+
+.phase-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.phase-card {
+  position: relative;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(139, 92, 246, 0.05));
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.phase-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 15px 40px rgba(59, 130, 246, 0.15);
+}
+
+.phase-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-gradient-start), var(--color-gradient-end));
+}
+
+.phase-card-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.phase-card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.phase-card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.phase-card-description {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.phase-card-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.phase-card-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background: var(--md-primary-fg-color);
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.phase-card-link:hover {
+  background: var(--md-primary-fg-color--light);
+  transform: translateX(4px);
+}
+
+/* ============================================================================
+   Admonitions & Callouts (Glassmorphism)
+=========================================================================== */
+
+.admonition {
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.admonition.note,
+.admonition.important,
+.admonition.tip {
+  background: rgba(59, 130, 246, 0.08);
+  border-color: rgba(59, 130, 246, 0.3);
+  border-left: 4px solid var(--color-tip);
+}
+
+.admonition.warning,
+.admonition.caution {
+  background: rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.3);
+  border-left: 4px solid var(--color-warning);
+}
+
+.admonition.danger,
+.admonition.error {
+  background: rgba(239, 68, 68, 0.08);
+  border-color: rgba(239, 68, 68, 0.3);
+  border-left: 4px solid #ef4444;
+}
+
+.admonition > .admonition-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.admonition > p {
+  margin: 0.5rem 0;
+  line-height: 1.7;
+}
+
+/* ============================================================================
+   Progress Tracking Checkbox
+=========================================================================== */
+
+.section-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.section-progress input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+  accent-color: var(--md-accent-fg-color);
+}
+
+.section-progress input[type="checkbox"]:checked {
+  background: var(--md-accent-fg-color);
+}
+
+.section-progress label {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ============================================================================
+   Code Blocks
+=========================================================================== */
+
+.highlight {
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+
+.highlight code {
+  padding: 1.5rem;
+  display: block;
+  line-height: 1.5;
+}
+
+/* ============================================================================
+   Responsive Design
+=========================================================================== */
+
+@media (max-width: 1220px) {
+  .md-sidebar--secondary {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .md-sidebar {
+    width: 100%;
+    position: relative;
+  }
+  
+  .md-content {
+    margin-left: 0;
+  }
+  
+  .md-sidebar--primary {
+    width: 100%;
+  }
+  
+  .phase-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================================
+   Miscellaneous
+=========================================================================== */
+
+a {
+  color: var(--md-accent-fg-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--md-primary-fg-color--light);
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+blockquote {
+  border-left: 4px solid var(--md-accent-fg-color);
+  padding-left: 1.5rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
+[data-md-color-scheme="slate"] ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+[data-md-color-scheme="slate"] ::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.4);
+}

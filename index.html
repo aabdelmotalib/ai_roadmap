@@ -1751,6 +1751,11 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+<div class="progress-bar-container">
+  <div class="progress-bar" id="progressBar"></div>
+</div>
+
+
                   
 
 
@@ -1953,24 +1958,24 @@
 <p>After setup, jump into <strong>Phase 0 Overview</strong>.</p>
 <hr />
 <h2 id="the-full-learning-path">🗓️ The Full Learning Path</h2>
-<pre class="mermaid"><code>flowchart TD
-    Start([🚀 Start Here]) --&gt; Setup["⚙️ Setup Environment&lt;br/&gt;1 hour"]
-    Setup --&gt; Phase0["📚 Phase 0: Foundations&lt;br/&gt;3-4 weeks&lt;br/&gt;Python, FastAPI, SQL, Linux"]
-    Phase0 --&gt; P0M["🏗️ Milestone: REST API&lt;br/&gt;+ PostgreSQL + Redis"]
-    P0M --&gt; Phase1["🤖 Phase 1: AI Systems&lt;br/&gt;6-8 weeks&lt;br/&gt;LLM APIs, RAG, Agents, Fine-Tuning"]
-    Phase1 --&gt; P1M["🏗️ Milestone: RAG Chatbot&lt;br/&gt;+ Evaluator"]
-    P1M --&gt; Phase2["🐳 Phase 2: Docker &amp; Cloud&lt;br/&gt;3-4 weeks&lt;br/&gt;Docker, AWS, ECS"]
-    Phase2 --&gt; P2M["🏗️ Milestone: Deployed Service&lt;br/&gt;on AWS"]
-    P2M --&gt; Phase3["📊 Phase 3: MLOps&lt;br/&gt;3-4 weeks&lt;br/&gt;MLflow, DVC, W&amp;B, CI/CD"]
-    Phase3 --&gt; P3M["🏗️ Milestone: Training Pipeline&lt;br/&gt;with Tracking"]
-    P3M --&gt; Phase4["☸️ Phase 4: Kubernetes&lt;br/&gt;4-5 weeks&lt;br/&gt;K8s, Scaling, Observability"]
-    Phase4 --&gt; P4M["🏗️ Milestone: Auto-scaling&lt;br/&gt;AI Service"]
-    P4M --&gt; Phase5["💼 Phase 5: Job Ready&lt;br/&gt;2-3 weeks&lt;br/&gt;Portfolio, Resume, Interviews"]
-    Phase5 --&gt; P5M["🎓 Final Milestone: 3-project&lt;br/&gt;Portfolio + Offers"]
-    P5M --&gt; End(["🎉 Ready for Job"])
+<pre class="mermaid"><code>graph TD
+    Start["🚀 Start Here"] --&gt; Setup["⚙️ Setup Environment"]
+    Setup --&gt; Phase0["📚 Phase 0: Foundations (3-4 weeks)"]
+    Phase0 --&gt; P0M["🏗️ Milestone: REST API with PostgreSQL"]
+    P0M --&gt; Phase1["🤖 Phase 1: AI Systems (6-8 weeks)"]
+    Phase1 --&gt; P1M["🏗️ Milestone: RAG Chatbot"]
+    P1M --&gt; Phase2["🐳 Phase 2: Docker and Cloud (3-4 weeks)"]
+    Phase2 --&gt; P2M["🏗️ Milestone: Deployed Service on AWS"]
+    P2M --&gt; Phase3["📊 Phase 3: MLOps (3-4 weeks)"]
+    Phase3 --&gt; P3M["🏗️ Milestone: Training Pipeline"]
+    P3M --&gt; Phase4["☸️ Phase 4: Scaling and Kubernetes (4-5 weeks)"]
+    Phase4 --&gt; P4M["🏗️ Milestone: Auto-scaling AI Service"]
+    P4M --&gt; Phase5["💼 Phase 5: Job Ready (2-3 weeks)"]
+    Phase5 --&gt; P5M["🎓 Final Milestone: 3-project Portfolio"]
+    P5M --&gt; Finish["🎉 Ready for Job"]
 
     style Start fill:#4CAF50,color:#fff
-    style End fill:#4CAF50,color:#fff
+    style Finish fill:#4CAF50,color:#fff
     style P0M fill:#2196F3,color:#fff
     style P1M fill:#2196F3,color:#fff
     style P2M fill:#2196F3,color:#fff
@@ -2026,6 +2031,7 @@
 
 
                 
+
               </article>
             </div>
           
@@ -2059,7 +2065,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.integrate", "toc.follow", "header.autohide"], "search": "assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.integrate", "toc.follow"], "search": "assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="assets/javascripts/bundle.4e0fa4ba.min.js"></script>

@@ -10,81 +10,85 @@
 
 {% block extra_javascript %}
 {{ super() }}
+<script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.3/dist/mermaid.min.js"></script>
 <script>
-// Progress bar on scroll
-window.addEventListener('scroll', function() {
-  const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  const scrolled = (window.scrollY / windowHeight) * 100;
-  document.getElementById('progressBar').style.width = scrolled + '%';
-});
+  // Mermaid is handled by Material superfences.
+</script>
+<script>
+  // Progress bar on scroll
+  window.addEventListener('scroll', function () {
+    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (window.scrollY / windowHeight) * 100;
+    document.getElementById('progressBar').style.width = scrolled + '%';
+  });
 
-// Make the right sidebar (TOC) sticky
-window.addEventListener('DOMContentLoaded', function() {
-  const rightSidebar = document.querySelector('.md-sidebar--secondary');
-  if (rightSidebar) {
-    rightSidebar.style.position = 'sticky';
-    rightSidebar.style.top = '20px';
-    rightSidebar.style.maxHeight = 'calc(100vh - 40px)';
-    rightSidebar.style.overflowY = 'auto';
-  }
-});
-
-// Progress tracking checkboxes
-document.addEventListener('DOMContentLoaded', function() {
-  // Find all h2 headers and add checkboxes
-  const headers = document.querySelectorAll('.md-content h2, .md-content h3');
-  
-  headers.forEach(function(header, index) {
-    // Create a unique ID based on the header text
-    const sectionId = 'section-' + header.textContent.toLowerCase().replace(/[^\w]+/g, '-');
-    header.id = sectionId;
-    
-    // Create checkbox container
-    const checkboxContainer = document.createElement('div');
-    checkboxContainer.className = 'section-progress';
-    
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.id = 'check-' + sectionId;
-    checkbox.className = 'section-checkbox';
-    
-    // Check localStorage for saved progress
-    const savedState = localStorage.getItem('progress-' + sectionId);
-    if (savedState === 'true') {
-      checkbox.checked = true;
-      header.style.opacity = '0.6';
-      header.style.textDecoration = 'line-through';
+  // Make the right sidebar (TOC) sticky
+  window.addEventListener('DOMContentLoaded', function () {
+    const rightSidebar = document.querySelector('.md-sidebar--secondary');
+    if (rightSidebar) {
+      rightSidebar.style.position = 'sticky';
+      rightSidebar.style.top = '20px';
+      rightSidebar.style.maxHeight = 'calc(100vh - 40px)';
+      rightSidebar.style.overflowY = 'auto';
     }
-    
-    // Save to localStorage on change
-    checkbox.addEventListener('change', function() {
-      localStorage.setItem('progress-' + sectionId, this.checked);
-      if (this.checked) {
+  });
+
+  // Progress tracking checkboxes
+  document.addEventListener('DOMContentLoaded', function () {
+    // Find all h2 headers and add checkboxes
+    const headers = document.querySelectorAll('.md-content h2, .md-content h3');
+
+    headers.forEach(function (header, index) {
+      // Create a unique ID based on the header text
+      const sectionId = 'section-' + header.textContent.toLowerCase().replace(/[^\w]+/g, '-');
+      header.id = sectionId;
+
+      // Create checkbox container
+      const checkboxContainer = document.createElement('div');
+      checkboxContainer.className = 'section-progress';
+
+      const checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.id = 'check-' + sectionId;
+      checkbox.className = 'section-checkbox';
+
+      // Check localStorage for saved progress
+      const savedState = localStorage.getItem('progress-' + sectionId);
+      if (savedState === 'true') {
+        checkbox.checked = true;
         header.style.opacity = '0.6';
         header.style.textDecoration = 'line-through';
-      } else {
-        header.style.opacity = '1';
-        header.style.textDecoration = 'none';
       }
+
+      // Save to localStorage on change
+      checkbox.addEventListener('change', function () {
+        localStorage.setItem('progress-' + sectionId, this.checked);
+        if (this.checked) {
+          header.style.opacity = '0.6';
+          header.style.textDecoration = 'line-through';
+        } else {
+          header.style.opacity = '1';
+          header.style.textDecoration = 'none';
+        }
+      });
+
+      const label = document.createElement('label');
+      label.htmlFor = 'check-' + sectionId;
+      label.textContent = 'Mark as complete';
+
+      checkboxContainer.appendChild(checkbox);
+      checkboxContainer.appendChild(label);
+      header.parentNode.insertBefore(checkboxContainer, header.nextSibling);
     });
-    
-    const label = document.createElement('label');
-    label.htmlFor = 'check-' + sectionId;
-    label.textContent = 'Mark as complete';
-    
-    checkboxContainer.appendChild(checkbox);
-    checkboxContainer.appendChild(label);
-    header.parentNode.insertBefore(checkboxContainer, header.nextSibling);
+
+    // Calculate and display overall progress
+    const totalCheckboxes = document.querySelectorAll('.section-checkbox').length;
+    const checkedCheckboxes = document.querySelectorAll('.section-checkbox:checked').length;
+
+    if (totalCheckboxes > 0) {
+      const progressPercent = Math.round((checkedCheckboxes / totalCheckboxes) * 100);
+      console.log('Page Progress: ' + progressPercent + '% (' + checkedCheckboxes + '/' + totalCheckboxes + ' sections)');
+    }
   });
-  
-  // Calculate and display overall progress
-  const totalCheckboxes = document.querySelectorAll('.section-checkbox').length;
-  const checkedCheckboxes = document.querySelectorAll('.section-checkbox:checked').length;
-  
-  if (totalCheckboxes > 0) {
-    const progressPercent = Math.round((checkedCheckboxes / totalCheckboxes) * 100);
-    console.log('Page Progress: ' + progressPercent + '% (' + checkedCheckboxes + '/' + totalCheckboxes + ' sections)');
-  }
-});
 </script>
 {% endblock %}

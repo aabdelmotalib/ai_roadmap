@@ -1,0 +1,2581 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive 6-phase learning roadmap from Python foundations to production ML systems">
+      
+      
+        <meta name="author" content="AI Engineering Community">
+      
+      
+      
+        <link rel="prev" href="../compose/">
+      
+      
+        <link rel="next" href="../secrets-monitoring/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>AWS Deployment (EC2 + S3 + ECS) - AI Full Stack Engineer Roadmap</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aws-deployment-for-ai-workloads" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-header__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Full Stack Engineer Roadmap
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AWS Deployment (EC2 + S3 + ECS)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        
+  
+    
+  
+  Setup Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase0/overview/" class="md-tabs__link">
+          
+  
+  Phase 0 — Foundation Warmup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase1/overview/" class="md-tabs__link">
+          
+  
+  Phase 1 — AI Systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  Phase 2 — Docker & Cloud
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase3/overview/" class="md-tabs__link">
+          
+  
+  Phase 3 — MLOps Tooling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase4/overview/" class="md-tabs__link">
+          
+  
+  Phase 4 — Scaling & Kubernetes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase5/overview/" class="md-tabs__link">
+          
+  
+  Phase 5 — Portfolio & Job Readiness
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../appendix/math-lite/" class="md-tabs__link">
+          
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-nav__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    AI Full Stack Engineer Roadmap
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 0 — Foundation Warmup
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 0 — Foundation Warmup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Mastery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/fastapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI Deep Dive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/databases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Databases (SQL + NoSQL + Redis)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux & Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 0 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 1 — AI Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 1 — AI Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/llm-apis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM APIs & Prompt Engineering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/embeddings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embeddings & Vector Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/rag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RAG Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Agents & Tool Use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/fine-tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fine-Tuning (LoRA & PEFT)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluation & Benchmarking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security & Prompt Injection Defense
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/cost-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cost & Performance Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 1 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 2 — Docker & Cloud
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 2 — Docker & Cloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose for AI Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    AWS Deployment (EC2 + S3 + ECS)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    AWS Deployment (EC2 + S3 + ECS)
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    Why This Matters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptual-explanation" class="md-nav__link">
+    Conceptual Explanation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-services-primer" class="md-nav__link">
+    AWS Services Primer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ec2-instance-types-for-ai" class="md-nav__link">
+    EC2 Instance Types for AI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-example-1-launch-ec2-instance-with-user-data" class="md-nav__link">
+    Code Example 1: Launch EC2 Instance with User Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-example-2-s3-for-model-storage" class="md-nav__link">
+    Code Example 2: S3 for Model Storage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-example-3-ecs-fargate-task-definition" class="md-nav__link">
+    Code Example 3: ECS Fargate Task Definition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-example-4-iam-policy-for-ecs-task-role" class="md-nav__link">
+    Code Example 4: IAM Policy for ECS Task Role
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-example-5-auto-scaling-configuration" class="md-nav__link">
+    Code Example 5: Auto-scaling Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-ai-service-on-aws" class="md-nav__link">
+    Architecture: AI Service on AWS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-deploy-to-ecs-fargate" class="md-nav__link">
+    Step-by-Step: Deploy to ECS Fargate
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step: Deploy to ECS Fargate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-ecr-repository" class="md-nav__link">
+    1. Create ECR Repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-build-and-push-image" class="md-nav__link">
+    2. Build and Push Image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-create-ecs-cluster" class="md-nav__link">
+    3. Create ECS Cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-register-task-definition" class="md-nav__link">
+    4. Register Task Definition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-create-service" class="md-nav__link">
+    5. Create Service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-project-deploy-phase-1-to-ecs" class="md-nav__link">
+    Practical Project: Deploy Phase 1 to ECS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-10-common-aws-deployment-errors" class="md-nav__link">
+    Debugging: 10 Common AWS Deployment Errors
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging: 10 Common AWS Deployment Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-task-fails-immediately-health-check" class="md-nav__link">
+    1. Task Fails Immediately (Health Check)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cant-pull-image-from-ecr" class="md-nav__link">
+    2. Can't Pull Image from ECR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-task-cant-access-rds" class="md-nav__link">
+    3. Task Can't Access RDS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-high-memory-usage-oomkill" class="md-nav__link">
+    4. High Memory Usage (OOMKill)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-cant-read-secrets-from-secrets-manager" class="md-nav__link">
+    5. Can't Read Secrets from Secrets Manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-load-balancer-returns-503" class="md-nav__link">
+    6. Load Balancer Returns 503
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-rds-connection-pool-exhausted" class="md-nav__link">
+    7. RDS Connection Pool Exhausted
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-cloudwatch-logs-not-appearing" class="md-nav__link">
+    8. CloudWatch Logs Not Appearing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-auto-scaling-not-triggering" class="md-nav__link">
+    9. Auto-scaling Not Triggering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-cost-explosion" class="md-nav__link">
+    10. Cost Explosion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-netflix-on-aws" class="md-nav__link">
+    Case Study: Netflix on AWS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-week-aws-checklist" class="md-nav__link">
+    1-Week AWS Checklist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../secrets-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secrets Management & Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 2 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 3 — MLOps Tooling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 3 — MLOps Tooling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/mlflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLflow Experiment Tracking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/dvc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DVC Data Versioning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/wandb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weights & Biases (W&B)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/cicd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI/CD for AI Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 3 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 4 — Scaling & Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 4 — Scaling & Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes Core Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/ai-on-k8s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying AI Services on K8s
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autoscaling & Observability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 4 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 5 — Portfolio & Job Readiness
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 5 — Portfolio & Job Readiness
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Portfolio Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/resume/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resume & LinkedIn Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/system-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI System Design Interviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/mock-interviews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mock Interview Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/salary-negotiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Salary & Negotiation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/math-lite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math-Lite Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/tooling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tooling & Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/study-planner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Study Planner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/project-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Showcase Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/whats-next/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What's Next (Post-Roadmap)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="aws-deployment-for-ai-workloads">AWS Deployment for AI Workloads</h1>
+<p>Deploying to AWS is how you make your system available to the world.</p>
+<p>Without AWS: Your AI system runs on your laptop.
+With AWS: Your AI system handles 1000 requests per second, scales automatically, and makes money while you sleep.</p>
+<hr />
+<h2 id="why-this-matters">Why This Matters</h2>
+<p><strong>Real incident:</strong> Company's local RAG works great. 10 users try to use it simultaneously. Laptop locks up. Server dies. Customers angry.</p>
+<p>AWS: 10 users, 100 users, 1000 users → AWS scales automatically.</p>
+<hr />
+<h2 id="conceptual-explanation">Conceptual Explanation</h2>
+<p><strong>Analogy: Restaurant Scaling</strong></p>
+<p>Without cloud: You run a restaurant from your apartment kitchen. Max 10 customers per night.</p>
+<p>With cloud: You use AWS. Lunch rush = AWS scales kitchen size. Dinner = scales back. You pay only for what you use.</p>
+<hr />
+<h2 id="aws-services-primer">AWS Services Primer</h2>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Does What</th>
+<th>Used For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EC2</strong></td>
+<td>Virtual machines (cheapest)</td>
+<td>Running code directly on servers</td>
+</tr>
+<tr>
+<td><strong>ECS Fargate</strong></td>
+<td>Managed containers (recommended)</td>
+<td>Running Docker containers without managing servers</td>
+</tr>
+<tr>
+<td><strong>RDS</strong></td>
+<td>Managed PostgreSQL</td>
+<td>Database without admin headaches</td>
+</tr>
+<tr>
+<td><strong>S3</strong></td>
+<td>Object storage</td>
+<td>Storing models, documents, files</td>
+</tr>
+<tr>
+<td><strong>ElastiCache</strong></td>
+<td>Managed Redis</td>
+<td>Caching without managing Redis</td>
+</tr>
+<tr>
+<td><strong>ALB</strong></td>
+<td>Load balancer</td>
+<td>Distributing traffic across instances</td>
+</tr>
+<tr>
+<td><strong>CloudWatch</strong></td>
+<td>Monitoring and logging</td>
+<td>See what's happening, alerts</td>
+</tr>
+<tr>
+<td><strong>Secrets Manager</strong></td>
+<td>Secure secret storage</td>
+<td>API keys, passwords (not in code)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ec2-instance-types-for-ai">EC2 Instance Types for AI</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>vCPU</th>
+<th>RAM</th>
+<th>GPU</th>
+<th>$/hr</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>t3.medium</strong></td>
+<td>2</td>
+<td>4GB</td>
+<td>None</td>
+<td>$0.04</td>
+<td>Dev/testing, small API</td>
+</tr>
+<tr>
+<td><strong>t3.xlarge</strong></td>
+<td>4</td>
+<td>16GB</td>
+<td>None</td>
+<td>$0.17</td>
+<td>Medium API traffic</td>
+</tr>
+<tr>
+<td><strong>t3.2xlarge</strong></td>
+<td>8</td>
+<td>32GB</td>
+<td>None</td>
+<td>$0.33</td>
+<td>Large API traffic</td>
+</tr>
+<tr>
+<td><strong>g4dn.xlarge</strong></td>
+<td>4</td>
+<td>16GB</td>
+<td>1×T4</td>
+<td>$0.52</td>
+<td>GPU inference</td>
+</tr>
+<tr>
+<td><strong>p3.2xlarge</strong></td>
+<td>8</td>
+<td>61GB</td>
+<td>8×V100</td>
+<td>$3.06</td>
+<td>GPU training</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="code-example-1-launch-ec2-instance-with-user-data">Code Example 1: Launch EC2 Instance with User Data</h2>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># user_data.sh - Runs on EC2 startup</span>
+
+<span class="nb">set</span><span class="w"> </span>-e
+
+<span class="c1"># Update system</span>
+apt-get<span class="w"> </span>update
+apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>curl<span class="w"> </span>git
+
+<span class="c1"># Install Docker</span>
+curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span>-o<span class="w"> </span>get-docker.sh
+sh<span class="w"> </span>get-docker.sh
+usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span>ec2-user
+
+<span class="c1"># Install Docker Compose</span>
+curl<span class="w"> </span>-L<span class="w"> </span><span class="s2">&quot;https://github.com/docker/compose/releases/latest/download/docker-compose-</span><span class="k">$(</span>uname<span class="w"> </span>-s<span class="k">)</span><span class="s2">-</span><span class="k">$(</span>uname<span class="w"> </span>-m<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>-o<span class="w"> </span>/usr/local/bin/docker-compose
+chmod<span class="w"> </span>+x<span class="w"> </span>/usr/local/bin/docker-compose
+
+<span class="c1"># Clone repository</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/yourname/ai-service.git<span class="w"> </span>/app
+
+<span class="nb">cd</span><span class="w"> </span>/app
+
+<span class="c1"># Pull latest code</span>
+git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
+
+<span class="c1"># Start services</span>
+docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+
+<span class="c1"># Log completion</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Services started at </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/var/log/startup.log
+</code></pre></div>
+<p><strong>Deploy:</strong>
+<div class="highlight"><pre><span></span><code>aws<span class="w"> </span>ec2<span class="w"> </span>run-instances<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--image-id<span class="w"> </span>ami-0c55b159cbfafe1f0<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--instance-type<span class="w"> </span>t3.xlarge<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--key-name<span class="w"> </span>my-key-pair<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--security-groups<span class="w"> </span>default<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--user-data<span class="w"> </span>file://user_data.sh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--tag-specifications<span class="w"> </span><span class="s1">&#39;ResourceType=instance,Tags=[{Key=Name,Value=ai-api}]&#39;</span>
+</code></pre></div></p>
+<hr />
+<h2 id="code-example-2-s3-for-model-storage">Code Example 2: S3 for Model Storage</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">boto3</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">download_model_from_s3</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Download model artifacts from S3 at startup.&quot;&quot;&quot;</span>
+
+    <span class="n">bucket</span> <span class="o">=</span> <span class="s2">&quot;ai-models-prod&quot;</span>
+    <span class="n">model_key</span> <span class="o">=</span> <span class="s2">&quot;adapters/lora-v2/adapter_model.safetensors&quot;</span>
+    <span class="n">local_path</span> <span class="o">=</span> <span class="s2">&quot;models/adapter_model.safetensors&quot;</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">s3</span><span class="o">.</span><span class="n">download_file</span><span class="p">(</span><span class="n">bucket</span><span class="p">,</span> <span class="n">model_key</span><span class="p">,</span> <span class="n">local_path</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Downloaded </span><span class="si">{</span><span class="n">model_key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error downloading from S3: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">raise</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">upload_evaluation_report</span><span class="p">(</span><span class="n">report</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Upload evaluation results to S3.&quot;&quot;&quot;</span>
+
+    <span class="kn">import</span> <span class="nn">json</span>
+    <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+    <span class="n">report_key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;evaluations/</span><span class="si">{</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span><span class="si">}</span><span class="s2">.json&quot;</span>
+
+    <span class="n">s3</span><span class="o">.</span><span class="n">put_object</span><span class="p">(</span>
+        <span class="n">Bucket</span><span class="o">=</span><span class="s2">&quot;ai-models-prod&quot;</span><span class="p">,</span>
+        <span class="n">Key</span><span class="o">=</span><span class="n">report_key</span><span class="p">,</span>
+        <span class="n">Body</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">report</span><span class="p">),</span>
+        <span class="n">ContentType</span><span class="o">=</span><span class="s2">&quot;application/json&quot;</span>
+    <span class="p">)</span>
+
+<span class="c1"># Presigned URL for document access</span>
+<span class="k">def</span> <span class="nf">generate_presigned_url</span><span class="p">(</span><span class="n">s3_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">expiration_seconds</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3600</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate time-limited URL for downloading S3 file.&quot;&quot;&quot;</span>
+
+    <span class="n">url</span> <span class="o">=</span> <span class="n">s3</span><span class="o">.</span><span class="n">generate_presigned_url</span><span class="p">(</span>
+        <span class="s1">&#39;get_object&#39;</span><span class="p">,</span>
+        <span class="n">Params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Bucket&#39;</span><span class="p">:</span> <span class="s1">&#39;ai-documents&#39;</span><span class="p">,</span> <span class="s1">&#39;Key&#39;</span><span class="p">:</span> <span class="n">s3_key</span><span class="p">},</span>
+        <span class="n">ExpiresIn</span><span class="o">=</span><span class="n">expiration_seconds</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">url</span>
+</code></pre></div>
+<hr />
+<h2 id="code-example-3-ecs-fargate-task-definition">Code Example 3: ECS Fargate Task Definition</h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;family&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ai-api-task&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;networkMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;awsvpc&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;requiresCompatibilities&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;FARGATE&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;cpu&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1024&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;memory&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2048&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;containerDefinitions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;api&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;image&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123456789.dkr.ecr.us-east-1.amazonaws.com/ai-service:latest&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;portMappings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;containerPort&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">8000</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;protocol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tcp&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;environment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ENVIRONMENT&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;production&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LOG_LEVEL&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;info&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;secrets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OPENAI_API_KEY&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;valueFrom&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arn:aws:secretsmanager:us-east-1:123456789:secret:openai-key&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DATABASE_URL&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;valueFrom&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arn:aws:secretsmanager:us-east-1:123456789:secret:db-url&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;logConfiguration&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;logDriver&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;awslogs&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;awslogs-group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/ecs/ai-api&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;awslogs-region&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;us-east-1&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;awslogs-stream-prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ecs&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;healthCheck&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">          </span><span class="s2">&quot;CMD-SHELL&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="s2">&quot;curl -f http://localhost:8000/health || exit 1&quot;</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;interval&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;timeout&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;retries&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;startPeriod&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;executionRoleArn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arn:aws:iam::123456789:role/ecsTaskExecutionRole&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;taskRoleArn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arn:aws:iam::123456789:role/ecsTaskRole&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="code-example-4-iam-policy-for-ecs-task-role">Code Example 4: IAM Policy for ECS Task Role</h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;Statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;s3:GetObject&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;s3:ListBucket&quot;</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;arn:aws:s3:::ai-models-prod&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;arn:aws:s3:::ai-models-prod/*&quot;</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;secretsmanager:GetSecretValue&quot;</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;arn:aws:secretsmanager:us-east-1:123456789:secret:openai-key&quot;</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;rds-db:connect&quot;</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;arn:aws:rds:us-east-1:123456789:dbuser:resource-id/iamuser&quot;</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="code-example-5-auto-scaling-configuration">Code Example 5: Auto-scaling Configuration</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># AWS Console or boto3</span>
+
+<span class="kn">import</span> <span class="nn">boto3</span>
+
+<span class="n">autoscaling</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;application-autoscaling&#39;</span><span class="p">)</span>
+
+<span class="c1"># Register ECS service for auto-scaling</span>
+<span class="n">autoscaling</span><span class="o">.</span><span class="n">register_scalable_target</span><span class="p">(</span>
+    <span class="n">ServiceNamespace</span><span class="o">=</span><span class="s1">&#39;ecs&#39;</span><span class="p">,</span>
+    <span class="n">ResourceId</span><span class="o">=</span><span class="s1">&#39;service/ai-cluster/ai-service&#39;</span><span class="p">,</span>
+    <span class="n">ScalableDimension</span><span class="o">=</span><span class="s1">&#39;ecs:service:DesiredCount&#39;</span><span class="p">,</span>
+    <span class="n">MinCapacity</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">MaxCapacity</span><span class="o">=</span><span class="mi">10</span>
+<span class="p">)</span>
+
+<span class="c1"># Scale on CPU</span>
+<span class="n">autoscaling</span><span class="o">.</span><span class="n">put_scaling_policy</span><span class="p">(</span>
+    <span class="n">PolicyName</span><span class="o">=</span><span class="s1">&#39;cpu-scaling&#39;</span><span class="p">,</span>
+    <span class="n">ServiceNamespace</span><span class="o">=</span><span class="s1">&#39;ecs&#39;</span><span class="p">,</span>
+    <span class="n">ResourceId</span><span class="o">=</span><span class="s1">&#39;service/ai-cluster/ai-service&#39;</span><span class="p">,</span>
+    <span class="n">ScalableDimension</span><span class="o">=</span><span class="s1">&#39;ecs:service:DesiredCount&#39;</span><span class="p">,</span>
+    <span class="n">PolicyType</span><span class="o">=</span><span class="s1">&#39;TargetTrackingScaling&#39;</span><span class="p">,</span>
+    <span class="n">TargetTrackingScalingPolicyConfiguration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;TargetValue&#39;</span><span class="p">:</span> <span class="mf">70.0</span><span class="p">,</span>
+        <span class="s1">&#39;PredefinedMetricSpecification&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;PredefinedMetricType&#39;</span><span class="p">:</span> <span class="s1">&#39;ECSServiceAverageCPUUtilization&#39;</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;ScaleOutCooldown&#39;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+        <span class="s1">&#39;ScaleInCooldown&#39;</span><span class="p">:</span> <span class="mi">300</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="c1"># Scale on request count</span>
+<span class="n">autoscaling</span><span class="o">.</span><span class="n">put_scaling_policy</span><span class="p">(</span>
+    <span class="n">PolicyName</span><span class="o">=</span><span class="s1">&#39;request-scaling&#39;</span><span class="p">,</span>
+    <span class="n">ServiceNamespace</span><span class="o">=</span><span class="s1">&#39;ecs&#39;</span><span class="p">,</span>
+    <span class="n">ResourceId</span><span class="o">=</span><span class="s1">&#39;service/ai-cluster/ai-service&#39;</span><span class="p">,</span>
+    <span class="n">ScalableDimension</span><span class="o">=</span><span class="s1">&#39;ecs:service:DesiredCount&#39;</span><span class="p">,</span>
+    <span class="n">PolicyType</span><span class="o">=</span><span class="s1">&#39;TargetTrackingScaling&#39;</span><span class="p">,</span>
+    <span class="n">TargetTrackingScalingPolicyConfiguration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;TargetValue&#39;</span><span class="p">:</span> <span class="mf">100.0</span><span class="p">,</span>
+        <span class="s1">&#39;PredefinedMetricSpecification&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;PredefinedMetricType&#39;</span><span class="p">:</span> <span class="s1">&#39;ALBRequestCountPerTarget&#39;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="architecture-ai-service-on-aws">Architecture: AI Service on AWS</h2>
+<pre class="mermaid"><code>graph TB
+    subgraph CDN["CloudFront CDN"]
+        CF["Cache Layer"]
+    end
+
+    subgraph AWS["AWS VPC"]
+        subgraph ALB["Application Load Balancer"]
+            LB["ALB:80/443"]
+        end
+
+        subgraph ECS["ECS Fargate"]
+            T1["Task 1&lt;br/&gt;API"]
+            T2["Task 2&lt;br/&gt;API"]
+            T3["Task 3&lt;br/&gt;API"]
+        end
+
+        subgraph DB["Data Layer"]
+            RDS["RDS PostgreSQL&lt;br/&gt;Multi-AZ"]
+            CACHE["ElastiCache&lt;br/&gt;Redis"]
+            S3["S3 Models&lt;br/&gt;Documents"]
+        end
+    end
+
+    CLIENT["Client Browser"]
+
+    CLIENT --&gt;|HTTPS| CF
+    CF --&gt;|Cache miss| LB
+    LB --&gt;|Round-robin| T1
+    LB --&gt;|Round-robin| T2
+    LB --&gt;|Round-robin| T3
+
+    T1 --&gt;|Query| RDS
+    T1 --&gt;|Cache| CACHE
+    T1 --&gt;|Download| S3
+
+    T2 --&gt;|Query| RDS
+    T2 --&gt;|Cache| CACHE
+    T2 --&gt;|Download| S3
+
+    T3 --&gt;|Query| RDS
+    T3 --&gt;|Cache| CACHE
+    T3 --&gt;|Download| S3</code></pre>
+<hr />
+<h2 id="step-by-step-deploy-to-ecs-fargate">Step-by-Step: Deploy to ECS Fargate</h2>
+<h3 id="1-create-ecr-repository">1. Create ECR Repository</h3>
+<div class="highlight"><pre><span></span><code>aws<span class="w"> </span>ecr<span class="w"> </span>create-repository<span class="w"> </span>--repository-name<span class="w"> </span>ai-service<span class="w"> </span>--region<span class="w"> </span>us-east-1
+</code></pre></div>
+<h3 id="2-build-and-push-image">2. Build and Push Image</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Get login token</span>
+aws<span class="w"> </span>ecr<span class="w"> </span>get-login-password<span class="w"> </span>--region<span class="w"> </span>us-east-1<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>docker<span class="w"> </span>login<span class="w"> </span>--username<span class="w"> </span>AWS<span class="w"> </span>--password-stdin<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="m">123456789</span>.dkr.ecr.us-east-1.amazonaws.com
+
+<span class="c1"># Build and tag</span>
+docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>ai-service:latest<span class="w"> </span>.
+docker<span class="w"> </span>tag<span class="w"> </span>ai-service:latest<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="m">123456789</span>.dkr.ecr.us-east-1.amazonaws.com/ai-service:latest
+
+<span class="c1"># Push</span>
+docker<span class="w"> </span>push<span class="w"> </span><span class="m">123456789</span>.dkr.ecr.us-east-1.amazonaws.com/ai-service:latest
+</code></pre></div>
+<h3 id="3-create-ecs-cluster">3. Create ECS Cluster</h3>
+<div class="highlight"><pre><span></span><code>aws<span class="w"> </span>ecs<span class="w"> </span>create-cluster<span class="w"> </span>--cluster-name<span class="w"> </span>ai-cluster
+</code></pre></div>
+<h3 id="4-register-task-definition">4. Register Task Definition</h3>
+<div class="highlight"><pre><span></span><code>aws<span class="w"> </span>ecs<span class="w"> </span>register-task-definition<span class="w"> </span>--cli-input-json<span class="w"> </span>file://task-definition.json
+</code></pre></div>
+<h3 id="5-create-service">5. Create Service</h3>
+<div class="highlight"><pre><span></span><code>aws<span class="w"> </span>ecs<span class="w"> </span>create-service<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--cluster<span class="w"> </span>ai-cluster<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--service-name<span class="w"> </span>ai-service<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--task-definition<span class="w"> </span>ai-api-task:1<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--desired-count<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--launch-type<span class="w"> </span>FARGATE<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--network-configuration<span class="w"> </span><span class="nv">awsvpcConfiguration</span><span class="o">=</span><span class="s2">&quot;{subnets=[subnet-12345],securityGroups=[sg-12345]}&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--load-balancers<span class="w"> </span><span class="s2">&quot;targetGroupArn=arn:aws:elasticloadbalancing:...,containerName=api,containerPort=8000&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="practical-project-deploy-phase-1-to-ecs">Practical Project: Deploy Phase 1 to ECS</h2>
+<p><strong>Build:</strong> Production-ready deployment on AWS.</p>
+<p>Requirements:
+- ECR dockerfile image
+- ECS task definition with secrets injection
+- RDS PostgreSQL instance
+- ElastiCache Redis cluster
+- ALB with health checks
+- Auto-scaling policy
+- CloudWatch monitoring
+- Cost estimation</p>
+<hr />
+<h2 id="debugging-10-common-aws-deployment-errors">Debugging: 10 Common AWS Deployment Errors</h2>
+<h3 id="1-task-fails-immediately-health-check">1. Task Fails Immediately (Health Check)</h3>
+<p><strong>Symptom:</strong> Task starts, then immediately stops. Status = "FAILED"</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check logs</span>
+aws<span class="w"> </span>logs<span class="w"> </span>get-log-events<span class="w"> </span>--log-group-name<span class="w"> </span>/ecs/ai-api<span class="w"> </span>--log-stream-name<span class="w"> </span>ecs/api/...
+
+<span class="c1"># Common causes:</span>
+<span class="c1"># 1. Health check endpoint doesn&#39;t exist</span>
+<span class="c1"># 2. Port mapping wrong</span>
+<span class="c1"># 3. Environment variables missing</span>
+</code></pre></div></p>
+<h3 id="2-cant-pull-image-from-ecr">2. Can't Pull Image from ECR</h3>
+<p><strong>Symptom:</strong> "AccessDenied pulling image from ECR"</p>
+<p><strong>Fix:</strong> Task execution role needs ECR permissions:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ecr:*&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arn:aws:ecr:us-east-1:123456789:repository/ai-service&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="3-task-cant-access-rds">3. Task Can't Access RDS</h3>
+<p><strong>Symptom:</strong> "Connection refused: postgres:5432"</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Security group allows ECS task</span>
+<span class="c1"># 2. RDS is in same VPC</span>
+
+<span class="c1"># Test from ECS task</span>
+aws<span class="w"> </span>ecs<span class="w"> </span>execute-command<span class="w"> </span>--cluster<span class="w"> </span>ai-cluster<span class="w"> </span>--task<span class="w"> </span>&lt;task-id&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--container<span class="w"> </span>api<span class="w"> </span>--interactive<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--command<span class="w"> </span><span class="s2">&quot;/bin/bash&quot;</span>
+
+<span class="c1"># Inside container</span>
+psql<span class="w"> </span>-h<span class="w"> </span>rds-endpoint.amazonaws.com<span class="w"> </span>-U<span class="w"> </span>aiuser<span class="w"> </span>-d<span class="w"> </span>aidb
+</code></pre></div></p>
+<h3 id="4-high-memory-usage-oomkill">4. High Memory Usage (OOMKill)</h3>
+<p><strong>Symptom:</strong> Task memory 2048MB, never enough. Tasks constantly killed.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Increase task memory</span>
+aws<span class="w"> </span>ecs<span class="w"> </span>update-service<span class="w"> </span>--cluster<span class="w"> </span>ai-cluster<span class="w"> </span>--service<span class="w"> </span>ai-service<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--task-definition<span class="w"> </span>ai-api-task:2<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--force-new-deployment
+
+<span class="c1"># Or reduce memory usage in code</span>
+</code></pre></div></p>
+<h3 id="5-cant-read-secrets-from-secrets-manager">5. Can't Read Secrets from Secrets Manager</h3>
+<p><strong>Symptom:</strong> Environment variable empty despite valueFrom</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;secrets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OPENAI_API_KEY&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;valueFrom&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arn:aws:secretsmanager:us-east-1:123456789:secret:openai-key:OPENAI_API_KEY::&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Note the extra <code>:OPENAI_API_KEY::</code> at the end for JSON secret key.</p>
+<h3 id="6-load-balancer-returns-503">6. Load Balancer Returns 503</h3>
+<p><strong>Symptom:</strong> Browser gets 503 Service Unavailable</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check target health</span>
+aws<span class="w"> </span>elbv2<span class="w"> </span>describe-target-health<span class="w"> </span>--target-group-arn<span class="w"> </span>arn:aws:...
+
+<span class="c1"># If all targets are down: check ECS task status</span>
+aws<span class="w"> </span>ecs<span class="w"> </span>describe-tasks<span class="w"> </span>--cluster<span class="w"> </span>ai-cluster<span class="w"> </span>--tasks<span class="w"> </span>&lt;task-ids&gt;
+
+<span class="c1"># If tasks are dying: check logs</span>
+aws<span class="w"> </span>logs<span class="w"> </span>get-log-events<span class="w"> </span>--log-group-name<span class="w"> </span>/ecs/ai-api
+</code></pre></div></p>
+<h3 id="7-rds-connection-pool-exhausted">7. RDS Connection Pool Exhausted</h3>
+<p><strong>Symptom:</strong> After 100 requests, new requests hang waiting for connection.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Use connection pool with limits</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span>
+    <span class="n">database_url</span><span class="p">,</span>
+    <span class="n">pool_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">max_overflow</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>  <span class="c1"># Max temp connections</span>
+    <span class="n">pool_pre_ping</span><span class="o">=</span><span class="kc">True</span>  <span class="c1"># Test connection before use</span>
+<span class="p">)</span>
+</code></pre></div></p>
+<h3 id="8-cloudwatch-logs-not-appearing">8. CloudWatch Logs Not Appearing</h3>
+<p><strong>Symptom:</strong> Task running, but no logs in CloudWatch.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;logConfiguration&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;logDriver&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;awslogs&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;awslogs-group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/ecs/ai-api&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;awslogs-region&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;us-east-1&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;awslogs-stream-prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ecs&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Ensure log group exists:
+<div class="highlight"><pre><span></span><code>aws<span class="w"> </span>logs<span class="w"> </span>create-log-group<span class="w"> </span>--log-group-name<span class="w"> </span>/ecs/ai-api
+</code></pre></div></p>
+<h3 id="9-auto-scaling-not-triggering">9. Auto-scaling Not Triggering</h3>
+<p><strong>Symptom:</strong> CPU at 90%, still only 1 task running.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check scaling policy</span>
+aws<span class="w"> </span>application-autoscaling<span class="w"> </span>describe-scaling-policies<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--service-namespace<span class="w"> </span>ecs
+
+<span class="c1"># Verify policy target</span>
+aws<span class="w"> </span>cloudwatch<span class="w"> </span>describe-alarms<span class="w"> </span>--alarm-names<span class="w"> </span>TargetTracking-ecs...
+</code></pre></div></p>
+<h3 id="10-cost-explosion">10. Cost Explosion</h3>
+<p><strong>Symptom:</strong> AWS bill is $2000/month (unexpected).</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Find expensive services</span>
+aws<span class="w"> </span>ce<span class="w"> </span>get-cost-and-usage<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--time-period<span class="w"> </span><span class="nv">Start</span><span class="o">=</span><span class="m">2024</span>-03-01,End<span class="o">=</span><span class="m">2024</span>-03-31<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--granularity<span class="w"> </span>MONTHLY<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--filter<span class="w"> </span>file://filter.json<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--metrics<span class="w"> </span><span class="s2">&quot;UnblendedCost&quot;</span>
+
+<span class="c1"># Likely causes:</span>
+<span class="c1"># - RDS too large, scale down</span>
+<span class="c1"># - Transfer costs, use S3 Edge</span>
+<span class="c1"># - Running too many ECS tasks, scale to 1 off-hours</span>
+</code></pre></div></p>
+<hr />
+<h2 id="case-study-netflix-on-aws">Case Study: Netflix on AWS</h2>
+<p><strong>Challenge:</strong> Run AI recommendation models serving 10M requests/day.</p>
+<p><strong>Solution:</strong>
+- ECS Fargate (no server management)
+- RDS Aurora (auto-scaling read replicas)
+- S3 for model versions (versioning enabled)
+- CLoudFront caching (CDN in front of ALB)
+- Auto-scaling trigger on p99 latency (scale before it matters)</p>
+<p><strong>Result:</strong> 99.9% uptime, 50ms p99 latency</p>
+<hr />
+<h2 id="1-week-aws-checklist">1-Week AWS Checklist</h2>
+<ul>
+<li>[ ] Day 1: Create AWS account, set up IAM user, build ECR repo</li>
+<li>[ ] Day 2: Push Docker image to ECR</li>
+<li>[ ] Day 3: Create RDS PostgreSQL instance</li>
+<li>[ ] Day 4: Create ECS cluster and task definition</li>
+<li>[ ] Day 5: Set up ALB and service</li>
+<li>[ ] Day 6: Configure auto-scaling</li>
+<li>[ ] Day 7: Test full deployment, monitor costs</li>
+</ul>
+<hr />
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://docs.aws.amazon.com/ecs/">AWS ECS Documentation</a></li>
+<li><a href="https://aws.amazon.com/fargate/pricing/">ECS Fargate Pricing</a></li>
+<li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_BestPractices.html">AWS RDS Best Practices</a></li>
+</ul>
+<p>→ <strong><a href="../secrets-monitoring/">Secrets &amp; Monitoring →</a></strong></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.integrate"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2684 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive 6-phase learning roadmap from Python foundations to production ML systems">
+      
+      
+        <meta name="author" content="AI Engineering Community">
+      
+      
+      
+        <link rel="prev" href="../math-lite/">
+      
+      
+        <link rel="next" href="../study-planner/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>Tooling & Productivity - AI Full Stack Engineer Roadmap</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tooling-and-productivity-for-ai-engineers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-header__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Full Stack Engineer Roadmap
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tooling & Productivity
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        
+  
+    
+  
+  Setup Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase0/overview/" class="md-tabs__link">
+          
+  
+  Phase 0 — Foundation Warmup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase1/overview/" class="md-tabs__link">
+          
+  
+  Phase 1 — AI Systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase2/overview/" class="md-tabs__link">
+          
+  
+  Phase 2 — Docker & Cloud
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase3/overview/" class="md-tabs__link">
+          
+  
+  Phase 3 — MLOps Tooling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase4/overview/" class="md-tabs__link">
+          
+  
+  Phase 4 — Scaling & Kubernetes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase5/overview/" class="md-tabs__link">
+          
+  
+  Phase 5 — Portfolio & Job Readiness
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../math-lite/" class="md-tabs__link">
+          
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-nav__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    AI Full Stack Engineer Roadmap
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 0 — Foundation Warmup
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 0 — Foundation Warmup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Mastery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/fastapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI Deep Dive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/databases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Databases (SQL + NoSQL + Redis)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux & Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 0 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 1 — AI Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 1 — AI Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/llm-apis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM APIs & Prompt Engineering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/embeddings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embeddings & Vector Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/rag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RAG Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Agents & Tool Use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/fine-tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fine-Tuning (LoRA & PEFT)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluation & Benchmarking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security & Prompt Injection Defense
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/cost-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cost & Performance Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 1 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 2 — Docker & Cloud
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 2 — Docker & Cloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose for AI Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Deployment (EC2 + S3 + ECS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/secrets-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secrets Management & Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 2 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 3 — MLOps Tooling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 3 — MLOps Tooling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/mlflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLflow Experiment Tracking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/dvc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DVC Data Versioning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/wandb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weights & Biases (W&B)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/cicd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI/CD for AI Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 3 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 4 — Scaling & Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 4 — Scaling & Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes Core Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/ai-on-k8s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying AI Services on K8s
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autoscaling & Observability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 4 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 5 — Portfolio & Job Readiness
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 5 — Portfolio & Job Readiness
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Portfolio Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/resume/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resume & LinkedIn Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/system-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI System Design Interviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/mock-interviews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mock Interview Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/salary-negotiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Salary & Negotiation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math-lite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math-Lite Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tooling & Productivity
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Tooling & Productivity
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-using-ai-assistants-for-coding-become-a-senior-pair-programmer" class="md-nav__link">
+    1. Using AI Assistants for Coding: Become a Senior Pair Programmer
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Using AI Assistants for Coding: Become a Senior Pair Programmer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-right-mindset" class="md-nav__link">
+    The Right Mindset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-pattern-1-debugging-my-favorite" class="md-nav__link">
+    Prompt Pattern 1: Debugging (My Favorite)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anti-patterns-what-not-to-do" class="md-nav__link">
+    Anti-Patterns: What NOT to Do
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-reading-documentation-efficiently-the-5-step-method" class="md-nav__link">
+    2. Reading Documentation Efficiently: The 5-Step Method
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Reading Documentation Efficiently: The 5-Step Method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-5-steps" class="md-nav__link">
+    The 5 Steps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-research-papers-without-a-phd" class="md-nav__link">
+    Reading Research Papers (Without a PhD)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-git-workflow-for-solo-ai-projects" class="md-nav__link">
+    3. Git Workflow for Solo AI Projects
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Git Workflow for Solo AI Projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#branch-naming-convention" class="md-nav__link">
+    Branch Naming Convention
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit-message-format-conventional-commits" class="md-nav__link">
+    Commit Message Format: Conventional Commits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-workflow" class="md-nav__link">
+    The Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gitignore-for-ai-projects" class="md-nav__link">
+    .gitignore for AI Projects
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-jupyter-notebooks-exploration-production" class="md-nav__link">
+    4. Jupyter Notebooks: Exploration → Production
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Jupyter Notebooks: Exploration → Production">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-refactoring-flow" class="md-nav__link">
+    The Refactoring Flow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converting-notebooks-to-html-docs" class="md-nav__link">
+    Converting Notebooks to HTML Docs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clean-notebooks-before-git-commit" class="md-nav__link">
+    Clean Notebooks Before Git Commit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-makefile-for-ai-projects" class="md-nav__link">
+    5. Makefile for AI Projects
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-pre-commit-hooks-automated-quality-gates" class="md-nav__link">
+    6. Pre-commit Hooks: Automated Quality Gates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-the-workflow-that-works" class="md-nav__link">
+    Summary: The Workflow That Works
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-issues-and-fixes" class="md-nav__link">
+    Common Issues and Fixes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../study-planner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Study Planner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Showcase Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../whats-next/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What's Next (Post-Roadmap)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="tooling-and-productivity-for-ai-engineers">Tooling and Productivity for AI Engineers</h1>
+<p>The best tool is the one you'll actually use.</p>
+<p>This guide covers the tools and workflows that let you move fast without sacrificing quality. Not just "what tools exist," but "how to use them effectively in actual work."</p>
+<hr />
+<h2 id="1-using-ai-assistants-for-coding-become-a-senior-pair-programmer">1. Using AI Assistants for Coding: Become a Senior Pair Programmer</h2>
+<p>Claude and ChatGPT are not code machines. They're thinking partners.</p>
+<p>The difference between "AI writes all my code" (you learn nothing) and "AI helps me solve hard problems" (you become faster and smarter) is how you prompt them.</p>
+<h3 id="the-right-mindset">The Right Mindset</h3>
+<div class="admonition note">
+<p class="admonition-title">AI Assistant Anti-Pattern</p>
+<p>User: "Write me a RAG system"
+Claude: [500 lines of code]
+User: [copies, pastes, doesn't understand, code breaks]</p>
+<p>This is how you learn nothing and the code is bad.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">AI Assistant The Right Way</p>
+<p>User: "I'm building RAG. Here's my problem: embeddings are fast but retrieval gets slow at 100K vectors. I tried [X], [Y], still slow. What are the most likely causes?"
+Claude: [explains bottleneck analysis, suggests causes, helps you investigate]
+User: [understands the tradeoff, fixes efficiently, learns something real]</p>
+</div>
+<hr />
+<h3 id="prompt-pattern-1-debugging-my-favorite">Prompt Pattern 1: Debugging (My Favorite)</h3>
+<p><strong>Situation:</strong> Something is broken. You're stuck.</p>
+<p><strong>Bad prompt:</strong>
+<div class="highlight"><pre><span></span><code>My code doesn&#39;t work. Fix it.
+</code></pre></div></p>
+<p><strong>Good prompt:</strong>
+<div class="highlight"><pre><span></span><code>[Include full error message]
+[Include relevant code (20-50 lines)]
+[Include what you&#39;ve already tried]
+[Include your hypothesis about what&#39;s wrong]
+
+What are the most likely causes? What should I check first?
+</code></pre></div></p>
+<p><strong>Example (real case):</strong>
+<div class="highlight"><pre><span></span><code>Error: &quot;CUDA out of memory&quot; on A100 with 80GB VRAM
+
+Batch size: 32
+Sequence length: 2048
+Model: mistral-7b with LoRA (rank=16)
+
+Code:
+```python
+model = AutoModelForCausalLM.from_pretrained(
+    &quot;mistral-7b&quot;,
+    torch_dtype=torch.float16,
+    device_map=&quot;auto&quot;
+)
+peft_model = get_peft_model(model, lora_config)
+for batch in dataloader:
+    outputs = peft_model(**batch)  # Dies here
+</code></pre></div></p>
+<p>I've tried:
+- Gradient accumulation (doesn't help, limit is inference)
+- Half precision (already using float16)
+- Smaller batch size (48GB → 32GB used, still okay, but 64Gb → OOM)</p>
+<p>My hypothesis: batch size 64 with sequence length 2048 = too many attention tokens at once. 
+64 * 2048 * 2048 = 268M attention matrix. Should fit, but maybe overhead?</p>
+<p>What am I missing?
+<div class="highlight"><pre><span></span><code>**Claude&#39;s response will be:**
+- Attention memory calculation (confirms your math)
+- KV cache size (ah! that&#39;s the hidden cost)
+- Specific fix (use flash-attention, reduce seq_len, or smaller batch)
+- Why each matters
+
+You learn the actual bottleneck. You fix it properly. Next time, you won&#39;t even need to ask.
+
+---
+
+### Prompt Pattern 2: Code Review
+
+**Purpose:** Get a critical pair&#39;s perspective before committing.
+</code></pre></div>
+Review this code for production readiness:
+- Production concerns (will this work at scale?)
+- Security issues (any vulnerabilities?)
+- Performance (obvious inefficiencies?)
+- Edge cases (what breaks?)
+- Maintainability (will others understand this 6 months from now?)</p>
+<p>Be specific and critical. Point out exact lines.</p>
+<p>[Include code]
+<div class="highlight"><pre><span></span><code>**Real example:**
+</code></pre></div>
+Review this embedding caching layer:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">cache_embedding</span><span class="p">(</span><span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">embedding</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]):</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>  <span class="c1"># Normalize</span>
+    <span class="n">cache</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">embedding</span>
+    <span class="k">return</span> <span class="n">cache</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">get_from_cache</span><span class="p">(</span><span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]]:</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+<p>Edge cases I'm worried about:
+- What if query is longer than expected?
+- Does lower() break for non-English?
+- Cache unbounded memory leak?
+<div class="highlight"><pre><span></span><code>**Claude will catch:**
+- Security: injection via memcached if you use external cache
+- Edge case: case-folding breaks some languages (Turkish ı/I)
+- Scaling: unbounded cache = eventual OOM
+- Performance: .lower() is fine, but dict lookup is O(1) only if key is hashable
+- Suggestion: add TTL, max size, semantic similarity threshold
+
+You get a checklist of real concerns. You fix them before they&#39;re prod issues.
+
+---
+
+### Prompt Pattern 3: Architecture Design
+</code></pre></div>
+I need to design [system]. 
+Constraints: [specific numbers: 1000 QPS, &lt;500ms latency, &lt;$1000/month]
+Trade-offs I'm willing to make: [speed &gt; cost, or accuracy &gt; latency]</p>
+<p>What are 3 different architecture approaches with pros/cons for each?
+<div class="highlight"><pre><span></span><code>**Real example:**
+</code></pre></div>
+Design a semantic search over 10M documents.
+Constraints:
+- &lt;500ms P99 latency
+- Cold start must complete in &lt;5 minutes
+- &lt;$500/month operating cost
+- Can re-index once weekly</p>
+<p>I'm willing to trade: slightly lower relevance for cheaper embed model
+<div class="highlight"><pre><span></span><code>**Claude will suggest:**
+1. Pinecone (fully managed, fast, expensive)
+   - Pros: 0 ops, guaranteed latency
+   - Cons: $8K/month at scale
+2. Elasticsearch (hybrid search, cheaper)
+   - Pros: full control, half the cost
+   - Cons: you manage infrastructure
+3. Qdrant self-hosted (vector-native, cheapest)
+   - Pros: complete control, $200/month
+   - Cons: you run/scale/backup yourself
+
+For YOUR constraints (budget-conscious), option 3 makes sense.
+
+You make an informed choice instead of copying a tutorial.
+
+---
+
+### Prompt Pattern 4: Explanation with Analogies
+
+Use when you understand *something* but not the deep intuition.
+</code></pre></div>
+Explain [concept] as if I understand [related concept].
+Use an analogy from [domain I know].</p>
+<p>For example: explain attention like it's [domain thing]
+<div class="highlight"><pre><span></span><code>**Real example:**
+</code></pre></div>
+Explain the difference between embedding fine-tuning and adapter layers (LoRA).</p>
+<p>I understand fine-tuning for classification models already.</p>
+<p>Use an analogy from music or finance (pick whichever makes more sense).
+<div class="highlight"><pre><span></span><code>**Claude will explain:**
+- Fine-tuning: &quot;Like rearranging every word in an orchestra, changes everything&quot;
+- LoRA: &quot;Like bringing in one extra musician (the adapter), changes only slightly&quot;
+- When to use: LoRA if you want to preserve knowledge, fine-tuning if you want specialization
+
+Now you have the *intuition* not just the technique.
+
+---
+
+### Prompt Pattern 5: Documentation
+
+Your code should explain *why* not *what*.
+</code></pre></div>
+Write docstrings for this function. Focus on WHY we do each step, not WHAT the code does.
+Include:
+- Why we chose this algorithm (vs alternatives)
+- What assumptions we're making
+- When this function isn't appropriate
+- Performance characteristics</p>
+<p>[Include function]
+<div class="highlight"><pre><span></span><code>**Before:**
+```python
+def chunk_text(text: str, size: int = 512) -&gt; list[str]:
+    &quot;&quot;&quot;Split text into chunks.&quot;&quot;&quot;
+    return [text[i:i+size] for i in range(0, len(text), size)]
+</code></pre></div></p>
+<p><strong>After (what Claude suggests):</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">chunk_text</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">512</span><span class="p">,</span> <span class="n">overlap</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Split text into fixed-size chunks for embedding or RAG.</span>
+
+<span class="sd">    Uses fixed-size chunking, not sentence-aware splitting.</span>
+<span class="sd">    This was chosen because:</span>
+<span class="sd">    - Simple and deterministic (same chunks every time)</span>
+<span class="sd">    - Consistent token counts (better for batching)</span>
+<span class="sd">    - Faster than sentence boundaries (no NLP parsing)</span>
+
+<span class="sd">    Tradeoff: may cut sentences mid-way. If you need semantic chunks, </span>
+<span class="sd">    use sentence_split() instead (slower but higher quality).</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        text: Text to chunk</span>
+<span class="sd">        size: Chunk size in characters (adjust if using tokens; 1 token ≈ 4 chars)</span>
+<span class="sd">        overlap: Characters to overlap between chunks (useful for RAG to preserve context)</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List of text chunks</span>
+
+<span class="sd">    Performance: O(n) where n = len(text). Very fast.</span>
+
+<span class="sd">    Limitations:</span>
+<span class="sd">    - Doesn&#39;t break on sentence boundaries (may cut mid-sentence)</span>
+<span class="sd">    - Overlap increases return list size (10% overlap = 10% more overlap chunks)</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; chunks = chunk_text(&quot;Hello world. This is AI.&quot;, size=10, overlap=2)</span>
+<span class="sd">        &gt;&gt;&gt; chunks</span>
+<span class="sd">        [&#39;Hello worl&#39;, &#39;worldd. Th&#39;, &#39;This is AI&#39;]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div></p>
+<p>The second version is maintainable. Future you will thank you.</p>
+<hr />
+<h3 id="anti-patterns-what-not-to-do">Anti-Patterns: What NOT to Do</h3>
+<div class="admonition warning">
+<p class="admonition-title">Don't: Accept First Answer Without Question</p>
+<p>Claude gives you code. You test it. It works. You're done.</p>
+<p>Better: Test it, read it, understand it. Does it handle edge cases?
+Is there a better way? You should be able to explain every line.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Don't: Use Code You Don't Understand</p>
+<p>"This code works, I don't need to understand it."</p>
+<p>When it breaks (and it will), you're helpless. You're a copy-paste engineer.
+Spend 10 minutes understanding it. Then you own it.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Don't: Let AI Write All Your Code</p>
+<p>If Claude writes 100% of your code, you're learning 0%.</p>
+<p>Better workflow: You write 70%, Claude helps with the hard 30%.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Don't: Ask Yes/No Questions</p>
+<p>"Is this code secure?" → Claude might say yes when it's not.</p>
+<p>Better: "Review for security issues. Point out specific vulnerabilities."
+Claude has to <em>find</em> something, not just agree with you.</p>
+</div>
+<hr />
+<h2 id="2-reading-documentation-efficiently-the-5-step-method">2. Reading Documentation Efficiently: The 5-Step Method</h2>
+<p>Most engineers waste hours reading docs wrong.</p>
+<h3 id="the-5-steps">The 5 Steps</h3>
+<p><strong>1. Scan the README/Overview (2 minutes)</strong>
+- What problem does this solve?
+- What type of tool is it? (framework, library, service, database)
+- Do I actually need this, or is there a better option?</p>
+<p>Example: "FastAPI is a web framework for APIs in Python. Good for production. Alternative: Flask." Done.</p>
+<p><strong>2. Run the quickstart (5 minutes)</strong>
+- Copy the first example
+- Run it
+- Make sure it works
+- Don't read the explanation, just run it</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Installation</span>
+pip<span class="w"> </span>install<span class="w"> </span>fastapi<span class="w"> </span>uvicorn
+
+<span class="c1"># Create main.py</span>
+from<span class="w"> </span>fastapi<span class="w"> </span>import<span class="w"> </span>FastAPI
+<span class="nv">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>FastAPI<span class="o">()</span>
+
+@app.get<span class="o">(</span><span class="s2">&quot;/&quot;</span><span class="o">)</span>
+def<span class="w"> </span>read_root<span class="o">()</span>:
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">{</span><span class="s2">&quot;message&quot;</span>:<span class="w"> </span><span class="s2">&quot;Hello&quot;</span><span class="o">}</span>
+
+<span class="c1"># Run</span>
+uvicorn<span class="w"> </span>main.py:app<span class="w"> </span>--reload
+</code></pre></div>
+<p>You now have working proof before learning <em>why</em> it works. This matters.</p>
+<p><strong>3. Find the API Reference (10 seconds)</strong>
+- Ctrl+F "API reference" or "API docs"
+- Note where it is
+- Don't read it thoroughly (too boring)
+- Know it exists so you can search it later</p>
+<p>You'll be back here 50 times. "What's the parameter name? What's the exact behavior?" Reference docs answer this in 30 seconds.</p>
+<p><strong>4. Search for Your Specific Use Case (5-10 minutes)</strong>
+- Ctrl+F "streaming"
+- Ctrl+F "batch"
+- Ctrl+F "async"
+- Find examples that match your need
+- Copy example code, don't read explanations</p>
+<p>Skip the narrative sections. You don't need "Chapter 4: Async Basics." You need "How do I stream responses in FastAPI?"</p>
+<p><strong>5. Read the "How It Works" Section (10-20 minutes)</strong>
+- Now that you have the what, understand the why
+- Especially useful for architecture understanding
+- Read this AFTER you have working code, not before</p>
+<hr />
+<h3 id="reading-research-papers-without-a-phd">Reading Research Papers (Without a PhD)</h3>
+<p>You'll need to read papers. No way around it.</p>
+<p>Real researchers read papers like this:
+- Abstract (does this matter to me?) → 30 seconds
+- Figures and tables (what did they build and how well did it work?) → 2 minutes
+- Conclusion (what's the takeaway?) → 1 minute
+- If it matters: Intro (what problem did they solve?) → 2 minutes
+- Skip unless directly implementing: Methodology section (the heavy math) → skip it</p>
+<p>Total: 5 minutes to understand 90% of what matters.</p>
+<div class="admonition note">
+<p class="admonition-title">Real Example: Reading a RAG Paper</p>
+<p>Paper title: "Self-RAG: Learning to Retrieve, Generate, and Critique for Self-Improved Generation"</p>
+<p><strong>Abstract:</strong> "Self-RAG learns when to retrieve and how to use retrieved documents"
+Decision: Matters? Yes, relevant to RAG improvements.</p>
+<p><strong>Figures:</strong> Figure 1 shows retriever, generator, critic components
+Understanding: Train a model to decide "should I retrieve?" and "is this generation good?"</p>
+<p><strong>Results table:</strong> Self-RAG achieves 75.3% on benchmark (vs 72.1% baseline)
+Takeaway: 3% improvement by adding critique module</p>
+<p><strong>Conclusion:</strong> "Models learn to retrieve only when needed"
+Key insight: Retrieval every time is wasteful; learn when to retrieve</p>
+<p><strong>Done.</strong> You understand the paper in 5 minutes.</p>
+<p>You don't need the methodology (math). You need the idea and results.</p>
+</div>
+<hr />
+<h2 id="3-git-workflow-for-solo-ai-projects">3. Git Workflow for Solo AI Projects</h2>
+<p>Clean git history is a form of respect for future you.</p>
+<h3 id="branch-naming-convention">Branch Naming Convention</h3>
+<div class="highlight"><pre><span></span><code>feature/[what-you-added]
+fix/[what-you-fixed]
+experiment/[what-you-tried]
+refactor/[what-you-reorganized]
+docs/[what-you-documented]
+</code></pre></div>
+<p><strong>Examples:</strong>
+<div class="highlight"><pre><span></span><code>feature/add-semantic-caching-layer
+fix/handle-openai-rate-limits
+experiment/try-bge-reranker
+refactor/extract-embedding-logic-to-module
+docs/add-architecture-diagram
+</code></pre></div></p>
+<h3 id="commit-message-format-conventional-commits">Commit Message Format: Conventional Commits</h3>
+<div class="highlight"><pre><span></span><code>&lt;type&gt;(&lt;scope&gt;): &lt;description&gt;
+</code></pre></div>
+<p><strong>Types:</strong>
+- <code>feat</code>: A new feature (RAG retrieval function)
+- <code>fix</code>: Bug fix (handle timeout errors)
+- <code>refactor</code>: Code restructuring (no functionality change)
+- <code>test</code>: Adding tests (new test suite)
+- <code>docs</code>: Documentation (README, docstrings)
+- <code>perf</code>: Performance improvement (optimize embedding query)
+- <code>chore</code>: Maintenance (update dependencies)</p>
+<p><strong>Examples:</strong>
+<div class="highlight"><pre><span></span><code>feat(rag): add semantic caching with Redis backend
+fix(api): handle OpenAI 429 rate limit error gracefully
+refactor(embedding): extract chunking strategy to separate module
+test(evaluation): add RAGAS faithfulness test suite
+docs(readme): add architecture diagram and setup instructions
+perf(inference): reduce latency by 40% with batch processing
+</code></pre></div></p>
+<h3 id="the-workflow">The Workflow</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Start new feature</span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/your-feature
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;feat(rag): add retrieval functionality&quot;</span>
+
+<span class="c1"># Multiple commits are fine during development</span>
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;fix(rag): handle empty query edge case&quot;</span>
+
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;test(rag): add unit tests for retrieval&quot;</span>
+
+<span class="c1"># Before merging, clean up: squash related commits</span>
+git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>main<span class="w">  </span><span class="c1"># Interactive rebase</span>
+
+<span class="c1"># In the editor, mark commits as &#39;squash&#39; to combine them</span>
+<span class="c1"># Result: clean linear history</span>
+pick<span class="w"> </span>abc1234<span class="w"> </span>feat<span class="o">(</span>rag<span class="o">)</span>:<span class="w"> </span>add<span class="w"> </span>retrieval<span class="w"> </span>functionality
+squash<span class="w"> </span>def5678<span class="w"> </span>fix<span class="o">(</span>rag<span class="o">)</span>:<span class="w"> </span>handle<span class="w"> </span>empty<span class="w"> </span>query<span class="w"> </span>edge<span class="w"> </span><span class="k">case</span>
+squash<span class="w"> </span>ghi9012<span class="w"> </span>test<span class="o">(</span>rag<span class="o">)</span>:<span class="w"> </span>add<span class="w"> </span>unit<span class="w"> </span>tests
+
+<span class="c1"># Final commit message:</span>
+feat<span class="o">(</span>rag<span class="o">)</span>:<span class="w"> </span>add<span class="w"> </span>retrieval<span class="w"> </span>with<span class="w"> </span>tests<span class="w"> </span>and<span class="w"> </span>edge<span class="w"> </span><span class="k">case</span><span class="w"> </span>handling
+
+<span class="c1"># Merge</span>
+git<span class="w"> </span>checkout<span class="w"> </span>main
+git<span class="w"> </span>merge<span class="w"> </span>feature/your-feature
+</code></pre></div>
+<p><strong>Result:</strong> Clean history. When you read the log 6 months later, you see the logic of development, not implementation noise.</p>
+<h3 id="gitignore-for-ai-projects">.gitignore for AI Projects</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Environment</span>
+.env
+.env.local
+.venv/
+venv/
+env/
+
+<span class="c1"># Model files (large, don&#39;t commit)</span>
+models/
+*.pkl
+*.pt
+*.pth
+*.safetensors
+*.onnx
+*.bin
+
+<span class="c1"># Data (large, don&#39;t commit)</span>
+data/raw/
+data/processed/
+*.csv
+*.parquet
+*.json.gz
+
+<span class="c1"># Training artifacts</span>
+runs/
+wandb/
+mlruns/
+outputs/
+checkpoints/
+
+<span class="c1"># IDE</span>
+.vscode/
+.idea/
+*.swp
+*.swo
+
+<span class="c1"># Python</span>
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+<span class="c1"># Jupyter</span>
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+<span class="c1"># OS</span>
+.DS_Store
+Thumbs.db
+</code></pre></div>
+<hr />
+<h2 id="4-jupyter-notebooks-exploration-production">4. Jupyter Notebooks: Exploration → Production</h2>
+<p><strong>Use notebooks for:</strong> Exploration, data analysis, one-time scripts, visualization
+<strong>Never use notebooks for:</strong> Production APIs, reusable libraries, version control nightmare code</p>
+<h3 id="the-refactoring-flow">The Refactoring Flow</h3>
+<div class="highlight"><pre><span></span><code>1. Notebook: Explore and experiment
+2. Extract functions into notebook cells
+3. Move cells into Python module (src/module.py)
+4. Add tests (tests/test_module.py)
+5. Integrate into main app (main.py imports your module)
+</code></pre></div>
+<p><strong>Real example:</strong></p>
+<p><strong>Step 1: Notebook (exploration)</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sentence_transformers</span> <span class="kn">import</span> <span class="n">SentenceTransformer</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">SentenceTransformer</span><span class="p">(</span><span class="s1">&#39;all-MiniLM-L6-v2&#39;</span><span class="p">)</span>
+
+<span class="c1"># Experiment with chunking</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Long document...&quot;&quot;&quot;</span>
+<span class="n">chunks</span> <span class="o">=</span> <span class="p">[</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">512</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">),</span> <span class="mi">512</span><span class="p">)]</span>
+
+<span class="n">embeddings</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">chunks</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">embeddings</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># (5, 384)</span>
+
+<span class="c1"># Test similarity</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics.pairwise</span> <span class="kn">import</span> <span class="n">cosine_similarity</span>
+<span class="n">sim</span> <span class="o">=</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">embeddings</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>Step 2: Extract to module (src/embedding.py)</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sentence_transformers</span> <span class="kn">import</span> <span class="n">SentenceTransformer</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics.pairwise</span> <span class="kn">import</span> <span class="n">cosine_similarity</span>
+
+<span class="k">class</span> <span class="nc">EmbeddingModel</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;all-MiniLM-L6-v2&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">SentenceTransformer</span><span class="p">(</span><span class="n">model_name</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">chunk_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">chunk_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">512</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Split text into fixed-size chunks.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">chunk_size</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">),</span> <span class="n">chunk_size</span><span class="p">)]</span>
+
+    <span class="k">def</span> <span class="nf">embed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">texts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Embed a list of texts.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">texts</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">similarity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embedding1</span><span class="p">,</span> <span class="n">embedding2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Cosine similarity between two embeddings.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">cosine_similarity</span><span class="p">([</span><span class="n">embedding1</span><span class="p">],</span> <span class="p">[</span><span class="n">embedding2</span><span class="p">])[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div></p>
+<p><strong>Step 3: Tests (tests/test_embedding.py)</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pytest</span>
+<span class="kn">from</span> <span class="nn">src.embedding</span> <span class="kn">import</span> <span class="n">EmbeddingModel</span>
+
+<span class="k">def</span> <span class="nf">test_chunk_text</span><span class="p">():</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">EmbeddingModel</span><span class="p">()</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span> <span class="o">*</span> <span class="mi">1000</span>
+    <span class="n">chunks</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">chunk_text</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">chunk_size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">chunks</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">chunks</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="mi">100</span>
+
+<span class="k">def</span> <span class="nf">test_embed</span><span class="p">():</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">EmbeddingModel</span><span class="p">()</span>
+    <span class="n">texts</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;hello world&quot;</span><span class="p">,</span> <span class="s2">&quot;goodbye world&quot;</span><span class="p">]</span>
+    <span class="n">embeddings</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">embed</span><span class="p">(</span><span class="n">texts</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">embeddings</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">embeddings</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="mi">384</span>  <span class="c1"># Model dimension</span>
+
+<span class="k">def</span> <span class="nf">test_similarity</span><span class="p">():</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">EmbeddingModel</span><span class="p">()</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;hello world&quot;</span>
+    <span class="n">embedding</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">embed</span><span class="p">([</span><span class="n">text</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="c1"># Same text should have similarity ~1.0</span>
+    <span class="n">similarity</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">similarity</span><span class="p">(</span><span class="n">embedding</span><span class="p">,</span> <span class="n">embedding</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="mf">0.99</span> <span class="o">&lt;</span> <span class="n">similarity</span> <span class="o">&lt;=</span> <span class="mf">1.0</span>
+</code></pre></div></p>
+<p><strong>Step 4: Integration (main.py)</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+<span class="kn">from</span> <span class="nn">src.embedding</span> <span class="kn">import</span> <span class="n">EmbeddingModel</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+<span class="n">embedding_model</span> <span class="o">=</span> <span class="n">EmbeddingModel</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/embed&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">embed_endpoint</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="n">chunks</span> <span class="o">=</span> <span class="n">embedding_model</span><span class="o">.</span><span class="n">chunk_text</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">embeddings</span> <span class="o">=</span> <span class="n">embedding_model</span><span class="o">.</span><span class="n">embed</span><span class="p">(</span><span class="n">chunks</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;chunks&quot;</span><span class="p">:</span> <span class="n">chunks</span><span class="p">,</span> <span class="s2">&quot;embeddings&quot;</span><span class="p">:</span> <span class="n">embeddings</span><span class="p">}</span>
+</code></pre></div></p>
+<hr />
+<h3 id="converting-notebooks-to-html-docs">Converting Notebooks to HTML Docs</h3>
+<p>Share your experimentation! Use <code>nbconvert</code>:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>nbconvert
+jupyter<span class="w"> </span>nbconvert<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>my_notebook.ipynb
+
+<span class="c1"># Output: my_notebook.html (can view in browser)</span>
+</code></pre></div>
+<p>Great for documentation, blog posts, and sharing findings.</p>
+<h3 id="clean-notebooks-before-git-commit">Clean Notebooks Before Git Commit</h3>
+<p>Notebooks with output take massive space. Use <code>nbstripout</code>:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>nbstripout
+nbstripout<span class="w"> </span>my_notebook.ipynb<span class="w">  </span><span class="c1"># Removes all outputs</span>
+
+<span class="c1"># For all notebooks in a folder</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.ipynb&quot;</span><span class="w"> </span>-exec<span class="w"> </span>nbstripout<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+</code></pre></div>
+<hr />
+<h2 id="5-makefile-for-ai-projects">5. Makefile for AI Projects</h2>
+<p>A Makefile is your command reference. No more scrolling through scripts.</p>
+<div class="highlight"><pre><span></span><code><span class="c"># Variables</span>
+<span class="nv">PYTHON</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>python
+<span class="nv">PIP</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>pip
+<span class="nv">POETRY</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>poetry
+
+<span class="c"># Installation</span>
+<span class="nf">install</span><span class="o">:</span>
+<span class="w">    </span><span class="k">$(</span>POETRY<span class="k">)</span><span class="w"> </span>install
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">install</span>
+
+<span class="c"># Running</span>
+<span class="nf">serve</span><span class="o">:</span>
+<span class="w">    </span>uvicorn<span class="w"> </span>src.main:app<span class="w"> </span>--reload<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8000</span>
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">serve</span>
+
+<span class="nf">serve-prod</span><span class="o">:</span>
+<span class="w">    </span>uvicorn<span class="w"> </span>src.main:app<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8000</span><span class="w"> </span>--workers<span class="w"> </span><span class="m">4</span>
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">serve</span>-<span class="n">prod</span>
+
+<span class="c"># Testing</span>
+<span class="nf">test</span><span class="o">:</span>
+<span class="w">    </span><span class="k">$(</span>POETRY<span class="k">)</span><span class="w"> </span>run<span class="w"> </span>pytest<span class="w"> </span>tests/<span class="w"> </span>-v<span class="w"> </span>--cov<span class="o">=</span>src<span class="w"> </span>--cov-report<span class="o">=</span>html
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">test</span>
+
+<span class="nf">test-quick</span><span class="o">:</span>
+<span class="w">    </span><span class="k">$(</span>POETRY<span class="k">)</span><span class="w"> </span>run<span class="w"> </span>pytest<span class="w"> </span>tests/<span class="w"> </span>-v
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">test</span>-<span class="n">quick</span>
+
+<span class="c"># Code quality</span>
+<span class="nf">lint</span><span class="o">:</span>
+<span class="w">    </span><span class="k">$(</span>POETRY<span class="k">)</span><span class="w"> </span>run<span class="w"> </span>ruff<span class="w"> </span>check<span class="w"> </span>src/<span class="w"> </span>tests/
+<span class="w">    </span><span class="k">$(</span>POETRY<span class="k">)</span><span class="w"> </span>run<span class="w"> </span>black<span class="w"> </span>--check<span class="w"> </span>src/<span class="w"> </span>tests/
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">lint</span>
+
+<span class="nf">format</span><span class="o">:</span>
+<span class="w">    </span><span class="k">$(</span>POETRY<span class="k">)</span><span class="w"> </span>run<span class="w"> </span>ruff<span class="w"> </span>check<span class="w"> </span>--fix<span class="w"> </span>src/<span class="w"> </span>tests/
+<span class="w">    </span><span class="k">$(</span>POETRY<span class="k">)</span><span class="w"> </span>run<span class="w"> </span>black<span class="w"> </span>src/<span class="w"> </span>tests/
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">format</span>
+
+<span class="nf">typecheck</span><span class="o">:</span>
+<span class="w">    </span><span class="k">$(</span>POETRY<span class="k">)</span><span class="w"> </span>run<span class="w"> </span>mypy<span class="w"> </span>src/<span class="w"> </span>--strict
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">typecheck</span>
+
+<span class="nf">security</span><span class="o">:</span>
+<span class="w">    </span><span class="k">$(</span>POETRY<span class="k">)</span><span class="w"> </span>run<span class="w"> </span>bandit<span class="w"> </span>-r<span class="w"> </span>src/<span class="w"> </span>-ll
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">security</span>
+
+<span class="c"># Docker</span>
+<span class="nf">docker-build</span><span class="o">:</span>
+<span class="w">    </span>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>ai-app:latest<span class="w"> </span>.
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">docker</span>-<span class="n">build</span>
+
+<span class="nf">docker-run</span><span class="o">:</span>
+<span class="w">    </span>docker<span class="w"> </span>run<span class="w"> </span>--env-file<span class="w"> </span>.env<span class="w"> </span>-p<span class="w"> </span><span class="m">8000</span>:8000<span class="w"> </span>ai-app:latest
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">docker</span>-<span class="n">run</span>
+
+<span class="nf">docker-push</span><span class="o">:</span>
+<span class="w">    </span>docker<span class="w"> </span>tag<span class="w"> </span>ai-app:latest<span class="w"> </span><span class="k">$(</span>REGISTRY<span class="k">)</span>/ai-app:latest
+<span class="w">    </span>docker<span class="w"> </span>push<span class="w"> </span><span class="k">$(</span>REGISTRY<span class="k">)</span>/ai-app:latest
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">docker</span>-<span class="n">push</span>
+
+<span class="c"># Training &amp; Evaluation</span>
+<span class="nf">train</span><span class="o">:</span>
+<span class="w">    </span><span class="k">$(</span>POETRY<span class="k">)</span><span class="w"> </span>run<span class="w"> </span><span class="k">$(</span>PYTHON<span class="k">)</span><span class="w"> </span>src/train.py<span class="w"> </span>--config<span class="w"> </span>configs/training.yaml
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">train</span>
+
+<span class="nf">evaluate</span><span class="o">:</span>
+<span class="w">    </span><span class="k">$(</span>POETRY<span class="k">)</span><span class="w"> </span>run<span class="w"> </span><span class="k">$(</span>PYTHON<span class="k">)</span><span class="w"> </span>src/evaluate.py
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">evaluate</span>
+
+<span class="nf">evaluate-ragas</span><span class="o">:</span>
+<span class="w">    </span><span class="k">$(</span>POETRY<span class="k">)</span><span class="w"> </span>run<span class="w"> </span><span class="k">$(</span>PYTHON<span class="k">)</span><span class="w"> </span>src/evaluate_ragas.py<span class="w"> </span>--output<span class="w"> </span>results.json
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">evaluate</span>-<span class="n">ragas</span>
+
+<span class="c"># Deployment</span>
+<span class="nf">deploy-staging</span><span class="o">:</span>
+<span class="w">    </span><span class="k">$(</span>POETRY<span class="k">)</span><span class="w"> </span>run<span class="w"> </span><span class="k">$(</span>PYTHON<span class="k">)</span><span class="w"> </span>scripts/deploy.py<span class="w"> </span>--environment<span class="w"> </span>staging
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">deploy</span>-<span class="n">staging</span>
+
+<span class="nf">deploy-prod</span><span class="o">:</span>
+<span class="w">    </span><span class="k">$(</span>POETRY<span class="k">)</span><span class="w"> </span>run<span class="w"> </span><span class="k">$(</span>PYTHON<span class="k">)</span><span class="w"> </span>scripts/deploy.py<span class="w"> </span>--environment<span class="w"> </span>production
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">deploy</span>-<span class="n">prod</span>
+
+<span class="c"># Cleanup</span>
+<span class="nf">clean</span><span class="o">:</span>
+<span class="w">    </span>find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span>-name<span class="w"> </span>__pycache__<span class="w"> </span>-exec<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
+<span class="w">    </span>find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.pyc&quot;</span><span class="w"> </span>-delete
+<span class="w">    </span>rm<span class="w"> </span>-rf<span class="w"> </span>.pytest_cache/
+<span class="w">    </span>rm<span class="w"> </span>-rf<span class="w"> </span>.mypy_cache/
+<span class="w">    </span>rm<span class="w"> </span>-rf<span class="w"> </span>htmlcov/
+<span class="w">    </span>rm<span class="w"> </span>-rf<span class="w"> </span>dist/<span class="w"> </span>build/<span class="w"> </span>*.egg-info
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">clean</span>
+
+<span class="c"># Help</span>
+<span class="nf">help</span><span class="o">:</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;Available targets:&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make install        - Install dependencies&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make serve          - Run development server (with reload)&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make serve-prod     - Run production server&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make test           - Run tests with coverage&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make test-quick     - Run tests without coverage&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make lint           - Check code style&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make format         - Auto-format code&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make typecheck      - Run type checking&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make security       - Run security audit&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make docker-build   - Build Docker image&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make docker-run     - Run Docker container&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make train          - Run training script&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make evaluate       - Evaluate model&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make evaluate-ragas - Evaluate RAG with RAGAS&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make deploy-staging - Deploy to staging&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make deploy-prod    - Deploy to production&quot;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;  make clean          - Clean build artifacts&quot;</span>
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">help</span>
+</code></pre></div>
+<p><strong>Usage:</strong>
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>install<span class="w">      </span><span class="c1"># One-command setup</span>
+make<span class="w"> </span>serve<span class="w">        </span><span class="c1"># Start dev server</span>
+make<span class="w"> </span><span class="nb">test</span><span class="w">         </span><span class="c1"># One command to test</span>
+make<span class="w"> </span>format<span class="w">       </span><span class="c1"># Fix formatting</span>
+make<span class="w"> </span><span class="nb">help</span><span class="w">         </span><span class="c1"># Remind yourself what&#39;s available</span>
+</code></pre></div></p>
+<p>No more "what's the command to run tests?" It's always <code>make test</code>.</p>
+<hr />
+<h2 id="6-pre-commit-hooks-automated-quality-gates">6. Pre-commit Hooks: Automated Quality Gates</h2>
+<p>Pre-commit hooks run before you commit, catching issues early.</p>
+<p><strong>.pre-commit-config.yaml:</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">repos</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/pre-commit/pre-commit-hooks</span>
+<span class="w">    </span><span class="nt">rev</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v4.4.0</span>
+<span class="w">    </span><span class="nt">hooks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trailing-whitespace</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end-of-file-fixer</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">check-yaml</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">check-json</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">check-merge-conflict</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detect-private-key</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/psf/black</span>
+<span class="w">    </span><span class="nt">rev</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">23.3.0</span>
+<span class="w">    </span><span class="nt">hooks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">black</span>
+<span class="w">        </span><span class="nt">language_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3</span>
+<span class="w">        </span><span class="nt">args</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">--line-length=88</span><span class="p p-Indicator">]</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/astral-sh/ruff-pre-commit</span>
+<span class="w">    </span><span class="nt">rev</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v0.0.260</span>
+<span class="w">    </span><span class="nt">hooks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ruff</span>
+<span class="w">        </span><span class="nt">args</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">--select=E</span><span class="p p-Indicator">,</span><span class="nv">F</span><span class="p p-Indicator">,</span><span class="nv">I</span><span class="p p-Indicator">,</span><span class="nv">W</span><span class="p p-Indicator">]</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/pre-commit/mirrors-mypy</span>
+<span class="w">    </span><span class="nt">rev</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2.0</span>
+<span class="w">    </span><span class="nt">hooks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mypy</span>
+<span class="w">        </span><span class="nt">additional_dependencies</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">types-all</span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="nt">args</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">--strict</span><span class="p p-Indicator">]</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/PyCQA/bandit</span>
+<span class="w">    </span><span class="nt">rev</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.7.5</span>
+<span class="w">    </span><span class="nt">hooks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bandit</span>
+<span class="w">        </span><span class="nt">args</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">-r</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">src/</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">-ll</span><span class="p p-Indicator">]</span>
+</code></pre></div></p>
+<p><strong>Setup:</strong>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>pre-commit
+pre-commit<span class="w"> </span>install
+</code></pre></div></p>
+<p><strong>What happens:</strong>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;feat: new feature&quot;</span>
+
+<span class="c1"># Pre-commit runs:</span>
+<span class="c1"># - Removes trailing whitespace</span>
+<span class="c1"># - Fixes line endings</span>
+<span class="c1"># - Checks YAML syntax</span>
+<span class="c1"># - Formats with Black</span>
+<span class="c1"># - Lints with Ruff</span>
+<span class="c1"># - Type checks with MyPy</span>
+<span class="c1"># - Security check with Bandit</span>
+
+<span class="c1"># If everything passes: commit succeeds</span>
+<span class="c1"># If something fails: fix, then try again</span>
+</code></pre></div></p>
+<p><strong>Emergency skip (only in rare cases):</strong>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>--no-verify<span class="w">  </span><span class="c1"># Skip hooks, commit anyway</span>
+</code></pre></div></p>
+<p>What each hook does:
+| Hook | Prevents |
+|------|----------|
+| trailing-whitespace | Messy diffs from whitespace |
+| check-yaml | Invalid YAML (breaks configs) |
+| detect-private-key | Accidentally committing secrets |
+| black | Code style inconsistency |
+| ruff | Import sorting, unused imports |
+| mypy | Type errors in Python |
+| bandit | Security vulnerabilities |</p>
+<hr />
+<h2 id="summary-the-workflow-that-works">Summary: The Workflow That Works</h2>
+<ol>
+<li><strong>For hard problems:</strong> Use Claude/ChatGPT with proper prompts (debugging, architecture, explanation)</li>
+<li><strong>For learning:</strong> 5-step method (scan, run, reference, search, understand)</li>
+<li><strong>For organization:</strong> Clean git history with conventional commits</li>
+<li><strong>For reusability:</strong> Extract notebooks to modules with tests</li>
+<li><strong>For speed:</strong> Makefile with all commands, pre-commit hooks automated</li>
+<li><strong>For quality:</strong> Type checking, linting, security scanning before commit</li>
+</ol>
+<p>This workflow lets you move fast without the chaos.</p>
+<hr />
+<h2 id="common-issues-and-fixes">Common Issues and Fixes</h2>
+<div class="admonition warning">
+<p class="admonition-title">Issue: Pre-commit hooks too slow</p>
+<p>Solution: Run only on changed files, exclude large directories
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mypy</span>
+<span class="w">  </span><span class="nt">exclude</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^(tests/fixtures/|.venv)</span>
+</code></pre></div></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Issue: Black and Ruff fight with each other</p>
+<p>Solution: Configure both to same line length
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">black</span>
+<span class="w">  </span><span class="nt">args</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">--line-length=88</span><span class="p p-Indicator">]</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ruff</span>
+<span class="w">  </span><span class="nt">args</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">--select=E</span><span class="p p-Indicator">,</span><span class="nv">F</span><span class="p p-Indicator">,</span><span class="nv">I</span><span class="p p-Indicator">,</span><span class="nv">W</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">--line-length=88</span><span class="p p-Indicator">]</span>
+</code></pre></div></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Issue: Mypy too strict for rapid prototyping</p>
+<p>Solution: Use <code>--warn-only</code> during development, <code>--strict</code> in CI
+<div class="highlight"><pre><span></span><code><span class="c1"># Local: warnings don&#39;t block</span>
+mypy<span class="w"> </span>src/<span class="w"> </span>--warn-only
+
+<span class="c1"># CI: strict checking</span>
+mypy<span class="w"> </span>src/<span class="w"> </span>--strict
+</code></pre></div></p>
+</div>
+<hr />
+<p><strong>Ready to be productive? Set up your Makefile and pre-commit hooks today.</strong></p>
+<p><strong>Next:</strong> <a href="../study-planner/">Study Planner →</a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.integrate"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2236 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive 6-phase learning roadmap from Python foundations to production ML systems">
+      
+      
+        <meta name="author" content="AI Engineering Community">
+      
+      
+      
+        <link rel="prev" href="../cicd/">
+      
+      
+        <link rel="next" href="../../phase4/overview/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>Phase 3 Milestone - AI Full Stack Engineer Roadmap</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#phase-3-milestone-mlops-pipeline-for-ai-fine-tuning" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-header__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Full Stack Engineer Roadmap
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Phase 3 Milestone
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        
+  
+    
+  
+  Setup Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase0/overview/" class="md-tabs__link">
+          
+  
+  Phase 0 — Foundation Warmup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase1/overview/" class="md-tabs__link">
+          
+  
+  Phase 1 — AI Systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase2/overview/" class="md-tabs__link">
+          
+  
+  Phase 2 — Docker & Cloud
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  Phase 3 — MLOps Tooling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase4/overview/" class="md-tabs__link">
+          
+  
+  Phase 4 — Scaling & Kubernetes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase5/overview/" class="md-tabs__link">
+          
+  
+  Phase 5 — Portfolio & Job Readiness
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../appendix/math-lite/" class="md-tabs__link">
+          
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-nav__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    AI Full Stack Engineer Roadmap
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 0 — Foundation Warmup
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 0 — Foundation Warmup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Mastery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/fastapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI Deep Dive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/databases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Databases (SQL + NoSQL + Redis)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux & Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 0 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 1 — AI Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 1 — AI Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/llm-apis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM APIs & Prompt Engineering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/embeddings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embeddings & Vector Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/rag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RAG Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Agents & Tool Use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/fine-tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fine-Tuning (LoRA & PEFT)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluation & Benchmarking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security & Prompt Injection Defense
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/cost-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cost & Performance Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 1 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 2 — Docker & Cloud
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 2 — Docker & Cloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose for AI Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Deployment (EC2 + S3 + ECS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/secrets-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secrets Management & Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 2 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 3 — MLOps Tooling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 3 — MLOps Tooling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLflow Experiment Tracking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dvc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DVC Data Versioning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wandb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weights & Biases (W&B)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cicd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI/CD for AI Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Phase 3 Milestone
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Phase 3 Milestone
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exit-criteria-checklist-20-items" class="md-nav__link">
+    Exit Criteria Checklist (20+ Items)
+  </a>
+  
+    <nav class="md-nav" aria-label="Exit Criteria Checklist (20+ Items)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mlflow-experiment-tracking" class="md-nav__link">
+    MLflow (Experiment Tracking)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dvc-data-versioning" class="md-nav__link">
+    DVC (Data Versioning)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weights-biases-visualization" class="md-nav__link">
+    Weights &amp; Biases (Visualization)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-actions-cicd" class="md-nav__link">
+    GitHub Actions (CI/CD)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#production-mlops" class="md-nav__link">
+    Production MLOps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capstone-project-mlops-pipeline-for-ai-fine-tuning" class="md-nav__link">
+    Capstone Project: "MLOps Pipeline for AI Fine-Tuning"
+  </a>
+  
+    <nav class="md-nav" aria-label="Capstone Project: "MLOps Pipeline for AI Fine-Tuning"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deliverables" class="md-nav__link">
+    Deliverables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-assessment-rubric" class="md-nav__link">
+    Self-Assessment Rubric
+  </a>
+  
+    <nav class="md-nav" aria-label="Self-Assessment Rubric">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beginner-not-ready-yet" class="md-nav__link">
+    Beginner (Not Ready Yet)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#competent-ready-for-phases-4" class="md-nav__link">
+    Competent (Ready for Phases 4+)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hire-ready-exceptional" class="md-nav__link">
+    Hire-Ready (Exceptional)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-a-failed-milestone-looks-like" class="md-nav__link">
+    What a Failed Milestone Looks Like
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-reasons-people-rush-phase-3" class="md-nav__link">
+    Common Reasons People Rush Phase 3
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Reasons People Rush Phase 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mlflow-is-just-logging-ill-skip-it" class="md-nav__link">
+    "MLflow is just logging, I'll skip it"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dvc-is-complex-git-is-enough" class="md-nav__link">
+    "DVC is complex, Git is enough"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweeps-are-too-slow-ill-just-try-one-config" class="md-nav__link">
+    "Sweeps are too slow, I'll just try one config"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-actions-is-overkill-ill-train-manually" class="md-nav__link">
+    "GitHub Actions is overkill, I'll train manually"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-dont-need-monitoring-the-model-is-good" class="md-nav__link">
+    "I don't need monitoring, the model is good"
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-in-phase-4-kubernetes-advanced-ops" class="md-nav__link">
+    What's in Phase 4 (Kubernetes &amp; Advanced Ops)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-thoughts" class="md-nav__link">
+    Final Thoughts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-checklist-before-going-live" class="md-nav__link">
+    Deployment Checklist (Before Going Live)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-week-phase-3-review" class="md-nav__link">
+    1-Week Phase 3 Review
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 4 — Scaling & Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 4 — Scaling & Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes Core Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/ai-on-k8s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying AI Services on K8s
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autoscaling & Observability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 4 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 5 — Portfolio & Job Readiness
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 5 — Portfolio & Job Readiness
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Portfolio Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/resume/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resume & LinkedIn Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/system-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI System Design Interviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/mock-interviews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mock Interview Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/salary-negotiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Salary & Negotiation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/math-lite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math-Lite Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/tooling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tooling & Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/study-planner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Study Planner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/project-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Showcase Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/whats-next/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What's Next (Post-Roadmap)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="phase-3-milestone-mlops-pipeline-for-ai-fine-tuning">Phase 3 Milestone: MLOps Pipeline for AI Fine-Tuning</h1>
+<p>You've learned to deploy systems (Phase 2) and manage iterations (Phase 3).</p>
+<p>This milestone validates you can <strong>systematically improve AI systems</strong> in production.</p>
+<hr />
+<h2 id="exit-criteria-checklist-20-items">Exit Criteria Checklist (20+ Items)</h2>
+<h3 id="mlflow-experiment-tracking">MLflow (Experiment Tracking)</h3>
+<ul>
+<li>[ ] Can log parameters, metrics, artifacts with MLflow</li>
+<li>[ ] Have run 10+ experiments and compared them</li>
+<li>[ ] Registered best model in Model Registry</li>
+<li>[ ] Know difference between runs, params, and metrics</li>
+<li>[ ] Can retrieve and evaluate historical runs</li>
+<li>[ ] Have used MLflow Server (local or remote)</li>
+<li>[ ] Understand artifact storage (S3 backend)</li>
+</ul>
+<h3 id="dvc-data-versioning">DVC (Data Versioning)</h3>
+<ul>
+<li>[ ] Initialized DVC in a git repo</li>
+<li>[ ] Added large file to DVC, pushed to remote</li>
+<li>[ ] Created dvc.yaml pipeline with 3+ stages</li>
+<li>[ ] Reproduced an experiment from git history</li>
+<li>[ ] Understand dvc.lock and reproducibility</li>
+<li>[ ] Have versioned both code, data, and model</li>
+<li>[ ] Know how to debug DVC issues (cache, remote, etc)</li>
+</ul>
+<h3 id="weights-biases-visualization">Weights &amp; Biases (Visualization)</h3>
+<ul>
+<li>[ ] Logged training runs with W&amp;B</li>
+<li>[ ] Created interactive dashboard</li>
+<li>[ ] Ran hyperparameter sweep (3+ combinations)</li>
+<li>[ ] Set up alerts for metric drops</li>
+<li>[ ] Understand W&amp;B tables for sample evaluation</li>
+<li>[ ] Can export results for reports</li>
+</ul>
+<h3 id="github-actions-cicd">GitHub Actions (CI/CD)</h3>
+<ul>
+<li>[ ] Created workflow that triggers on push</li>
+<li>[ ] Workflow runs training automatically</li>
+<li>[ ] Have stored secrets (API keys) safely</li>
+<li>[ ] Understand conditional deployment (only if metric improves)</li>
+<li>[ ] Can debug workflow failures</li>
+<li>[ ] Have received Slack notification from workflow</li>
+</ul>
+<h3 id="production-mlops">Production MLOps</h3>
+<ul>
+<li>[ ] Pipeline is fully automated (no manual retraining)</li>
+<li>[ ] Metrics tracked across all runs</li>
+<li>[ ] Can compare any two models systematically</li>
+<li>[ ] Experiment cost tracked and under control</li>
+<li>[ ] Baseline established and monitored</li>
+<li>[ ] Team can reproduce any experiment</li>
+<li>[ ] Rollback to previous model is &lt; 5 minutes</li>
+</ul>
+<hr />
+<h2 id="capstone-project-mlops-pipeline-for-ai-fine-tuning">Capstone Project: "MLOps Pipeline for AI Fine-Tuning"</h2>
+<p><strong>What You'll Build:</strong> End-to-end pipeline that:
+1. Auto-trains on new data
+2. Auto-evaluates (RAGAS)
+3. Compares to baseline
+4. Auto-deploys if metric improves
+5. Tracks everything</p>
+<h3 id="architecture">Architecture</h3>
+<div class="highlight"><pre><span></span><code>GitHub: Code + DVC pointers
+  ↓
+GitHub Actions: Tests + trains
+  ↓
+MLflow: Logs parameters, metrics
+  ↓
+DVC: Versions data, models
+  ↓
+W&amp;B: Rich visualization
+  ↓
+Auto-deploy: If metric improves
+  ↓
+Production: New model serving
+</code></pre></div>
+<h3 id="requirements">Requirements</h3>
+<p><strong>MLflow:</strong>
+- [ ] Tracks 10+ experiments
+- [ ] Compares by RAGAS faithfulness
+- [ ] Model Registry with 3+ versions
+- [ ] Can load best model for inference</p>
+<p><strong>DVC:</strong>
+- [ ] dvc.yaml with pipeline: prepare → train → evaluate
+- [ ] Versioned training data (train.jsonl)
+- [ ] Versioned models (model.safetensors)
+- [ ] Reproducible: <code>git checkout</code> + <code>dvc pull</code> + <code>dvc repro</code> = same results</p>
+<p><strong>Weights &amp; Biases:</strong>
+- [ ] Training logged with loss curves
+- [ ] Evaluation logged with RAGAS metrics
+- [ ] Table showing sample predictions
+- [ ] Dashboard comparing runs
+- [ ] Alert if faithfulness &lt; 0.75</p>
+<p><strong>GitHub Actions:</strong>
+- [ ] Workflow on push/schedule
+- [ ] Trains with <code>python train.py</code>
+- [ ] Evaluates with RAGAS
+- [ ] Compares to baseline
+- [ ] If improved: deploys to production
+- [ ] Slack notification on completion
+- [ ] Cost tracking (logs training time)</p>
+<p><strong>Production:</strong>
+- [ ] Model served in ECS (from Phase 2)
+- [ ] Can rollback in &lt; 5 minutes
+- [ ] Monitoring shows model age
+- [ ] Alert if baseline model serving (rollback happened)</p>
+<h3 id="deliverables">Deliverables</h3>
+<div class="highlight"><pre><span></span><code>├── train.py                      # Training script (logged to MLflow)
+├── evaluate.py                   # Evaluation (logs to W&amp;B)
+├── dvc.yaml                      # Pipeline definition
+├── params.yaml                   # Hyperparameters
+├── .github/workflows/
+│   └── train-and-deploy.yml      # GitHub Actions workflow
+├── baseline_metrics.json         # Baseline for comparison
+├── requirements.txt
+├── deployment-guide.md           # How to use the pipeline
+└── README.md                     # Architecture, how everything connects
+</code></pre></div>
+<hr />
+<h2 id="self-assessment-rubric">Self-Assessment Rubric</h2>
+<h3 id="beginner-not-ready-yet">Beginner (Not Ready Yet)</h3>
+<p><strong>Indicators:</strong>
+- Can follow tutorial, but struggle to modify
+- Pipeline works once, hard to repeat
+- Don't understand how MLflow/DVC connect
+- Metrics buried, hard to find
+- Unlikely to share with team</p>
+<p><strong>Example:</strong> "I got MLflow working, but I don't know how to integrate with GitHub Actions."</p>
+<h3 id="competent-ready-for-phases-4">Competent (Ready for Phases 4+)</h3>
+<p><strong>Indicators:</strong>
+- Can write training script with MLflow integration
+- DVC pipeline is reproducible
+- GitHub Actions workflow auto-deploys
+- Can compare models systematically
+- Baseline established, monitoring in place
+- Team can understand your pipeline</p>
+<p><strong>Example:</strong> "I have DVC tracking data, MLflow tracking experiments, W&amp;B visualization, and GitHub Actions that auto-deploys if RAGAS &gt; 0.80."</p>
+<h3 id="hire-ready-exceptional">Hire-Ready (Exceptional)</h3>
+<p><strong>Indicators:</strong>
+- Full MLOps lifecycle automated
+- Cost optimized (efficient experiments)
+- Metrics SLOs defined (what's acceptable?)
+- Data drift detected (alert if quality drops)
+- A/B testing infrastructure ready
+- Can onboard new teammate to pipeline in 1 hour
+- Systematic improvement over time (not random)</p>
+<p><strong>Example:</strong> "Pipeline tracks data drift, auto-retrains if quality drops. We have 200 experiments over 6 months, consistently improving baseline. Cost $150/month. Team can reproduce any experiment in 1 hour."</p>
+<hr />
+<h2 id="what-a-failed-milestone-looks-like">What a Failed Milestone Looks Like</h2>
+<p>⚠️ <strong>You're not ready if:</strong></p>
+<ol>
+<li>❌ "I have MLflow but don't use it"</li>
+<li>
+<p>If you're not logging experiments, you don't have MLOps. You have training code.</p>
+</li>
+<li>
+<p>❌ "DVC is too complex, I just copy files"</p>
+</li>
+<li>
+<p>Then you can't reproduce. You need versioning.</p>
+</li>
+<li>
+<p>❌ "Experiments are random, I don't know what changed"</p>
+</li>
+<li>
+<p>Every run must log: data version, code version, hyperparameters, metrics, timestamp.</p>
+</li>
+<li>
+<p>❌ "No baseline, can't know if improvement is real"</p>
+</li>
+<li>
+<p>Metric could just be variance. Need baseline to compare.</p>
+</li>
+<li>
+<p>❌ "GitHub Actions times out, I gave up"</p>
+</li>
+<li>
+<p>Scale compute (longer timeout), cache dependencies, split into stages.</p>
+</li>
+<li>
+<p>❌ "Manual deployment, waiting for ops to push to prod"</p>
+</li>
+<li>
+<p>You should auto-deploy. That's the point of CI/CD.</p>
+</li>
+<li>
+<p>❌ "Team doesn't know how the pipeline works"</p>
+</li>
+<li>
+<p>Document it. Write a 1-page guide. Make it repeatable by others.</p>
+</li>
+<li>
+<p>❌ "Costs $500/month in compute"</p>
+</li>
+<li>Experiments are inefficient. Use smaller models, shorter iterations, pre-validation.</li>
+</ol>
+<hr />
+<h2 id="common-reasons-people-rush-phase-3">Common Reasons People Rush Phase 3</h2>
+<h3 id="mlflow-is-just-logging-ill-skip-it">"MLflow is just logging, I'll skip it"</h3>
+<p><strong>Consequence:</strong> Months later: "Which model is in production?" Nobody knows.
+<strong>Reality:</strong> MLflow saves you for 1-2 hours of setup. Pays back constantly after.</p>
+<h3 id="dvc-is-complex-git-is-enough">"DVC is complex, Git is enough"</h3>
+<p><strong>Consequence:</strong> Data grows to 100GB. Git repo is unusable.
+<strong>Reality:</strong> DVC takes 2 days to learn. You'll use it for years.</p>
+<h3 id="sweeps-are-too-slow-ill-just-try-one-config">"Sweeps are too slow, I'll just try one config"</h3>
+<p><strong>Consequence:</strong> Pick worst hyperparameters. Performance is mediocre.
+<strong>Reality:</strong> Sweeps run in parallel. Sample 12 configs in 6 hours, find optimal.</p>
+<h3 id="github-actions-is-overkill-ill-train-manually">"GitHub Actions is overkill, I'll train manually"</h3>
+<p><strong>Consequence:</strong> Manual training = human error. Forgot to update metrics. Deployed wrong model.
+<strong>Reality:</strong> Automation removes human error. Takes 1 day to set up.</p>
+<h3 id="i-dont-need-monitoring-the-model-is-good">"I don't need monitoring, the model is good"</h3>
+<p><strong>Consequence:</strong> Model performance drifts. You don't notice. Real-world quality drops.
+<strong>Reality:</strong> Set baselines. Monitor. Alert. Know immediately if something's wrong.</p>
+<hr />
+<h2 id="whats-in-phase-4-kubernetes-advanced-ops">What's in Phase 4 (Kubernetes &amp; Advanced Ops)</h2>
+<p>Phase 4 (4-6 weeks): <strong>Kubernetes &amp; Multi-Region Deployment</strong></p>
+<p>By now:
+- You deploy AI systems (Phase 2)
+- You iterate systematically (Phase 3)</p>
+<p>In Phase 4, you'll <strong>operate at massive scale</strong>:
+- Kubernetes: Orchestrate 100s of containers
+- Multi-region: Serve globally (latency + resilience)
+- Advanced monitoring: Distributed tracing, performance budgets
+- Cost optimization: Resource quotas, autoscaling policies
+- Disaster recovery: Backup, failover, recovery RTO/RPO</p>
+<p>Example: Netflix runs 1000s of models in production. You'll learn how.</p>
+<p>→ <strong><a href="../../phase4/overview.md">Phase 4: Kubernetes &amp; Advanced Ops →</a></strong></p>
+<hr />
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>Now you have the full picture:</p>
+<p><strong>Phase 1:</strong> How to build AI systems (APIs, embeddings, RAG, agents, evaluation)
+<strong>Phase 2:</strong> How to deploy them (Docker, AWS, monitoring)
+<strong>Phase 3:</strong> How to improve them (MLOps, versioning, automation)</p>
+<p>Three phases. 12+ weeks. You've learned enough to:
+- Build production AI systems
+- Deploy them reliably
+- Improve them systematically
+- Collaborate with teams
+- Operate at scale</p>
+<p>You're an <strong>AI Engineer</strong> now.</p>
+<hr />
+<h2 id="deployment-checklist-before-going-live">Deployment Checklist (Before Going Live)</h2>
+<ul>
+<li>[ ] MLflow tracks all experiments (baseline + 5+ runs)</li>
+<li>[ ] DVC versions data and models (reproducible)</li>
+<li>[ ] GitHub Actions auto-trains on schedule</li>
+<li>[ ] Evaluation metrics in W&amp;B (visible to team)</li>
+<li>[ ] Baseline established and documented</li>
+<li>[ ] Alert thresholds set (email + Slack)</li>
+<li>[ ] Cost per experiment &lt; $10</li>
+<li>[ ] Rollback is &lt; 5 minutes</li>
+<li>[ ] Team documentation complete</li>
+<li>[ ] New teammate can run full pipeline in 1 hour</li>
+</ul>
+<hr />
+<h2 id="1-week-phase-3-review">1-Week Phase 3 Review</h2>
+<ul>
+<li>[ ] Day 1: MLflow setup and log first experiment</li>
+<li>[ ] Day 2: DVC pipeline setup</li>
+<li>[ ] Day 3: W&amp;B dashboard creation</li>
+<li>[ ] Day 4: GitHub Actions workflow</li>
+<li>[ ] Day 5: Auto-deploy integration</li>
+<li>[ ] Day 6: Team review and feedback</li>
+<li>[ ] Day 7: Document and test reproducibility</li>
+</ul>
+<hr />
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://mlflow.org/docs/">MLflow Guide</a></li>
+<li><a href="https://dvc.org/learn">DVC Handbook</a></li>
+<li><a href="https://docs.wandb.ai/tutorials">W&amp;B Tutorials</a></li>
+<li><a href="https://docs.github.com/en/actions">GitHub Actions Best Practices</a></li>
+</ul>
+<hr />
+<p><strong>Congratulations on Phases 1-3.</strong> 🎓</p>
+<p>You've completed <strong>20+ weeks of AI systems engineering</strong>.</p>
+<p>You understand:
+- How to build AI systems
+- How to deploy them
+- How to improve them systematically</p>
+<p>Next: Scaling to production (Phase 4).</p>
+<p>But first: <strong>Build something</strong>. Apply what you've learned. Ship to production. Get users. Iterate.</p>
+<p>The learning never stops. But you now have the foundation.</p>
+<p><strong>Go ship.</strong> 🚀</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.integrate"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>

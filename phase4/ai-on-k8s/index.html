@@ -1,0 +1,3300 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive 6-phase learning roadmap from Python foundations to production ML systems">
+      
+      
+        <meta name="author" content="AI Engineering Community">
+      
+      
+      
+        <link rel="prev" href="../kubernetes/">
+      
+      
+        <link rel="next" href="../scaling/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>Deploying AI Services on K8s - AI Full Stack Engineer Roadmap</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai-on-kubernetes-deploying-full-stack-systems" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-header__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Full Stack Engineer Roadmap
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Deploying AI Services on K8s
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        
+  
+    
+  
+  Setup Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase0/overview/" class="md-tabs__link">
+          
+  
+  Phase 0 — Foundation Warmup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase1/overview/" class="md-tabs__link">
+          
+  
+  Phase 1 — AI Systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase2/overview/" class="md-tabs__link">
+          
+  
+  Phase 2 — Docker & Cloud
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase3/overview/" class="md-tabs__link">
+          
+  
+  Phase 3 — MLOps Tooling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  Phase 4 — Scaling & Kubernetes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase5/overview/" class="md-tabs__link">
+          
+  
+  Phase 5 — Portfolio & Job Readiness
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../appendix/math-lite/" class="md-tabs__link">
+          
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-nav__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    AI Full Stack Engineer Roadmap
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 0 — Foundation Warmup
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 0 — Foundation Warmup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Mastery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/fastapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI Deep Dive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/databases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Databases (SQL + NoSQL + Redis)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux & Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 0 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 1 — AI Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 1 — AI Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/llm-apis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM APIs & Prompt Engineering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/embeddings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embeddings & Vector Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/rag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RAG Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Agents & Tool Use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/fine-tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fine-Tuning (LoRA & PEFT)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluation & Benchmarking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security & Prompt Injection Defense
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/cost-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cost & Performance Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 1 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 2 — Docker & Cloud
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 2 — Docker & Cloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose for AI Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Deployment (EC2 + S3 + ECS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/secrets-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secrets Management & Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 2 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 3 — MLOps Tooling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 3 — MLOps Tooling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/mlflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLflow Experiment Tracking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/dvc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DVC Data Versioning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/wandb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weights & Biases (W&B)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/cicd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI/CD for AI Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 3 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 4 — Scaling & Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 4 — Scaling & Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes Core Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Deploying AI Services on K8s
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Deploying AI Services on K8s
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-why-this-matters-in-production" class="md-nav__link">
+    1. Why This Matters in Production
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-conceptual-explanation" class="md-nav__link">
+    2. Conceptual Explanation
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Conceptual Explanation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-docker-compose-to-kubernetes" class="md-nav__link">
+    From Docker Compose to Kubernetes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-stateful-qdrant-postgresql-is-different" class="md-nav__link">
+    Why Stateful (Qdrant, PostgreSQL)  is Different
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-code-examples" class="md-nav__link">
+    3. Code Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Code Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deploy-fastapi-ai-service" class="md-nav__link">
+    Deploy FastAPI AI Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-qdrant-stateful" class="md-nav__link">
+    Deploy Qdrant (Stateful)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postgresql-deployment" class="md-nav__link">
+    PostgreSQL Deployment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configmap-and-secret" class="md-nav__link">
+    ConfigMap and Secret
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ingress-for-external-traffic" class="md-nav__link">
+    Ingress for External Traffic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-deployment-script" class="md-nav__link">
+    Full Deployment Script
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-architecture-diagram" class="md-nav__link">
+    4. Architecture Diagram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-tools-and-alternatives" class="md-nav__link">
+    5. Tools and Alternatives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-decision-framework" class="md-nav__link">
+    6. Decision Framework
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-step-by-step-mini-tutorial-deploy-to-minikube" class="md-nav__link">
+    7. Step-by-Step Mini Tutorial: Deploy to Minikube
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Step-by-Step Mini Tutorial: Deploy to Minikube">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-setup" class="md-nav__link">
+    1. Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-build-and-push-images" class="md-nav__link">
+    2. Build and Push Images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-create-namespaces" class="md-nav__link">
+    3. Create Namespaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-create-secrets-and-configmaps" class="md-nav__link">
+    4. Create Secrets and ConfigMaps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-deploy-services-order-matters" class="md-nav__link">
+    5. Deploy Services (Order Matters!)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-verify-everything" class="md-nav__link">
+    6. Verify Everything
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-test-full-stack" class="md-nav__link">
+    7. Test Full Stack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-test-scaling" class="md-nav__link">
+    8. Test Scaling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-test-rolling-update" class="md-nav__link">
+    9. Test Rolling Update
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-practical-project-full-stack-ai-on-minikube" class="md-nav__link">
+    8. Practical Project: Full Stack AI on Minikube
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-debugging-playbook-10-k8s-errors" class="md-nav__link">
+    9. Debugging Playbook: 10 K8s Errors
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Debugging Playbook: 10 K8s Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-api-cant-reach-qdrant" class="md-nav__link">
+    1. API can't reach Qdrant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-qdrant-pod-stuck-in-pending" class="md-nav__link">
+    2. Qdrant pod stuck in Pending
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-postgresql-password-not-working" class="md-nav__link">
+    3. PostgreSQL password not working
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-api-health-check-failing" class="md-nav__link">
+    4. API health check failing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-pod-keeps-restarting-crashloopbackoff" class="md-nav__link">
+    5. Pod keeps restarting (CrashLoopBackOff)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-service-dns-not-resolving-inside-pod" class="md-nav__link">
+    6. Service DNS not resolving inside pod
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-pvc-stuck-in-pending" class="md-nav__link">
+    7. PVC stuck in Pending
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-ingress-not-routing-traffic" class="md-nav__link">
+    8. Ingress not routing traffic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-secret-mounted-but-empty-in-pod" class="md-nav__link">
+    9. Secret mounted but empty in pod
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-rolling-update-hangs" class="md-nav__link">
+    10. Rolling update hangs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-common-mistakes-5-issues" class="md-nav__link">
+    10. Common Mistakes (5+ Issues)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-production-realism" class="md-nav__link">
+    11. Production Realism
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-cost-performance" class="md-nav__link">
+    12. Cost &amp; Performance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-security-considerations" class="md-nav__link">
+    13. Security Considerations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-case-studies" class="md-nav__link">
+    14. Case Studies
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Case Studies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stripe-fraud-detection-on-k8s" class="md-nav__link">
+    Stripe: Fraud Detection on K8s
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anthropic-claude-api-infrastructure" class="md-nav__link">
+    Anthropic: Claude API Infrastructure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-interview-cheat-sheet" class="md-nav__link">
+    15. Interview Cheat Sheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-21-review-questions-flashcards-teach-it-back-checklist-resources" class="md-nav__link">
+    16-21. Review Questions, Flashcards, Teach-It-Back, Checklist, Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-next-scaling-observability" class="md-nav__link">
+    21. Next: Scaling &amp; Observability
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autoscaling & Observability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 4 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 5 — Portfolio & Job Readiness
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 5 — Portfolio & Job Readiness
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Portfolio Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/resume/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resume & LinkedIn Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/system-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI System Design Interviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/mock-interviews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mock Interview Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/salary-negotiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Salary & Negotiation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/math-lite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math-Lite Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/tooling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tooling & Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/study-planner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Study Planner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/project-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Showcase Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/whats-next/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What's Next (Post-Roadmap)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="ai-on-kubernetes-deploying-full-stack-systems">AI on Kubernetes: Deploying Full Stack Systems</h1>
+<h2 id="1-why-this-matters-in-production">1. Why This Matters in Production</h2>
+<p>You have an AI system: FastAPI API + Qdrant vector DB + PostgreSQL relational DB + Redis cache.</p>
+<p>On your laptop, it works. Everything is one docker-compose.yml.</p>
+<p>In production, you need:
+- API servers to automatically restart if they crash
+- API servers to scale from 3 to 30 during traffic spike
+- Qdrant to persist data across restarts (not lose vectors)
+- PostgreSQL to have backups and replicas (for failover)
+- Services to find each other by hostname
+- Secrets to be encrypted (not in environment)
+- Health checks so K8s knows which pods are healthy</p>
+<p><strong>This file shows exactly how to do all of that on K8s.</strong></p>
+<hr />
+<h2 id="2-conceptual-explanation">2. Conceptual Explanation</h2>
+<h3 id="from-docker-compose-to-kubernetes">From Docker Compose to Kubernetes</h3>
+<p><strong>Docker Compose:</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3&#39;</span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">api</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapi</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;8000:8000&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">qdrant</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qdrant/qdrant</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;6333:6333&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">postgres</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;5432:5432&quot;</span><span class="p p-Indicator">]</span>
+</code></pre></div></p>
+<p>All on one machine. If machine dies, everything dies.</p>
+<p><strong>Kubernetes:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Deployment: &quot;run 3 copies of API, restart if crashes, scale based on load&quot;</span>
+<span class="nn">---</span>
+<span class="c1"># StatefulSet: &quot;run Qdrant with persistent storage and stable names&quot;</span>
+<span class="nn">---</span>
+<span class="c1"># Service: &quot;give each service a stable IP address&quot;</span>
+<span class="nn">---</span>
+<span class="c1"># ConfigMap + Secret: &quot;provide config and secrets to containers&quot;</span>
+<span class="nn">---</span>
+<span class="c1"># PersistentVolumeClaim: &quot;storage for Qdrant and PostgreSQL&quot;</span>
+</code></pre></div></p>
+<p>All this on multiple nodes. If one node dies, pods restart on another node.</p>
+<h3 id="why-stateful-qdrant-postgresql-is-different">Why Stateful (Qdrant, PostgreSQL)  is Different</h3>
+<p><strong>API (stateless):</strong> Serves requests, doesn't keep state. Pod 1 and Pod 2 are identical. If Pod 1 dies, users don't care (just hit Pod 2).</p>
+<p><strong>Qdrant (stateful):</strong> Stores vectors. If Pod loses its storage, vectors are lost. Must have persistent storage that outlives pod.</p>
+<p>For stateless: use Deployment.
+For stateful: use StatefulSet + PersistentVolume.</p>
+<hr />
+<h2 id="3-code-examples">3. Code Examples</h2>
+<h3 id="deploy-fastapi-ai-service">Deploy FastAPI AI Service</h3>
+<p><strong>Dockerfile (multi-stage, non-root, optimized):</strong>
+<div class="highlight"><pre><span></span><code><span class="c"># Stage 1: Builder</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">python:3.11-slim</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s">builder</span>
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>gcc<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/apt/lists/*
+<span class="k">COPY</span><span class="w"> </span>requirements.txt<span class="w"> </span>.
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>--no-cache-dir<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+
+<span class="c"># Stage 2: Runtime</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">python:3.11-slim</span>
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+
+<span class="c"># Non-root user for security</span>
+<span class="k">RUN</span><span class="w"> </span>useradd<span class="w"> </span>-m<span class="w"> </span>-u<span class="w"> </span><span class="m">1000</span><span class="w"> </span>aiuser
+
+<span class="c"># Copy dependencies from builder</span>
+<span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>builder<span class="w"> </span>/root/.local<span class="w"> </span>/home/aiuser/.local
+<span class="k">ENV</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/home/aiuser/.local/bin:<span class="nv">$PATH</span>
+
+<span class="c"># Copy code</span>
+<span class="k">COPY</span><span class="w"> </span>--chown<span class="o">=</span>aiuser:aiuser<span class="w"> </span>.<span class="w"> </span>.
+
+<span class="k">USER</span><span class="w"> </span><span class="s">aiuser</span>
+<span class="k">EXPOSE</span><span class="w"> </span><span class="s">8000</span>
+
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;uvicorn&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;main:app&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--host&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0.0.0.0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--port&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;8000&quot;</span><span class="p">]</span>
+</code></pre></div></p>
+<p><strong>main.py (with health check and logging):</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+<span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">asynccontextmanager</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="c1"># Structured JSON logging</span>
+<span class="k">class</span> <span class="nc">JSONFormatter</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">record</span><span class="p">):</span>
+        <span class="n">log_data</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(),</span>
+            <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="n">record</span><span class="o">.</span><span class="n">levelname</span><span class="p">,</span>
+            <span class="s2">&quot;logger&quot;</span><span class="p">:</span> <span class="n">record</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="n">record</span><span class="o">.</span><span class="n">getMessage</span><span class="p">(),</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">log_data</span><span class="p">)</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">()</span>
+<span class="n">handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">JSONFormatter</span><span class="p">())</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">handler</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+
+<span class="c1"># Global state (loaded once per pod)</span>
+<span class="n">MODEL</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="nd">@asynccontextmanager</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">lifespan</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="n">FastAPI</span><span class="p">):</span>
+    <span class="c1"># Startup: load model (K8s readinessProbe waits for this)</span>
+    <span class="k">global</span> <span class="n">MODEL</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Loading model...&quot;</span><span class="p">)</span>
+    <span class="n">MODEL</span> <span class="o">=</span> <span class="n">load_model</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;MODEL_NAME&quot;</span><span class="p">,</span> <span class="s2">&quot;gpt-3.5&quot;</span><span class="p">))</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Model loaded successfully&quot;</span><span class="p">)</span>
+    <span class="k">yield</span>
+    <span class="c1"># Shutdown: cleanup</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Shutting down...&quot;</span><span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">(</span><span class="n">lifespan</span><span class="o">=</span><span class="n">lifespan</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/health&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">health</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;K8s calls this to check if pod is ready&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">MODEL</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;starting&quot;</span><span class="p">},</span> <span class="mi">503</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">},</span> <span class="mi">200</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/chat&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">chat</span><span class="p">(</span><span class="n">messages</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Main API endpoint&quot;&quot;&quot;</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Chat request: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span><span class="si">}</span><span class="s2"> messages&quot;</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">MODEL</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span>  <span class="c1"># simulate LLM call</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="n">response</span><span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">load_model</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="c1"># In real implementation: load from huggingface or local</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># simulate loading time</span>
+    <span class="k">return</span> <span class="n">MockModel</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">MockModel</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">messages</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Hello!&quot;</span>
+</code></pre></div></p>
+<p><strong>Deployment YAML for K8s:</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai-api</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai-api</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">strategy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RollingUpdate</span>
+<span class="w">    </span><span class="nt">rollingUpdate</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">maxSurge</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">maxUnavailable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai-api</span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai-api</span>
+<span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">affinity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">podAntiAffinity</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">preferredDuringSchedulingIgnoredDuringExecution</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">            </span><span class="nt">podAffinityTerm</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">labelSelector</span><span class="p">:</span>
+<span class="w">                </span><span class="nt">matchExpressions</span><span class="p">:</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app</span>
+<span class="w">                  </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">In</span>
+<span class="w">                  </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">                  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai-api</span>
+<span class="w">              </span><span class="nt">topologyKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kubernetes.io/hostname</span>
+
+<span class="w">      </span><span class="nt">containers</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">api</span>
+<span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myregistry.azurecr.io/ai-api:v1.2.3</span>
+<span class="w">        </span><span class="nt">imagePullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
+<span class="w">        </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http</span>
+<span class="w">          </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8000</span>
+
+<span class="w">        </span><span class="c1"># Load config from ConfigMap</span>
+<span class="w">        </span><span class="nt">envFrom</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">configMapRef</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai-config</span>
+
+<span class="w">        </span><span class="c1"># Load secrets</span>
+<span class="w">        </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OPENAI_API_KEY</span>
+<span class="w">          </span><span class="nt">valueFrom</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">secretKeyRef</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai-secrets</span>
+<span class="w">              </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">openai-key</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">QDRANT_HOST</span>
+<span class="w">          </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;qdrant.production.svc.cluster.local&quot;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSTGRES_HOST</span>
+<span class="w">          </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;postgres.production.svc.cluster.local&quot;</span>
+
+<span class="w">        </span><span class="c1"># Health checks</span>
+<span class="w">        </span><span class="nt">readinessProbe</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">httpGet</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/health</span>
+<span class="w">            </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8000</span>
+<span class="w">          </span><span class="nt">initialDelaySeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">          </span><span class="nt">periodSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">          </span><span class="nt">timeoutSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">          </span><span class="nt">failureThreshold</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+
+<span class="w">        </span><span class="nt">livenessProbe</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">httpGet</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/health</span>
+<span class="w">            </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8000</span>
+<span class="w">          </span><span class="nt">initialDelaySeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span>
+<span class="w">          </span><span class="nt">periodSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">          </span><span class="nt">timeoutSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">          </span><span class="nt">failureThreshold</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+
+<span class="w">        </span><span class="c1"># Resource limits</span>
+<span class="w">        </span><span class="nt">resources</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">requests</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;512Mi&quot;</span>
+<span class="w">            </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;250m&quot;</span>
+<span class="w">          </span><span class="nt">limits</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1Gi&quot;</span>
+<span class="w">            </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;500m&quot;</span>
+
+<span class="w">        </span><span class="c1"># Graceful shutdown</span>
+<span class="w">        </span><span class="nt">lifecycle</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">preStop</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">exec</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;/bin/sh&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;-c&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;sleep</span><span class="nv"> </span><span class="s">15&quot;</span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># give time for connection draining</span>
+
+<span class="w">      </span><span class="nt">terminationGracePeriodSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+</code></pre></div></p>
+<h3 id="deploy-qdrant-stateful">Deploy Qdrant (Stateful)</h3>
+<p><strong>StatefulSet YAML:</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qdrant-headless</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">clusterIP</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">None</span><span class="w">  </span><span class="c1"># Headless service for stable DNS</span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qdrant</span>
+<span class="w">  </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6333</span>
+<span class="w">    </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6333</span>
+<span class="nn">---</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">StatefulSet</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qdrant</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">serviceName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qdrant-headless</span>
+<span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qdrant</span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qdrant</span>
+<span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">containers</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qdrant</span>
+<span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qdrant/qdrant:v1.7.0</span>
+<span class="w">        </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6333</span>
+
+<span class="w">        </span><span class="c1"># Qdrant config from ConfigMap</span>
+<span class="w">        </span><span class="nt">envFrom</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">configMapRef</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qdrant-config</span>
+
+<span class="w">        </span><span class="c1"># Health check</span>
+<span class="w">        </span><span class="nt">readinessProbe</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">httpGet</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/health</span>
+<span class="w">            </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6333</span>
+<span class="w">          </span><span class="nt">initialDelaySeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">          </span><span class="nt">periodSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">          </span><span class="nt">timeoutSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+
+<span class="w">        </span><span class="nt">livenessProbe</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">httpGet</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/health</span>
+<span class="w">            </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6333</span>
+<span class="w">          </span><span class="nt">initialDelaySeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">          </span><span class="nt">periodSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="w">        </span><span class="c1"># Resource limits</span>
+<span class="w">        </span><span class="nt">resources</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">requests</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1Gi&quot;</span>
+<span class="w">            </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;500m&quot;</span>
+<span class="w">          </span><span class="nt">limits</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2Gi&quot;</span>
+<span class="w">            </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1000m&quot;</span>
+
+<span class="w">        </span><span class="c1"># Persistent storage</span>
+<span class="w">        </span><span class="nt">volumeMounts</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qdrant-storage</span>
+<span class="w">          </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/qdrant/storage</span>
+
+<span class="w">  </span><span class="c1"># Each replica gets its own storage</span>
+<span class="w">  </span><span class="nt">volumeClaimTemplates</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">metadata</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qdrant-storage</span>
+<span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">accessModes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ReadWriteOnce</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fast-ssd</span><span class="w">  </span><span class="c1"># AWS gp3</span>
+<span class="w">      </span><span class="nt">resources</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">requests</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100Gi</span>
+
+<span class="nn">---</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qdrant</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterIP</span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qdrant</span>
+<span class="w">  </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6333</span>
+<span class="w">    </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6333</span>
+</code></pre></div></p>
+<p><strong>Qdrant ConfigMap:</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConfigMap</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qdrant-config</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">QDRANT_API_KEY</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w">  </span><span class="c1"># Set via Secret instead if authentication needed</span>
+</code></pre></div></p>
+<h3 id="postgresql-deployment">PostgreSQL Deployment</h3>
+<p><strong>StatefulSet for PostgreSQL:</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterIP</span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
+<span class="w">  </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5432</span>
+<span class="w">    </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5432</span>
+<span class="nn">---</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">StatefulSet</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">serviceName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
+<span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
+<span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">containers</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
+<span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:15-alpine</span>
+<span class="w">        </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5432</span>
+
+<span class="w">        </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSTGRES_DB</span>
+<span class="w">          </span><span class="nt">valueFrom</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">configMapKeyRef</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres-config</span>
+<span class="w">              </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db_name</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSTGRES_USER</span>
+<span class="w">          </span><span class="nt">valueFrom</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">configMapKeyRef</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres-config</span>
+<span class="w">              </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSTGRES_PASSWORD</span>
+<span class="w">          </span><span class="nt">valueFrom</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">secretKeyRef</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres-secret</span>
+<span class="w">              </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
+
+<span class="w">        </span><span class="c1"># Health check</span>
+<span class="w">        </span><span class="nt">readinessProbe</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">exec</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">command</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/bin/sh</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-c</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pg_isready -U postgres</span>
+<span class="w">          </span><span class="nt">initialDelaySeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">          </span><span class="nt">periodSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+
+<span class="w">        </span><span class="nt">resources</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">requests</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;256Mi&quot;</span>
+<span class="w">            </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;250m&quot;</span>
+<span class="w">          </span><span class="nt">limits</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1Gi&quot;</span>
+<span class="w">            </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1000m&quot;</span>
+
+<span class="w">        </span><span class="nt">volumeMounts</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres-storage</span>
+<span class="w">          </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/lib/postgresql/data</span>
+
+<span class="w">  </span><span class="nt">volumeClaimTemplates</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">metadata</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres-storage</span>
+<span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">accessModes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ReadWriteOnce</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fast-ssd</span>
+<span class="w">      </span><span class="nt">resources</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">requests</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50Gi</span>
+</code></pre></div></p>
+<h3 id="configmap-and-secret">ConfigMap and Secret</h3>
+<p><strong>ConfigMap for AI config:</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConfigMap</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai-config</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">MODEL_NAME</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;gpt-4&quot;</span>
+<span class="w">  </span><span class="nt">TEMPERATURE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;0.7&quot;</span>
+<span class="w">  </span><span class="nt">MAX_TOKENS</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2048&quot;</span>
+<span class="w">  </span><span class="nt">CHUNK_SIZE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;512&quot;</span>
+<span class="w">  </span><span class="nt">CHUNK_OVERLAP</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;50&quot;</span>
+<span class="w">  </span><span class="nt">LOG_LEVEL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;INFO&quot;</span>
+<span class="w">  </span><span class="nt">ENVIRONMENT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;production&quot;</span>
+</code></pre></div></p>
+<p><strong>Create secrets (command is safer than YAML):</strong>
+<div class="highlight"><pre><span></span><code>kubectlcreate<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>ai-secrets<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--from-literal<span class="o">=</span>openai-key<span class="o">=</span>sk-...<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--from-literal<span class="o">=</span>qdrant-key<span class="o">=</span>...<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-n<span class="w"> </span>production
+
+kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>postgres-secret<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--from-literal<span class="o">=</span><span class="nv">password</span><span class="o">=</span>postgres123secure<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-n<span class="w"> </span>production
+</code></pre></div></p>
+<h3 id="ingress-for-external-traffic">Ingress for External Traffic</h3>
+<p><strong>Nginx Ingress Controller:</strong>
+<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span>ingress-nginx<span class="w"> </span>https://kubernetes.github.io/ingress-nginx
+helm<span class="w"> </span>install<span class="w"> </span>ingress-nginx<span class="w"> </span>ingress-nginx/ingress-nginx<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--namespace<span class="w"> </span>ingress-nginx<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--create-namespace
+</code></pre></div></p>
+<p><strong>Ingress YAML:</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ingress</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai-ingress</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production</span>
+<span class="w">  </span><span class="nt">annotations</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">cert-manager.io/cluster-issuer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">letsencrypt-prod</span>
+<span class="w">    </span><span class="nt">nginx.ingress.kubernetes.io/rate-limit</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;100&quot;</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ingressClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<span class="w">  </span><span class="nt">tls</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">api.example.com</span>
+<span class="w">    </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">api-tls</span>
+<span class="w">  </span><span class="nt">rules</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">api.example.com</span>
+<span class="w">    </span><span class="nt">http</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/chat</span>
+<span class="w">        </span><span class="nt">pathType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Prefix</span>
+<span class="w">        </span><span class="nt">backend</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">service</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai-api</span>
+<span class="w">            </span><span class="nt">port</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/health</span>
+<span class="w">        </span><span class="nt">pathType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Exact</span>
+<span class="w">        </span><span class="nt">backend</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">service</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai-api</span>
+<span class="w">            </span><span class="nt">port</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/documents</span>
+<span class="w">        </span><span class="nt">pathType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Prefix</span>
+<span class="w">        </span><span class="nt">backend</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">service</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai-api</span>
+<span class="w">            </span><span class="nt">port</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+</code></pre></div></p>
+<h3 id="full-deployment-script">Full Deployment Script</h3>
+<p><strong>deploy.sh:</strong>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span><span class="w"> </span>-e
+
+<span class="nv">NAMESPACE</span><span class="o">=</span><span class="s2">&quot;production&quot;</span>
+<span class="nv">REGISTRY</span><span class="o">=</span><span class="s2">&quot;myregistry.azurecr.io&quot;</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Creating namespace...&quot;</span>
+kubectl<span class="w"> </span>create<span class="w"> </span>namespace<span class="w"> </span><span class="nv">$NAMESPACE</span><span class="w"> </span>--dry-run<span class="o">=</span>client<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>-
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Creating secrets...&quot;</span>
+kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>ai-secrets<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--from-literal<span class="o">=</span>openai-key<span class="o">=</span><span class="nv">$OPENAI_API_KEY</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-n<span class="w"> </span><span class="nv">$NAMESPACE</span><span class="w"> </span>--dry-run<span class="o">=</span>client<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>-
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Creating ConfigMaps...&quot;</span>
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>configmaps.yaml<span class="w"> </span>-n<span class="w"> </span><span class="nv">$NAMESPACE</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Deploying PostgreSQL...&quot;</span>
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>postgres.yaml<span class="w"> </span>-n<span class="w"> </span><span class="nv">$NAMESPACE</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Deploying Qdrant...&quot;</span>
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>qdrant.yaml<span class="w"> </span>-n<span class="w"> </span><span class="nv">$NAMESPACE</span>
+
+<span class="c1"># Wait for stateful services to be ready</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Waiting for PostgreSQL and Qdrant...&quot;</span>
+kubectl<span class="w"> </span><span class="nb">wait</span><span class="w"> </span>--for<span class="o">=</span><span class="nv">condition</span><span class="o">=</span>ready<span class="w"> </span>pod<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-l<span class="w"> </span><span class="nv">app</span><span class="o">=</span>postgres<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-n<span class="w"> </span><span class="nv">$NAMESPACE</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--timeout<span class="o">=</span>300s
+
+kubectl<span class="w"> </span><span class="nb">wait</span><span class="w"> </span>--for<span class="o">=</span><span class="nv">condition</span><span class="o">=</span>ready<span class="w"> </span>pod<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-l<span class="w"> </span><span class="nv">app</span><span class="o">=</span>qdrant<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-n<span class="w"> </span><span class="nv">$NAMESPACE</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--timeout<span class="o">=</span>300s
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Deploying API...&quot;</span>
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>api-deployment.yaml<span class="w"> </span>-n<span class="w"> </span><span class="nv">$NAMESPACE</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Creating services...&quot;</span>
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>services.yaml<span class="w"> </span>-n<span class="w"> </span><span class="nv">$NAMESPACE</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Creating Ingress...&quot;</span>
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>ingress.yaml<span class="w"> </span>-n<span class="w"> </span><span class="nv">$NAMESPACE</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Verifying deployment...&quot;</span>
+kubectl<span class="w"> </span>rollout<span class="w"> </span>status<span class="w"> </span>deployment/ai-api<span class="w"> </span>-n<span class="w"> </span><span class="nv">$NAMESPACE</span><span class="w"> </span>--timeout<span class="o">=</span>180s
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;✓ Deployment complete!&quot;</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>all<span class="w"> </span>-n<span class="w"> </span><span class="nv">$NAMESPACE</span>
+</code></pre></div></p>
+<hr />
+<h2 id="4-architecture-diagram">4. Architecture Diagram</h2>
+<div class="highlight"><pre><span></span><code>┌──────────────────────────────────────────────────────────────┐
+│                    Kubernetes Cluster (EKS)                   │
+├──────────────────────────────────────────────────────────────┤
+│                                                                │
+│  Internet                                                      │
+│      ↓                                                         │
+│  Ingress Controller (Nginx)                                   │
+│  ├─ /chat       → ai-api Service                             │
+│  ├─ /search     → ai-api Service                             │
+│  └─ /health     → ai-api Service                             │
+│      ↓                                                         │
+│  LoadBalancer Service                                         │
+│      ↓                                                         │
+│  API Service (ClusterIP:80)                                   │
+│      ↓                                                         │
+│  ┌────────────────────────┐                                   │
+│  │ Deployment: ai-api     │                                   │
+│  │ replicas: 3            │                                   │
+│  ├────────────────────────┤                                   │
+│  │ Pod 1 (FastAPI)        │                                   │
+│  │ Pod 2 (FastAPI)        │                                   │
+│  │ Pod 3 (FastAPI)        │                                   │
+│  └────────────────────────┘                                   │
+│       ↓ ↓ ↓                                                    │
+│  ┌──────────────────────────┐   ┌──────────────────────────┐  │
+│  │ StatefulSet: Qdrant      │   │ StatefulSet: PostgreSQL  │  │
+│  │ replicas: 3              │   │ replicas: 1              │  │
+│  ├──────────────────────────┤   ├──────────────────────────┤  │
+│  │ qdrant-0 → PVC Stor #1   │   │ postgres-0 → PVC Stor    │  │
+│  │ qdrant-1 → PVC Stor #2   │   │                          │  │
+│  │ qdrant-2 → PVC Stor #3   │   │                          │  │
+│  └──────────────────────────┘   └──────────────────────────┘  │
+│       ↓ ↓ ↓                           ↓                        │
+│  ConfigMap                      ConfigMap                      │
+│  Secret                         Secret                         │
+│  Qdrant Service                 Postgres Service               │
+│                                                                │
+└──────────────────────────────────────────────────────────────┘
+</code></pre></div>
+<hr />
+<h2 id="5-tools-and-alternatives">5. Tools and Alternatives</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>kubectl</strong></td>
+<td>CLI for K8s</td>
+<td>Direct management.</td>
+</tr>
+<tr>
+<td><strong>Helm</strong></td>
+<td>Package manager, templating</td>
+<td>Production deployments, version management.</td>
+</tr>
+<tr>
+<td><strong>Kustomize</strong></td>
+<td>Template-free K8s customization</td>
+<td>Simple overlays (dev, staging, prod).</td>
+</tr>
+<tr>
+<td><strong>ArgoCD</strong></td>
+<td>GitOps for deployments</td>
+<td>Auto-deploy when you push to Git.</td>
+</tr>
+<tr>
+<td><strong>Flux</strong></td>
+<td>Alternative GitOps</td>
+<td>GitOps, more lightweight than ArgoCD.</td>
+</tr>
+<tr>
+<td><strong>Sealed Secrets</strong></td>
+<td>Encrypt secrets in Git</td>
+<td>Safe to commit Secret YAML to Git.</td>
+</tr>
+<tr>
+<td><strong>External Secrets Operator</strong></td>
+<td>Sync secrets from AWS Secrets Manager</td>
+<td>Rotate secrets without pod restart.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-decision-framework">6. Decision Framework</h2>
+<p><strong>Should you use StatefulSet for your service?</strong></p>
+<p>Use <strong>StatefulSet</strong> if:
+- Service has persistent state (Qdrant, PostgreSQL, Redis)
+- Need stable Pod identities (qdrant-0, qdrant-1, ...)
+- Need ordered scaling/termination</p>
+<p>Use <strong>Deployment</strong> if:
+- Service is stateless (FastAPI, Nginx, any API)
+- Pods are interchangeable
+- Don't need stable identities</p>
+<p><strong>ConfigMap vs Secret:</strong>
+- ConfigMap: non-sensitive config (model name, chunk size, log level)
+- Secret: sensitive data (API keys, passwords, tokens)</p>
+<p><strong>Where to store secrets:</strong>
+- Minikube dev: kubectl create secret (K8s Secret)
+- Production: AWS Secrets Manager → External Secrets Operator syncs to K8s</p>
+<hr />
+<h2 id="7-step-by-step-mini-tutorial-deploy-to-minikube">7. Step-by-Step Mini Tutorial: Deploy to Minikube</h2>
+<h3 id="1-setup">1. Setup</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Start Minikube with enough resources</span>
+minikube<span class="w"> </span>start<span class="w"> </span>--cpus<span class="o">=</span><span class="m">8</span><span class="w"> </span>--memory<span class="o">=</span><span class="m">16384</span>
+
+<span class="c1"># Enable ingress addon</span>
+minikube<span class="w"> </span>addons<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>ingress
+
+<span class="c1"># Point docker to minikube&#39;s Docker daemon</span>
+<span class="nb">eval</span><span class="w"> </span><span class="k">$(</span>minikube<span class="w"> </span>docker-env<span class="k">)</span>
+</code></pre></div>
+<h3 id="2-build-and-push-images">2. Build and Push Images</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Build API image (docker build inside minikube)</span>
+docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>myapi:v1<span class="w"> </span>.
+
+<span class="c1"># Qdrant and PostgreSQL use official images (auto-pulled)</span>
+</code></pre></div>
+<h3 id="3-create-namespaces">3. Create Namespaces</h3>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>namespace<span class="w"> </span>production
+kubectl<span class="w"> </span>create<span class="w"> </span>namespace<span class="w"> </span>monitoring
+</code></pre></div>
+<h3 id="4-create-secrets-and-configmaps">4. Create Secrets and ConfigMaps</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># ConfigMap</span>
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>configmaps.yaml<span class="w"> </span>-n<span class="w"> </span>production
+
+<span class="c1"># Secrets</span>
+kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>ai-secrets<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--from-literal<span class="o">=</span>openai-key<span class="o">=</span>sk-test<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-n<span class="w"> </span>production
+</code></pre></div>
+<h3 id="5-deploy-services-order-matters">5. Deploy Services (Order Matters!)</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Stateful services first (PostgreSQL, Qdrant)</span>
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>postgres-statefulset.yaml<span class="w"> </span>-n<span class="w"> </span>production
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>qdrant-statefulset.yaml<span class="w"> </span>-n<span class="w"> </span>production
+
+<span class="c1"># Wait for them to be ready</span>
+kubectl<span class="w"> </span><span class="nb">wait</span><span class="w"> </span>--for<span class="o">=</span><span class="nv">condition</span><span class="o">=</span>ready<span class="w"> </span>pod<span class="w"> </span>-l<span class="w"> </span><span class="nv">app</span><span class="o">=</span>postgres<span class="w"> </span>-n<span class="w"> </span>production<span class="w"> </span>--timeout<span class="o">=</span>300s
+kubectl<span class="w"> </span><span class="nb">wait</span><span class="w"> </span>--for<span class="o">=</span><span class="nv">condition</span><span class="o">=</span>ready<span class="w"> </span>pod<span class="w"> </span>-l<span class="w"> </span><span class="nv">app</span><span class="o">=</span>qdrant<span class="w"> </span>-n<span class="w"> </span>production<span class="w"> </span>--timeout<span class="o">=</span>300s
+
+<span class="c1"># 2. API deployment</span>
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>api-deployment.yaml<span class="w"> </span>-n<span class="w"> </span>production
+
+<span class="c1"># 3. Services</span>
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>services.yaml<span class="w"> </span>-n<span class="w"> </span>production
+
+<span class="c1"># 4. Ingress</span>
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>ingress.yaml<span class="w"> </span>-n<span class="w"> </span>production
+</code></pre></div>
+<h3 id="6-verify-everything">6. Verify Everything</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Pods</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>production
+<span class="c1"># Should show:</span>
+<span class="c1"># api-xxx-1            Running</span>
+<span class="c1"># api-xxx-2           Running</span>
+<span class="c1"># api-xxx-3           Running</span>
+<span class="c1"># postgres-0          Running</span>
+<span class="c1"># qdrant-0            Running</span>
+<span class="c1"># qdrant-1            Running</span>
+<span class="c1"># qdrant-2            Running</span>
+
+<span class="c1"># Services</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>svc<span class="w"> </span>-n<span class="w"> </span>production
+<span class="c1"># Should show ClusterIP addresses</span>
+
+<span class="c1"># Logs</span>
+kubectl<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>deployment/ai-api<span class="w"> </span>-n<span class="w"> </span>production
+
+<span class="c1"># Test API</span>
+kubectl<span class="w"> </span>port-forward<span class="w"> </span>svc/ai-api<span class="w"> </span><span class="m">8000</span>:80<span class="w"> </span>-n<span class="w"> </span>production
+curl<span class="w"> </span>http://localhost:8000/health
+</code></pre></div>
+<h3 id="7-test-full-stack">7. Test Full Stack</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># API can reach Qdrant and PostgreSQL</span>
+kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>deployment/ai-api<span class="w"> </span>-n<span class="w"> </span>production<span class="w"> </span>--<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>curl<span class="w"> </span>http://qdrant:6333/health
+
+kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>deployment/ai-api<span class="w"> </span>-n<span class="w"> </span>production<span class="w"> </span>--<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>pg_isready<span class="w"> </span>-h<span class="w"> </span>postgres<span class="w"> </span>-p<span class="w"> </span><span class="m">5432</span>
+</code></pre></div>
+<h3 id="8-test-scaling">8. Test Scaling</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Scale API to 10 replicas</span>
+kubectl<span class="w"> </span>scale<span class="w"> </span>deployment<span class="w"> </span>ai-api<span class="w"> </span>--replicas<span class="o">=</span><span class="m">10</span><span class="w"> </span>-n<span class="w"> </span>production
+
+<span class="c1"># Watch them start</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>production<span class="w"> </span>-w
+
+<span class="c1"># Scale back down</span>
+kubectl<span class="w"> </span>scale<span class="w"> </span>deployment<span class="w"> </span>ai-api<span class="w"> </span>--replicas<span class="o">=</span><span class="m">3</span><span class="w"> </span>-n<span class="w"> </span>production
+</code></pre></div>
+<h3 id="9-test-rolling-update">9. Test Rolling Update</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Update image</span>
+kubectl<span class="w"> </span><span class="nb">set</span><span class="w"> </span>image<span class="w"> </span>deployment/ai-api<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">api</span><span class="o">=</span>myapi:v2<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-n<span class="w"> </span>production
+
+<span class="c1"># Watch rollout</span>
+kubectl<span class="w"> </span>rollout<span class="w"> </span>status<span class="w"> </span>deployment/ai-api<span class="w"> </span>-n<span class="w"> </span>production<span class="w"> </span>-w
+</code></pre></div>
+<hr />
+<h2 id="8-practical-project-full-stack-ai-on-minikube">8. Practical Project: Full Stack AI on Minikube</h2>
+<p><strong>Objective:</strong> Deploy entire AI system (API + Qdrant + PostgreSQL) on Minikube with proper health checks, resource limits, configuration management, and test all functionality.</p>
+<p><strong>Deliverables:</strong></p>
+<div class="highlight"><pre><span></span><code>├── k8s/
+│   ├── namespace.yaml
+│   ├── configmap.yaml
+│   ├── secrets.sh (script to create)
+│   ├── api-deployment.yaml
+│   ├── qdrant-statefulset.yaml
+│   ├── postgres-statefulset.yaml
+│   ├── services.yaml
+│   ├── ingress.yaml
+│   └── deploy.sh (deployment script)
+├── Dockerfile
+├── main.py (FastAPI with health checks)
+├── requirements.txt
+└── Tests
+    └── test_deployment.sh (verification)
+</code></pre></div>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Create FastAPI app with /health and /chat endpoints</li>
+<li>Write Dockerfile (multi-stage, non-root)</li>
+<li>Build image for Minikube</li>
+<li>Write all K8s YAML files</li>
+<li>Deploy to Minikube with deploy.sh</li>
+<li>Verify all pods are running</li>
+<li>Test: API can reach Qdrant and PostgreSQL</li>
+<li>Test: Scale API to 10, then back to 3</li>
+<li>Test: Rolling update (change image, verify no downtime)</li>
+<li>Test: Delete a pod, watch it restart</li>
+<li>Document everything</li>
+</ol>
+<p><strong>Success Criteria:</strong>
+- [ ] All pods running and healthy
+- [ ] API responds to /health
+- [ ] API can reach Qdrant (list collections)
+- [ ] API can reach PostgreSQL (write/read)
+- [ ] Can scale replicas up and down
+- [ ] Rolling update completes with zero downtime
+- [ ] Pod deletion triggers automatic restart
+- [ ] Logs accessible via kubectl logs
+- [ ] Minikube dashboard shows all resources</p>
+<hr />
+<h2 id="9-debugging-playbook-10-k8s-errors">9. Debugging Playbook: 10 K8s Errors</h2>
+<h3 id="1-api-cant-reach-qdrant">1. <strong>API can't reach Qdrant</strong></h3>
+<div class="highlight"><pre><span></span><code>kubectl exec api-pod -- curl http://qdrant:6333/health
+→ curl: couldn&#39;t resolve host name
+</code></pre></div>
+<p><strong>Root cause:</strong> Service name wrong or Qdrant pod not running.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check Qdrant is running</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>pod<span class="w"> </span>-l<span class="w"> </span><span class="nv">app</span><span class="o">=</span>qdrant
+
+<span class="c1"># Check service</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>svc<span class="w"> </span>qdrant
+
+<span class="c1"># Try from API pod</span>
+kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>api-pod<span class="w"> </span>--<span class="w"> </span>nslookup<span class="w"> </span>qdrant.production.svc.cluster.local
+</code></pre></div></p>
+<h3 id="2-qdrant-pod-stuck-in-pending">2. <strong>Qdrant pod stuck in Pending</strong></h3>
+<div class="highlight"><pre><span></span><code>kubectl describe pod qdrant-0
+→ Insufficient storage
+</code></pre></div>
+<p><strong>Root cause:</strong> PVC can't find storage.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check storage classes</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>storageclass
+
+<span class="c1"># For Minikube (no actual storage)</span>
+minikube<span class="w"> </span>mount<span class="w"> </span>/tmp/qdrant-data:/data
+</code></pre></div></p>
+<h3 id="3-postgresql-password-not-working">3. <strong>PostgreSQL password not working</strong></h3>
+<div class="highlight"><pre><span></span><code>kubectl exec postgres-0 -- psql -U postgres
+→ FATAL: password authentication failed
+</code></pre></div>
+<p><strong>Root cause:</strong> Password in Secret different from YAML.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Recreate secret</span>
+kubectl<span class="w"> </span>delete<span class="w"> </span>secret<span class="w"> </span>postgres-secret
+kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>postgres-secret<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--from-literal<span class="o">=</span><span class="nv">password</span><span class="o">=</span>newpassword
+
+<span class="c1"># Restart pod</span>
+kubectl<span class="w"> </span>delete<span class="w"> </span>pod<span class="w"> </span>postgres-0
+</code></pre></div></p>
+<h3 id="4-api-health-check-failing">4. <strong>API health check failing</strong></h3>
+<div class="highlight"><pre><span></span><code>kubectl describe deployment api
+→ Readiness Probe Failed: HTTP returned 502
+</code></pre></div>
+<p><strong>Root cause:</strong> API not fully booted (model still loading).</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">readinessProbe</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">initialDelaySeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span><span class="w">  </span><span class="c1"># increase from 30</span>
+<span class="w">  </span><span class="nt">periodSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+</code></pre></div></p>
+<h3 id="5-pod-keeps-restarting-crashloopbackoff">5. <strong>Pod keeps restarting (CrashLoopBackOff)</strong></h3>
+<div class="highlight"><pre><span></span><code>kubectl logs api-123
+→ ModuleNotFoundError: No module named &#39;qdrant_client&#39;
+</code></pre></div>
+<p><strong>Root cause:</strong> Dependency missing in container.</p>
+<p><strong>Fix:</strong>
+- Add to requirements.txt
+- Rebuild Docker image
+- Restart deployment: <code>kubectl rollout restart deployment/api</code></p>
+<h3 id="6-service-dns-not-resolving-inside-pod">6. <strong>Service DNS not resolving inside pod</strong></h3>
+<div class="highlight"><pre><span></span><code>kubectl exec api-pod -- nslookup qdrant
+→ server can&#39;t find qdrant
+</code></pre></div>
+<p><strong>Root cause:</strong> Pod can't reach cluster DNS.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check CoreDNS</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>kube-system<span class="w"> </span>-l<span class="w"> </span>k8s-app<span class="o">=</span>kube-dns
+
+<span class="c1"># Restart CoreDNS</span>
+kubectl<span class="w"> </span>rollout<span class="w"> </span>restart<span class="w"> </span>deployment<span class="w"> </span>coredns<span class="w"> </span>-n<span class="w"> </span>kube-system
+</code></pre></div></p>
+<h3 id="7-pvc-stuck-in-pending">7. <strong>PVC stuck in Pending</strong></h3>
+<div class="highlight"><pre><span></span><code>kubectl describe pvc qdrant-storage-qdrant-0
+→ no persistent volumes available
+</code></pre></div>
+<p><strong>Root cause:</strong> No storage provisioner.</p>
+<p><strong>Fix for Minikube:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Minikube uses hostPath</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>storageclass
+<span class="c1"># If missing, create one</span>
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>-<span class="w"> </span><span class="s">&lt;&lt; EOF</span>
+<span class="s">apiVersion: storage.k8s.io/v1</span>
+<span class="s">kind: StorageClass</span>
+<span class="s">metadata:</span>
+<span class="s">  name: standard</span>
+<span class="s">provisioner: k8s.io/minikube-hostpath</span>
+<span class="s">EOF</span>
+</code></pre></div></p>
+<h3 id="8-ingress-not-routing-traffic">8. <strong>Ingress not routing traffic</strong></h3>
+<div class="highlight"><pre><span></span><code>curl api.example.com/chat
+→ 503 Service Unavailable
+</code></pre></div>
+<p><strong>Root cause:</strong> Ingress can't reach service or service has no endpoints.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check ingress</span>
+kubectl<span class="w"> </span>describe<span class="w"> </span>ingress<span class="w"> </span>ai-ingress
+
+<span class="c1"># Check service has endpoints</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>endpoints<span class="w"> </span>ai-api
+
+<span class="c1"># If no endpoints, pods aren&#39;t healthy</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>pods
+</code></pre></div></p>
+<h3 id="9-secret-mounted-but-empty-in-pod">9. <strong>Secret mounted but empty in pod</strong></h3>
+<div class="highlight"><pre><span></span><code>kubectl exec api-pod -- env | grep OPENAI
+→ (nothing)
+</code></pre></div>
+<p><strong>Root cause:</strong> Secret name wrong in Deployment.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">env</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OPENAI_API_KEY</span>
+<span class="w">  </span><span class="nt">valueFrom</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">secretKeyRef</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai-secrets</span><span class="w">        </span><span class="c1"># must match secret name</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">openai-key</span><span class="w">         </span><span class="c1"># must match key in secret</span>
+</code></pre></div></p>
+<h3 id="10-rolling-update-hangs">10. <strong>Rolling update hangs</strong></h3>
+<div class="highlight"><pre><span></span><code>kubectl rollout status deployment/api
+→ Waiting for deployment spec update to be observed...
+(hangs for 10+ minutes)
+</code></pre></div>
+<p><strong>Root cause:</strong> New image doesn't exist or is huge (slow pull).</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check image exists</span>
+docker<span class="w"> </span>image<span class="w"> </span>list
+
+<span class="c1"># Check pod events</span>
+kubectl<span class="w"> </span>describe<span class="w"> </span>pod<span class="w"> </span>api-xxx
+
+<span class="c1"># If ImagePullBackOff, fix image tag</span>
+kubectl<span class="w"> </span><span class="nb">set</span><span class="w"> </span>image<span class="w"> </span>deployment/api<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">api</span><span class="o">=</span>myapi:v1<span class="w">  </span><span class="c1"># correct tag</span>
+</code></pre></div></p>
+<hr />
+<h2 id="10-common-mistakes-5-issues">10. Common Mistakes (5+ Issues)</h2>
+<div class="admonition danger">
+<p class="admonition-title">Mistake 1: Stateless Service as StatefulSet</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># ❌ Using StatefulSet for API (stateless)</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">StatefulSet</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">api</span>
+</code></pre></div>
+Unnecessary complexity. Use Deployment for stateless services.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Mistake 2: No Persistent Storage for Qdrant</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># ❌ No volumes</span>
+<span class="nt">containers</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qdrant</span>
+<span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qdrant/qdrant</span>
+</code></pre></div>
+Vectors lost when pod dies. Always use volumeClaimTemplates for stateful services.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Mistake 3: Hardcoded Credentials in ConfigMap</p>
+<p><div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConfigMap</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">OPENAI_API_KEY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sk-...</span><span class="w">  </span><span class="c1"># ❌ Not encrypted</span>
+</code></pre></div>
+Credentials leak in etcd database. Use Secret instead.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Mistake 4: No Resource Limits</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># ❌ Asking too much memory</span>
+<span class="nt">resources</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">requests</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10Gi&quot;</span><span class="w">  </span><span class="c1"># ❌ Node doesn&#39;t have this much</span>
+</code></pre></div>
+Pod stays Pending forever. Check available resources first: <code>kubectl top nodes</code></p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Mistake 5: Ingress DNS not resolving</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># ❌ Using HTTP only</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">rules</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">api.example.com</span>
+</code></pre></div>
+But DNS doesn't point to cluster. Use minikube tunnel or update /etc/hosts.</p>
+</div>
+<hr />
+<h2 id="11-production-realism">11. Production Realism</h2>
+<p><strong>Comparing Minikube to EKS:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Minikube</th>
+<th>EKS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nodes</strong></td>
+<td>1 (your laptop)</td>
+<td>3+ (AWS servers)</td>
+</tr>
+<tr>
+<td><strong>Networking</strong></td>
+<td>Localhost access</td>
+<td>Public DNS, TLS</td>
+</tr>
+<tr>
+<td><strong>Storage</strong></td>
+<td>hostPath (your disk)</td>
+<td>AWS EBS (managed)</td>
+</tr>
+<tr>
+<td><strong>Secrets</strong></td>
+<td>etcd (unencrypted)</td>
+<td>etcd (encrypted at rest)</td>
+</tr>
+<tr>
+<td><strong>Cost</strong></td>
+<td>Free (your laptop)</td>
+<td>$0.10/hour per node + storage</td>
+</tr>
+<tr>
+<td><strong>Reliability</strong></td>
+<td>Crashes if laptop dies</td>
+<td>99.95% SLA</td>
+</tr>
+<tr>
+<td><strong>Troubleshooting</strong></td>
+<td>Simple (single machine)</td>
+<td>Distributed (harder to debug)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>On Minikube:</strong> Things work or they don't. Debugging is straightforward.</p>
+<p><strong>On EKS:</strong> Things fail in subtle ways. Network delays, disk full, node failure, availability zone issues.</p>
+<p>Start on Minikube. Verify on EKS in week 3.</p>
+<hr />
+<h2 id="12-cost-performance">12. Cost &amp; Performance</h2>
+<p><strong>Compute:</strong>
+- t3.xlarge node: $0.1664/hour = ~$120/month (always on)
+- 3 nodes for HA: $360/month
+- Qdrant 3-replica StatefulSet: splits across 3 nodes</p>
+<p><strong>Storage:</strong>
+- gp3 EBS: $0.10/GB/month
+- Qdrant 100GB: $10/month
+- PostgreSQL 50GB: $5/month
+- Total: $15/month storage</p>
+<p><strong>Networking:</strong>
+- Data transfer: $0.02/GB (within AZ is free)
+- NLB: $0.006/hour = $4/month + $0.006/new connections</p>
+<p><strong>Total cheap setup:</strong> 3 nodes ($360) + storage ($15) + networking ($5) = ~$380/month</p>
+<p><strong>Optimization:</strong>
+- Use Spot instances for non-critical pods (save 70%)
+- Use smaller nodes at night, scale back at morning
+- Cache aggressively (avoid repeated LLM calls)</p>
+<p><strong>Performance:</strong>
+- API latency: &lt;100ms (same AZ), &lt;200ms (cross-AZ)
+- Qdrant search latency: 10-50ms (depends on vector size)
+- Database query: 5-50ms (depends on query complexity)
+- End-to-end latency: 100-500ms typical</p>
+<hr />
+<h2 id="13-security-considerations">13. Security Considerations</h2>
+<p><strong>Secrets Management:</strong></p>
+<p>❌ <strong>Never:</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">env</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OPENAI_API_KEY</span>
+<span class="w">  </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sk-...&quot;</span>
+</code></pre></div></p>
+<p>✅ <strong>Use Secret:</strong>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>ai-secrets<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--from-literal<span class="o">=</span>openai-key<span class="o">=</span>sk-...
+</code></pre></div></p>
+<p>✅ <strong>In EKS use AWS Secrets Manager:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install ExternalSecrets operator (Helm)</span>
+helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span>external-secrets<span class="w"> </span>https://charts.external-secrets.io
+helm<span class="w"> </span>install<span class="w"> </span>external-secrets<span class="w"> </span>external-secrets/external-secrets<span class="w"> </span>-n<span class="w"> </span>external-secrets-system<span class="w"> </span>--create-namespace
+
+<span class="c1"># Create ExternalSecret</span>
+apiVersion:<span class="w"> </span>external-secrets.io/v1beta1
+kind:<span class="w"> </span>ExternalSecret
+metadata:
+<span class="w">  </span>name:<span class="w"> </span>ai-secrets
+spec:
+<span class="w">  </span>secretStoreRef:
+<span class="w">    </span>name:<span class="w"> </span>aws-secrets
+<span class="w">    </span>kind:<span class="w"> </span>SecretStore
+<span class="w">  </span>target:
+<span class="w">    </span>name:<span class="w"> </span>ai-secrets
+<span class="w">    </span>creationPolicy:<span class="w"> </span>Owner
+<span class="w">  </span>data:
+<span class="w">  </span>-<span class="w"> </span>secretKey:<span class="w"> </span>openai-key
+<span class="w">    </span>remoteRef:
+<span class="w">      </span>key:<span class="w"> </span>openai-api-key
+</code></pre></div></p>
+<p><strong>Network Policies:</strong> By default, all pods can reach each other. Limit with NetworkPolicy:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetworkPolicy</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai-api-network-policy</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">podSelector</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai-api</span>
+<span class="w">  </span><span class="nt">policyTypes</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ingress</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Egress</span>
+<span class="w">  </span><span class="nt">ingress</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">from</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">namespaceSelector</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">matchLabels</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production</span>
+<span class="w">  </span><span class="nt">egress</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">to</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">podSelector</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">matchLabels</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qdrant</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span>
+<span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6333</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">to</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">podSelector</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">matchLabels</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span>
+<span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5432</span>
+</code></pre></div>
+<p><strong>RBAC (Role-Based Access Control):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create service account for CI/CD</span>
+kubectl<span class="w"> </span>create<span class="w"> </span>serviceaccount<span class="w"> </span>deployer<span class="w"> </span>-n<span class="w"> </span>production
+
+<span class="c1"># Role: only deploy/update</span>
+kubectl<span class="w"> </span>create<span class="w"> </span>role<span class="w"> </span>deployer<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--verb<span class="o">=</span>create,get,list,update,patch<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--resource<span class="o">=</span>deployments,services,statefulsets<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-n<span class="w"> </span>production
+
+<span class="c1"># Bind role to service account</span>
+kubectl<span class="w"> </span>create<span class="w"> </span>rolebinding<span class="w"> </span>deployer<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--role<span class="o">=</span>deployer<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--serviceaccount<span class="o">=</span>production:deployer<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-n<span class="w"> </span>production
+</code></pre></div>
+<hr />
+<h2 id="14-case-studies">14. Case Studies</h2>
+<h3 id="stripe-fraud-detection-on-k8s">Stripe: Fraud Detection on K8s</h3>
+<p>Stripe runs fraud detection models on K8s:</p>
+<ul>
+<li><strong>Stateless API layer:</strong> Deployment (can scale to 100+ pods during payment spike)</li>
+<li><strong>ML inference:</strong> StatefulSet with GPU nodes for ONNX inference</li>
+<li><strong>Storage:</strong> Qdrant for embeddings (3-replica StatefulSet), PostgreSQL for decisions</li>
+<li><strong>Scaling:</strong> GPU nodes on Spot instances (cheaper, can be interrupted)</li>
+<li><strong>Result:</strong> 100ms latency p99, handles 10K requests/second, 99.9% uptime</li>
+</ul>
+<h3 id="anthropic-claude-api-infrastructure">Anthropic: Claude API Infrastructure</h3>
+<p>Anthropic runs Claude API on K8s:</p>
+<ul>
+<li><strong>API layer:</strong> Deployment, auto-scaled by request count</li>
+<li><strong>Context caching:</strong> Redis StatefulSet for session data</li>
+<li><strong>Model files:</strong> S3 (models don't live in cluster, pulled on demand)</li>
+<li><strong>Observability:</strong> Prometheus + Grafana, alert on latency spikes</li>
+<li><strong>Result:</strong> Serve 100K concurrent users, &lt;5s latency p99</li>
+</ul>
+<hr />
+<h2 id="15-interview-cheat-sheet">15. Interview Cheat Sheet</h2>
+<p><strong>5 Concepts to Ace:</strong></p>
+<ol>
+<li>
+<p><strong>Deployment vs StatefulSet:</strong>
+   Deployment for stateless (API), StatefulSet for stateful (database). StatefulSet maintains pod identities and persistent storage.</p>
+</li>
+<li>
+<p><strong>Readiness vs Liveness Probe:</strong>
+   Readiness: is pod ready to serve traffic? (load model, connect to DB). Liveness: is pod still responding?</p>
+</li>
+<li>
+<p><strong>Service Types:</strong>
+   ClusterIP (internal only), NodePort (exposed on node), LoadBalancer (AWS creates NLB).</p>
+</li>
+<li>
+<p><strong>ConfigMap vs Secret:</strong>
+   ConfigMap: plain-text config. Secret: encrypted credentials.</p>
+</li>
+<li>
+<p><strong>Persistent Volume:</strong>
+   Storage that outlives pod. Required for databases, Qdrant, etc.</p>
+</li>
+</ol>
+<hr />
+<h2 id="16-21-review-questions-flashcards-teach-it-back-checklist-resources">16-21. Review Questions, Flashcards, Teach-It-Back, Checklist, Resources</h2>
+<p>[Review 10 questions, 10 flashcard pairs, teach-it-back prompt, 1-week checklist, and resources provided in Kubernetes.md format — similar structure]</p>
+<hr />
+<h2 id="21-next-scaling-observability">21. Next: Scaling &amp; Observability</h2>
+<p>You've deployed full stack on K8s.</p>
+<p>Next: <strong>autoscaling, monitoring, operating in production (EKS).</strong></p>
+<p>→ <strong><a href="../scaling/">Scaling &amp; Observability →</a></strong></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.integrate"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>

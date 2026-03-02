@@ -1,0 +1,3045 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive 6-phase learning roadmap from Python foundations to production ML systems">
+      
+      
+        <meta name="author" content="AI Engineering Community">
+      
+      
+      
+        <link rel="prev" href="../llm-apis/">
+      
+      
+        <link rel="next" href="../rag/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>Embeddings & Vector Search - AI Full Stack Engineer Roadmap</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#embeddings-vector-search" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-header__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Full Stack Engineer Roadmap
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Embeddings & Vector Search
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        
+  
+    
+  
+  Setup Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase0/overview/" class="md-tabs__link">
+          
+  
+  Phase 0 — Foundation Warmup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  Phase 1 — AI Systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase2/overview/" class="md-tabs__link">
+          
+  
+  Phase 2 — Docker & Cloud
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase3/overview/" class="md-tabs__link">
+          
+  
+  Phase 3 — MLOps Tooling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase4/overview/" class="md-tabs__link">
+          
+  
+  Phase 4 — Scaling & Kubernetes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase5/overview/" class="md-tabs__link">
+          
+  
+  Phase 5 — Portfolio & Job Readiness
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../appendix/math-lite/" class="md-tabs__link">
+          
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-nav__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    AI Full Stack Engineer Roadmap
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 0 — Foundation Warmup
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 0 — Foundation Warmup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Mastery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/fastapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI Deep Dive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/databases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Databases (SQL + NoSQL + Redis)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux & Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 0 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 1 — AI Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 1 — AI Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../llm-apis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM APIs & Prompt Engineering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Embeddings & Vector Search
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Embeddings & Vector Search
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-matters-in-production" class="md-nav__link">
+    Why This Matters in Production
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptual-explanation-meaning-as-gps-coordinates" class="md-nav__link">
+    Conceptual Explanation: Meaning as GPS Coordinates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-examples-embeddings-in-production" class="md-nav__link">
+    Code Examples: Embeddings in Production
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Examples: Embeddings in Production">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openai-embeddings" class="md-nav__link">
+    OpenAI Embeddings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-embedding-with-semaphore-cost-optimization" class="md-nav__link">
+    Batch Embedding with Semaphore (Cost Optimization)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qdrant-vector-database" class="md-nav__link">
+    Qdrant Vector Database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semantic-caching-dont-re-embed-same-queries" class="md-nav__link">
+    Semantic Caching (Don't Re-embed Same Queries)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-source-embeddings-local-free" class="md-nav__link">
+    Open Source Embeddings (Local, Free)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-diagram" class="md-nav__link">
+    Architecture Diagram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-comparison-vector-databases" class="md-nav__link">
+    Tools Comparison: Vector Databases
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-framework" class="md-nav__link">
+    Decision Framework
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-tutorial-build-a-semantic-search-endpoint" class="md-nav__link">
+    Step-by-Step Tutorial: Build a Semantic Search Endpoint
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step Tutorial: Build a Semantic Search Endpoint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-setup-qdrant-locally" class="md-nav__link">
+    1. Setup Qdrant Locally
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-install-dependencies" class="md-nav__link">
+    2. Install Dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-create-index" class="md-nav__link">
+    3. Create Index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-fastapi-endpoint" class="md-nav__link">
+    4. FastAPI Endpoint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-test" class="md-nav__link">
+    5. Test
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-project-document-similarity-recommender" class="md-nav__link">
+    Practical Project: Document Similarity Recommender
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-playbook-10-embedding-errors" class="md-nav__link">
+    Debugging Playbook: 10 Embedding Errors
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging Playbook: 10 Embedding Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-invalidrequesterror-input-too-long-exceeds-token-limit" class="md-nav__link">
+    1. InvalidRequestError: Input too long (exceeds token limit)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-vectorerror-cosine-similarity-expects-float-vectors" class="md-nav__link">
+    2. VectorError: Cosine similarity expects float vectors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-query-too-slow-5-seconds" class="md-nav__link">
+    3. Query too slow (&gt;5 seconds)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-runtimeerror-cuda-memory-error" class="md-nav__link">
+    4. RuntimeError: CUDA memory error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ratelimiterror-too-many-requests" class="md-nav__link">
+    5. RateLimitError: Too many requests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-collections-dont-align-stored-1536-query-384-dimensions" class="md-nav__link">
+    6. Collections don't align: stored 1536, query 384 dimensions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-all-vectors-have-zero-similarity" class="md-nav__link">
+    7. All vectors have zero similarity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-missing-result-relevant-doc-not-in-top-10" class="md-nav__link">
+    8. Missing result (relevant doc not in top-10)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-memory-explosion-storing-1m-embeddings-on-cpu" class="md-nav__link">
+    9. Memory explosion: storing 1M embeddings on CPU
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-embedding-quality-degraded-after-re-indexing" class="md-nav__link">
+    10. Embedding quality degraded after re-indexing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-mistakes" class="md-nav__link">
+    Common Mistakes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-realism-tutorial-vs-production" class="md-nav__link">
+    Production Realism: Tutorial vs Production
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cost-performance-considerations" class="md-nav__link">
+    Cost &amp; Performance Considerations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    Security Considerations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-1-pinterest-recommendation-engine" class="md-nav__link">
+    Case Study 1: Pinterest Recommendation Engine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-2-chatgpt-code-search" class="md-nav__link">
+    Case Study 2: ChatGPT Code Search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interview-cheat-sheet" class="md-nav__link">
+    Interview Cheat Sheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-review-questions" class="md-nav__link">
+    10 Review Questions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flashcards" class="md-nav__link">
+    Flashcards
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teach-it-back-prompt" class="md-nav__link">
+    Teach-It-Back Prompt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-week-review-checklist" class="md-nav__link">
+    1-Week Review Checklist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-page" class="md-nav__link">
+    Next Page
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RAG Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Agents & Tool Use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fine-tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fine-Tuning (LoRA & PEFT)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluation & Benchmarking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security & Prompt Injection Defense
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cost-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cost & Performance Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 1 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 2 — Docker & Cloud
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 2 — Docker & Cloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose for AI Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Deployment (EC2 + S3 + ECS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/secrets-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secrets Management & Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 2 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 3 — MLOps Tooling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 3 — MLOps Tooling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/mlflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLflow Experiment Tracking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/dvc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DVC Data Versioning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/wandb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weights & Biases (W&B)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/cicd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI/CD for AI Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 3 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 4 — Scaling & Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 4 — Scaling & Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes Core Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/ai-on-k8s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying AI Services on K8s
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autoscaling & Observability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 4 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 5 — Portfolio & Job Readiness
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 5 — Portfolio & Job Readiness
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Portfolio Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/resume/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resume & LinkedIn Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/system-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI System Design Interviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/mock-interviews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mock Interview Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/salary-negotiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Salary & Negotiation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/math-lite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math-Lite Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/tooling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tooling & Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/study-planner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Study Planner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/project-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Showcase Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/whats-next/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What's Next (Post-Roadmap)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="embeddings-vector-search">Embeddings &amp; Vector Search</h1>
+<p>Text is words. Embeddings are numbers. Those numbers unlock semantic search.</p>
+<p>An embedding is a list of 1500 decimal numbers that captures the <em>meaning</em> of text. Similar text gets similar numbers. This lets you find documents by meaning, not keywords.</p>
+<p>This is the foundation of RAG, recommendation systems, and semantic similarity.</p>
+<hr />
+<h2 id="why-this-matters-in-production">Why This Matters in Production</h2>
+<p><strong>Real incident:</strong> E-commerce company added semantic search to their product catalog. Same day, latency spiked from 50ms to 5 seconds. Their embedding service was slow. They had no fallback. Sales dropped 20%.</p>
+<p><strong>Real incident 2:</strong> Startup built RAG system with free embedding model. When scaling to 100k documents, realized the model was too weak. Vectors correlated poorly with relevance. They paid $50k to re-embed everything.</p>
+<p>Why it matters:
+- <strong>Wrong embedding model = garbage search.</strong> All downstream systems (RAG, recommendations) fail silently.
+- <strong>Dimensional curse.</strong> Searching through 1M vectors takes forever without the right index. You need approximate nearest neighbors (ANN).
+- <strong>Cost surprises.</strong> Embedding 1M documents with OpenAI APIs: $500. If you re-embed: $1000. Budget this upfront.
+- <strong>Infrastructure complexity.</strong> Vector databases are different from PostgreSQL. Different indexing, different query language, different failure modes.</p>
+<hr />
+<h2 id="conceptual-explanation-meaning-as-gps-coordinates">Conceptual Explanation: Meaning as GPS Coordinates</h2>
+<p><strong>Analogy:</strong></p>
+<p>Imagine all possible meanings as neighborhoods in a giant city.</p>
+<ul>
+<li>"Dog" is a neighborhood at GPS: (40.7°N, 74.0°W)</li>
+<li>"Puppy" is nearby: (40.7°N, 74.0°W) ← slightly shifted</li>
+<li>"Cat" is across town: (51.5°N, 0.1°W) ← far away</li>
+<li>"Automobile" is in a different state entirely</li>
+</ul>
+<p>An embedding is these coordinates. Your vector database is a city map.</p>
+<p>When you search for "dog," you ask: "Which neighborhoods are closest to the dog neighborhood?"</p>
+<p>The database doesn't search alphabetically. It finds neighbors by distance.</p>
+<p><strong>Why this works:</strong> Meanings that are similar live close together. Your search finds them fast.</p>
+<p><strong>Cosine Similarity (Not Distance)</strong></p>
+<div class="highlight"><pre><span></span><code>Vector A: [0.1, 0.8, 0.2]
+Vector B: [0.15, 0.75, 0.25]
+
+Cosine similarity = angle between vectors
+Ranges 0 to 1 (0 = completely different, 1 = identical)
+
+NOT Euclidean distance (not &quot;shortest line between points&quot;)
+
+Why cosine? Because direction matters more than magnitude.
+&quot;Dog&quot; and &quot;HUGE DOG&quot; should be similar (different magnitude, same direction).
+Cosine similarity captures direction.
+</code></pre></div>
+<p><strong>Dimensions: 1536 Numbers per Text</strong></p>
+<div class="highlight"><pre><span></span><code>&quot;The quick brown fox&quot; = [0.123, 0.456, -0.789, ...(1533 more numbers)]
+
+1536 dimensions seems like overkill. It&#39;s not.
+
+Why so many? To capture *nuance*.
+
+&quot;Happy&quot; vs &quot;Joyful&quot; — very similar
+&quot;Dog&quot; vs &quot;Puppy&quot; — very similar
+&quot;Dog&quot; vs &quot;Cat&quot; — different
+
+With only 10 dimensions, you can&#39;t distinguish these. With 1536, you can.
+
+Trade-off: more dimensions = better quality but slower search.
+</code></pre></div>
+<p><strong>Approximate Nearest Neighbors (ANN)</strong></p>
+<p>Searching 1M vectors exactly = slow (O(n) time).</p>
+<p>ANN says: "Find approximately the closest vectors fast."</p>
+<p><strong>HNSW (Hierarchical Navigable Small World):</strong></p>
+<p>Imagine a highway system. You don't walk through every neighborhood. You jump on the highway, take exits closer to your destination.</p>
+<p>HNSW is a graph of shortcuts:
+- Entry layer: highways (sparse)
+- Middle layers: roads (medium density)
+- Bottom layer: walking paths (dense)</p>
+<p>Search jumps through layers instead of checking all vectors.</p>
+<p>99.9% recall, 100x faster than exact search. This is usually good enough.</p>
+<hr />
+<h2 id="code-examples-embeddings-in-production">Code Examples: Embeddings in Production</h2>
+<h3 id="openai-embeddings">OpenAI Embeddings</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">from</span> <span class="nn">openai</span> <span class="kn">import</span> <span class="n">AsyncOpenAI</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">AsyncOpenAI</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;OPENAI_API_KEY&quot;</span><span class="p">))</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">embed_text</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;text-embedding-3-small&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert text to embedding vector.&quot;&quot;&quot;</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">embeddings</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="nb">input</span><span class="o">=</span><span class="n">text</span><span class="p">,</span>
+        <span class="n">model</span><span class="o">=</span><span class="n">model</span>  <span class="c1"># 1536 dimensions</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">embedding</span>
+
+<span class="c1"># Usage</span>
+<span class="n">embedding</span> <span class="o">=</span> <span class="k">await</span> <span class="n">embed_text</span><span class="p">(</span><span class="s2">&quot;The quick brown fox&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Embedding shape: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">embedding</span><span class="p">)</span><span class="si">}</span><span class="s2"> dimensions&quot;</span><span class="p">)</span>
+<span class="c1"># Output: Embedding shape: 1536 dimensions</span>
+</code></pre></div>
+<h3 id="batch-embedding-with-semaphore-cost-optimization">Batch Embedding with Semaphore (Cost Optimization)</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">from</span> <span class="nn">openai</span> <span class="kn">import</span> <span class="n">AsyncOpenAI</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">batch_embed</span><span class="p">(</span><span class="n">texts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">max_concurrent</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Embed many texts concurrently without rate limit.&quot;&quot;&quot;</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">AsyncOpenAI</span><span class="p">()</span>
+    <span class="n">semaphore</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Semaphore</span><span class="p">(</span><span class="n">max_concurrent</span><span class="p">)</span>  <span class="c1"># Limit concurrent requests</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">embed_with_semaphore</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+        <span class="k">async</span> <span class="k">with</span> <span class="n">semaphore</span><span class="p">:</span>  <span class="c1"># Max 10 concurrent API calls</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">embeddings</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+                <span class="nb">input</span><span class="o">=</span><span class="n">text</span><span class="p">,</span>
+                <span class="n">model</span><span class="o">=</span><span class="s2">&quot;text-embedding-3-small&quot;</span>
+            <span class="p">)</span>
+            <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">embedding</span>
+
+    <span class="c1"># Gather all embeddings concurrently</span>
+    <span class="n">embeddings</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span>
+        <span class="o">*</span><span class="p">[</span><span class="n">embed_with_semaphore</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">texts</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">embeddings</span>
+
+<span class="c1"># Usage: embed 1000 documents in parallel (not sequentially!)</span>
+<span class="n">texts</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;doc1 content&quot;</span><span class="p">,</span> <span class="s2">&quot;doc2 content&quot;</span><span class="p">,</span> <span class="o">...</span><span class="p">(</span><span class="mi">1000</span> <span class="n">docs</span><span class="p">)]</span>
+<span class="n">embeddings</span> <span class="o">=</span> <span class="k">await</span> <span class="n">batch_embed</span><span class="p">(</span><span class="n">texts</span><span class="p">,</span> <span class="n">max_concurrent</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="qdrant-vector-database">Qdrant Vector Database</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">qdrant_client.async_client</span> <span class="kn">import</span> <span class="n">AsyncQdrantClient</span>
+<span class="kn">from</span> <span class="nn">qdrant_client.models</span> <span class="kn">import</span> <span class="n">PointStruct</span><span class="p">,</span> <span class="n">VectorParams</span><span class="p">,</span> <span class="n">Distance</span>
+<span class="kn">from</span> <span class="nn">openai</span> <span class="kn">import</span> <span class="n">AsyncOpenAI</span>
+<span class="kn">import</span> <span class="nn">uuid</span>
+
+<span class="n">qdrant_client</span> <span class="o">=</span> <span class="n">AsyncQdrantClient</span><span class="p">(</span><span class="s2">&quot;localhost:6333&quot;</span><span class="p">)</span>  <span class="c1"># localhost Qdrant</span>
+<span class="n">openai_client</span> <span class="o">=</span> <span class="n">AsyncOpenAI</span><span class="p">()</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">setup_collection</span><span class="p">(</span><span class="n">collection_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;documents&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a vector collection.&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">qdrant_client</span><span class="o">.</span><span class="n">create_collection</span><span class="p">(</span>
+            <span class="n">collection_name</span><span class="o">=</span><span class="n">collection_name</span><span class="p">,</span>
+            <span class="n">vectors_config</span><span class="o">=</span><span class="n">VectorParams</span><span class="p">(</span>
+                <span class="n">size</span><span class="o">=</span><span class="mi">1536</span><span class="p">,</span>  <span class="c1"># OpenAI embedding dimensions</span>
+                <span class="n">distance</span><span class="o">=</span><span class="n">Distance</span><span class="o">.</span><span class="n">COSINE</span>  <span class="c1"># Cosine similarity</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="k">pass</span>  <span class="c1"># Collection already exists</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">index_documents</span><span class="p">(</span><span class="n">docs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Embed documents and store in Qdrant.&quot;&quot;&quot;</span>
+    <span class="k">await</span> <span class="n">setup_collection</span><span class="p">(</span><span class="s2">&quot;documents&quot;</span><span class="p">)</span>
+
+    <span class="n">points</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">docs</span><span class="p">:</span>
+        <span class="c1"># 1. Embed the text</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">openai_client</span><span class="o">.</span><span class="n">embeddings</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+            <span class="nb">input</span><span class="o">=</span><span class="n">doc</span><span class="p">[</span><span class="s2">&quot;content&quot;</span><span class="p">],</span>
+            <span class="n">model</span><span class="o">=</span><span class="s2">&quot;text-embedding-3-small&quot;</span>
+        <span class="p">)</span>
+        <span class="n">embedding</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">embedding</span>
+
+        <span class="c1"># 2. Create point (vector + metadata)</span>
+        <span class="n">point</span> <span class="o">=</span> <span class="n">PointStruct</span><span class="p">(</span>
+            <span class="nb">id</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">()),</span>  <span class="c1"># Unique ID</span>
+            <span class="n">vector</span><span class="o">=</span><span class="n">embedding</span><span class="p">,</span>
+            <span class="n">payload</span><span class="o">=</span><span class="p">{</span>  <span class="c1"># Metadata (not searched, just returned)</span>
+                <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="n">doc</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">doc</span><span class="p">[</span><span class="s2">&quot;url&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">doc</span><span class="p">[</span><span class="s2">&quot;content&quot;</span><span class="p">][:</span><span class="mi">200</span><span class="p">]</span>  <span class="c1"># Snippet</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+        <span class="n">points</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+
+    <span class="c1"># 3. Upload all points at once</span>
+    <span class="k">await</span> <span class="n">qdrant_client</span><span class="o">.</span><span class="n">upsert</span><span class="p">(</span>
+        <span class="n">collection_name</span><span class="o">=</span><span class="s2">&quot;documents&quot;</span><span class="p">,</span>
+        <span class="n">points</span><span class="o">=</span><span class="n">points</span>
+    <span class="p">)</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">top_k</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Search for semantically similar documents.&quot;&quot;&quot;</span>
+    <span class="c1"># 1. Embed the query</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">openai_client</span><span class="o">.</span><span class="n">embeddings</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="nb">input</span><span class="o">=</span><span class="n">query</span><span class="p">,</span>
+        <span class="n">model</span><span class="o">=</span><span class="s2">&quot;text-embedding-3-small&quot;</span>
+    <span class="p">)</span>
+    <span class="n">query_embedding</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">embedding</span>
+
+    <span class="c1"># 2. Search in Qdrant</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="k">await</span> <span class="n">qdrant_client</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+        <span class="n">collection_name</span><span class="o">=</span><span class="s2">&quot;documents&quot;</span><span class="p">,</span>
+        <span class="n">query_vector</span><span class="o">=</span><span class="n">query_embedding</span><span class="p">,</span>
+        <span class="n">limit</span><span class="o">=</span><span class="n">top_k</span>  <span class="c1"># Return top 5 matches</span>
+    <span class="p">)</span>
+
+    <span class="c1"># 3. Return with scores</span>
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">payload</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;score&quot;</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">score</span><span class="p">,</span>  <span class="c1"># 0-1, higher = better match</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">payload</span><span class="p">[</span><span class="s2">&quot;url&quot;</span><span class="p">]</span>
+        <span class="p">}</span>
+        <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">results</span>
+    <span class="p">]</span>
+
+<span class="c1"># Usage</span>
+<span class="n">docs</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Python Guide&quot;</span><span class="p">,</span> <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;/python&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;Python is...&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Async Patterns&quot;</span><span class="p">,</span> <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;/async&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;Asyncio...&quot;</span><span class="p">}</span>
+<span class="p">]</span>
+<span class="k">await</span> <span class="n">index_documents</span><span class="p">(</span><span class="n">docs</span><span class="p">)</span>
+
+<span class="n">results</span> <span class="o">=</span> <span class="k">await</span> <span class="n">search</span><span class="p">(</span><span class="s2">&quot;asynchronous programming&quot;</span><span class="p">,</span> <span class="n">top_k</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+<span class="c1"># [</span>
+<span class="c1">#   {&quot;title&quot;: &quot;Async Patterns&quot;, &quot;score&quot;: 0.92, ...},</span>
+<span class="c1">#   {&quot;title&quot;: &quot;Python Guide&quot;, &quot;score&quot;: 0.81, ...}</span>
+<span class="c1"># ]</span>
+</code></pre></div>
+<h3 id="semantic-caching-dont-re-embed-same-queries">Semantic Caching (Don't Re-embed Same Queries)</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">redis</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.spatial.distance</span> <span class="kn">import</span> <span class="n">cosine</span>
+
+<span class="n">redis_client</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">Redis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">)</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">cached_embed</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">similarity_threshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.95</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return embedding, check cache for similar text first.&quot;&quot;&quot;</span>
+    <span class="c1"># 1. Get embedding</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">openai_client</span><span class="o">.</span><span class="n">embeddings</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="nb">input</span><span class="o">=</span><span class="n">text</span><span class="p">,</span>
+        <span class="n">model</span><span class="o">=</span><span class="s2">&quot;text-embedding-3-small&quot;</span>
+    <span class="p">)</span>
+    <span class="n">embedding</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">embedding</span>
+
+    <span class="c1"># 2. Hash the embedding to a cache key</span>
+    <span class="c1"># Actually, hash the text to be deterministic</span>
+    <span class="kn">import</span> <span class="nn">hashlib</span>
+    <span class="n">text_hash</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+    <span class="n">cache_key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;embedding:</span><span class="si">{</span><span class="n">text_hash</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="c1"># 3. Check if we&#39;ve seen similar text before</span>
+    <span class="n">cached_value</span> <span class="o">=</span> <span class="n">redis_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cache_key</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">cached_value</span><span class="p">:</span>
+        <span class="c1"># Found in cache, return immediately</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cache hit!&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">cached_value</span><span class="p">)</span>
+
+    <span class="c1"># 4. Not in cache, store it</span>
+    <span class="n">redis_client</span><span class="o">.</span><span class="n">setex</span><span class="p">(</span>
+        <span class="n">cache_key</span><span class="p">,</span>
+        <span class="mi">86400</span><span class="p">,</span>  <span class="c1"># 24 hour TTL</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">embedding</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">embedding</span>
+</code></pre></div>
+<h3 id="open-source-embeddings-local-free">Open Source Embeddings (Local, Free)</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sentence_transformers</span> <span class="kn">import</span> <span class="n">SentenceTransformer</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+
+<span class="c1"># Download once, use offline (free, no API costs)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">SentenceTransformer</span><span class="p">(</span><span class="s2">&quot;all-MiniLM-L6-v2&quot;</span><span class="p">)</span>  <span class="c1"># 384 dimensions, super fast</span>
+
+<span class="k">def</span> <span class="nf">embed_local</span><span class="p">(</span><span class="n">texts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Embed using local model (no API call).&quot;&quot;&quot;</span>
+    <span class="n">embeddings</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">texts</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">embeddings</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+<span class="c1"># Usage</span>
+<span class="n">texts</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;The quick brown fox&quot;</span><span class="p">,</span> <span class="s2">&quot;A fast animal&quot;</span><span class="p">]</span>
+<span class="n">embeddings</span> <span class="o">=</span> <span class="n">embed_local</span><span class="p">(</span><span class="n">texts</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Embedding dimensions: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">embeddings</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># 384</span>
+
+<span class="c1"># Cost: $0 (runs on your hardware)</span>
+<span class="c1"># Speed: 50ms for 100 texts (much faster than API)</span>
+<span class="c1"># Trade-off: lower quality than OpenAI embeddings</span>
+</code></pre></div>
+<hr />
+<h2 id="architecture-diagram">Architecture Diagram</h2>
+<pre class="mermaid"><code>graph LR
+    A["Input Text"] --&gt;|"Tokenize"| B["Token IDs"]
+    B --&gt;|"Neural Network"| C["1536 Floats"]
+    C --&gt;|"Normalize"| D["Unit Vector"]
+    D --&gt;|"Store"| E["Vector Database"]
+    F["Query Text"] --&gt;|"Same Process"| G["Query Vector"]
+    G --&gt;|"HNSW Graph"| E
+    E --&gt;|"Top-K Similar"| H["Results + Scores"]</code></pre>
+<hr />
+<h2 id="tools-comparison-vector-databases">Tools Comparison: Vector Databases</h2>
+<table>
+<thead>
+<tr>
+<th>Database</th>
+<th>Deployment</th>
+<th>Filtering</th>
+<th>Scale</th>
+<th>Cost</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Qdrant</strong></td>
+<td>Self-hosted or cloud</td>
+<td>Yes (metadata)</td>
+<td>1B+ vectors</td>
+<td>Free (self)</td>
+<td>Startups, fine-grained filtering</td>
+</tr>
+<tr>
+<td><strong>Pinecone</strong></td>
+<td>Cloud only</td>
+<td>Yes</td>
+<td>1B+ vectors</td>
+<td>$0.25/1M vectors/month</td>
+<td>Quick launch, managed ops</td>
+</tr>
+<tr>
+<td><strong>Weaviate</strong></td>
+<td>Self-hosted or cloud</td>
+<td>Yes</td>
+<td>1B+ vectors</td>
+<td>Free (self)</td>
+<td>GraphQL, complex queries</td>
+</tr>
+<tr>
+<td><strong>pgvector</strong></td>
+<td>PostgreSQL extension</td>
+<td>Yes (SQL)</td>
+<td>10M vectors (practical)</td>
+<td>Free</td>
+<td>Existing Postgres users</td>
+</tr>
+<tr>
+<td><strong>Milvus</strong></td>
+<td>Self-hosted</td>
+<td>Yes</td>
+<td>100B+ vectors</td>
+<td>Free</td>
+<td>Massive scale, academic</td>
+</tr>
+<tr>
+<td><strong>Chroma</strong></td>
+<td>Self-hosted</td>
+<td>Limited</td>
+<td>1M vectors</td>
+<td>Free</td>
+<td>Development, small scale</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Decision:</strong>
+- <strong>Starting out:</strong> pgvector (use existing PostgreSQL) or Qdrant (simplest)
+- <strong>Production at scale:</strong> Qdrant or Pinecone (managed, reliable)
+- <strong>Cost sensitive:</strong> pgvector or Milvus (free)
+- <strong>Complex queries:</strong> Weaviate (GraphQL support)</p>
+<hr />
+<h2 id="decision-framework">Decision Framework</h2>
+<p><strong>OpenAI vs sentence-transformers?</strong></p>
+<div class="highlight"><pre><span></span><code>Is cost critical?
+  ├─ YES: sentence-transformers (free)
+  └─ NO: Continue...
+
+Do you need state-of-the-art quality?
+  ├─ YES: OpenAI text-embedding-3-large
+  └─ NO: OpenAI text-embedding-3-small
+
+Is latency &lt;100ms required?
+  ├─ YES: Self-host (sentence-transformers)
+  └─ NO: OpenAI API is fine
+</code></pre></div>
+<p><strong>Which vector database?</strong></p>
+<div class="highlight"><pre><span></span><code>Existing PostgreSQL?
+  ├─ YES: pgvector
+  └─ NO: Continue...
+
+Need managed + simple?
+  ├─ YES: Pinecone
+  └─ NO: Continue...
+
+Want free + self-hosted?
+  ├─ YES: Qdrant or Milvus
+  └─ NO: Your preference
+</code></pre></div>
+<hr />
+<h2 id="step-by-step-tutorial-build-a-semantic-search-endpoint">Step-by-Step Tutorial: Build a Semantic Search Endpoint</h2>
+<h3 id="1-setup-qdrant-locally">1. Setup Qdrant Locally</h3>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">6333</span>:6333<span class="w"> </span>qdrant/qdrant:latest
+</code></pre></div>
+<h3 id="2-install-dependencies">2. Install Dependencies</h3>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>qdrant-client<span class="w"> </span>openai<span class="w"> </span>sentence-transformers
+</code></pre></div>
+<h3 id="3-create-index">3. Create Index</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># src/services/embeddings.py</span>
+<span class="kn">from</span> <span class="nn">qdrant_client.async_client</span> <span class="kn">import</span> <span class="n">AsyncQdrantClient</span>
+<span class="kn">from</span> <span class="nn">qdrant_client.models</span> <span class="kn">import</span> <span class="n">PointStruct</span><span class="p">,</span> <span class="n">VectorParams</span><span class="p">,</span> <span class="n">Distance</span>
+<span class="kn">from</span> <span class="nn">openai</span> <span class="kn">import</span> <span class="n">AsyncOpenAI</span>
+<span class="kn">import</span> <span class="nn">uuid</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">initialize_qdrant</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Setup Qdrant collection.&quot;&quot;&quot;</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">AsyncQdrantClient</span><span class="p">(</span><span class="s2">&quot;http://localhost:6333&quot;</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">create_collection</span><span class="p">(</span>
+            <span class="n">collection_name</span><span class="o">=</span><span class="s2">&quot;documents&quot;</span><span class="p">,</span>
+            <span class="n">vectors_config</span><span class="o">=</span><span class="n">VectorParams</span><span class="p">(</span>
+                <span class="n">size</span><span class="o">=</span><span class="mi">1536</span><span class="p">,</span>
+                <span class="n">distance</span><span class="o">=</span><span class="n">Distance</span><span class="o">.</span><span class="n">COSINE</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="k">pass</span>  <span class="c1"># Already exists</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">index_documents</span><span class="p">(</span><span class="n">documents</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">]):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Embed and store documents.&quot;&quot;&quot;</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">AsyncQdrantClient</span><span class="p">(</span><span class="s2">&quot;http://localhost:6333&quot;</span><span class="p">)</span>
+    <span class="n">openai_client</span> <span class="o">=</span> <span class="n">AsyncOpenAI</span><span class="p">()</span>
+
+    <span class="n">points</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">documents</span><span class="p">:</span>
+        <span class="c1"># Embed</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">openai_client</span><span class="o">.</span><span class="n">embeddings</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+            <span class="nb">input</span><span class="o">=</span><span class="n">doc</span><span class="p">[</span><span class="s2">&quot;content&quot;</span><span class="p">],</span>
+            <span class="n">model</span><span class="o">=</span><span class="s2">&quot;text-embedding-3-small&quot;</span>
+        <span class="p">)</span>
+        <span class="n">embedding</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">embedding</span>
+
+        <span class="c1"># Create point</span>
+        <span class="n">point</span> <span class="o">=</span> <span class="n">PointStruct</span><span class="p">(</span>
+            <span class="nb">id</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">()),</span>
+            <span class="n">vector</span><span class="o">=</span><span class="n">embedding</span><span class="p">,</span>
+            <span class="n">payload</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="n">doc</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">doc</span><span class="p">[</span><span class="s2">&quot;content&quot;</span><span class="p">]}</span>
+        <span class="p">)</span>
+        <span class="n">points</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+
+    <span class="c1"># Batch upload</span>
+    <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">upsert</span><span class="p">(</span>
+        <span class="n">collection_name</span><span class="o">=</span><span class="s2">&quot;documents&quot;</span><span class="p">,</span>
+        <span class="n">points</span><span class="o">=</span><span class="n">points</span><span class="p">,</span>
+        <span class="n">batch_size</span><span class="o">=</span><span class="mi">100</span>  <span class="c1"># Upload in batches for memory efficiency</span>
+    <span class="p">)</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">semantic_search</span><span class="p">(</span><span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">top_k</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Search by meaning.&quot;&quot;&quot;</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">AsyncQdrantClient</span><span class="p">(</span><span class="s2">&quot;http://localhost:6333&quot;</span><span class="p">)</span>
+    <span class="n">openai_client</span> <span class="o">=</span> <span class="n">AsyncOpenAI</span><span class="p">()</span>
+
+    <span class="c1"># Embed query</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">openai_client</span><span class="o">.</span><span class="n">embeddings</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="nb">input</span><span class="o">=</span><span class="n">query</span><span class="p">,</span>
+        <span class="n">model</span><span class="o">=</span><span class="s2">&quot;text-embedding-3-small&quot;</span>
+    <span class="p">)</span>
+    <span class="n">query_vector</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">embedding</span>
+
+    <span class="c1"># Search</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+        <span class="n">collection_name</span><span class="o">=</span><span class="s2">&quot;documents&quot;</span><span class="p">,</span>
+        <span class="n">query_vector</span><span class="o">=</span><span class="n">query_vector</span><span class="p">,</span>
+        <span class="n">limit</span><span class="o">=</span><span class="n">top_k</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">payload</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="s2">&quot;score&quot;</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">score</span><span class="p">}</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">results</span>
+    <span class="p">]</span>
+</code></pre></div>
+<h3 id="4-fastapi-endpoint">4. FastAPI Endpoint</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">APIRouter</span>
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+
+<span class="n">router</span> <span class="o">=</span> <span class="n">APIRouter</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">SearchRequest</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">query</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">top_k</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="nd">@router</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/search&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">SearchRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Search endpoint.&quot;&quot;&quot;</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="k">await</span> <span class="n">semantic_search</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">query</span><span class="p">,</span> <span class="n">request</span><span class="o">.</span><span class="n">top_k</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">results</span>
+</code></pre></div>
+<h3 id="5-test">5. Test</h3>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8000/search<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;query&quot;: &quot;async programming&quot;, &quot;top_k&quot;: 3}&#39;</span>
+</code></pre></div>
+<hr />
+<h2 id="practical-project-document-similarity-recommender">Practical Project: Document Similarity Recommender</h2>
+<p><strong>Problem:</strong> Given user's current document, find similar ones (recommendation engine).</p>
+<p><strong>Features:</strong>
+- Upload documents, auto-embed them
+- Find similar docs by semantic meaning
+- Filter by category, date (metadata)
+- Track which embeddings are cached to avoid re-embedding</p>
+<p><strong>API:</strong>
+<div class="highlight"><pre><span></span><code>POST /documents/upload
+  Upload doc, auto-embed, store in Qdrant
+
+GET /documents/{doc_id}/similar
+  Return top-10 similar docs with scores
+
+DELETE /documents/{doc_id}
+  Remove from Qdrant and database
+</code></pre></div></p>
+<p><strong>Requirements:</strong>
+- Batch embed 1000 documents (use asyncio.gather with Semaphore)
+- Cache embeddings in Redis to avoid re-processing
+- Support both OpenAI and sentence-transformers
+- Measure latency for each search (p95 &lt; 200ms)</p>
+<hr />
+<h2 id="debugging-playbook-10-embedding-errors">Debugging Playbook: 10 Embedding Errors</h2>
+<h3 id="1-invalidrequesterror-input-too-long-exceeds-token-limit">1. <code>InvalidRequestError: Input too long (exceeds token limit)</code></h3>
+<p><strong>Symptom:</strong> Some documents can't be embedded.</p>
+<p><strong>Explanation:</strong> OpenAI embedding has 8191 token limit. Long documents exceed it.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">chunk_for_embedding</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">max_tokens</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8000</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Split long text into chunks for embedding.&quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">tiktoken</span>
+    <span class="n">encoding</span> <span class="o">=</span> <span class="n">tiktoken</span><span class="o">.</span><span class="n">encoding_for_model</span><span class="p">(</span><span class="s2">&quot;text-embedding-3-small&quot;</span><span class="p">)</span>
+
+    <span class="n">tokens</span> <span class="o">=</span> <span class="n">encoding</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">chunks</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">),</span> <span class="n">max_tokens</span><span class="p">):</span>
+        <span class="n">chunk_tokens</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">max_tokens</span><span class="p">]</span>
+        <span class="n">chunk_text</span> <span class="o">=</span> <span class="n">encoding</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">chunk_tokens</span><span class="p">)</span>
+        <span class="n">chunks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">chunk_text</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">chunks</span>
+</code></pre></div></p>
+<h3 id="2-vectorerror-cosine-similarity-expects-float-vectors">2. <code>VectorError: Cosine similarity expects float vectors</code></h3>
+<p><strong>Symptom:</strong> Wrong data type passed to Qdrant.</p>
+<p><strong>Explanation:</strong> Embeddings must be float32, not list of objects.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">embedding</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">embedding</span>
+<span class="n">embedding</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">embedding</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</code></pre></div></p>
+<h3 id="3-query-too-slow-5-seconds">3. <code>Query too slow (&gt;5 seconds)</code></h3>
+<p><strong>Symptom:</strong> Semantic search is slow.</p>
+<p><strong>Explanation:</strong> No index. HNSW not trained. Too many dimensions.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># In Qdrant, explicitly create index and wait for it</span>
+<span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">create_payload_index</span><span class="p">(</span>
+    <span class="n">collection_name</span><span class="o">=</span><span class="s2">&quot;documents&quot;</span><span class="p">,</span>
+    <span class="n">field_name</span><span class="o">=</span><span class="s2">&quot;timestamp&quot;</span><span class="p">,</span>
+    <span class="n">field_type</span><span class="o">=</span><span class="s2">&quot;integer&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># Or reduce dimensions (quantization)</span>
+<span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">create_collection</span><span class="p">(</span>
+    <span class="n">vectors_config</span><span class="o">=</span><span class="n">VectorParams</span><span class="p">(</span>
+        <span class="n">size</span><span class="o">=</span><span class="mi">384</span><span class="p">,</span>  <span class="c1"># Smaller vectors = faster search</span>
+        <span class="n">distance</span><span class="o">=</span><span class="n">Distance</span><span class="o">.</span><span class="n">COSINE</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div></p>
+<h3 id="4-runtimeerror-cuda-memory-error">4. <code>RuntimeError: CUDA memory error</code></h3>
+<p><strong>Symptom:</strong> Self-hosted sentence-transformers crashes with large batches.</p>
+<p><strong>Explanation:</strong> GPU out of memory.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">texts</span><span class="p">,</span>
+    <span class="n">batch_size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>  <span class="c1"># Reduce batch size</span>
+    <span class="n">device</span><span class="o">=</span><span class="s2">&quot;cpu&quot;</span>   <span class="c1"># Use CPU instead of GPU, slower but works</span>
+<span class="p">)</span>
+</code></pre></div></p>
+<h3 id="5-ratelimiterror-too-many-requests">5. <code>RateLimitError: Too many requests</code></h3>
+<p><strong>Symptom:</strong> OpenAI embedding API throttles you.</p>
+<p><strong>Explanation:</strong> You're calling API too fast (&gt;10k requests/minute).</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Use Semaphore to limit concurrent calls</span>
+<span class="n">semaphore</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Semaphore</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># Max 5 concurrent</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">controlled_embed</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="k">async</span> <span class="k">with</span> <span class="n">semaphore</span><span class="p">:</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">embeddings</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</code></pre></div></p>
+<h3 id="6-collections-dont-align-stored-1536-query-384-dimensions">6. <code>Collections don't align: stored 1536, query 384 dimensions</code></h3>
+<p><strong>Symptom:</strong> Embedding dimension mismatch.</p>
+<p><strong>Explanation:</strong> You changed embedding models but re-used old collection.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Delete and recreate collection with correct dimensions</span>
+<span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">delete_collection</span><span class="p">(</span><span class="s2">&quot;documents&quot;</span><span class="p">)</span>
+<span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">create_collection</span><span class="p">(</span>
+    <span class="n">collection_name</span><span class="o">=</span><span class="s2">&quot;documents&quot;</span><span class="p">,</span>
+    <span class="n">vectors_config</span><span class="o">=</span><span class="n">VectorParams</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">384</span><span class="p">,</span> <span class="n">distance</span><span class="o">=</span><span class="n">Distance</span><span class="o">.</span><span class="n">COSINE</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div></p>
+<h3 id="7-all-vectors-have-zero-similarity">7. <code>All vectors have zero similarity</code></h3>
+<p><strong>Symptom:</strong> Search returns everything with score ~0.5.</p>
+<p><strong>Explanation:</strong> Vectors are all orthogonal (uncorrelated). Wrong model or bad preprocessing.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Ensure you&#39;re normalizing vectors</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">embedding</span><span class="p">)</span>
+<span class="n">normalized</span> <span class="o">=</span> <span class="n">vector</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span>
+
+<span class="c1"># OR use unit vectors from embedding API automatically</span>
+</code></pre></div></p>
+<h3 id="8-missing-result-relevant-doc-not-in-top-10">8. <code>Missing result (relevant doc not in top-10)</code></h3>
+<p><strong>Symptom:</strong> Document should rank high but doesn't.</p>
+<p><strong>Explanation:</strong> Bad chunking. Query → embedding mismatch. Low-quality model.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Debug: manually check similarity</span>
+<span class="kn">from</span> <span class="nn">scipy.spatial.distance</span> <span class="kn">import</span> <span class="n">cosine</span>
+
+<span class="n">doc_embedding</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">query_embedding</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">similarity</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">cosine</span><span class="p">(</span><span class="n">doc_embedding</span><span class="p">,</span> <span class="n">query_embedding</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Similarity: </span><span class="si">{</span><span class="n">similarity</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Should be &gt; 0.7 if relevant</span>
+
+<span class="c1"># If low, either chunking is bad or model is weak</span>
+</code></pre></div></p>
+<h3 id="9-memory-explosion-storing-1m-embeddings-on-cpu">9. <code>Memory explosion: storing 1M embeddings on CPU</code></h3>
+<p><strong>Symptom:</strong> RAM usage is 50GB+.</p>
+<p><strong>Explanation:</strong> Holding all embeddings in memory. Should use database.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Stream embeddings, don&#39;t hold in memory</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">batch_embed_to_qdrant</span><span class="p">(</span><span class="n">documents</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">documents</span><span class="p">),</span> <span class="n">batch_size</span><span class="p">):</span>
+        <span class="n">batch</span> <span class="o">=</span> <span class="n">documents</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">batch_size</span><span class="p">]</span>
+        <span class="n">embeddings</span> <span class="o">=</span> <span class="k">await</span> <span class="n">batch_embed</span><span class="p">(</span><span class="n">batch</span><span class="p">)</span>
+        <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">upsert</span><span class="p">(</span><span class="n">collection</span><span class="p">,</span> <span class="n">points</span><span class="p">)</span>  <span class="c1"># Write to DB, don&#39;t keep in RAM</span>
+</code></pre></div></p>
+<h3 id="10-embedding-quality-degraded-after-re-indexing">10. <code>Embedding quality degraded after re-indexing</code></h3>
+<p><strong>Symptom:</strong> Same query now returns worse results.</p>
+<p><strong>Explanation:</strong> You changed embedding model but re-used old vectors.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Track model version in metadata</span>
+<span class="n">point</span> <span class="o">=</span> <span class="n">PointStruct</span><span class="p">(</span>
+    <span class="o">...</span><span class="p">,</span>
+    <span class="n">payload</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;model_version&quot;</span><span class="p">:</span> <span class="s2">&quot;text-embedding-3-small-v1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;embedding_date&quot;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="c1"># If model changes, migrate:</span>
+<span class="k">for</span> <span class="n">old_point</span> <span class="ow">in</span> <span class="n">old_collection</span><span class="p">:</span>
+    <span class="n">new_embedding</span> <span class="o">=</span> <span class="k">await</span> <span class="n">embed</span><span class="p">(</span><span class="n">old_point</span><span class="o">.</span><span class="n">payload</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">],</span> <span class="n">new_model</span><span class="p">)</span>
+    <span class="n">new_point</span> <span class="o">=</span> <span class="n">PointStruct</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">vector</span><span class="o">=</span><span class="n">new_embedding</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">new_collection</span><span class="o">.</span><span class="n">upsert</span><span class="p">(</span><span class="n">new_point</span><span class="p">)</span>
+</code></pre></div></p>
+<hr />
+<h2 id="common-mistakes">Common Mistakes</h2>
+<div class="admonition danger">
+<p class="admonition-title">Mistake 1: Embedding Everything at Query Time</p>
+</div>
+<p>You embed the user's query live. At scale (100+ QPS), API costs explode.</p>
+<p><strong>Don't:</strong> Embed query per request.
+<strong>Do:</strong> Cache embeddings. If similar query exists, reuse.</p>
+<div class="admonition danger">
+<p class="admonition-title">Mistake 2: No Metadata Filtering</p>
+</div>
+<p>You stored 1M embeddings but want to search only "recent docs". You get all 1M, then filter memory. Slow.</p>
+<p><strong>Don't:</strong> Filter results in code.
+<strong>Do:</strong> Use vector DB filtering:
+<div class="highlight"><pre><span></span><code><span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+    <span class="n">query_vector</span><span class="o">=</span><span class="n">query_embedding</span><span class="p">,</span>
+    <span class="n">query_filter</span><span class="o">=</span><span class="n">Filter</span><span class="p">(</span>
+        <span class="n">must</span><span class="o">=</span><span class="p">[</span>
+            <span class="n">FieldCondition</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;gte&quot;</span><span class="p">:</span> <span class="s2">&quot;2024-01-01&quot;</span><span class="p">})</span>
+        <span class="p">]</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div></p>
+<div class="admonition danger">
+<p class="admonition-title">Mistake 3: Storing Embeddings as Strings</p>
+</div>
+<p>You JSON-encode embedding as string. Searching requires parsing every embedding. N+1 search.</p>
+<p><strong>Don't:</strong> <code>json.dumps(embedding)</code> in database.
+<strong>Do:</strong> Use vector database (Qdrant, Pinecone). Native vector storage.</p>
+<div class="admonition danger">
+<p class="admonition-title">Mistake 4: Not Deduplicating</p>
+</div>
+<p>Same document embedded twice = two vectors in database = wasted space and slower search.</p>
+<p><strong>Don't:</strong> Blindly re-index documents.
+<strong>Do:</strong> Check if document already indexed by content hash:
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">hashlib</span>
+<span class="n">doc_hash</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">doc_hash</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
+    <span class="n">embed_and_store</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+    <span class="n">seen</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">doc_hash</span><span class="p">)</span>
+</code></pre></div></p>
+<div class="admonition danger">
+<p class="admonition-title">Mistake 5: Using Euclidean Distance Instead of Cosine</p>
+</div>
+<p>They're different. Euclidean distance cares about magnitude (longer text = larger vector). Cosine only cares about direction.</p>
+<p><strong>Don't:</strong> Default distance metric.
+<strong>Do:</strong> Use cosine similarity for embeddings.</p>
+<hr />
+<h2 id="production-realism-tutorial-vs-production">Production Realism: Tutorial vs Production</h2>
+<p><strong>Tutorial Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">embeddings</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">texts</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">search_simple</span><span class="p">(</span><span class="n">query_embedding</span><span class="p">,</span> <span class="n">embeddings</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</code></pre></div></p>
+<p><strong>Production Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">hashlib</span>
+<span class="kn">import</span> <span class="nn">redis</span>
+<span class="kn">from</span> <span class="nn">qdrant_client.async_client</span> <span class="kn">import</span> <span class="n">AsyncQdrantClient</span>
+
+<span class="k">class</span> <span class="nc">SemanticSearch</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">Redis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">qdrant</span> <span class="o">=</span> <span class="n">AsyncQdrantClient</span><span class="p">(</span><span class="s2">&quot;http://localhost:6333&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">openai_client</span> <span class="o">=</span> <span class="n">AsyncOpenAI</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">embedding_cache</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># In-memory cache for speed</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">top_k</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
+        <span class="c1"># 1. Check cache (avoid duplicate API calls)</span>
+        <span class="n">query_hash</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="n">query</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+        <span class="n">cache_key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;search:</span><span class="si">{</span><span class="n">query_hash</span><span class="si">}</span><span class="s2">&quot;</span>
+
+        <span class="n">cached</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cache_key</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cached</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">cached</span><span class="p">)</span>
+
+        <span class="c1"># 2. Estimate cost before embedding</span>
+        <span class="n">prompt_tokens</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">query</span><span class="o">.</span><span class="n">split</span><span class="p">())</span> <span class="o">*</span> <span class="mf">1.3</span>  <span class="c1"># Rough estimate</span>
+        <span class="n">estimated_cost</span> <span class="o">=</span> <span class="p">(</span><span class="n">prompt_tokens</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.00015</span>  <span class="c1"># OpenAI pricing</span>
+
+        <span class="k">if</span> <span class="n">estimated_cost</span> <span class="o">&gt;</span> <span class="mf">0.001</span><span class="p">:</span>  <span class="c1"># Sanity check</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Search cost estimate: $</span><span class="si">{</span><span class="n">estimated_cost</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="c1"># 3. Embed with retry</span>
+        <span class="n">embedding</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_embed_with_retry</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+
+        <span class="c1"># 4. Search with timeout</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">results</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">wait_for</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">qdrant</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+                    <span class="n">collection_name</span><span class="o">=</span><span class="s2">&quot;documents&quot;</span><span class="p">,</span>
+                    <span class="n">query_vector</span><span class="o">=</span><span class="n">embedding</span><span class="p">,</span>
+                    <span class="n">limit</span><span class="o">=</span><span class="n">top_k</span>
+                <span class="p">),</span>
+                <span class="n">timeout</span><span class="o">=</span><span class="mf">5.0</span>
+            <span class="p">)</span>
+        <span class="k">except</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">TimeoutError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;Search timeout&quot;</span><span class="p">,</span> <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="n">query</span><span class="p">}</span>
+
+        <span class="c1"># 5. Format results</span>
+        <span class="n">formatted</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">payload</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">),</span>
+                <span class="s2">&quot;score&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">score</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+                <span class="s2">&quot;relevance&quot;</span><span class="p">:</span> <span class="s2">&quot;high&quot;</span> <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">score</span> <span class="o">&gt;</span> <span class="mf">0.8</span> <span class="k">else</span> <span class="s2">&quot;medium&quot;</span>
+            <span class="p">}</span>
+            <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">results</span>
+        <span class="p">]</span>
+
+        <span class="c1"># 6. Cache for 24 hours</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">setex</span><span class="p">(</span><span class="n">cache_key</span><span class="p">,</span> <span class="mi">86400</span><span class="p">,</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">formatted</span><span class="p">))</span>
+
+        <span class="c1"># 7. Log metrics</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;semantic_search&quot;</span><span class="p">,</span>
+            <span class="n">query_length</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">query</span><span class="p">),</span>
+            <span class="n">results</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">formatted</span><span class="p">),</span>
+            <span class="n">top_score</span><span class="o">=</span><span class="n">formatted</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;score&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="n">formatted</span> <span class="k">else</span> <span class="mi">0</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">formatted</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">_embed_with_retry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">max_retries</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Embed with exponential backoff.&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_retries</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">openai_client</span><span class="o">.</span><span class="n">embeddings</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+                    <span class="nb">input</span><span class="o">=</span><span class="n">text</span><span class="p">,</span>
+                    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;text-embedding-3-small&quot;</span>
+                <span class="p">)</span>
+                <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">embedding</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">attempt</span> <span class="o">==</span> <span class="n">max_retries</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="k">raise</span>
+                <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">attempt</span><span class="p">)</span>
+</code></pre></div></p>
+<hr />
+<h2 id="cost-performance-considerations">Cost &amp; Performance Considerations</h2>
+<p><strong>Embedding Model Costs:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Cost/1M</th>
+<th>Dimensions</th>
+<th>Quality</th>
+<th>Latency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OpenAI text-embedding-3-small</td>
+<td>$0.02</td>
+<td>1536</td>
+<td>High</td>
+<td>200ms</td>
+</tr>
+<tr>
+<td>OpenAI text-embedding-3-large</td>
+<td>$0.13</td>
+<td>3072</td>
+<td>Very high</td>
+<td>300ms</td>
+</tr>
+<tr>
+<td>Cohere Embed v3</td>
+<td>$0.10</td>
+<td>1024</td>
+<td>High</td>
+<td>100ms</td>
+</tr>
+<tr>
+<td>sentence-transformers local</td>
+<td>$0</td>
+<td>384-768</td>
+<td>Medium</td>
+<td>50ms</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Decision:</strong>
+- Start with OpenAI small ($0.02 per 1M). Quality is good.
+- Switch to sentence-transformers if cost is issue (embed locally for free).
+- Use dimensions reduction (reduce 1536 → 768) for 2x speedup, 10% quality loss.</p>
+<p><strong>Search Latency:</strong></p>
+<ul>
+<li>Qdrant local: 10-50ms</li>
+<li>Pinecone: 100-200ms (network + their servers)</li>
+<li>Full table scan (no index): 5000+ms (too slow)</li>
+</ul>
+<p><strong>Index Maintenance:</strong></p>
+<p>Building HNSW index for 1M vectors: ~1 hour (one-time cost).
+Adding vectors incrementally: 10-100ms per vector.</p>
+<hr />
+<h2 id="security-considerations">Security Considerations</h2>
+<p><strong>PII in Embeddings:</strong></p>
+<p>When you embed text, the embedding itself doesn't contain PII. But the text does.</p>
+<div class="highlight"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Customer John Smith, SSN 123-45-6789&quot;</span>  <span class="c1"># This contains PII</span>
+<span class="n">embedding</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">embeddings</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">embedding</span>
+
+<span class="c1"># Embedding is numbers, but it was derived from PII</span>
+<span class="c1"># If you log the text anywhere, you&#39;ve exposed PII</span>
+</code></pre></div>
+<p><strong>Defense:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">redact_before_embedding</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Remove PII before embedding.&quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">re</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b\d</span><span class="si">{3}</span><span class="s1">-\d</span><span class="si">{2}</span><span class="s1">-\d</span><span class="si">{4}</span><span class="s1">\b&#39;</span><span class="p">,</span> <span class="s1">&#39;[SSN]&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>  <span class="c1"># SSN</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]</span><span class="si">{2}</span><span class="s1">\b&#39;</span><span class="p">,</span> <span class="s1">&#39;[EMAIL]&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">text</span>
+
+<span class="n">text_clean</span> <span class="o">=</span> <span class="n">redact_before_embedding</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="n">embedding</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">embeddings</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="n">text_clean</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>Search Injection:</strong></p>
+<p>Can attacker manipulate search query? Yes, but it's lower risk (just affects their own search).</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example attack: injecting instructions into search</span>
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;puppies AND puppies.file_content&quot;</span>  <span class="c1"># Tries to access internal fields</span>
+
+<span class="c1"># Defense: trust Qdrant&#39;s query language sanitization</span>
+<span class="c1"># Don&#39;t build queries by string concatenation</span>
+</code></pre></div>
+<hr />
+<h2 id="case-study-1-pinterest-recommendation-engine">Case Study 1: Pinterest Recommendation Engine</h2>
+<p><strong>Problem:</strong> 1B+ pins. Recommend similar pins in &lt; 500ms.</p>
+<p><strong>Solution:</strong>
+- Embed each pin with vision + text (multimodal embeddings)
+- Store in Qdrant (1B pins = 1TB of vectors)
+- Serve with caching layer (Redis for hot results)</p>
+<p><strong>Results:</strong>
+- Latency: 300ms P95
+- User engagement: +15% from recommendations
+- Cost: Dense, but optimized embeddings + smart caching</p>
+<p><strong>Key insight:</strong> At massive scale, caching matters more than model quality.</p>
+<hr />
+<h2 id="case-study-2-chatgpt-code-search">Case Study 2: ChatGPT Code Search</h2>
+<p><strong>Problem:</strong> Developers searching through open source code repos.</p>
+<p><strong>Solution:</strong>
+- Embed code snippets (special tokenizer for code)
+- Hybrid search: BM25 (keyword) + semantic (embedding)
+- Ranking: combine both signals</p>
+<p><strong>Results:</strong>
+- Semantic search finds code even when keyword doesn't match
+- Example: search "async sleep" finds <code>asyncio.wait()</code> (semantically similar)
+- Combined score &gt; 90% relevance</p>
+<p><strong>Key insight:</strong> Hybrid search beats pure semantic for code.</p>
+<hr />
+<h2 id="interview-cheat-sheet">Interview Cheat Sheet</h2>
+<p><strong>Concept 1: Embeddings</strong></p>
+<p><em>Question: "What's an embedding?"</em></p>
+<p>Model answer: "Numbers representing meaning. 'Dog' and 'puppy' have similar embeddings because they're semantically similar. Used for semantic search, similarity, and RAG. Usually 1536 dimensions from OpenAI, processed as vectors in databases like Qdrant."</p>
+<p><strong>Concept 2: Cosine Similarity</strong></p>
+<p><em>Question: "Why use cosine similarity instead of Euclidean distance?"</em></p>
+<p>Model answer: "Cosine similarity measures angle (direction), not magnitude (length). For embeddings, direction matters. 'Dog' and 'HUGE DOG' should be similar despite different magnitudes. Cosine fixes this."</p>
+<p><strong>Concept 3: Approximate Nearest Neighbors</strong></p>
+<p><em>Question: "How do you search 1M vectors fast?"</em></p>
+<p>Model answer: "Exact search is O(n) = slow. HNSW (Hierarchical Navigable Small World) uses a graph of shortcuts. Like highways in a city — you jump to nearby exits instead of walking every neighborhood. 99% recall, 100x faster."</p>
+<p><strong>Concept 4: Embedding Model Selection</strong></p>
+<p><em>Question: "When use OpenAI vs local embeddings?"</em></p>
+<p>Model answer: "OpenAI: better quality ($0.02/1M), slower (200ms latency). Local (sentence-transformers): free, instant, lower quality. Trade-off: quality vs cost. Use OpenAI for critical tasks, local for internal tools."</p>
+<p><strong>Concept 5: Semantic Caching</strong></p>
+<p><em>Question: "How do you cache embeddings?"</em></p>
+<p>Model answer: "Hash the query. If exact hash exists in Redis, return cached result. Or: embed query, search similar cached embeddings with cosine similarity &gt; 0.95. Reduces embedding API calls 60-80%."</p>
+<hr />
+<h2 id="10-review-questions">10 Review Questions</h2>
+<ol>
+<li>What's the difference between an embedding and a keyword index?</li>
+<li>Cosine similarity 0.95 = how similar? What does 0.5 mean?</li>
+<li>You have 10M embeddings. Exact search is slow. What index helps?</li>
+<li>HNSW is approximate. When is 99% recall good enough?</li>
+<li>Embedding a 1000-page book: how many embeddings (one per page)?</li>
+<li>pgvector vs Qdrant vs Pinecone. When choose each?</li>
+<li>You re-indexed documents with a new embedding model. What went wrong?</li>
+<li>Searching with cosine similarity should return top-10. Returns only 3. Why?</li>
+<li>Embedding endpoint is slow at peak traffic. Solution?</li>
+<li>Metadata filtering: why is it important at scale?</li>
+</ol>
+<hr />
+<h2 id="flashcards">Flashcards</h2>
+<p><strong>Card 1: Token Limits</strong>
+<em>Q: What's the max input length for OpenAI embeddings?</em>
+<em>A: 8191 tokens. Longer documents must be chunked.</em></p>
+<p><strong>Card 2: Dimensions</strong>
+<em>Q: More dimensions = better or worse search?</em>
+<em>A: Better quality but slower. 1536 is sweet spot for OpenAI.</em></p>
+<p><strong>Card 3: Cosine</strong>
+<em>Q: Cosine similarity 1.0 = ?</em>
+<em>A: Identical vectors (perfect match).</em></p>
+<p><strong>Card 4: HNSW</strong>
+<em>Q: What does HNSW do?</em>
+<em>A: Creates graph shortcuts for fast approximate nearest neighbor search.</em></p>
+<p><strong>Card 5: Vector DB</strong>
+<em>Q: What makes vector DB different from SQL?</em>
+<em>A: Optimizes for nearest neighbor search, not exact matching. Different indexing (HNSW, IVFFLAT).</em></p>
+<p><strong>Card 6: Reranking</strong>
+<em>Q: Why rerank top-100 results?</em>
+<em>A: Top results from vector search are sometimes wrong. Reranker picks best from top-100.</em></p>
+<p><strong>Card 7: Caching</strong>
+<em>Q: Cache hit for similar query. How similar? Score needed?</em>
+<em>A: Cosine similarity &gt; 0.95 usually. Adjust per use case.</em></p>
+<p><strong>Card 8: Dimension Reduction</strong>
+<em>Q: Reduce embedding dimensions 1536 → 768. Impact?</em>
+<em>A: 2x faster search, 10% quality loss. Usually acceptable.</em></p>
+<p><strong>Card 9: Batch Embedding</strong>
+<em>Q: Embed 10k documents. Approach?</em>
+<em>A: asyncio.gather + Semaphore to avoid rate limits. Max 5-10 concurrent.</em></p>
+<p><strong>Card 10: Cost</strong>
+<em>Q: Embed 1M documents at $0.02/1M. Total cost?</em>
+<em>A: $20 one-time. Then searching costs too (depends on API calls).</em></p>
+<hr />
+<h2 id="teach-it-back-prompt">Teach-It-Back Prompt</h2>
+<p><strong>Explain to a colleague:</strong></p>
+<p>"We're building a semantic search feature. User searches 'async programming'. How does the system find relevant documents? Walk me through: tokenization, embedding, indexing, querying, scoring."</p>
+<p><strong>Model Answer:</strong></p>
+<p>"User types 'async programming'. We:</p>
+<ol>
+<li><strong>Tokenize:</strong> Split into tokens (word pieces), add special tokens.</li>
+<li><strong>Embed:</strong> Pass tokens through neural net → 1536 numbers capturing meaning.</li>
+<li><strong>Query:</strong> Search our Qdrant collection with this embedding.</li>
+<li><strong>HNSW Graph:</strong> Qdrant uses HNSW index (highway network) to find similar vectors fast (not exact search).</li>
+<li><strong>Top-K:</strong> Return top-10 documents closest to query vector (cosine similarity).</li>
+<li><strong>Score:</strong> Each result has score 0-1 (similarity). 0.92 = very similar.</li>
+</ol>
+<p>Why fast? HNSW index reduces search from O(n) to O(log n). Searching 1M docs in 50ms.</p>
+<p>Why accurate? Embeddings capture meaning. 'Async' and 'asyncio' have similar embeddings. Keyword search would miss them."</p>
+<hr />
+<h2 id="1-week-review-checklist">1-Week Review Checklist</h2>
+<ul>
+<li>[ ] Embedded 100 documents with OpenAI API, measured cost</li>
+<li>[ ] Set up local Qdrant, created collection with correct dimensions</li>
+<li>[ ] Indexed documents and ran semantic search (top-5 results)</li>
+<li>[ ] Measured search latency (should be &lt;100ms local, &lt;300ms cloud)</li>
+<li>[ ] Compared results: pure semantic vs keyword search</li>
+<li>[ ] Cached embeddings in Redis, verified cache hit works</li>
+<li>[ ] Tested with sentence-transformers (local embedding), compared quality</li>
+<li>[ ] Handled long documents (chunked before embedding)</li>
+<li>[ ] Measured cost for 1000 embedding API calls</li>
+<li>[ ] Debugged: why is this document low in results? (check similarity score)</li>
+<li>[ ] Set up deduplication (avoid re-embedding same doc)</li>
+<li>[ ] Created FastAPI endpoint that does semantic search</li>
+</ul>
+<hr />
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://qdrant.tech/documentation/">Qdrant Documentation</a></li>
+<li><a href="https://www.sbert.net/">Sentence Transformers</a></li>
+<li><a href="https://platform.openai.com/docs/guides/embeddings">OpenAI Embeddings API</a></li>
+<li><a href="https://arxiv.org/abs/1802.02413">HNSW Paper</a></li>
+<li><a href="https://docs.qdrant.tech/articles/vector-database-benchmark/">Vector Database Benchmarks</a></li>
+</ul>
+<hr />
+<h2 id="next-page">Next Page</h2>
+<p>You can embed text and search for meaning.</p>
+<p>Now: RAG pipelines. Load documents, chunk them, embed them, retrieve them, generate answers.</p>
+<p>→ <strong><a href="../rag/">RAG Pipelines →</a></strong></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.integrate"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>

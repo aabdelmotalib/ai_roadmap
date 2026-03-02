@@ -1,0 +1,3337 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive 6-phase learning roadmap from Python foundations to production ML systems">
+      
+      
+        <meta name="author" content="AI Engineering Community">
+      
+      
+      
+        <link rel="prev" href="../overview/">
+      
+      
+        <link rel="next" href="../fastapi/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>Python Mastery - AI Full Stack Engineer Roadmap</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#production-grade-python-for-ai-engineers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-header__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Full Stack Engineer Roadmap
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Python Mastery
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        
+  
+    
+  
+  Setup Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  Phase 0 — Foundation Warmup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase1/overview/" class="md-tabs__link">
+          
+  
+  Phase 1 — AI Systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase2/overview/" class="md-tabs__link">
+          
+  
+  Phase 2 — Docker & Cloud
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase3/overview/" class="md-tabs__link">
+          
+  
+  Phase 3 — MLOps Tooling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase4/overview/" class="md-tabs__link">
+          
+  
+  Phase 4 — Scaling & Kubernetes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase5/overview/" class="md-tabs__link">
+          
+  
+  Phase 5 — Portfolio & Job Readiness
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../appendix/math-lite/" class="md-tabs__link">
+          
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-nav__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    AI Full Stack Engineer Roadmap
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 0 — Foundation Warmup
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 0 — Foundation Warmup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Python Mastery
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Python Mastery
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-why-this-matters-in-production" class="md-nav__link">
+    1. Why This Matters in Production
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-conceptual-explanation-type-hints-plain-english" class="md-nav__link">
+    2. Conceptual Explanation: Type Hints (Plain English)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-code-examples-type-hints" class="md-nav__link">
+    3. Code Examples: Type Hints
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Code Examples: Type Hints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-basic-type-hints" class="md-nav__link">
+    3.1 Basic Type Hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-pydantic-v2-type-safe-data-validation" class="md-nav__link">
+    3.2 Pydantic v2: Type-Safe Data Validation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-asyncawait-for-concurrent-llm-calls" class="md-nav__link">
+    3.3 Async/Await for Concurrent LLM Calls
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-decorators-retry-with-exponential-backoff" class="md-nav__link">
+    3.4 Decorators: Retry with Exponential Backoff
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-testing-with-mocking" class="md-nav__link">
+    3.5 Testing with Mocking
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-architecture-diagram-python-type-system" class="md-nav__link">
+    4. Architecture Diagram: Python Type System
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-tools-section-type-checking-validation" class="md-nav__link">
+    5. Tools Section: Type Checking &amp; Validation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-decision-framework-when-to-use-what" class="md-nav__link">
+    6. Decision Framework: When to Use What
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-step-by-step-building-type-safe-python-from-scratch" class="md-nav__link">
+    7. Step-by-Step: Building Type-Safe Python from Scratch
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Step-by-Step: Building Type-Safe Python from Scratch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-set-up-type-checking-in-your-project" class="md-nav__link">
+    Step 1: Set Up Type Checking in Your Project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-add-pydantic-to-your-project" class="md-nav__link">
+    Step 2: Add Pydantic to Your Project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-use-in-fastapi-endpoint" class="md-nav__link">
+    Step 3: Use in FastAPI Endpoint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-test-with-type-checking" class="md-nav__link">
+    Step 4: Test with Type Checking
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-practical-project-type-safe-document-processor" class="md-nav__link">
+    8. Practical Project: Type-Safe Document Processor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-debugging-playbook-10-common-type-related-errors" class="md-nav__link">
+    9. Debugging Playbook: 10 Common Type-Related Errors
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Debugging Playbook: 10 Common Type-Related Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-1-attributeerror-nonetype-has-no-attribute-split" class="md-nav__link">
+    Error 1: AttributeError: 'NoneType' has no attribute 'split'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-2-typeerror-unsupported-operand-types-for-str-and-int" class="md-nav__link">
+    Error 2: TypeError: unsupported operand type(s) for +: 'str' and 'int'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-3-validationerror-from-pydantic" class="md-nav__link">
+    Error 3: ValidationError from Pydantic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-4-asynciotimeouterror" class="md-nav__link">
+    Error 4: asyncio.TimeoutError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-5-jsondecodeerror-from-api-response" class="md-nav__link">
+    Error 5: JSONDecodeError from API response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-6-runtimeerror-event-loop-is-closed" class="md-nav__link">
+    Error 6: RuntimeError: Event loop is closed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-7-recursionerror-maximum-recursion-depth-exceeded" class="md-nav__link">
+    Error 7: RecursionError: maximum recursion depth exceeded
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-8-assertion-error-in-tests" class="md-nav__link">
+    Error 8: Assertion Error in tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-9-unboundlocalerror-local-variable-x-referenced-before-assignment" class="md-nav__link">
+    Error 9: UnboundLocalError: local variable 'x' referenced before assignment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-10-modulenotfounderror-no-module-named-mymodule" class="md-nav__link">
+    Error 10: ModuleNotFoundError: No module named 'mymodule'
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-common-mistakes-type-hints-async" class="md-nav__link">
+    10. Common Mistakes: Type Hints &amp; Async
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Common Mistakes: Type Hints & Async">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mistake-1-overly-permissive-types" class="md-nav__link">
+    Mistake 1: Overly Permissive Types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-2-not-awaiting-async-functions" class="md-nav__link">
+    Mistake 2: Not Awaiting Async Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-3-mixing-blocking-non-blocking-operations" class="md-nav__link">
+    Mistake 3: Mixing Blocking &amp; Non-Blocking Operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-4-modifying-mutable-default-arguments" class="md-nav__link">
+    Mistake 4: Modifying Mutable Default Arguments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-5-using-string-type-hints-incorrectly" class="md-nav__link">
+    Mistake 5: Using string type hints incorrectly
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-production-realism-tutorial-vs-production" class="md-nav__link">
+    11. Production Realism: Tutorial vs Production
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Production Realism: Tutorial vs Production">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tutorial-code" class="md-nav__link">
+    Tutorial Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#production-code" class="md-nav__link">
+    Production Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-cost-performance-considerations" class="md-nav__link">
+    12. Cost &amp; Performance Considerations
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Cost & Performance Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-checking-performance" class="md-nav__link">
+    Type Checking Performance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-concurrency-roi" class="md-nav__link">
+    Async Concurrency ROI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-security-considerations" class="md-nav__link">
+    13. Security Considerations
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Security Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secret-management" class="md-nav__link">
+    Secret Management
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-validation-defense-against-injection" class="md-nav__link">
+    Input Validation (Defense Against Injection)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-safety-for-secrets" class="md-nav__link">
+    Type Safety for Secrets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-case-study-type-safe-rag-pipeline-openai" class="md-nav__link">
+    14. Case Study: Type-Safe RAG Pipeline (OpenAI)
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Case Study: Type-Safe RAG Pipeline (OpenAI)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-study-type-safe-ml-pipeline-anthropic" class="md-nav__link">
+    Case Study: Type-Safe ML Pipeline (Anthropic)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-interview-cheat-sheet-type-hints-async" class="md-nav__link">
+    15. Interview Cheat Sheet: Type Hints &amp; Async
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Interview Cheat Sheet: Type Hints & Async">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concept-1-optional-vs-union" class="md-nav__link">
+    Concept 1: Optional vs Union
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-2-when-to-use-property-vs-regular-method" class="md-nav__link">
+    Concept 2: When to Use @property vs Regular Method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-3-asynciogather-vs-asynciocreate_task" class="md-nav__link">
+    Concept 3: asyncio.gather vs asyncio.create_task
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-4-protocol-vs-abc" class="md-nav__link">
+    Concept 4: Protocol vs ABC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-5-type-variance-covariance-vs-contravariance" class="md-nav__link">
+    Concept 5: Type Variance: Covariance vs Contravariance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-review-questions" class="md-nav__link">
+    16. Review Questions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-flashcards-anki-format" class="md-nav__link">
+    17. Flashcards (Anki Format)
+  </a>
+  
+    <nav class="md-nav" aria-label="17. Flashcards (Anki Format)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#card-1" class="md-nav__link">
+    Card 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-2" class="md-nav__link">
+    Card 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-3" class="md-nav__link">
+    Card 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-4" class="md-nav__link">
+    Card 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-5" class="md-nav__link">
+    Card 5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-6" class="md-nav__link">
+    Card 6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-7" class="md-nav__link">
+    Card 7
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-8" class="md-nav__link">
+    Card 8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-9" class="md-nav__link">
+    Card 9
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-10" class="md-nav__link">
+    Card 10
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-teach-it-back-prompt" class="md-nav__link">
+    18. Teach-It-Back Prompt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-1-week-review-checklist" class="md-nav__link">
+    19. 1-Week Review Checklist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-resources" class="md-nav__link">
+    20. Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-next-fastapi-deep-dive" class="md-nav__link">
+    21. Next: FastAPI Deep Dive
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fastapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI Deep Dive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../databases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Databases (SQL + NoSQL + Redis)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux & Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 0 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 1 — AI Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 1 — AI Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/llm-apis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM APIs & Prompt Engineering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/embeddings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embeddings & Vector Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/rag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RAG Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Agents & Tool Use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/fine-tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fine-Tuning (LoRA & PEFT)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluation & Benchmarking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security & Prompt Injection Defense
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/cost-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cost & Performance Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 1 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 2 — Docker & Cloud
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 2 — Docker & Cloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose for AI Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Deployment (EC2 + S3 + ECS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/secrets-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secrets Management & Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 2 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 3 — MLOps Tooling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 3 — MLOps Tooling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/mlflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLflow Experiment Tracking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/dvc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DVC Data Versioning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/wandb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weights & Biases (W&B)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/cicd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI/CD for AI Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 3 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 4 — Scaling & Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 4 — Scaling & Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes Core Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/ai-on-k8s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying AI Services on K8s
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autoscaling & Observability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 4 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 5 — Portfolio & Job Readiness
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 5 — Portfolio & Job Readiness
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Portfolio Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/resume/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resume & LinkedIn Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/system-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI System Design Interviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/mock-interviews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mock Interview Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/salary-negotiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Salary & Negotiation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/math-lite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math-Lite Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/tooling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tooling & Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/study-planner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Study Planner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/project-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Showcase Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/whats-next/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What's Next (Post-Roadmap)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="production-grade-python-for-ai-engineers">Production-Grade Python for AI Engineers</h1>
+<p>You already write Python. This guide covers the patterns that separate "code that works" from "code that works reliably at scale."</p>
+<hr />
+<h2 id="1-why-this-matters-in-production">1. Why This Matters in Production</h2>
+<p>A data engineer deployed a document processing pipeline. It worked perfectly on her laptop. In production, after 48 hours of processing millions of documents, the service crashed.</p>
+<p>Root cause: She wasn't using type hints. A typo in a rarely-called function (<code>len(dataset)</code> instead of <code>len(dataset_items)</code>) went unnoticed. In production, under load, that typo created a bug that corrupted the dataset, causing the entire pipeline to fail.</p>
+<p>Cost: $20,000 AWS bill for reprocessing. 2 days of downtime.</p>
+<p>Type hints would have caught it in the IDE.</p>
+<p><strong>Production reality:</strong>
+- Your laptop is as powerful as a multi-thousand-dollar server. Problems hide there.
+- Production runs for weeks. Rare bugs become common bugs.
+- You won't be debugging at 3 AM. Someone making $250k will be. Make their life easy with clear, type-hinted code.</p>
+<hr />
+<h2 id="2-conceptual-explanation-type-hints-plain-english">2. Conceptual Explanation: Type Hints (Plain English)</h2>
+<p>Type hints tell Python (and your IDE, and linters) what type a variable should be.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Without type hints (ambiguous)</span>
+<span class="k">def</span> <span class="nf">process_documents</span><span class="p">(</span><span class="n">docs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">clean</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">docs</span><span class="p">]</span>
+</code></pre></div>
+<p>What type is <code>docs</code>? A list? A generator? A single item? What does <code>clean</code> return? Unclear.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># With type hints (crystal clear)</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+
+<span class="k">def</span> <span class="nf">process_documents</span><span class="p">(</span><span class="n">docs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">clean</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">docs</span><span class="p">]</span>
+</code></pre></div>
+<p>Now: <code>docs</code> is a list of strings. The function returns a list of strings. Your IDE autocompletes correctly. Linters catch misuse.</p>
+<p><strong>For AI engineers, the crucial types:</strong></p>
+<ul>
+<li><code>Optional[str]</code> — might be None</li>
+<li><code>Union[int, float]</code> — could be either type</li>
+<li><code>Protocol</code> — "anything that quacks like a duck"</li>
+<li><code>TypedDict</code> — structured dicts with typed keys</li>
+<li><code>Literal["value1", "value2"]</code> — exact string values</li>
+<li>Generics like <code>T</code> — reusable functions that work with any type</li>
+</ul>
+<hr />
+<h2 id="3-code-examples-type-hints">3. Code Examples: Type Hints</h2>
+<h3 id="31-basic-type-hints">3.1 Basic Type Hints</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dict</span>
+
+<span class="c1"># Simple types</span>
+<span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>
+<span class="n">age</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">score</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">95.5</span>
+<span class="n">is_active</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># Optional (can be None or the type)</span>
+<span class="n">api_key</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="c1"># Union (one of several types)</span>
+<span class="n">response_code</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="mi">200</span>  <span class="c1"># Could be int or str</span>
+
+<span class="c1"># Lists and dicts</span>
+<span class="n">documents</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;doc1&quot;</span><span class="p">,</span> <span class="s2">&quot;doc2&quot;</span><span class="p">]</span>
+<span class="n">embeddings</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;doc1&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]}</span>
+
+<span class="k">def</span> <span class="nf">fetch_embedding</span><span class="p">(</span><span class="n">doc_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Might return embeddings or None if not found.&quot;&quot;&quot;</span>
+    <span class="c1"># Your code here</span>
+    <span class="k">return</span> <span class="kc">None</span>
+</code></pre></div>
+<h3 id="32-pydantic-v2-type-safe-data-validation">3.2 Pydantic v2: Type-Safe Data Validation</h3>
+<p>Pydantic converts and validates data. Critical for AI pipelines where messy data arrives constantly.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">Field</span><span class="p">,</span> <span class="n">field_validator</span><span class="p">,</span> <span class="n">model_validator</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">List</span>
+
+<span class="k">class</span> <span class="nc">Document</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A document with content and metadata.&quot;&quot;&quot;</span>
+
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span>  <span class="c1"># Required field</span>
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">content</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">tags</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>  <span class="c1"># Default empty list</span>
+    <span class="n">chunk_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>  <span class="c1"># Must be 1-10000</span>
+    <span class="n">confidence</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># Optional field</span>
+
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">)</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">title_not_empty</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Title must not be empty.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">v</span><span class="o">.</span><span class="n">strip</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Title cannot be empty&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">v</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;tags&quot;</span><span class="p">)</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">lowercase_tags</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Convert all tags to lowercase.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">tag</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">v</span><span class="p">]</span>
+
+    <span class="nd">@model_validator</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;after&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">validate_chunk_size</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Document&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Cross-field validation: chunk_size can&#39;t be larger than content.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">)</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">chunk_size</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;chunk_size cannot exceed content length&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+<span class="c1"># Usage</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">Document</span><span class="p">(</span>
+        <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;doc1&quot;</span><span class="p">,</span>
+        <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Machine Learning Basics&quot;</span><span class="p">,</span>
+        <span class="n">content</span><span class="o">=</span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
+        <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ML&quot;</span><span class="p">,</span> <span class="s2">&quot;AI&quot;</span><span class="p">],</span>
+        <span class="n">chunk_size</span><span class="o">=</span><span class="mi">512</span>
+    <span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Validation failed: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Pydantic catches bad data immediately</span>
+<span class="n">bad_doc</span> <span class="o">=</span> <span class="n">Document</span><span class="p">(</span>
+    <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;doc2&quot;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>  <span class="c1"># Empty title → caught by validator</span>
+    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;test&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+<h3 id="33-asyncawait-for-concurrent-llm-calls">3.3 Async/Await for Concurrent LLM Calls</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<span class="kn">import</span> <span class="nn">httpx</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">fetch_embedding</span><span class="p">(</span><span class="n">client</span><span class="p">:</span> <span class="n">httpx</span><span class="o">.</span><span class="n">AsyncClient</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Fetch embedding from API (simulated).&quot;&quot;&quot;</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+        <span class="s2">&quot;https://api.openai.com/v1/embeddings&quot;</span><span class="p">,</span>
+        <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;input&quot;</span><span class="p">:</span> <span class="n">text</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;text-embedding-3-small&quot;</span><span class="p">}</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;data&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;embedding&quot;</span><span class="p">]</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">process_documents_parallel</span><span class="p">(</span><span class="n">docs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Fetch embeddings for multiple documents concurrently.</span>
+<span class="sd">    Without asyncio, this would be sequential (slow).</span>
+<span class="sd">    With asyncio.gather, they&#39;re all parallel.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">async</span> <span class="k">with</span> <span class="n">httpx</span><span class="o">.</span><span class="n">AsyncClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+        <span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span><span class="n">fetch_embedding</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="n">doc</span><span class="p">)</span> <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">docs</span><span class="p">]</span>
+        <span class="c1"># await asyncio.gather runs all tasks concurrently</span>
+        <span class="n">embeddings</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="n">tasks</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">embeddings</span>
+
+<span class="c1"># Usage</span>
+<span class="n">docs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Document 1&quot;</span><span class="p">,</span> <span class="s2">&quot;Document 2&quot;</span><span class="p">,</span> <span class="s2">&quot;Document 3&quot;</span><span class="p">]</span>
+<span class="n">embeddings</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">process_documents_parallel</span><span class="p">(</span><span class="n">docs</span><span class="p">))</span>
+<span class="c1"># With sequential API calls: 3 calls × 2 seconds each = 6 seconds</span>
+<span class="c1"># With parallel: max latency = 2 seconds (all happen simultaneously)</span>
+</code></pre></div>
+<h3 id="34-decorators-retry-with-exponential-backoff">3.4 Decorators: Retry with Exponential Backoff</h3>
+<p>LLM APIs fail. Networks fail. Decorators make retrying automatic.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Any</span>
+
+<span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">retry_with_backoff</span><span class="p">(</span><span class="n">max_retries</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">base_delay</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Retry a function with exponential backoff.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">T</span><span class="p">]:</span>
+        <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+        <span class="k">async</span> <span class="k">def</span> <span class="nf">async_wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+            <span class="n">delay</span> <span class="o">=</span> <span class="n">base_delay</span>
+            <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_retries</span><span class="p">):</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="k">await</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">attempt</span> <span class="o">==</span> <span class="n">max_retries</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                        <span class="k">raise</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Attempt </span><span class="si">{</span><span class="n">attempt</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2"> failed. Retrying in </span><span class="si">{</span><span class="n">delay</span><span class="si">}</span><span class="s2">s...&quot;</span><span class="p">)</span>
+                    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">delay</span><span class="p">)</span>
+                    <span class="n">delay</span> <span class="o">*=</span> <span class="mi">2</span>  <span class="c1"># Exponential backoff</span>
+
+        <span class="k">return</span> <span class="n">async_wrapper</span>
+    <span class="k">return</span> <span class="n">decorator</span>
+
+<span class="nd">@retry_with_backoff</span><span class="p">(</span><span class="n">max_retries</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">base_delay</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">call_llm_api</span><span class="p">(</span><span class="n">prompt</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Call LLM API with automatic retry if it fails.&quot;&quot;&quot;</span>
+    <span class="c1"># Your API call here</span>
+    <span class="k">return</span> <span class="s2">&quot;response&quot;</span>
+</code></pre></div>
+<h3 id="35-testing-with-mocking">3.5 Testing with Mocking</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pytest</span>
+<span class="kn">from</span> <span class="nn">unittest.mock</span> <span class="kn">import</span> <span class="n">AsyncMock</span><span class="p">,</span> <span class="n">patch</span>
+<span class="kn">import</span> <span class="nn">httpx</span>
+
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">asyncio</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">test_fetch_embedding_success</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test successful embedding fetch.&quot;&quot;&quot;</span>
+    <span class="n">mock_response</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;embedding&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]}]}</span>
+
+    <span class="k">with</span> <span class="n">patch</span><span class="p">(</span><span class="s2">&quot;httpx.AsyncClient.post&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">mock_post</span><span class="p">:</span>
+        <span class="n">mock_post</span><span class="o">.</span><span class="n">return_value</span> <span class="o">=</span> <span class="n">AsyncMock</span><span class="p">(</span>
+            <span class="n">json</span><span class="o">=</span><span class="n">AsyncMock</span><span class="p">(</span><span class="n">return_value</span><span class="o">=</span><span class="n">mock_response</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">fetch_embedding</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]</span>
+
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">asyncio</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">test_fetch_embedding_with_retry</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test retry on failure.&quot;&quot;&quot;</span>
+    <span class="n">mock_client</span> <span class="o">=</span> <span class="n">AsyncMock</span><span class="p">()</span>
+
+    <span class="c1"># First call fails, second succeeds</span>
+    <span class="n">mock_client</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">side_effect</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Network error&quot;</span><span class="p">),</span>
+        <span class="n">AsyncMock</span><span class="p">(</span><span class="n">json</span><span class="o">=</span><span class="n">AsyncMock</span><span class="p">(</span><span class="n">return_value</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;embedding&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]}]}))</span>
+    <span class="p">]</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">fetch_embedding</span><span class="p">(</span><span class="n">mock_client</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="n">mock_client</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">call_count</span> <span class="o">==</span> <span class="mi">2</span>  <span class="c1"># Verify retry happened</span>
+</code></pre></div>
+<hr />
+<h2 id="4-architecture-diagram-python-type-system">4. Architecture Diagram: Python Type System</h2>
+<pre class="mermaid"><code>graph TD
+    A["Type Hints&lt;br/&gt;str, int, List, Dict"] --&gt; B["Static Checkers&lt;br/&gt;mypy, Pylance&lt;br/&gt;Catch errors before runtime"]
+    A --&gt; C["IDEs&lt;br/&gt;VS Code&lt;br/&gt;Better autocomplete"]
+    B --&gt; D["Pydantic&lt;br/&gt;Runtime validation&lt;br/&gt;Serialization"]
+    D --&gt; E["FastAPI Integration&lt;br/&gt;Automatic request validation&lt;br/&gt;OpenAPI docs"]
+    E --&gt; F["Production Safety&lt;br/&gt;Type errors caught&lt;br/&gt;before shipping"]
+
+    A --&gt; G["Async/Await&lt;br/&gt;Concurrent execution&lt;br/&gt;Non-blocking I/O"]
+    G --&gt; H["Decorators&lt;br/&gt;Retry logic&lt;br/&gt;Caching&lt;br/&gt;Rate limiting"]
+    H --&gt; F
+
+    style A fill:#E3F2FD
+    style F fill:#F3E5F5
+    style D fill:#C8E6C9
+    style G fill:#FFE0B2</code></pre>
+<hr />
+<h2 id="5-tools-section-type-checking-validation">5. Tools Section: Type Checking &amp; Validation</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+<th>Integration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>mypy</strong></td>
+<td>Static type checker</td>
+<td>CLI: <code>mypy src/</code></td>
+</tr>
+<tr>
+<td><strong>Pylance</strong> (VS Code)</td>
+<td>IDE type checking + IntelliSense</td>
+<td>Built-in to Extension</td>
+</tr>
+<tr>
+<td><strong>Pydantic</strong></td>
+<td>Runtime validation + serialization</td>
+<td><code>from pydantic import BaseModel</code></td>
+</tr>
+<tr>
+<td><strong>pytest-asyncio</strong></td>
+<td>Async test runner</td>
+<td><code>@pytest.mark.asyncio</code></td>
+</tr>
+<tr>
+<td><strong>tenacity</strong></td>
+<td>Retry logic</td>
+<td><code>@retry(stop=stop_after_attempt(3))</code></td>
+</tr>
+<tr>
+<td><strong>decorator</strong></td>
+<td>Library for writing decorators</td>
+<td><code>from decorator import decorator</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-decision-framework-when-to-use-what">6. Decision Framework: When to Use What</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Pattern</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Simple function with 1-2 parameters</td>
+<td>Basic type hints</td>
+<td>Clear intent, IDE support</td>
+</tr>
+<tr>
+<td>API endpoint with nested data</td>
+<td>Pydantic BaseModel</td>
+<td>Validates + (de)serializes</td>
+</tr>
+<tr>
+<td>LLM API calls (can fail)</td>
+<td>Retry decorator</td>
+<td>Automatic recovery</td>
+</tr>
+<tr>
+<td>Multiple concurrent API calls</td>
+<td><code>asyncio.gather</code></td>
+<td>Parallel execution = faster</td>
+</tr>
+<tr>
+<td>Caching expensive computation</td>
+<td><code>@lru_cache</code> (sync) or custom async</td>
+<td>Avoid recomputation</td>
+</tr>
+<tr>
+<td>Per-request database session</td>
+<td>Dependency injection</td>
+<td>Clean, testable</td>
+</tr>
+<tr>
+<td>Custom validation logic</td>
+<td><code>@field_validator</code> in Pydantic</td>
+<td>Single source of truth</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-step-by-step-building-type-safe-python-from-scratch">7. Step-by-Step: Building Type-Safe Python from Scratch</h2>
+<h3 id="step-1-set-up-type-checking-in-your-project">Step 1: Set Up Type Checking in Your Project</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install mypy</span>
+pip<span class="w"> </span>install<span class="w"> </span>mypy
+
+<span class="c1"># Create mypy.ini</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>mypy.ini<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">[mypy]</span>
+<span class="s">python_version = 3.11</span>
+<span class="s">warn_return_any = True</span>
+<span class="s">warn_unused_configs = True</span>
+<span class="s">disallow_untyped_defs = True</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Check your code</span>
+mypy<span class="w"> </span>src/
+</code></pre></div>
+<p>Output:
+<div class="highlight"><pre><span></span><code>src/myapp/main.py:10: error: Function is missing a return type annotation
+src/myapp/main.py:21: error: Argument 1 to &quot;process&quot; has incompatible type &quot;str&quot;, expected &quot;int&quot;
+</code></pre></div></p>
+<h3 id="step-2-add-pydantic-to-your-project">Step 2: Add Pydantic to Your Project</h3>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>pydantic
+</code></pre></div>
+<p>Create <code>src/myapp/schemas.py</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">Field</span><span class="p">,</span> <span class="n">field_validator</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">List</span>
+
+<span class="k">class</span> <span class="nc">DocumentRequest</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">min_length</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span>
+    <span class="n">content</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">min_length</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">tags</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">DocumentResponse</span><span class="p">(</span><span class="n">DocumentRequest</span><span class="p">):</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">created_at</span><span class="p">:</span> <span class="nb">str</span>
+</code></pre></div>
+<h3 id="step-3-use-in-fastapi-endpoint">Step 3: Use in FastAPI Endpoint</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+<span class="kn">from</span> <span class="nn">.schemas</span> <span class="kn">import</span> <span class="n">DocumentRequest</span><span class="p">,</span> <span class="n">DocumentResponse</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/documents&quot;</span><span class="p">,</span> <span class="n">response_model</span><span class="o">=</span><span class="n">DocumentResponse</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">create_document</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="n">DocumentRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DocumentResponse</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Pydantic validates input, FastAPI documents the schema.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">DocumentResponse</span><span class="p">(</span>
+        <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;doc123&quot;</span><span class="p">,</span>
+        <span class="n">title</span><span class="o">=</span><span class="n">doc</span><span class="o">.</span><span class="n">title</span><span class="p">,</span>
+        <span class="n">content</span><span class="o">=</span><span class="n">doc</span><span class="o">.</span><span class="n">content</span><span class="p">,</span>
+        <span class="n">tags</span><span class="o">=</span><span class="n">doc</span><span class="o">.</span><span class="n">tags</span><span class="p">,</span>
+        <span class="n">created_at</span><span class="o">=</span><span class="s2">&quot;2024-03-01T10:00:00Z&quot;</span>
+    <span class="p">)</span>
+</code></pre></div>
+<h3 id="step-4-test-with-type-checking">Step 4: Test with Type Checking</h3>
+<div class="highlight"><pre><span></span><code>mypy<span class="w"> </span>src/myapp/
+<span class="c1"># No errors = types are correct</span>
+</code></pre></div>
+<hr />
+<h2 id="8-practical-project-type-safe-document-processor">8. Practical Project: Type-Safe Document Processor</h2>
+<p><strong>Goal:</strong> Build a document processing service that validates input, processes with type safety, and caches async operations.</p>
+<p><strong>File structure:</strong>
+<div class="highlight"><pre><span></span><code>src/
+├── myapp/
+│   ├── __init__.py
+│   ├── schemas.py      # Pydantic models
+│   ├── processor.py    # Core logic with async
+│   ├── cache.py        # Caching decorator
+│   └── main.py         # FastAPI app
+</code></pre></div></p>
+<p><strong>src/myapp/schemas.py:</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">Field</span><span class="p">,</span> <span class="n">field_validator</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="k">class</span> <span class="nc">Document</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">min_length</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">content</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">tags</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;tags&quot;</span><span class="p">)</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">lowercase_tags</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">tag</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">v</span><span class="p">]</span>
+</code></pre></div></p>
+<p><strong>src/myapp/cache.py:</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Any</span>
+
+<span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">async_cache</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Simple async result caching.&quot;&quot;&quot;</span>
+    <span class="n">cache</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">())))</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">cache</span><span class="p">:</span>
+            <span class="n">cache</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="k">await</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">cache</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">wrapper</span>
+</code></pre></div></p>
+<p><strong>src/myapp/processor.py:</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<span class="kn">from</span> <span class="nn">.schemas</span> <span class="kn">import</span> <span class="n">Document</span>
+
+<span class="k">class</span> <span class="nc">DocumentProcessor</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Process documents with async and type safety.&quot;&quot;&quot;</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">process_document</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">doc</span><span class="p">:</span> <span class="n">Document</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Document</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Simulate processing (sleep to mimic API call).&quot;&quot;&quot;</span>
+        <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Simulate work</span>
+        <span class="k">return</span> <span class="n">doc</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">process_batch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">docs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Document</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Document</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Process multiple documents concurrently.&quot;&quot;&quot;</span>
+        <span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">process_document</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span> <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">docs</span><span class="p">]</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="n">tasks</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>tests/test_processor.py:</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pytest</span>
+<span class="kn">from</span> <span class="nn">myapp.processor</span> <span class="kn">import</span> <span class="n">DocumentProcessor</span>
+<span class="kn">from</span> <span class="nn">myapp.schemas</span> <span class="kn">import</span> <span class="n">Document</span>
+
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">asyncio</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">test_process_document</span><span class="p">():</span>
+    <span class="n">processor</span> <span class="o">=</span> <span class="n">DocumentProcessor</span><span class="p">()</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">Document</span><span class="p">(</span>
+        <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Test&quot;</span><span class="p">,</span>
+        <span class="n">content</span><span class="o">=</span><span class="s2">&quot;Content&quot;</span><span class="p">,</span>
+        <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ML&quot;</span><span class="p">,</span> <span class="s2">&quot;AI&quot;</span><span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">processor</span><span class="o">.</span><span class="n">process_document</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="s2">&quot;1&quot;</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">tags</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;ml&quot;</span><span class="p">,</span> <span class="s2">&quot;ai&quot;</span><span class="p">]</span>  <span class="c1"># Lowercased by validator</span>
+</code></pre></div></p>
+<hr />
+<h2 id="9-debugging-playbook-10-common-type-related-errors">9. Debugging Playbook: 10 Common Type-Related Errors</h2>
+<h3 id="error-1-attributeerror-nonetype-has-no-attribute-split">Error 1: AttributeError: 'NoneType' has no attribute 'split'</h3>
+<p><strong>Symptom:</strong> Code crashes at runtime when a value is None.</p>
+<p><strong>Explanation:</strong> You assumed a value was never None, but it was. Type hints would have caught this.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong (assumes value is never None)</span>
+<span class="k">def</span> <span class="nf">process_text</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+<span class="c1"># Right (acknowledges it could be None)</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
+
+<span class="k">def</span> <span class="nf">process_text</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">text</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Use <code>Optional[T]</code> for values that might be None. Enable <code>disallow_untyped_defs</code> in mypy config.</p>
+<hr />
+<h3 id="error-2-typeerror-unsupported-operand-types-for-str-and-int">Error 2: TypeError: unsupported operand type(s) for +: 'str' and 'int'</h3>
+<p><strong>Symptom:</strong> Adding incompatible types.</p>
+<p><strong>Explanation:</strong> You tried to add a string and integer.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong</span>
+<span class="n">total</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="s2">&quot;5&quot;</span> <span class="o">+</span> <span class="mi">10</span>  <span class="c1"># String + int</span>
+
+<span class="c1"># Right</span>
+<span class="n">total</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;5&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">10</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Type hints catch this in the IDE. Pylance shows a red squiggle.</p>
+<hr />
+<h3 id="error-3-validationerror-from-pydantic">Error 3: ValidationError from Pydantic</h3>
+<p><strong>Symptom:</strong> <code>pydantic_core._pydantic_core.ValidationError: 1 validation error</code></p>
+<p><strong>Explanation:</strong> Input data doesn't match schema.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">Field</span>
+
+<span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">age</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span>
+
+<span class="c1"># This fails</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">age</span><span class="o">=-</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># Negative age</span>
+<span class="k">except</span> <span class="n">ValidationError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Validation failed: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Write validators for business logic constraints. Test with invalid data.</p>
+<hr />
+<h3 id="error-4-asynciotimeouterror">Error 4: asyncio.TimeoutError</h3>
+<p><strong>Symptom:</strong> Your async code hangs or takes forever.</p>
+<p><strong>Explanation:</strong> You called an async function that blocks, or created a deadlock.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">asyncio</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">fetch_with_timeout</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Timeout if operation takes &gt; 5 seconds.&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">async</span> <span class="k">with</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">timeout</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>  <span class="c1"># Python 3.11+</span>
+            <span class="c1"># Your async operation</span>
+            <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  <span class="c1"># Simulates slow operation</span>
+    <span class="k">except</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">TimeoutError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Timeout&quot;</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Always add timeouts to external API calls. Use <code>asyncio.TaskGroup</code> to avoid cancelled task errors.</p>
+<hr />
+<h3 id="error-5-jsondecodeerror-from-api-response">Error 5: JSONDecodeError from API response</h3>
+<p><strong>Symptom:</strong> <code>json.decoder.JSONDecodeError: Expecting value</code></p>
+<p><strong>Explanation:</strong> API returned non-JSON (HTML error page, plain text, etc.).</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">httpx</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">call_api</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+    <span class="k">async</span> <span class="k">with</span> <span class="n">httpx</span><span class="o">.</span><span class="n">AsyncClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+        <span class="c1"># Check status before parsing JSON</span>
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;API returned </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">json</span><span class="o">.</span><span class="n">JSONDecodeError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;API returned: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">raise</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Check HTTP status codes. Log the raw response before parsing.</p>
+<hr />
+<h3 id="error-6-runtimeerror-event-loop-is-closed">Error 6: RuntimeError: Event loop is closed</h3>
+<p><strong>Symptom:</strong> Happens when mixing <code>asyncio.run()</code> with <code>await</code> in different contexts.</p>
+<p><strong>Explanation:</strong> You created multiple event loops or closed one while it's still in use.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">asyncio</span>
+
+<span class="c1"># Wrong: calling asyncio.run multiple times</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">my_async_func</span><span class="p">())</span>  <span class="c1"># Creates new event loop each time</span>
+
+<span class="c1"># Right: create loop once, reuse it</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span><span class="n">my_async_func</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="n">tasks</span><span class="p">)</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Keep one event loop per script. Pass it around instead of creating new ones.</p>
+<hr />
+<h3 id="error-7-recursionerror-maximum-recursion-depth-exceeded">Error 7: RecursionError: maximum recursion depth exceeded</h3>
+<p><strong>Symptom:</strong> Stack overflow from recursive calls.</p>
+<p><strong>Explanation:</strong> Function calls itself infinitely (no base case).</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong: infinite recursion</span>
+<span class="k">def</span> <span class="nf">process_nested</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">process_nested</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>  <span class="c1"># No base case!</span>
+
+<span class="c1"># Right: has a base case</span>
+<span class="k">def</span> <span class="nf">process_nested</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">depth</span> <span class="o">&gt;=</span> <span class="n">max_depth</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">data</span>
+    <span class="k">return</span> <span class="n">process_nested</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">depth</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">max_depth</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Every recursive function needs a termination condition.</p>
+<hr />
+<h3 id="error-8-assertion-error-in-tests">Error 8: Assertion Error in tests</h3>
+<p><strong>Symptom:</strong> <code>AssertionError: assert None == "expected"</code></p>
+<p><strong>Explanation:</strong> Function returned None instead of expected value.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">my_function</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This function claims to return str but returns None.&quot;&quot;&quot;</span>
+    <span class="k">pass</span>  <span class="c1"># Returns None implicitly</span>
+
+<span class="c1"># Test catches this</span>
+<span class="k">assert</span> <span class="n">my_function</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;something&quot;</span>  <span class="c1"># Fails</span>
+
+<span class="c1"># Fix it</span>
+<span class="k">def</span> <span class="nf">my_function</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">return</span> <span class="s2">&quot;something&quot;</span>
+
+<span class="k">assert</span> <span class="n">my_function</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;something&quot;</span>  <span class="c1"># Passes</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Type hints + type checking catch this: <code>mypy</code> warns that None doesn't match return type.</p>
+<hr />
+<h3 id="error-9-unboundlocalerror-local-variable-x-referenced-before-assignment">Error 9: UnboundLocalError: local variable 'x' referenced before assignment</h3>
+<p><strong>Symptom:</strong> Variable used before it's defined in a function.</p>
+<p><strong>Explanation:</strong> Scope issue (usually from trying to modify a global).</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong</span>
+<span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">increment</span><span class="p">():</span>
+    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Error: UnboundLocalError</span>
+
+<span class="c1"># Right</span>
+<span class="k">def</span> <span class="nf">increment</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">counter</span>
+    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="c1"># Or better (no globals)</span>
+<span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="n">counter</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">counter</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Avoid global state. Pass values as parameters. Use type hints to clarify scope.</p>
+<hr />
+<h3 id="error-10-modulenotfounderror-no-module-named-mymodule">Error 10: ModuleNotFoundError: No module named 'mymodule'</h3>
+<p><strong>Symptom:</strong> <code>ModuleNotFoundError: No module named 'myapp'</code></p>
+<p><strong>Explanation:</strong> Python can't find your module (path issue or not installed).</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong: module not in PYTHONPATH</span>
+<span class="nb">cd</span><span class="w"> </span>src/
+python<span class="w"> </span>script.py<span class="w">  </span><span class="c1"># Can&#39;t find myapp</span>
+
+<span class="c1"># Right: install in editable mode</span>
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.<span class="w">  </span><span class="c1"># Installs myapp as importable package</span>
+
+<span class="c1"># Then from anywhere:</span>
+python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;from myapp import processor&quot;</span><span class="w">  </span><span class="c1"># Works</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Use <code>pip install -e .</code> in development. Always use <code>src/</code> layout. Add <code>__init__.py</code> to packages.</p>
+<hr />
+<h2 id="10-common-mistakes-type-hints-async">10. Common Mistakes: Type Hints &amp; Async</h2>
+<h3 id="mistake-1-overly-permissive-types">Mistake 1: Overly Permissive Types</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong: accepts anything, too loose</span>
+<span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="c1"># Right: specific about what you accept and return</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+
+<span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">documents</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="k">pass</span>
+</code></pre></div>
+<p><strong>Why:</strong> <code>Any</code> defeats the purpose of type hints. Be specific.</p>
+<hr />
+<h3 id="mistake-2-not-awaiting-async-functions">Mistake 2: Not Awaiting Async Functions</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong: forgot await</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">fetch</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">&quot;data&quot;</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">fetch</span><span class="p">()</span>  <span class="c1"># Returns coroutine object, not data</span>
+
+<span class="c1"># Right: use await</span>
+<span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">fetch</span><span class="p">()</span>  <span class="c1"># Returns actual data</span>
+</code></pre></div>
+<p><strong>Why:</strong> Without await, you get a coroutine object, not the value. Code likely crashes later.</p>
+<hr />
+<h3 id="mistake-3-mixing-blocking-non-blocking-operations">Mistake 3: Mixing Blocking &amp; Non-Blocking Operations</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong: does sync I/O inside async function (blocks event loop)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">process_documents</span><span class="p">(</span><span class="n">docs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">docs</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;data/</span><span class="si">{</span><span class="n">doc</span><span class="si">}</span><span class="s2">.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>  <span class="c1"># Blocks!</span>
+            <span class="n">content</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">docs</span>
+
+<span class="c1"># Right: use async file I/O</span>
+<span class="kn">import</span> <span class="nn">aiofiles</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">process_documents</span><span class="p">(</span><span class="n">docs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">docs</span><span class="p">:</span>
+        <span class="k">async</span> <span class="k">with</span> <span class="n">aiofiles</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;data/</span><span class="si">{</span><span class="n">doc</span><span class="si">}</span><span class="s2">.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>  <span class="c1"># Non-blocking</span>
+            <span class="n">content</span> <span class="o">=</span> <span class="k">await</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">results</span>
+</code></pre></div>
+<p><strong>Why:</strong> Blocking calls freeze the entire event loop. No other requests can run.</p>
+<hr />
+<h3 id="mistake-4-modifying-mutable-default-arguments">Mistake 4: Modifying Mutable Default Arguments</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong: list is created once, shared across all calls</span>
+<span class="k">def</span> <span class="nf">add_tag</span><span class="p">(</span><span class="n">tags</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="n">tags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;new-tag&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">tags</span>
+
+<span class="n">result1</span> <span class="o">=</span> <span class="n">add_tag</span><span class="p">()</span>  <span class="c1"># [&quot;new-tag&quot;]</span>
+<span class="n">result2</span> <span class="o">=</span> <span class="n">add_tag</span><span class="p">()</span>  <span class="c1"># [&quot;new-tag&quot;, &quot;new-tag&quot;] — unexpected!</span>
+
+<span class="c1"># Right: use None as default</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
+
+<span class="k">def</span> <span class="nf">add_tag</span><span class="p">(</span><span class="n">tags</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">tags</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">tags</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">tags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;new-tag&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">tags</span>
+
+<span class="n">result1</span> <span class="o">=</span> <span class="n">add_tag</span><span class="p">()</span>  <span class="c1"># [&quot;new-tag&quot;]</span>
+<span class="n">result2</span> <span class="o">=</span> <span class="n">add_tag</span><span class="p">()</span>  <span class="c1"># [&quot;new-tag&quot;] — correct!</span>
+</code></pre></div>
+<p><strong>Why:</strong> Mutable defaults are shared. Classic Python gotcha.</p>
+<hr />
+<h3 id="mistake-5-using-string-type-hints-incorrectly">Mistake 5: Using string type hints incorrectly</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong: not actually used forward references</span>
+<span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">results</span><span class="p">:</span> <span class="s2">&quot;List[Result]&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="c1"># Right: import the type or use from __future__ import annotations</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+
+<span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">results</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Result</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">pass</span>
+</code></pre></div>
+<p><strong>Why:</strong> String annotations are slower and confusing. Use <code>from __future__ import annotations</code> for forward references.</p>
+<hr />
+<h2 id="11-production-realism-tutorial-vs-production">11. Production Realism: Tutorial vs Production</h2>
+<h3 id="tutorial-code">Tutorial Code</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Simple, fast to write, but breaks at scale</span>
+<span class="k">class</span> <span class="nc">DocumentCache</span><span class="p">:</span>
+    <span class="n">cache</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># Global dict</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+<span class="c1"># Problem: thread-unsafe, no TTL, unbounded growth</span>
+</code></pre></div>
+<h3 id="production-code">Production Code</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Lock</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="k">class</span> <span class="nc">DocumentCache</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Thread-safe cache with TTL and size limits.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">,</span> <span class="n">ttl_seconds</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3600</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_timestamps</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span> <span class="o">=</span> <span class="n">Lock</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_size</span> <span class="o">=</span> <span class="n">max_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ttl_seconds</span> <span class="o">=</span> <span class="n">ttl_seconds</span>
+
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get with TTL check.&quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>  <span class="c1"># Thread-safe</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">None</span>
+
+            <span class="c1"># Check if expired</span>
+            <span class="k">if</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_timestamps</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ttl_seconds</span><span class="p">):</span>
+                <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+                <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_timestamps</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+                <span class="k">return</span> <span class="kc">None</span>
+
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set with size management.&quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
+            <span class="c1"># Evict oldest if at capacity (LRU)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_size</span> <span class="ow">and</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">:</span>
+                <span class="n">oldest</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_timestamps</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_timestamps</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
+                <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">oldest</span><span class="p">]</span>
+                <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_timestamps</span><span class="p">[</span><span class="n">oldest</span><span class="p">]</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_timestamps</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+</code></pre></div>
+<p><strong>The differences:</strong>
+- Thread-safe locking
+- TTL expiration
+- Size limits (prevents memory explosions)
+- Type hints
+- Logging (add in production)</p>
+<p>Tutorial code works on your laptop. Production code works with 1M concurrent users.</p>
+<hr />
+<h2 id="12-cost-performance-considerations">12. Cost &amp; Performance Considerations</h2>
+<h3 id="type-checking-performance">Type Checking Performance</h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Overhead</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>mypy</strong></td>
+<td>5-10 seconds (one-time)</td>
+<td>Pre-commit hook</td>
+</tr>
+<tr>
+<td><strong>Pylance</strong> (IDE)</td>
+<td>Negligible (background)</td>
+<td>Real-time</td>
+</tr>
+<tr>
+<td><strong>Runtime Pydantic</strong></td>
+<td>10-50ms per validation</td>
+<td>Accept user input</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Optimization:</strong> Cache Pydantic models when parsing large datasets:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Slow: parses 10,000 times</span>
+<span class="k">for</span> <span class="n">raw</span> <span class="ow">in</span> <span class="n">large_dataset</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">Document</span><span class="o">.</span><span class="n">model_validate</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>  <span class="c1"># 10k × 10ms = 100s</span>
+
+<span class="c1"># Fast: use batch validation</span>
+<span class="n">docs</span> <span class="o">=</span> <span class="n">Document</span><span class="o">.</span><span class="n">model_validate_json</span><span class="p">(</span><span class="n">batch_json_string</span><span class="p">)</span>  <span class="c1"># 1-2s</span>
+</code></pre></div>
+<h3 id="async-concurrency-roi">Async Concurrency ROI</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Sequential: 10 API calls × 2s latency = 20 seconds</span>
+<span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">docs</span><span class="p">:</span>
+    <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="k">await</span> <span class="n">fetch_embedding</span><span class="p">(</span><span class="n">doc</span><span class="p">))</span>
+
+<span class="c1"># Parallel: max 2s (all concurrent)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="n">fetch_embedding</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span> <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">docs</span><span class="p">])</span>
+</code></pre></div>
+<p><strong>ROI:</strong> If each task is I/O-bound (waiting for network), asyncio gives 10x speedup for free.</p>
+<hr />
+<h2 id="13-security-considerations">13. Security Considerations</h2>
+<h3 id="secret-management">Secret Management</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong: hardcoded secret</span>
+<span class="n">API_KEY</span> <span class="o">=</span> <span class="s2">&quot;sk-1234567890abcdef&quot;</span>
+
+<span class="c1"># Right: from environment</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+
+<span class="n">load_dotenv</span><span class="p">()</span>
+<span class="n">API_KEY</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;OPENAI_API_KEY&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">API_KEY</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;OPENAI_API_KEY not set&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="input-validation-defense-against-injection">Input Validation (Defense Against Injection)</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">Field</span>
+
+<span class="k">class</span> <span class="nc">Query</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;User query — validate to prevent injection.&quot;&quot;&quot;</span>
+    <span class="n">text</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">min_length</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
+
+    <span class="c1"># Custom validator for SQL characters</span>
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">)</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">no_sql_injection</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s2">&quot;;&quot;</span> <span class="ow">in</span> <span class="n">v</span> <span class="ow">or</span> <span class="s2">&quot;DROP&quot;</span> <span class="ow">in</span> <span class="n">v</span><span class="o">.</span><span class="n">upper</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid characters detected&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">v</span>
+
+<span class="c1"># Pydantic catches malicious input before it hits your DB</span>
+</code></pre></div>
+<h3 id="type-safety-for-secrets">Type Safety for Secrets</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">SecretStr</span><span class="p">,</span> <span class="n">Field</span>
+<span class="kn">from</span> <span class="nn">pydantic_settings</span> <span class="kn">import</span> <span class="n">BaseSettings</span>
+
+<span class="k">class</span> <span class="nc">Settings</span><span class="p">(</span><span class="n">BaseSettings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;App config — secrets are masked in logs.&quot;&quot;&quot;</span>
+    <span class="n">openai_api_key</span><span class="p">:</span> <span class="n">SecretStr</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">min_length</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+    <span class="n">database_password</span><span class="p">:</span> <span class="n">SecretStr</span>
+
+    <span class="k">class</span> <span class="nc">Config</span><span class="p">:</span>
+        <span class="n">env_file</span> <span class="o">=</span> <span class="s2">&quot;.env&quot;</span>
+
+<span class="n">settings</span> <span class="o">=</span> <span class="n">Settings</span><span class="p">()</span>
+<span class="c1"># settings.openai_api_key prints as &quot;***&quot; not actual key</span>
+</code></pre></div>
+<hr />
+<h2 id="14-case-study-type-safe-rag-pipeline-openai">14. Case Study: Type-Safe RAG Pipeline (OpenAI)</h2>
+<p><strong>Context:</strong> OpenAI's RAG code uses strict typing throughout.</p>
+<p><strong>Their patterns:</strong>
+- Every function has input/output types
+- Pydantic for API request/response validation
+- Async throughout (concurrent embedding + retrieval)
+- Custom types for domain concepts (Message, Embedding, etc.)</p>
+<p><strong>Result:</strong> Catches bugs in development, not production. Ship faster.</p>
+<h3 id="case-study-type-safe-ml-pipeline-anthropic">Case Study: Type-Safe ML Pipeline (Anthropic)</h3>
+<p><strong>Context:</strong> Anthropic processes billions of prompts. Type safety is critical.</p>
+<p><strong>Their patterns:</strong>
+- Pydantic for prompt schemas
+- TypedDict for unstructured data with known keys
+- Strict validation on input (rejects malformed prompts before processing)</p>
+<p><strong>Result:</strong> 10x fewer production incidents. Easy onboarding for new engineers.</p>
+<hr />
+<h2 id="15-interview-cheat-sheet-type-hints-async">15. Interview Cheat Sheet: Type Hints &amp; Async</h2>
+<h3 id="concept-1-optional-vs-union">Concept 1: Optional vs Union</h3>
+<p><strong>Q:</strong> What's the difference between <code>Optional[str]</code> and <code>Union[str, None]</code>?</p>
+<p><strong>A:</strong> They're identical. <code>Optional[str]</code> is syntactic sugar for <code>Union[str, None]</code>. Use <code>Optional[str]</code> because it's clearer.</p>
+<hr />
+<h3 id="concept-2-when-to-use-property-vs-regular-method">Concept 2: When to Use @property vs Regular Method</h3>
+<p><strong>Q:</strong> When should I use <code>@property</code> vs a regular method?</p>
+<p><strong>A:</strong> Use <code>@property</code> for computed attributes that feel like data, not methods. Example:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Document</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">content</span>
+
+    <span class="nd">@property</span>  <span class="c1"># Feels like an attribute</span>
+    <span class="k">def</span> <span class="nf">word_count</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+
+    <span class="c1"># vs</span>
+    <span class="k">def</span> <span class="nf">calculate_word_count</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>  <span class="c1"># Feels like a method</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+</code></pre></div>
+<hr />
+<h3 id="concept-3-asynciogather-vs-asynciocreate_task">Concept 3: asyncio.gather vs asyncio.create_task</h3>
+<p><strong>Q:</strong> When do you use <code>gather</code> vs <code>create_task</code>?</p>
+<p><strong>A:</strong>
+- <code>gather</code>: Wait for all tasks, return results in order. Use when you need all results.
+- <code>create_task</code>: Fire and forget. Use for background work you don't need to wait for.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># gather: need results</span>
+<span class="n">results</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="n">task1</span><span class="p">(),</span> <span class="n">task2</span><span class="p">())</span>  <span class="c1"># Waits for both</span>
+
+<span class="c1"># create_task: fire and forget</span>
+<span class="n">asyncio</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">background_work</span><span class="p">())</span>  <span class="c1"># Doesn&#39;t wait</span>
+</code></pre></div>
+<hr />
+<h3 id="concept-4-protocol-vs-abc">Concept 4: Protocol vs ABC</h3>
+<p><strong>Q:</strong> Should I use Protocol or ABC for type constraints?</p>
+<p><strong>A:</strong>
+- <strong>Protocol:</strong> "If it walks like a duck and quacks like a duck, it's a duck." Use for structural typing (duck typing).
+- <strong>ABC:</strong> Formal interface. Use when you control all implementations.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Protocol</span>
+
+<span class="k">class</span> <span class="nc">Embedding</span><span class="p">(</span><span class="n">Protocol</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">embed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span> <span class="o">...</span>
+
+<span class="c1"># Anything with an embed method matches this Protocol</span>
+<span class="c1"># No explicit inheritance needed</span>
+</code></pre></div>
+<hr />
+<h3 id="concept-5-type-variance-covariance-vs-contravariance">Concept 5: Type Variance: Covariance vs Contravariance</h3>
+<p><strong>Q:</strong> Explain covariance in inheritance.</p>
+<p><strong>A:</strong> A subtype is always assignable to a supertype.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Animal</span><span class="p">:</span> <span class="k">pass</span>
+<span class="k">class</span> <span class="nc">Dog</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span> <span class="k">pass</span>
+
+<span class="c1"># Covariant (works)</span>
+<span class="k">def</span> <span class="nf">get_animal</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Animal</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">Dog</span><span class="p">()</span>  <span class="c1"># Dog is a subtype of Animal</span>
+
+<span class="c1"># Contravariant (in function parameters)</span>
+<span class="k">def</span> <span class="nf">accept_dog</span><span class="p">(</span><span class="n">f</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Dog</span><span class="p">],</span> <span class="kc">None</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">f</span><span class="p">(</span><span class="n">Dog</span><span class="p">())</span>
+
+<span class="c1"># This function accepts ANY Animal (contravariance)</span>
+<span class="k">def</span> <span class="nf">accepts_animal</span><span class="p">(</span><span class="n">animal</span><span class="p">:</span> <span class="n">Animal</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Got </span><span class="si">{</span><span class="n">animal</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># But you can pass it to accept_dog (because contravariance)</span>
+<span class="n">accept_dog</span><span class="p">(</span><span class="n">accepts_animal</span><span class="p">)</span>
+</code></pre></div>
+<p>This is advanced, but interviews sometimes ask about it. Just know: "Subtypes work where supertypes are expected."</p>
+<hr />
+<h2 id="16-review-questions">16. Review Questions</h2>
+<ol>
+<li>What's the difference between <code>Optional[str]</code> and <code>Union[str, None]</code>? When would you use each?</li>
+<li>Write a Pydantic model for an LLM response with <code>content</code> (str), <code>tokens_used</code> (int), and <code>model</code> (str). Add validation to ensure tokens_used &gt; 0.</li>
+<li>Write an async function that fetches embeddings for 100 documents in parallel using <code>asyncio.gather</code>.</li>
+<li>What's the problem with this code: <code>def process(items: list = [])</code>? How do you fix it?</li>
+<li>Explain the difference between <code>asyncio.gather</code> and <code>asyncio.create_task</code>. When would you use each?</li>
+<li>What does <code>@field_validator</code> do in Pydantic? Show an example.</li>
+<li>Write a retry decorator that retries an async function up to 3 times.</li>
+<li>What's the difference between <code>Union[str, int]</code> and <code>str | int</code> (Python 3.10+)?</li>
+<li>How do you test an async function in pytest? Show a basic example.</li>
+<li>What's the purpose of type hints if Python is dynamically typed?</li>
+</ol>
+<hr />
+<h2 id="17-flashcards-anki-format">17. Flashcards (Anki Format)</h2>
+<h3 id="card-1">Card 1</h3>
+<p><strong>Front:</strong> What does <code>await asyncio.gather(*tasks)</code> do?</p>
+<p><strong>Back:</strong> Runs all tasks concurrently and waits for all to complete. Returns results in the same order as tasks. Used when you need all results before proceeding.</p>
+<hr />
+<h3 id="card-2">Card 2</h3>
+<p><strong>Front:</strong> What's wrong with <code>def process(items: list = [])</code>?</p>
+<p><strong>Back:</strong> Mutable default argument. The list is created once and shared across all calls. If you modify it, future calls see the modification. Fix: <code>def process(items: Optional[list] = None): if items is None: items = []</code></p>
+<hr />
+<h3 id="card-3">Card 3</h3>
+<p><strong>Front:</strong> How do you validate ALL fields in a Pydantic model together?</p>
+<p><strong>Back:</strong> Use <code>@model_validator(mode="after")</code>. Allows cross-field validation. Example: ensure chunk_size &lt; len(content).</p>
+<hr />
+<h3 id="card-4">Card 4</h3>
+<p><strong>Front:</strong> What's the difference between <code>asyncio.sleep(1)</code> and <code>time.sleep(1)</code> in async functions?</p>
+<p><strong>Back:</strong> <code>asyncio.sleep()</code> is non-blocking (other code runs). <code>time.sleep()</code> is blocking (freezes entire event loop). Always use <code>asyncio.sleep()</code> in async functions.</p>
+<hr />
+<h3 id="card-5">Card 5</h3>
+<p><strong>Front:</strong> How do you reload a .env file in a running app?</p>
+<p><strong>Back:</strong> <code>load_dotenv()</code> reloads from .env. But be careful: already-imported values won't update. Solution: use Pydantic BaseSettings with <code>env_file = ".env"</code> for automatic reload.</p>
+<hr />
+<h3 id="card-6">Card 6</h3>
+<p><strong>Front:</strong> What's a Protocol in Python typing?</p>
+<p><strong>Back:</strong> Structural typing. Defines what methods/attributes an object must have, without explicit inheritance. Example: <code>class Embedding(Protocol): def embed(self, text) -&gt; List[float]</code>. Anything with an <code>embed</code> method matches.</p>
+<hr />
+<h3 id="card-7">Card 7</h3>
+<p><strong>Front:</strong> How do you mock an async function in pytest?</p>
+<p><strong>Back:</strong> Use <code>AsyncMock()</code> from <code>unittest.mock</code>. Example: <code>mock_func = AsyncMock(return_value="result")</code>. Works with <code>await mock_func()</code>.</p>
+<hr />
+<h3 id="card-8">Card 8</h3>
+<p><strong>Front:</strong> What does <code>@lru_cache</code> do? Does it work with async?</p>
+<p><strong>Back:</strong> Caches function results. But it doesn't work directly with async (no async version). For async, you need custom caching or use external libraries like <code>aiocache</code>.</p>
+<hr />
+<h3 id="card-9">Card 9</h3>
+<p><strong>Front:</strong> How do you add a timeout to an async operation?</p>
+<p><strong>Back:</strong> Python 3.11+: <code>async with asyncio.timeout(5): await slow_operation()</code>. Older versions: <code>asyncio.wait_for(slow_operation(), timeout=5)</code>.</p>
+<hr />
+<h3 id="card-10">Card 10</h3>
+<p><strong>Front:</strong> What does <code>mypy</code> check that <code>pylance</code> doesn't (in IDE)?</p>
+<p><strong>Back:</strong> <code>mypy</code> is comprehensive and command-line. <code>pylance</code> is IDE-based and more permissive. Run <code>mypy --strict src/</code> in CI. Use <code>pylance</code> for real-time IDE feedback.</p>
+<hr />
+<h2 id="18-teach-it-back-prompt">18. Teach-It-Back Prompt</h2>
+<p>Explain to a junior engineer why <code>async</code>/<code>await</code> matters for AI systems.</p>
+<p><strong>Model Answer:</strong></p>
+<p>"AI systems make lots of I/O calls (LLM APIs, database queries, file I/O). With synchronous code, each call blocks the entire server. If you have 100 concurrent users and each request takes 2 seconds (waiting for the LLM), you need 200 seconds = 3+ minutes. But with <code>async</code>/<code>await</code>, while Request 1 waits for the LLM, Request 2 can run. All 100 requests run concurrently in ~2 seconds total. Same amount of wait time, but parallelized. That's why every AI backend uses async."</p>
+<hr />
+<h2 id="19-1-week-review-checklist">19. 1-Week Review Checklist</h2>
+<ul>
+<li>[ ] Write 3 functions with complete type hints (including return types). Run <code>mypy --strict</code> on them.</li>
+<li>[ ] Build a Pydantic model for an AI domain (documents, chunks, embeddings). Add at least 2 validators.</li>
+<li>[ ] Write an async function that fetches data 10 times in parallel. Compare runtime vs sequential.</li>
+<li>[ ] Deploy once with proper secrets management (.env + <code>.env.example</code> file).</li>
+<li>[ ] Write tests for an async function using <code>@pytest.mark.asyncio</code> and <code>AsyncMock</code>.</li>
+</ul>
+<hr />
+<h2 id="20-resources">20. Resources</h2>
+<ul>
+<li><a href="https://docs.python.org/3.11/library/typing.html">Python typing documentation</a></li>
+<li><a href="https://docs.pydantic.dev/">Pydantic v2 documentation</a></li>
+<li><a href="https://fastapi.tiangolo.com/tutorial/dependencies/">FastAPI dependency injection guide</a></li>
+<li><a href="https://docs.python.org/3.11/library/asyncio.html">asyncio documentation</a></li>
+<li><a href="https://mypy.readthedocs.io/">mypy documentation</a></li>
+<li><a href="https://realpython.com/python-type-checking/">Real Python: Type hints</a></li>
+<li><a href="https://realpython.com/async-io-python/">Real Python: asyncio</a></li>
+</ul>
+<hr />
+<h2 id="21-next-fastapi-deep-dive">21. Next: FastAPI Deep Dive</h2>
+<p>You now understand Python patterns. FastAPI builds on this.</p>
+<p>→ <strong><a href="../fastapi/">FastAPI Deep Dive (next lecture) →</a></strong></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.integrate"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>

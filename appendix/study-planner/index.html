@@ -1,0 +1,2567 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive 6-phase learning roadmap from Python foundations to production ML systems">
+      
+      
+        <meta name="author" content="AI Engineering Community">
+      
+      
+      
+        <link rel="prev" href="../tooling/">
+      
+      
+        <link rel="next" href="../project-template/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>Study Planner - AI Full Stack Engineer Roadmap</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#your-study-planner-how-to-actually-finish-this-roadmap" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-header__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Full Stack Engineer Roadmap
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Study Planner
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        
+  
+    
+  
+  Setup Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase0/overview/" class="md-tabs__link">
+          
+  
+  Phase 0 — Foundation Warmup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase1/overview/" class="md-tabs__link">
+          
+  
+  Phase 1 — AI Systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase2/overview/" class="md-tabs__link">
+          
+  
+  Phase 2 — Docker & Cloud
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase3/overview/" class="md-tabs__link">
+          
+  
+  Phase 3 — MLOps Tooling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase4/overview/" class="md-tabs__link">
+          
+  
+  Phase 4 — Scaling & Kubernetes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase5/overview/" class="md-tabs__link">
+          
+  
+  Phase 5 — Portfolio & Job Readiness
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../math-lite/" class="md-tabs__link">
+          
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-nav__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    AI Full Stack Engineer Roadmap
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 0 — Foundation Warmup
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 0 — Foundation Warmup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Mastery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/fastapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI Deep Dive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/databases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Databases (SQL + NoSQL + Redis)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux & Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 0 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 1 — AI Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 1 — AI Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/llm-apis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM APIs & Prompt Engineering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/embeddings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embeddings & Vector Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/rag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RAG Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Agents & Tool Use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/fine-tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fine-Tuning (LoRA & PEFT)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluation & Benchmarking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security & Prompt Injection Defense
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/cost-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cost & Performance Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 1 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 2 — Docker & Cloud
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 2 — Docker & Cloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose for AI Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Deployment (EC2 + S3 + ECS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/secrets-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secrets Management & Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 2 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 3 — MLOps Tooling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 3 — MLOps Tooling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/mlflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLflow Experiment Tracking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/dvc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DVC Data Versioning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/wandb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weights & Biases (W&B)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/cicd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI/CD for AI Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 3 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 4 — Scaling & Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 4 — Scaling & Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes Core Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/ai-on-k8s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying AI Services on K8s
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autoscaling & Observability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 4 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 5 — Portfolio & Job Readiness
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 5 — Portfolio & Job Readiness
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Portfolio Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/resume/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resume & LinkedIn Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/system-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI System Design Interviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/mock-interviews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mock Interview Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/salary-negotiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Salary & Negotiation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math-lite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math-Lite Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tooling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tooling & Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Study Planner
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Study Planner
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-weekly-schedule-templates" class="md-nav__link">
+    1. Weekly Schedule Templates
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Weekly Schedule Templates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#full-time-learner-40-hoursweek" class="md-nav__link">
+    Full-Time Learner (40 hours/week)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-time-learner-15-hoursweek" class="md-nav__link">
+    Part-Time Learner (15 hours/week)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weekend-warrior-8-hoursweek" class="md-nav__link">
+    Weekend Warrior (8 hours/week)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-7030-rule" class="md-nav__link">
+    2. The 70/30 Rule
+  </a>
+  
+    <nav class="md-nav" aria-label="2. The 70/30 Rule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-enforce-this" class="md-nav__link">
+    How to Enforce This
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signs-youre-breaking-the-rule-and-how-to-fix-it" class="md-nav__link">
+    Signs You're Breaking the Rule (and how to fix it)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-when-youre-stuck-the-unstuck-ladder" class="md-nav__link">
+    3. When You're Stuck: The Unstuck Ladder
+  </a>
+  
+    <nav class="md-nav" aria-label="3. When You're Stuck: The Unstuck Ladder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level-1-rubber-duck-10-min" class="md-nav__link">
+    Level 1: Rubber Duck (10 min)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-2-re-read-the-error-10-min" class="md-nav__link">
+    Level 2: Re-read the Error (10 min)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-3-check-the-debugging-playbook-10-min" class="md-nav__link">
+    Level 3: Check the Debugging Playbook (10 min)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-4-ask-claude-with-full-context-10-min" class="md-nav__link">
+    Level 4: Ask Claude with Full Context (10 min)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-5-better-searches-10-min" class="md-nav__link">
+    Level 5: Better Searches (10 min)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-6-ask-in-community-30-min" class="md-nav__link">
+    Level 6: Ask in Community (30 min)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-7-sleep-on-it-24h" class="md-nav__link">
+    Level 7: Sleep on It (24h)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-do-when-youre-stuck-for-2-hours" class="md-nav__link">
+    What To Do When You're Stuck for 2+ Hours
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-progress-tracking-system" class="md-nav__link">
+    4. Progress Tracking System
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Progress Tracking System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plain-text-progress-tracker" class="md-nav__link">
+    Plain Text Progress Tracker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-mark-a-topic-complete" class="md-nav__link">
+    When to Mark a Topic Complete?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ready-to-move-on-vs-rushing" class="md-nav__link">
+    5. Ready to Move On vs. Rushing
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Ready to Move On vs. Rushing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signs-youre-ready-for-next-topic" class="md-nav__link">
+    Signs You're Ready for Next Topic ✅
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signs-youre-rushing-not-ready" class="md-nav__link">
+    Signs You're Rushing (Not Ready) ❌
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-handling-low-motivation-weeks" class="md-nav__link">
+    6. Handling Low-Motivation Weeks
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Handling Low-Motivation Weeks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-5-minute-rule" class="md-nav__link">
+    The 5-Minute Rule
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#momentum-techniques" class="md-nav__link">
+    Momentum Techniques
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-not-to-do" class="md-nav__link">
+    What NOT to Do
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-reduce-without-stopping" class="md-nav__link">
+    How to Reduce Without Stopping
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-learn-in-public-accelerate-through-sharing" class="md-nav__link">
+    7. Learn in Public: Accelerate Through Sharing
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Learn in Public: Accelerate Through Sharing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#weekly-content-ideas" class="md-nav__link">
+    Weekly Content Ideas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#template-weekly-twitterx-thread" class="md-nav__link">
+    Template: Weekly Twitter/X Thread
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-phase-by-phase-time-estimates" class="md-nav__link">
+    8. Phase-by-Phase Time Estimates
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Phase-by-Phase Time Estimates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adjusting-if-youre-behind" class="md-nav__link">
+    Adjusting If You're Behind
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-your-study-rhythm" class="md-nav__link">
+    Summary: Your Study Rhythm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-first-week-checklist" class="md-nav__link">
+    Your First Week Checklist
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Showcase Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../whats-next/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What's Next (Post-Roadmap)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="your-study-planner-how-to-actually-finish-this-roadmap">Your Study Planner: How to Actually Finish This Roadmap</h1>
+<p>Most people don't finish learning roadmaps.</p>
+<p>Not because they're not smart enough. Because they don't have a schedule.</p>
+<p>This guide gives you the structure to actually finish. For real.</p>
+<hr />
+<h2 id="1-weekly-schedule-templates">1. Weekly Schedule Templates</h2>
+<h3 id="full-time-learner-40-hoursweek">Full-Time Learner (40 hours/week)</h3>
+<p>You're doing this full-time. School break, sabbatical, job transition period.</p>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Morning (3h)</th>
+<th>Afternoon (3h)</th>
+<th>Evening (2h)</th>
+<th>Evening (2h)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Monday</strong></td>
+<td>New topic: read slides/docs (Phase)</td>
+<td>Code examples from topic</td>
+<td>Build project code</td>
+<td>Review + flashcards</td>
+</tr>
+<tr>
+<td><strong>Tuesday</strong></td>
+<td>Continue topic (deeper dive)</td>
+<td>Code examples + debugging</td>
+<td>Build project + test fixes</td>
+<td>Reflection: what's confusing?</td>
+</tr>
+<tr>
+<td><strong>Wednesday</strong></td>
+<td>New topic (if ready) or deep dive</td>
+<td>Code implementation</td>
+<td>Project build (intensive)</td>
+<td>Document what you learned</td>
+</tr>
+<tr>
+<td><strong>Thursday</strong></td>
+<td>Review previous topics</td>
+<td>Practice old concepts</td>
+<td>Project build</td>
+<td>Quiz yourself (can you explain?)</td>
+</tr>
+<tr>
+<td><strong>Friday</strong></td>
+<td>New topic or catch-up</td>
+<td>Code exploration</td>
+<td>Project shipping</td>
+<td>Weekend prep</td>
+</tr>
+<tr>
+<td><strong>Saturday</strong></td>
+<td>Project refinement</td>
+<td>Advanced features</td>
+<td>Optimization / polish</td>
+<td>Blog post writing</td>
+</tr>
+<tr>
+<td><strong>Sunday</strong></td>
+<td>Recovery + review</td>
+<td>Catch-up on weak areas</td>
+<td>Light reading ahead</td>
+<td>Plan next week</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Weekly targets:</strong>
+- 12 hours: reading/learning
+- 16 hours: coding/building
+- 8 hours: review/reflection
+- 4 hours: stretch goals</p>
+<p>This pace gets you through the full roadmap in 20-24 weeks.</p>
+<h3 id="part-time-learner-15-hoursweek">Part-Time Learner (15 hours/week)</h3>
+<p>You're working full-time or have limited time. This path prioritizes building over reading.</p>
+<p><strong>Best approach: weekday evenings + weekend blocks</strong></p>
+<p><strong>Weekday (10 hours/week, concentrated):</strong>
+- Monday-Tuesday: New topic (2h), code examples (1h/day) = 4 hours
+- Wednesday: Deep dive coding = 2 hours
+- Thursday-Friday: Practice + project = 4 hours</p>
+<p><strong>Weekend (5 hours):</strong>
+- Saturday: 3-4 hour focused building session
+- Sunday: 1.5 hour review + next week prep</p>
+<p><strong>Skip:</strong> Optimization, polish, advanced features. Focus on core understanding and working code.</p>
+<p><strong>Realistic timeline:</strong> 30-36 weeks (7-9 months)</p>
+<h3 id="weekend-warrior-8-hoursweek">Weekend Warrior (8 hours/week)</h3>
+<p>You have a full-time job. You learn on weekends only.</p>
+<p><strong>Saturday morning (5h): Deep focus</strong>
+- No notifications. Phone on silent.
+- 1.5h: Read/learn one concept
+- 3h: Code that concept
+- 0.5h: Test and verify</p>
+<p><strong>Sunday evening (3h): Reinforce + plan</strong>
+- 1.5h: Code review what you built
+- 1h: Test and document
+- 0.5h: Plan next weekend's topic</p>
+<p><strong>Constraint:</strong> You won't do advanced projects. You'll understand the important concepts and build working code, but not polished systems.</p>
+<p><strong>Realistic timeline:</strong> 40-50 weeks (9-12 months)</p>
+<p><strong>Pro tip:</strong> Use your weekday commute (30 min) for spaced review. Flashcards, re-watching concepts. This helps retention without eating into learning time.</p>
+<hr />
+<h2 id="2-the-7030-rule">2. The 70/30 Rule</h2>
+<p><strong>70% building. 30% reading.</strong></p>
+<p>Not the other way around.</p>
+<h3 id="how-to-enforce-this">How to Enforce This</h3>
+<p>Create a simple spreadsheet:</p>
+<table>
+<thead>
+<tr>
+<th>Week</th>
+<th>Phase</th>
+<th>Study Hours</th>
+<th>Build Hours</th>
+<th>Ratio</th>
+<th>On Target?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Intro</td>
+<td>2</td>
+<td>8</td>
+<td>80% build ✓</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Embeddings</td>
+<td>4</td>
+<td>10</td>
+<td>71% build ✓</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Embeddings</td>
+<td>4.5</td>
+<td>6</td>
+<td>57% build ✗</td>
+<td>Too much reading</td>
+</tr>
+<tr>
+<td>4</td>
+<td>RAG</td>
+<td>3</td>
+<td>12</td>
+<td>80% build ✓</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p>Track actual time. Adjust.</p>
+<h3 id="signs-youre-breaking-the-rule-and-how-to-fix-it">Signs You're Breaking the Rule (and how to fix it)</h3>
+<div class="admonition warning">
+<p class="admonition-title">Sign: You're reading more than coding</p>
+<p>Problem: You're in tutorial hell. Reading is comfortable because you don't fail.</p>
+<p>Fix: Set a timer. 30 min reading max per topic, then code for 2 hours.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Sign: You haven't shipped anything in 2 weeks</p>
+<p>Problem: Too much setup/learning, not enough building.</p>
+<p>Fix: Today, make something work. Doesn't have to be perfect. Just functional.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Sign: You're switching topics every 2-3 days</p>
+<p>Problem: You're overwhelmed or jumping around.</p>
+<p>Fix: Stick with one topic for 2-3 days minimum. Build something complete.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Sign: You understand it intellectually but can't code it</p>
+<p>Problem: You're learning without building.</p>
+<p>Fix: Write code before reading the explanation. Struggle first. Then read.</p>
+</div>
+<hr />
+<h2 id="3-when-youre-stuck-the-unstuck-ladder">3. When You're Stuck: The Unstuck Ladder</h2>
+<p>You will get stuck. Everyone does.</p>
+<p>Follow this in order. Do each for 10 minutes before moving to the next.</p>
+<h3 id="level-1-rubber-duck-10-min">Level 1: Rubber Duck (10 min)</h3>
+<p>Explain the problem out loud to a rubber duck (or your pet, or yourself).</p>
+<p>"My RAG retrieval returns wrong results. I want it to return the most similar chunk, but it returns irrelevant chunks. When I embed the query and search, the similarity scores are 0.6-0.7, but 0.85 threshold returns nothing. So either 1) embedding is wrong, 2) similarity threshold is wrong, 3) data is bad..."</p>
+<p>Talking forces clarity. You often find the bug while explaining.</p>
+<h3 id="level-2-re-read-the-error-10-min">Level 2: Re-read the Error (10 min)</h3>
+<p>Your instinct is to Google the error.</p>
+<p>Instead: read it slowly.</p>
+<p>"ValueError: <code>shape (100,) and (384,) are not compatible</code>"</p>
+<p>Translation: You're trying to compare a 100-dimensional vector to 384-dimensional vector. They're different dimensions.</p>
+<p>Why? Your embedding model changed, or you're loading wrong model.</p>
+<h3 id="level-3-check-the-debugging-playbook-10-min">Level 3: Check the Debugging Playbook (10 min)</h3>
+<p>Each lecture file has a "Debugging" section.</p>
+<p><a href="../../phase1/rag/#debugging">RAG Debugging Playbook</a> has 10 common errors. Is yours there?</p>
+<h3 id="level-4-ask-claude-with-full-context-10-min">Level 4: Ask Claude with Full Context (10 min)</h3>
+<p>Now you can ask effectively:</p>
+<div class="highlight"><pre><span></span><code>Error: similarity returns value outside [-1, 1]
+Got: 1.05
+
+Code:
+[full relevant code]
+
+What I&#39;ve tried:
+- Checked embedding dimensions match (they do, both 384)
+- Checked similarity function (using cosine_similarity from sklearn)
+- Input embeddings are normalized (using l2)
+
+My hypothesis:
+Floating point precision? Cosine should clamp to [-1,1].
+
+What am I missing?
+</code></pre></div>
+<p>Claude will likely say: "1.05 due to floating point precision, totally normal. Add <code>.clip(-1, 1)</code> to be safe."</p>
+<p>You just learned something real.</p>
+<h3 id="level-5-better-searches-10-min">Level 5: Better Searches (10 min)</h3>
+<p>Bad search: "vector similarity"
+Good search: "sklearn cosine_similarity returns &gt; 1"</p>
+<p>Include library, version, exact error. </p>
+<p>Likely finds stack overflow with exact answer.</p>
+<h3 id="level-6-ask-in-community-30-min">Level 6: Ask in Community (30 min)</h3>
+<p>Try <a href="https://discuss.huggingface.co">HuggingFace Forums</a>, <a href="https://reddit.com/r/LanguageModels">r/LanguageModels</a>, <a href="https://github.com/tiangolo/fastapi/discussions">FastAPI GitHub Discussions</a>.</p>
+<p>Provide:
+- Minimal reproducible example
+- What you've tried
+- Your hypothesis</p>
+<p>Real humans come through. Takes a few hours, but you get clarity.</p>
+<h3 id="level-7-sleep-on-it-24h">Level 7: Sleep on It (24h)</h3>
+<p>Genuine rest is a underrated debugging tool.</p>
+<p>Take a walk. Shower. Sleep.</p>
+<p>Your subconscious keeps working. You come back with a fresh perspective. The solution is often obvious the next day.</p>
+<hr />
+<h3 id="what-to-do-when-youre-stuck-for-2-hours">What To Do When You're Stuck for 2+ Hours</h3>
+<p><strong>Stop. Seriously.</strong></p>
+<p>You're in a negative spiral. The stress is blocking problem-solving.</p>
+<p>Time-box and move on:</p>
+<div class="highlight"><pre><span></span><code>11:00 - Run into problem
+11:00-11:10 - Rubber duck
+11:10-11:20 - Read error again
+11:20-11:30 - Check debugging guide
+11:30-11:40 - Ask Claude
+11:40-12:00 - Searches
+12:00 - SWITCH TASKS
+
+Come back tomorrow with fresh mind.
+</code></pre></div>
+<p>You'll often fix it in 5 minutes the next day.</p>
+<hr />
+<h2 id="4-progress-tracking-system">4. Progress Tracking System</h2>
+<p>You don't need a fancy app. A text file works perfectly.</p>
+<h3 id="plain-text-progress-tracker">Plain Text Progress Tracker</h3>
+<p>Create: <code>PROGRESS.md</code></p>
+<div class="highlight"><pre><span></span><code><span class="gh"># Learning Progress</span>
+
+<span class="gu">## Phase 0: Foundation</span>
+<span class="k">- [x]</span> Python Mastery
+<span class="w">  </span><span class="k">- [x]</span> Read all sections
+<span class="w">  </span><span class="k">- [x]</span> Completed code examples
+<span class="w">  </span><span class="k">- [x]</span> Built sample project
+<span class="w">  </span><span class="k">- [x]</span> Passed review (8/10)
+<span class="k">- [ ]</span> Git &amp; GitHub
+<span class="w">  </span><span class="k">- [x]</span> Read sections
+<span class="w">  </span><span class="k">- [x]</span> Code examples
+<span class="w">  </span><span class="k">- [ ]</span> Create GitHub account and practice
+<span class="w">  </span><span class="k">- [ ]</span> Review material (target: 8/10)
+
+<span class="gu">## Phase 1: AI Systems</span>
+<span class="k">- [ ]</span> LLM Fundamentals
+<span class="w">  </span><span class="k">- [ ]</span> Read all sections
+<span class="w">  </span><span class="k">- [ ]</span> Completed code examples
+<span class="w">  </span><span class="k">- [ ]</span> Built sample project
+<span class="w">  </span><span class="k">- [ ]</span> Passed review (8/10)
+<span class="k">- [ ]</span> Embeddings
+<span class="w">  </span><span class="k">- [x]</span> Read all sections
+<span class="w">  </span><span class="k">- [x]</span> Completed code examples
+<span class="w">  </span><span class="k">- [ ]</span> Built sample project (IN PROGRESS - 50% done)
+<span class="w">  </span><span class="k">- [ ]</span> Passed review (target: 8/10)
+
+...
+
+<span class="gu">## Metrics</span>
+<span class="k">-</span><span class="w"> </span>Total phases: 6
+<span class="k">-</span><span class="w"> </span>Phases started: 2
+<span class="k">-</span><span class="w"> </span>Phases completed: 1 (Phase 0)
+<span class="k">-</span><span class="w"> </span>Current phase: Phase 1 (30% done)
+<span class="k">-</span><span class="w"> </span>Total hours invested: 45 hours
+<span class="k">-</span><span class="w"> </span>Weeks into roadmap: 4 weeks
+<span class="k">-</span><span class="w"> </span>Pace: 11h/week (on track for 20-week completion)
+</code></pre></div>
+<p>Update it weekly. It's your progress mirror.</p>
+<h3 id="when-to-mark-a-topic-complete">When to Mark a Topic Complete?</h3>
+<p>Not "I read it." But actually "I can use it."</p>
+<p>✅ <strong>Can explain it without notes</strong> (even rough explanation)
+✅ <strong>Can write the code from memory</strong> (not line-for-line, just the structure)
+✅ <strong>Passed 8/10 review questions</strong> (each topic has self-test questions)
+✅ <strong>Built the practical project</strong> (not polished, but functional)</p>
+<p>If you can do all 4: complete.</p>
+<hr />
+<h2 id="5-ready-to-move-on-vs-rushing">5. Ready to Move On vs. Rushing</h2>
+<h3 id="signs-youre-ready-for-next-topic">Signs You're Ready for Next Topic ✅</h3>
+<ul>
+<li>You can explain the concept in your own words (to a friend, or in writing)</li>
+<li>You built working code without copy-pasting the solution</li>
+<li>You understand why the code works, not just what it does</li>
+<li>You can predict what happens if you change one line</li>
+<li>You've spent 2-3 days with the topic (not rushed through in 3 hours)</li>
+</ul>
+<h3 id="signs-youre-rushing-not-ready">Signs You're Rushing (Not Ready) ❌</h3>
+<ul>
+<li>You haven't built the practical project yet</li>
+<li>Code works because you copied the solution, not writing it</li>
+<li>You can't explain why something works (just that it does)</li>
+<li>You'll need to re-learn it in 2 weeks when you forget</li>
+<li>You're jumping topics because they're hard or slow</li>
+<li>You can't answer 6 of the 10 review questions</li>
+</ul>
+<p><strong>If you see rushing signs: STOP. Go back. Spend 2-3 more days.</strong></p>
+<p>You'll save time in the long run because you won't need to re-learn.</p>
+<hr />
+<h2 id="6-handling-low-motivation-weeks">6. Handling Low-Motivation Weeks</h2>
+<p>This will happen. Usually around week 6-8 when novelty wears off.</p>
+<h3 id="the-5-minute-rule">The 5-Minute Rule</h3>
+<p>Don't ask yourself "Do I want to study?"</p>
+<p>Ask: "Can I spend 5 minutes on my laptop opening my project?"</p>
+<p>Just 5 minutes. No commitment.</p>
+<p>99% of the time, you open, see your code, remember why it's interesting, and keep working.</p>
+<h3 id="momentum-techniques">Momentum Techniques</h3>
+<p><strong>Look at what you've built:</strong>
+- Scroll through your GitHub commits
+- Run your projects
+- See them working
+- Remember you've made real progress</p>
+<p>Don't compare to what you haven't built yet. That kills motivation.</p>
+<p><strong>Make one small thing work:</strong>
+- Not "finish the whole phase"
+- Just "make the button work" or "fix this one bug"
+- Completion is motivating, no matter how small</p>
+<p><strong>Community:</strong> Tell someone what you're building.
+- Tweet about your progress (you'd be surprised how supportive AI engineers are)
+- Show a friend
+- Post on Discord</p>
+<p>External accountability is a powerful motivator.</p>
+<h3 id="what-not-to-do">What NOT to Do</h3>
+<div class="admonition warning">
+<p class="admonition-title">Don't: Take a week off</p>
+<p>A week off becomes two weeks. Two weeks becomes a month.</p>
+<p>You lose momentum and restarting is hard.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Don't: Switch to a different learning path</p>
+<p>"Maybe I should learn JavaScript instead of AI..."</p>
+<p>This is your brain's way of avoiding hard topics. Push through.</p>
+</div>
+<h3 id="how-to-reduce-without-stopping">How to Reduce Without Stopping</h3>
+<p>Low motivation week? Cut to 50% your normal load.</p>
+<div class="highlight"><pre><span></span><code>Normal: 10h study, 15h build per week
+Low week: 5h study, 7.5h build per week
+
+Still moving forward, just slower. That&#39;s fine.
+</code></pre></div>
+<p>Don't pause entirely. Just 50%.</p>
+<hr />
+<h2 id="7-learn-in-public-accelerate-through-sharing">7. Learn in Public: Accelerate Through Sharing</h2>
+<p>Learning alone is slow. Learning in public is 3x faster.</p>
+<p>Why? Explaining forces clarity. Feedback corrects mistakes. Community celebrates wins.</p>
+<h3 id="weekly-content-ideas">Weekly Content Ideas</h3>
+<p><strong>Monday Twitter/X thread:</strong>
+<div class="highlight"><pre><span></span><code>This week I learned about semantic caching. Here&#39;s 3 things that surprised me:
+
+1/ Caching embeddings is 30x cheaper than recomputing. 
+   cos_sim(query, cached) &gt; 0.95 and return previous answer
+   Saved $500/month on inference.
+
+2/ Thread-safety matters. Two requests same query = race condition.
+   Redis SET with locks prevents double-compute.
+
+3/ Cold start is your friend. Cache misses on cold start teach you 
+   which queries users care about.
+
+Next week tackling batch inference. GitHub: [link] 💻
+</code></pre></div></p>
+<p><strong>Frequency:</strong> Once per week, 2-4 minutes to write, reaches 100-1000 people</p>
+<p><strong>LinkedIn post (bi-weekly):</strong>
+<div class="highlight"><pre><span></span><code>Built a semantic caching layer today and 3 lessons stuck with me:
+
+1. Sometimes the highest ROI optimization is the simplest.
+2. Measure before and after. We cut latency by 45%.
+3. Your database doesn&#39;t always need to be your bottleneck.
+
+Full repo: [link to GitHub]
+</code></pre></div></p>
+<p><strong>GitHub:</strong> Consistent commits visible on your contribution graph
+<div class="highlight"><pre><span></span><code>commit a3f34k &quot;feat: add semantic caching with Redis backend&quot;
+commit b2d45l &quot;test: add caching layer unit tests&quot;
+commit c3e56m &quot;docs: update README with caching benchmarks&quot;
+</code></pre></div></p>
+<p>Visible progress attracts opportunities.</p>
+<p><strong>Blog post (once per phase):</strong>
+<div class="highlight"><pre><span></span><code>&quot;Building RAG: What I Learned&quot;
+- What problem I was solving
+- Architecture I built
+- 5 things that surprised me
+- Code snippets + GitHub link
+- What&#39;s next
+
+5 min read, 500-1000 words. Worth your time.
+</code></pre></div></p>
+<h3 id="template-weekly-twitterx-thread">Template: Weekly Twitter/X Thread</h3>
+<div class="highlight"><pre><span></span><code>This week I learned about [TOPIC]. Here&#39;s 3 things that surprised me:
+
+1/ [Specific insight 1: something you didn&#39;t expect]
+   [Why it matters: practical impact]
+
+2/ [Specific insight 2: concrete lesson]
+   [Why it matters: problem it solves]
+
+3/ [Specific insight 3: learning point]
+   [Why it matters: how you&#39;ll use it]
+
+Building [WHAT]: [GitHub link]
+Next week: [NEXT TOPIC]
+</code></pre></div>
+<p>Specific &gt; Generic
+Concrete &gt; Abstract
+Your voice &gt; ChatGPT voice</p>
+<hr />
+<h2 id="8-phase-by-phase-time-estimates">8. Phase-by-Phase Time Estimates</h2>
+<p>Realistic estimates (not optimistic):</p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Topic</th>
+<th>Full-Time (40h/w)</th>
+<th>Part-Time (15h/w)</th>
+<th>Weekend (8h/w)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Python &amp; Git</td>
+<td>1 week</td>
+<td>2-3 weeks</td>
+<td>4-5 weeks</td>
+</tr>
+<tr>
+<td>1</td>
+<td>AI Systems</td>
+<td>5 weeks</td>
+<td>10-12 weeks</td>
+<td>15-18 weeks</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Deployment</td>
+<td>3 weeks</td>
+<td>6-8 weeks</td>
+<td>10-12 weeks</td>
+</tr>
+<tr>
+<td>3</td>
+<td>MLOps</td>
+<td>3 weeks</td>
+<td>6-8 weeks</td>
+<td>10-12 weeks</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Kubernetes</td>
+<td>4 weeks</td>
+<td>8-10 weeks</td>
+<td>12-15 weeks</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Jobs</td>
+<td>2 weeks</td>
+<td>4-5 weeks</td>
+<td>6-8 weeks</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>6 phases</strong></td>
+<td><strong>18-20 weeks</strong></td>
+<td><strong>36-48 weeks</strong></td>
+<td><strong>57-70 weeks</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Real Talk About Time Estimates</p>
+<p>These are if you're:
+- Not starting from zero (know Python basics)
+- Focus and consistent
+- No major life disruptions</p>
+<p>Reality: add 20-30% buffer for life happening.</p>
+</div>
+<h3 id="adjusting-if-youre-behind">Adjusting If You're Behind</h3>
+<p>You're 6 weeks in, only done 1.5 phases (should be 2).</p>
+<p>Options:
+1. <strong>Speed up slightly</strong> (10h/week → 12h/week)
+2. <strong>Skip optional deep-dives</strong> (implement, don't optimize)
+3. <strong>Extend timeline</strong> (it's fine, learning &gt; rushing)
+4. <strong>Combine phases</strong> (do MLOps + K8s together since they overlap)</p>
+<p>Most people choose option 3. That's wise.</p>
+<hr />
+<h2 id="summary-your-study-rhythm">Summary: Your Study Rhythm</h2>
+<p><strong>Pick your schedule:</strong>
+- Full-time: 20 weeks
+- Part-time: 36-48 weeks
+- Weekend: 57-70 weeks</p>
+<p><strong>Weekly ritual:</strong>
+- Monday: Start new topic
+- Tuesday-Thursday: Build and practice
+- Friday: Polish, review
+- Weekend: Reflect and plan next week</p>
+<p><strong>70/30 rule:</strong> 70% coding, 30% reading</p>
+<p><strong>Stuck?</strong> Unstuck ladder (rubber duck → searches → sleep)</p>
+<p><strong>Tracking:</strong> One markdown file, updated weekly</p>
+<p><strong>Motivation:</strong> Low weeks are 50%, not zero. Learn in public. Celebrate small wins.</p>
+<p><strong>Ready?</strong> Start slowly. You'll find your pace.</p>
+<hr />
+<h2 id="your-first-week-checklist">Your First Week Checklist</h2>
+<ul>
+<li>[ ] Pick your schedule (full-time, part-time, or weekend warrior)</li>
+<li>[ ] Create PROGRESS.md file</li>
+<li>[ ] Block time on your calendar (same time each week)</li>
+<li>[ ] Set up notifications (gentle reminders, not aggressive)</li>
+<li>[ ] Join a community (Discord, Reddit, or AI engineers community)</li>
+<li>[ ] Commit to one week (7 days) before deciding if schedule fits</li>
+<li>[ ] Track actual hours to validate your pace assumption</li>
+<li>[ ] Plan your first project (Phase 0)</li>
+<li>[ ] Share your goal with one person (accountability buddy)</li>
+</ul>
+<hr />
+<p><strong>Next:</strong> <a href="../project-template/">Project Templates →</a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.integrate"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>

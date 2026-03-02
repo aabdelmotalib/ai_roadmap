@@ -1,0 +1,2795 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive 6-phase learning roadmap from Python foundations to production ML systems">
+      
+      
+        <meta name="author" content="AI Engineering Community">
+      
+      
+      
+        <link rel="prev" href="../overview/">
+      
+      
+        <link rel="next" href="../compose/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>Docker Fundamentals - AI Full Stack Engineer Roadmap</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#docker-for-ai-applications" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-header__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Full Stack Engineer Roadmap
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Docker Fundamentals
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        
+  
+    
+  
+  Setup Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase0/overview/" class="md-tabs__link">
+          
+  
+  Phase 0 — Foundation Warmup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase1/overview/" class="md-tabs__link">
+          
+  
+  Phase 1 — AI Systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  Phase 2 — Docker & Cloud
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase3/overview/" class="md-tabs__link">
+          
+  
+  Phase 3 — MLOps Tooling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase4/overview/" class="md-tabs__link">
+          
+  
+  Phase 4 — Scaling & Kubernetes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase5/overview/" class="md-tabs__link">
+          
+  
+  Phase 5 — Portfolio & Job Readiness
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../appendix/math-lite/" class="md-tabs__link">
+          
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-nav__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    AI Full Stack Engineer Roadmap
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 0 — Foundation Warmup
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 0 — Foundation Warmup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Mastery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/fastapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI Deep Dive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/databases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Databases (SQL + NoSQL + Redis)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux & Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase0/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 0 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 1 — AI Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 1 — AI Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/llm-apis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM APIs & Prompt Engineering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/embeddings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embeddings & Vector Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/rag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RAG Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Agents & Tool Use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/fine-tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fine-Tuning (LoRA & PEFT)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluation & Benchmarking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security & Prompt Injection Defense
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/cost-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cost & Performance Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 1 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 2 — Docker & Cloud
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 2 — Docker & Cloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Docker Fundamentals
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Docker Fundamentals
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    Why This Matters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptual-explanation" class="md-nav__link">
+    Conceptual Explanation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base-image-selection" class="md-nav__link">
+    Base Image Selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-dockerfile-for-ai-service" class="md-nav__link">
+    Production Dockerfile for AI Service
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layer-caching-explained" class="md-nav__link">
+    Layer Caching Explained
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-example-1-build-arguments-for-environment" class="md-nav__link">
+    Code Example 1: Build Arguments for Environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-example-2-model-download-at-build-time" class="md-nav__link">
+    Code Example 2: Model Download at Build Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-example-3-gpu-dockerfile" class="md-nav__link">
+    Code Example 3: GPU Dockerfile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-example-4-dockerignore" class="md-nav__link">
+    Code Example 4: .dockerignore
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-example-5-multi-stage-build-optimization" class="md-nav__link">
+    Code Example 5: Multi-stage Build Optimization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-and-running" class="md-nav__link">
+    Building and Running
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buildkit-for-faster-builds" class="md-nav__link">
+    BuildKit for Faster Builds
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#health-checks" class="md-nav__link">
+    Health Checks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-docker-build-run-flow" class="md-nav__link">
+    Architecture: Docker Build &amp; Run Flow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-comparison" class="md-nav__link">
+    Tools Comparison
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-framework" class="md-nav__link">
+    Decision Framework
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-create-production-docker-image" class="md-nav__link">
+    Step-by-Step: Create Production Docker Image
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step: Create Production Docker Image">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-write-dockerfile" class="md-nav__link">
+    1. Write Dockerfile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-create-dockerignore" class="md-nav__link">
+    2. Create .dockerignore
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-build" class="md-nav__link">
+    3. Build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-test-locally" class="md-nav__link">
+    4. Test Locally
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-push-to-registry-aws-ecr" class="md-nav__link">
+    5. Push to Registry (AWS ECR)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-project-production-ready-container" class="md-nav__link">
+    Practical Project: Production-Ready Container
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-10-common-docker-errors" class="md-nav__link">
+    Debugging: 10 Common Docker Errors
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging: 10 Common Docker Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-oomkilled" class="md-nav__link">
+    1. OOMKilled
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-image-too-large" class="md-nav__link">
+    2. Image Too Large
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-permission-denied-on-model-files" class="md-nav__link">
+    3. Permission Denied on Model Files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-port-already-in-use" class="md-nav__link">
+    4. Port Already in Use
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-container-exits-immediately" class="md-nav__link">
+    5. Container Exits Immediately
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-healthcheck-keeps-failing" class="md-nav__link">
+    6. HEALTHCHECK Keeps Failing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-build-fails-pip-install-hangs" class="md-nav__link">
+    7. Build Fails: "pip install" Hangs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-multi-stage-build-file-not-found-in-runtime-stage" class="md-nav__link">
+    8. Multi-stage Build: File Not Found in Runtime Stage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-env-file-not-loaded" class="md-nav__link">
+    9. .env File Not Loaded
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-gpu-not-available-in-container" class="md-nav__link">
+    10. GPU Not Available in Container
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-1-stripe-docker-at-scale" class="md-nav__link">
+    Case Study 1: Stripe Docker at Scale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-2-netflix-docker-optimization" class="md-nav__link">
+    Case Study 2: Netflix Docker Optimization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-checklist" class="md-nav__link">
+    Production Checklist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interview-cheat-sheet" class="md-nav__link">
+    Interview Cheat Sheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-review-questions" class="md-nav__link">
+    10 Review Questions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-flashcards" class="md-nav__link">
+    10 Flashcards
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teach-it-back-prompt" class="md-nav__link">
+    Teach-It-Back Prompt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-week-docker-checklist" class="md-nav__link">
+    1-Week Docker Checklist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose for AI Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Deployment (EC2 + S3 + ECS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../secrets-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secrets Management & Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 2 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 3 — MLOps Tooling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 3 — MLOps Tooling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/mlflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLflow Experiment Tracking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/dvc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DVC Data Versioning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/wandb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weights & Biases (W&B)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/cicd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI/CD for AI Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 3 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 4 — Scaling & Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 4 — Scaling & Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes Core Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/ai-on-k8s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying AI Services on K8s
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autoscaling & Observability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 4 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 5 — Portfolio & Job Readiness
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 5 — Portfolio & Job Readiness
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Portfolio Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/resume/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resume & LinkedIn Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/system-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI System Design Interviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/mock-interviews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mock Interview Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/salary-negotiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Salary & Negotiation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/math-lite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math-Lite Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/tooling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tooling & Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/study-planner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Study Planner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/project-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Showcase Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/whats-next/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What's Next (Post-Roadmap)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="docker-for-ai-applications">Docker for AI Applications</h1>
+<p>Docker is how you make your code run the same way on your laptop, in staging, and in production.</p>
+<p>Without Docker: "It works on my machine" → goes to prod → dies.
+With Docker: "It works in a container" → works everywhere.</p>
+<hr />
+<h2 id="why-this-matters">Why This Matters</h2>
+<p><strong>Real incident:</strong> Company deploys RAG API. Works perfectly on developer laptop (Python 3.11, OpenAI key in .env, model files in /data).</p>
+<p>Production: System image has Python 3.9. Keys are in different location. Models aren't there.</p>
+<p>8am: 500 errors. CEO asked "why isn't it working?"</p>
+<p>Docker solves this. <strong>Exactly same environment everywhere.</strong></p>
+<hr />
+<h2 id="conceptual-explanation">Conceptual Explanation</h2>
+<p><strong>Analogy: Pizza Delivery</strong></p>
+<p>Without Docker:
+- Restaurant has ingredients scattered in kitchen
+- Chef memorizes where everything is
+- Driver tries to rebuild kitchen in their truck
+- Pizza arrives broken</p>
+<p>With Docker:
+- All ingredients pre-measured in a box
+- Instructions included in the box
+- Oven at destination just runs the instructions
+- Pizza arrives perfect</p>
+<p>Docker = sealed box + instructions.</p>
+<hr />
+<h2 id="base-image-selection">Base Image Selection</h2>
+<p>You need a starting point. Every Docker image is built FROM another image.</p>
+<table>
+<thead>
+<tr>
+<th>Base Image</th>
+<th>Size</th>
+<th>Pros</th>
+<th>Cons</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>python:3.11-slim</strong></td>
+<td>140MB</td>
+<td>Small, fast builds, essential only</td>
+<td>Limited tools (no git, no build-essential)</td>
+<td>Production AI services, small images</td>
+</tr>
+<tr>
+<td><strong>python:3.11</strong></td>
+<td>880MB</td>
+<td>All build tools, dependencies</td>
+<td>Large, slow to push</td>
+<td>Development, complex builds</td>
+</tr>
+<tr>
+<td><strong>ubuntu:22.04 + python</strong></td>
+<td>1000MB+</td>
+<td>Complete OS, apt packages</td>
+<td>Large, need manual python install</td>
+<td>Special requirements</td>
+</tr>
+<tr>
+<td><strong>nvidia/cuda:12.4-runtime</strong></td>
+<td>2500MB</td>
+<td>GPU support built in</td>
+<td>Massive, slow builds</td>
+<td>GPU inference (must use)</td>
+</tr>
+<tr>
+<td><strong>pytorch:2.1-cuda12.1-devel</strong></td>
+<td>7000MB+</td>
+<td>PyTorch + GPU pre-installed</td>
+<td>Huge, complex</td>
+<td>ML training images</td>
+</tr>
+<tr>
+<td><strong>python:3.11-alpine</strong></td>
+<td>50MB</td>
+<td>Tiny, fast</td>
+<td>Missing glibc, some packages fail</td>
+<td>Minimal services, lambda</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="production-dockerfile-for-ai-service">Production Dockerfile for AI Service</h2>
+<div class="highlight"><pre><span></span><code><span class="c"># Stage 1: Builder (compile dependencies, run tests)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">python:3.11-slim</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">builder</span>
+
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+
+<span class="c"># Copy requirements early (layer caching)</span>
+<span class="c"># If requirements.txt doesn&#39;t change, this layer gets cached</span>
+<span class="k">COPY</span><span class="w"> </span>requirements.txt<span class="w"> </span>.
+
+<span class="c"># Install build dependencies (only needed for compiling wheels)</span>
+<span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>--no-install-recommends<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>build-essential<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>git<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/apt/lists/*
+
+<span class="c"># Compile wheels (faster than pip install in final stage)</span>
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>--no-cache-dir<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+
+<span class="c"># Stage 2: Runtime (only what you need to run)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">python:3.11-slim</span>
+
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+
+<span class="c"># Create non-root user (security: never run as root)</span>
+<span class="k">RUN</span><span class="w"> </span>useradd<span class="w"> </span>-m<span class="w"> </span>-u<span class="w"> </span><span class="m">1000</span><span class="w"> </span>aiuser<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/app<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>chown<span class="w"> </span>-R<span class="w"> </span>aiuser:aiuser<span class="w"> </span>/app
+
+<span class="c"># Copy compiled dependencies from builder</span>
+<span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>builder<span class="w"> </span>--chown<span class="o">=</span>aiuser:aiuser<span class="w"> </span>/root/.local<span class="w"> </span>/home/aiuser/.local
+
+<span class="c"># Copy application code</span>
+<span class="k">COPY</span><span class="w"> </span>--chown<span class="o">=</span>aiuser:aiuser<span class="w"> </span>.<span class="w"> </span>.
+
+<span class="c"># Set PATH to use user-installed packages</span>
+<span class="k">ENV</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/home/aiuser/.local/bin:<span class="nv">$PATH</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="nv">PYTHONUNBUFFERED</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="nv">PYTHONDONTWRITEBYTECODE</span><span class="o">=</span><span class="m">1</span>
+
+<span class="c"># Switch to non-root user</span>
+<span class="k">USER</span><span class="w"> </span><span class="s">aiuser</span>
+
+<span class="c"># Health check (tells Docker if service is alive)</span>
+<span class="k">HEALTHCHECK</span><span class="w"> </span>--interval<span class="o">=</span>30s<span class="w"> </span>--timeout<span class="o">=</span>10s<span class="w"> </span>--start-period<span class="o">=</span>40s<span class="w"> </span>--retries<span class="o">=</span><span class="m">3</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>CMD<span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import requests; requests.get(&#39;http://localhost:8000/health&#39;, timeout=5)&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+
+<span class="c"># Expose port</span>
+<span class="k">EXPOSE</span><span class="w"> </span><span class="s">8000</span>
+
+<span class="c"># Run the service</span>
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;uvicorn&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;main:app&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--host&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0.0.0.0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--port&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;8000&quot;</span><span class="p">]</span>
+</code></pre></div>
+<hr />
+<h2 id="layer-caching-explained">Layer Caching Explained</h2>
+<div class="highlight"><pre><span></span><code><span class="c"># BAD: Every code change rebuilds everything</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">python:3.11-slim</span>
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.<span class="w">                          </span>#<span class="w"> </span>Big<span class="w"> </span>layer,<span class="w"> </span>changes<span class="w"> </span>often
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt<span class="w">  </span>#<span class="w"> </span>Runs<span class="w"> </span>again<span class="w"> </span>on<span class="w"> </span>every<span class="w"> </span>code<span class="w"> </span>change
+
+<span class="c"># GOOD: Separate concerns</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">python:3.11-slim</span>
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<span class="k">COPY</span><span class="w"> </span>requirements.txt<span class="w"> </span>.<span class="w">            </span>#<span class="w"> </span>Small<span class="w"> </span>layer,<span class="w"> </span>rarely<span class="w"> </span>changes
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt<span class="w"> </span>#<span class="w"> </span>Cached<span class="w"> </span><span class="k">if</span><span class="w"> </span>requirements.txt<span class="w"> </span>unchanged
+<span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.<span class="w">                          </span>#<span class="w"> </span>Code<span class="w"> </span>changes<span class="w"> </span>don<span class="err">&#39;</span>t<span class="w"> </span>affect<span class="w"> </span>pip<span class="w"> </span>layer
+</code></pre></div>
+<p><strong>Time saved:</strong> 100s code changes = 100s × (5-minute pip install) saved by caching.</p>
+<hr />
+<h2 id="code-example-1-build-arguments-for-environment">Code Example 1: Build Arguments for Environment</h2>
+<div class="highlight"><pre><span></span><code><span class="c"># Dockerfile</span>
+<span class="k">ARG</span><span class="w"> </span><span class="nv">ENVIRONMENT</span><span class="o">=</span>production
+<span class="k">ARG</span><span class="w"> </span><span class="nv">PYTHON_VERSION</span><span class="o">=</span><span class="m">3</span>.11
+
+<span class="k">FROM</span><span class="w"> </span><span class="s">python:${PYTHON_VERSION}-slim</span>
+
+<span class="k">ENV</span><span class="w"> </span><span class="nv">ENVIRONMENT</span><span class="o">=</span><span class="si">${</span><span class="nv">ENVIRONMENT</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="nv">DEBUG</span><span class="o">=</span>False
+
+<span class="c"># Install different packages based on environment</span>
+<span class="k">RUN</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$ENVIRONMENT</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;development&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>pip<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span>pytest<span class="w"> </span>pytest-cov<span class="w"> </span>black<span class="w"> </span>flake8<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="k">fi</span>
+
+<span class="c"># ... rest of Dockerfile</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Build for production (smaller, no debug tools)</span>
+docker<span class="w"> </span>build<span class="w"> </span>--build-arg<span class="w"> </span><span class="nv">ENVIRONMENT</span><span class="o">=</span>production<span class="w"> </span>-t<span class="w"> </span>ai-service:prod<span class="w"> </span>.
+
+<span class="c1"># Build for development (includes test tools)</span>
+docker<span class="w"> </span>build<span class="w"> </span>--build-arg<span class="w"> </span><span class="nv">ENVIRONMENT</span><span class="o">=</span>development<span class="w"> </span>-t<span class="w"> </span>ai-service:dev<span class="w"> </span>.
+</code></pre></div>
+<hr />
+<h2 id="code-example-2-model-download-at-build-time">Code Example 2: Model Download at Build Time</h2>
+<div class="highlight"><pre><span></span><code><span class="c"># download_models.sh</span>
+<span class="c">#!/bin/bash</span>
+python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span>
+<span class="k">from</span><span class="w"> </span><span class="s">sentence_transformers</span><span class="w"> </span>import<span class="w"> </span>SentenceTransformer
+<span class="nv">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>SentenceTransformer<span class="o">(</span><span class="s1">&#39;all-MiniLM-L6-v2&#39;</span><span class="o">)</span>
+model.save<span class="o">(</span><span class="s1">&#39;models/embeddings-model&#39;</span><span class="o">)</span>
+<span class="s2">&quot;</span>
+
+<span class="c"># Dockerfile</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">python:3.11-slim</span>
+
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+
+<span class="k">COPY</span><span class="w"> </span>requirements.txt<span class="w"> </span>.
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+
+<span class="k">COPY</span><span class="w"> </span>download_models.sh<span class="w"> </span>.
+<span class="k">RUN</span><span class="w"> </span>bash<span class="w"> </span>download_models.sh<span class="w">  </span>#<span class="w"> </span>Downloaded<span class="w"> </span>at<span class="w"> </span>build<span class="w"> </span>time
+
+<span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
+
+<span class="c"># At runtime, model is already in image</span>
+<span class="c"># No network call, instant startup</span>
+</code></pre></div>
+<p><strong>Tradeoff:</strong>
+- ✅ Fast startup (model already there)
+- ❌ Larger image (2GB+ with models)
+- ❌ Rebuild image to update model</p>
+<hr />
+<h2 id="code-example-3-gpu-dockerfile">Code Example 3: GPU Dockerfile</h2>
+<div class="highlight"><pre><span></span><code><span class="c"># For GPU inference (CUDA acceleration)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">nvidia/cuda:12.4-runtime-ubuntu22.04</span>
+
+<span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>python3.11<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>python3-pip<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/apt/lists/*
+
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+
+<span class="k">COPY</span><span class="w"> </span>requirements.txt<span class="w"> </span>.
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+
+<span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
+
+<span class="c"># Test GPU access</span>
+<span class="k">RUN</span><span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import torch; print(f&#39;CUDA available: {torch.cuda.is_available()}&#39;)&quot;</span>
+
+<span class="k">EXPOSE</span><span class="w"> </span><span class="s">8000</span>
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;server.py&quot;</span><span class="p">]</span>
+</code></pre></div>
+<p><strong>Build:</strong>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>ai-gpu:latest<span class="w"> </span>.
+</code></pre></div></p>
+<p><strong>Run with GPU:</strong>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>--gpus<span class="w"> </span>all<span class="w"> </span>-p<span class="w"> </span><span class="m">8000</span>:8000<span class="w"> </span>ai-gpu:latest
+</code></pre></div></p>
+<hr />
+<h2 id="code-example-4-dockerignore">Code Example 4: .dockerignore</h2>
+<div class="highlight"><pre><span></span><code># Don&#39;t include these in Docker image
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+env/
+venv/
+.env
+
+# Models (too large, download at runtime)
+models/
+data/
+*.bin
+*.pt
+*.safetensors
+
+# Git
+.git/
+.gitignore
+
+# Development
+.vscode/
+.idea/
+*.swp
+
+# Tests (run in CI, not in image)
+tests/
+pytest.ini
+
+# Documentation
+docs/
+README.md
+</code></pre></div>
+<p><strong>Benefit:</strong> Image 50% smaller, faster builds, no accidental secrets.</p>
+<hr />
+<h2 id="code-example-5-multi-stage-build-optimization">Code Example 5: Multi-stage Build Optimization</h2>
+<div class="highlight"><pre><span></span><code><span class="c"># Stage 1: Build dependencies</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">python:3.11-slim</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">dependencies</span>
+
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/build</span>
+
+<span class="k">COPY</span><span class="w"> </span>requirements.txt<span class="w"> </span>.
+
+<span class="c"># Create virtual environment</span>
+<span class="k">RUN</span><span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>/opt/venv
+
+<span class="c"># Install wheels</span>
+<span class="k">ENV</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/opt/venv/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+
+<span class="c"># Stage 2: Runtime (only venv, no build tools)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">python:3.11-slim</span>
+
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+
+<span class="c"># Copy pre-built venv from stage 1</span>
+<span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>dependencies<span class="w"> </span>/opt/venv<span class="w"> </span>/opt/venv
+
+<span class="k">ENV</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/opt/venv/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+
+<span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
+
+<span class="k">EXPOSE</span><span class="w"> </span><span class="s">8000</span>
+
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;uvicorn&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;main:app&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--host&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0.0.0.0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--port&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;8000&quot;</span><span class="p">]</span>
+</code></pre></div>
+<p><strong>Result:</strong> Image 60% smaller (no build tools, gcc, git in final image).</p>
+<hr />
+<h2 id="building-and-running">Building and Running</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Build image (tags it with name:version)</span>
+docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>ai-service:1.0<span class="w"> </span>.
+
+<span class="c1"># Run container (interactive terminal)</span>
+docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>-p<span class="w"> </span><span class="m">8000</span>:8000<span class="w"> </span>ai-service:1.0
+
+<span class="c1"># Run in background</span>
+docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">8000</span>:8000<span class="w"> </span>--name<span class="w"> </span>my-api<span class="w"> </span>ai-service:1.0
+
+<span class="c1"># View logs</span>
+docker<span class="w"> </span>logs<span class="w"> </span>my-api
+docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>my-api<span class="w">  </span><span class="c1"># Follow mode (like tail -f)</span>
+
+<span class="c1"># Execute command in running container</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>my-api<span class="w"> </span>bash
+
+<span class="c1"># Stop and remove</span>
+docker<span class="w"> </span>stop<span class="w"> </span>my-api
+docker<span class="w"> </span>rm<span class="w"> </span>my-api
+
+<span class="c1"># Check running containers</span>
+docker<span class="w"> </span>ps
+docker<span class="w"> </span>ps<span class="w"> </span>-a<span class="w">  </span><span class="c1"># Include stopped containers</span>
+
+<span class="c1"># Cleanup (remove unused images/containers/volumes)</span>
+docker<span class="w"> </span>system<span class="w"> </span>prune
+</code></pre></div>
+<hr />
+<h2 id="buildkit-for-faster-builds">BuildKit for Faster Builds</h2>
+<p>BuildKit enables layer caching and secret mounting.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Enable BuildKit</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">DOCKER_BUILDKIT</span><span class="o">=</span><span class="m">1</span>
+
+<span class="c1"># Now build (will cache layers more aggressively)</span>
+docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>ai-service:latest<span class="w"> </span>.
+
+<span class="c1"># Check BuildKit output</span>
+docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>ai-service:latest<span class="w"> </span>--progress<span class="o">=</span>plain<span class="w"> </span>.
+</code></pre></div>
+<hr />
+<h2 id="health-checks">Health Checks</h2>
+<div class="highlight"><pre><span></span><code><span class="k">HEALTHCHECK</span><span class="w"> </span>--interval<span class="o">=</span>30s<span class="w"> </span>--timeout<span class="o">=</span>10s<span class="w"> </span>--start-period<span class="o">=</span>5s<span class="w"> </span>--retries<span class="o">=</span><span class="m">3</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>CMD<span class="w"> </span>curl<span class="w"> </span>-f<span class="w"> </span>http://localhost:8000/health<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+</code></pre></div>
+<p>In your FastAPI:
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/health&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">health_check</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;healthy&quot;</span><span class="p">}</span>
+</code></pre></div></p>
+<p>Docker uses this to:
+- Restart unhealthy containers
+- Remove from load balancer if unhealthy
+- Prevent traffic to broken instances</p>
+<hr />
+<h2 id="architecture-docker-build-run-flow">Architecture: Docker Build &amp; Run Flow</h2>
+<pre class="mermaid"><code>graph LR
+    A["Dockerfile"] --&gt;|docker build| B["Image&lt;br/&gt;abc123"]
+    B --&gt;|docker run| C["Container 1&lt;br/&gt;Running"]
+    B --&gt;|docker run| D["Container 2&lt;br/&gt;Running"]
+    B --&gt;|docker run| E["Container 3&lt;br/&gt;Running"]
+
+    C --&gt;|logs| F["stdout/stderr"]
+    D --&gt;|metrics| G["Resource&lt;br/&gt;Usage"]
+    E --&gt;|health| H["Health&lt;br/&gt;Status"]</code></pre>
+<hr />
+<h2 id="tools-comparison">Tools Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+<th>Pros</th>
+<th>Cons</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Docker Desktop</strong></td>
+<td>Local container dev</td>
+<td>Simple, GUI, Docker Compose</td>
+<td>Uses VM on Mac/Windows</td>
+<td>Development</td>
+</tr>
+<tr>
+<td><strong>Podman</strong></td>
+<td>Docker alternative</td>
+<td>Rootless, no daemon</td>
+<td>Less ecosystem</td>
+<td>Kubernetes prep, rootless</td>
+</tr>
+<tr>
+<td><strong>Kaniko</strong></td>
+<td>Container build (CI)</td>
+<td>No Docker daemon needed</td>
+<td>Limited features</td>
+<td>CI/CD pipelines</td>
+</tr>
+<tr>
+<td><strong>BuildKit</strong></td>
+<td>Fast builds</td>
+<td>Layer caching, parallelization</td>
+<td>Extra config</td>
+<td>Large images, slow builds</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="decision-framework">Decision Framework</h2>
+<div class="highlight"><pre><span></span><code>Is this for local development?
+  ├─ YES: Docker Desktop + Compose
+  └─ NO: Go to production decision
+
+Testing locally before AWS?
+  ├─ YES: Docker Desktop
+  └─ NO: Docker on Linux VM
+
+Using GPU (NVIDIA)?
+  ├─ YES: nvidia/cuda base image
+  └─ NO: python base image
+
+Image &gt; 1GB?
+  ├─ YES: Multi-stage build
+  └─ NO: Single stage fine
+
+Need rootless?
+  ├─ YES: Podman
+  └─ NO: Docker fine
+</code></pre></div>
+<hr />
+<h2 id="step-by-step-create-production-docker-image">Step-by-Step: Create Production Docker Image</h2>
+<h3 id="1-write-dockerfile">1. Write Dockerfile</h3>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.11-slim</span>
+
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+
+<span class="c"># Non-root user</span>
+<span class="k">RUN</span><span class="w"> </span>useradd<span class="w"> </span>-m<span class="w"> </span>aiuser
+
+<span class="k">COPY</span><span class="w"> </span>requirements.txt<span class="w"> </span>.
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+
+<span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
+
+<span class="k">USER</span><span class="w"> </span><span class="s">aiuser</span>
+
+<span class="k">HEALTHCHECK</span><span class="w"> </span>--interval<span class="o">=</span>30s<span class="w"> </span><span class="k">CMD</span><span class="w"> </span>curl<span class="w"> </span>-f<span class="w"> </span>http://localhost:8000/health<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+
+<span class="k">EXPOSE</span><span class="w"> </span><span class="s">8000</span>
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;uvicorn&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;main:app&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--host&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0.0.0.0&quot;</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="2-create-dockerignore">2. Create .dockerignore</h3>
+<div class="highlight"><pre><span></span><code>__pycache__
+.env
+models/
+data/
+.git
+venv
+</code></pre></div>
+<h3 id="3-build">3. Build</h3>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>my-ai-service:1.0<span class="w"> </span>.
+</code></pre></div>
+<h3 id="4-test-locally">4. Test Locally</h3>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">8000</span>:8000<span class="w"> </span>my-ai-service:1.0
+curl<span class="w"> </span>http://localhost:8000/health
+</code></pre></div>
+<h3 id="5-push-to-registry-aws-ecr">5. Push to Registry (AWS ECR)</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Login to ECR</span>
+aws<span class="w"> </span>ecr<span class="w"> </span>get-login-password<span class="w"> </span>--region<span class="w"> </span>us-east-1<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>docker<span class="w"> </span>login<span class="w"> </span>--username<span class="w"> </span>AWS<span class="w"> </span>--password-stdin<span class="w"> </span><span class="m">123456789</span>.dkr.ecr.us-east-1.amazonaws.com
+
+<span class="c1"># Tag image</span>
+docker<span class="w"> </span>tag<span class="w"> </span>my-ai-service:1.0<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="m">123456789</span>.dkr.ecr.us-east-1.amazonaws.com/my-ai-service:1.0
+
+<span class="c1"># Push</span>
+docker<span class="w"> </span>push<span class="w"> </span><span class="m">123456789</span>.dkr.ecr.us-east-1.amazonaws.com/my-ai-service:1.0
+</code></pre></div>
+<hr />
+<h2 id="practical-project-production-ready-container">Practical Project: Production-Ready Container</h2>
+<p><strong>Build:</strong> Docker image for Phase 1 RAG system.</p>
+<p>Requirements:
+- Multi-stage build (builder + runtime)
+- Non-root user (security)
+- Health check endpoint
+- Layer caching optimized
+- .dockerignore configured
+- Tested locally
+- Model download strategy defined
+- Environment variable examples documented</p>
+<p><strong>Deliverables:</strong>
+- Dockerfile (clean, commented)
+- .dockerignore
+- Local test (docker run, curl /health)
+- Image size &lt; 500MB (challenge!)</p>
+<hr />
+<h2 id="debugging-10-common-docker-errors">Debugging: 10 Common Docker Errors</h2>
+<h3 id="1-oomkilled">1. OOMKilled</h3>
+<p><strong>Symptom:</strong> Container exits immediately, <code>docker logs</code> shows nothing.</p>
+<p><strong>Cause:</strong> Container went out of memory. Random process dies.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check memory limit</span>
+docker<span class="w"> </span>stats<span class="w"> </span>my-api<span class="w">  </span><span class="c1"># See MEMORY usage and limit</span>
+
+<span class="c1"># Run with more memory</span>
+docker<span class="w"> </span>run<span class="w"> </span>-m<span class="w"> </span>2g<span class="w"> </span>my-api<span class="w">  </span><span class="c1"># 2GB limit instead of 512MB default</span>
+
+<span class="c1"># Or increase system memory if on VM</span>
+</code></pre></div></p>
+<h3 id="2-image-too-large">2. Image Too Large</h3>
+<p><strong>Symptom:</strong> <code>docker push</code> takes 10+ minutes.</p>
+<p><strong>Cause:</strong> Including unnecessary files (models, <strong>pycache</strong>, .git).</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check image layers</span>
+docker<span class="w"> </span><span class="nb">history</span><span class="w"> </span>my-api:latest
+
+<span class="c1"># Add to .dockerignore</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;models/&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.dockerignore
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;__pycache__/&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.dockerignore
+
+<span class="c1"># Rebuild</span>
+docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>my-api:latest<span class="w"> </span>.
+</code></pre></div></p>
+<h3 id="3-permission-denied-on-model-files">3. Permission Denied on Model Files</h3>
+<p><strong>Symptom:</strong> <code>PermissionError: [Errno 13] Permission denied: '/app/models/model.bin'</code></p>
+<p><strong>Cause:</strong> Running as root, then switch to non-root user without chown.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">COPY</span><span class="w"> </span>--chown<span class="o">=</span>aiuser:aiuser<span class="w"> </span>models/<span class="w"> </span>./models/
+
+<span class="k">USER</span><span class="w"> </span><span class="s">aiuser</span>
+</code></pre></div></p>
+<h3 id="4-port-already-in-use">4. Port Already in Use</h3>
+<p><strong>Symptom:</strong> <code>docker run</code> fails with "bind: address already in use"</p>
+<p><strong>Cause:</strong> Another container (or service) using port 8000.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Find what&#39;s running on port 8000</span>
+lsof<span class="w"> </span>-i<span class="w"> </span>:8000
+
+<span class="c1"># Use different port</span>
+docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">9000</span>:8000<span class="w"> </span>my-api
+</code></pre></div></p>
+<h3 id="5-container-exits-immediately">5. Container Exits Immediately</h3>
+<p><strong>Symptom:</strong> <code>docker run</code> starts then immediately stops.</p>
+<p><strong>Cause:</strong> CMD or entrypoint crashes.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check logs</span>
+docker<span class="w"> </span>logs<span class="w"> </span>&lt;container_id&gt;
+
+<span class="c1"># If no logs, run with interactive shell</span>
+docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>my-api<span class="w"> </span>bash
+<span class="c1"># Then manually run: python app.py to see error</span>
+</code></pre></div></p>
+<h3 id="6-healthcheck-keeps-failing">6. HEALTHCHECK Keeps Failing</h3>
+<p><strong>Symptom:</strong> <code>docker ps</code> shows container is "unhealthy" (red).</p>
+<p><strong>Cause:</strong> Health check endpoint doesn't exist or returns wrong status.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Add to FastAPI</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/health&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">health</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">}</span>
+
+<span class="c1"># Update Dockerfile</span>
+<span class="n">HEALTHCHECK</span> <span class="n">CMD</span> <span class="n">curl</span> <span class="o">-</span><span class="n">f</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8000</span><span class="o">/</span><span class="n">health</span> <span class="o">||</span> <span class="n">exit</span> <span class="mi">1</span>
+
+<span class="c1"># Test manually</span>
+<span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8000</span><span class="o">/</span><span class="n">health</span>
+</code></pre></div></p>
+<h3 id="7-build-fails-pip-install-hangs">7. Build Fails: "pip install" Hangs</h3>
+<p><strong>Symptom:</strong> Build stops at "pip install -r requirements.txt" with no output for minutes.</p>
+<p><strong>Cause:</strong> Slow network or building from wheels.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c"># Add timeout, increase verbosity</span>
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--default-timeout<span class="o">=</span><span class="m">1000</span><span class="w"> </span>-vvv<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+
+<span class="c"># Or use index-url for faster mirror</span>
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-i<span class="w"> </span>https://mirrors.aliyun.com/pypi/simple/<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div></p>
+<h3 id="8-multi-stage-build-file-not-found-in-runtime-stage">8. Multi-stage Build: File Not Found in Runtime Stage</h3>
+<p><strong>Symptom:</strong> <code>COPY --from=builder /opt/venv /opt/venv</code> fails, venv not found.</p>
+<p><strong>Cause:</strong> Built venv in /root/.local, not /opt/venv.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c"># In builder stage</span>
+<span class="k">ENV</span><span class="w"> </span><span class="nv">VIRTUAL_ENV</span><span class="o">=</span>/opt/venv
+<span class="k">RUN</span><span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span><span class="nv">$VIRTUAL_ENV</span>
+<span class="k">ENV</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$VIRTUAL_ENV</span><span class="s2">/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+
+<span class="c"># Then in runtime, copy correctly</span>
+<span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>builder<span class="w"> </span>/opt/venv<span class="w"> </span>/opt/venv
+</code></pre></div></p>
+<h3 id="9-env-file-not-loaded">9. .env File Not Loaded</h3>
+<p><strong>Symptom:</strong> Environment variables missing in container.</p>
+<p><strong>Cause:</strong> .env not COPYd into image, or using <code>--env-file</code> wrong.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c"># Option 1: Set in Dockerfile</span>
+<span class="k">ENV</span><span class="w"> </span><span class="nv">OPENAI_API_KEY</span><span class="o">=</span><span class="si">${</span><span class="nv">OPENAI_API_KEY</span><span class="si">}</span>
+
+<span class="c"># Option 2: Use --env-file at runtime</span>
+docker<span class="w"> </span>run<span class="w"> </span>--env-file<span class="w"> </span>.env<span class="w"> </span>my-api
+
+<span class="c"># Option 3: Individual vars</span>
+docker<span class="w"> </span>run<span class="w"> </span>-e<span class="w"> </span><span class="nv">OPENAI_API_KEY</span><span class="o">=</span>sk-...<span class="w"> </span>my-api
+</code></pre></div></p>
+<h3 id="10-gpu-not-available-in-container">10. GPU Not Available in Container</h3>
+<p><strong>Symptom:</strong> <code>torch.cuda.is_available()</code> returns False in container.</p>
+<p><strong>Cause:</strong> Using CPU base image, or not passing --gpus flag.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Use nvidia base image</span>
+FROM<span class="w"> </span>nvidia/cuda:12.4-runtime
+
+<span class="c1"># Run with GPU access</span>
+docker<span class="w"> </span>run<span class="w"> </span>--gpus<span class="w"> </span>all<span class="w"> </span>my-gpu-api
+
+<span class="c1"># Verify</span>
+docker<span class="w"> </span>run<span class="w"> </span>--gpus<span class="w"> </span>all<span class="w"> </span>nvidia/cuda:12.4-runtime<span class="w"> </span>nvidia-smi
+</code></pre></div></p>
+<hr />
+<h2 id="case-study-1-stripe-docker-at-scale">Case Study 1: Stripe Docker at Scale</h2>
+<p><strong>Challenge:</strong> 200+ microservices, all containerized.</p>
+<p><strong>Solution:</strong>
+- Multi-stage builds (builders 2GB, runtime 200MB)
+- BuildKit for parallelized builds (5x faster)
+- Security scanners in build pipeline
+- Image layer caching strategy</p>
+<p><strong>Result:</strong> 5-minute deploys, zero production Docker issues</p>
+<hr />
+<h2 id="case-study-2-netflix-docker-optimization">Case Study 2: Netflix Docker Optimization</h2>
+<p><strong>Challenge:</strong> AI ML services need GPU, but images were 8GB.</p>
+<p><strong>Solution:</strong>
+- Multi-stage: build with PyTorch dev (8GB) → runtime with only inference libs (2GB)
+- Separate model image (just models, versioned separately)
+- Base image updated monthly (security patches)</p>
+<p><strong>Result:</strong> 15-minute deployment time → 3 minutes</p>
+<hr />
+<h2 id="production-checklist">Production Checklist</h2>
+<ul>
+<li>[ ] Dockerfile follows multi-stage pattern</li>
+<li>[ ] Running as non-root user</li>
+<li>[ ] HEALTHCHECK endpoint exists</li>
+<li>[ ] .dockerignore includes models, <strong>pycache</strong>, .env, .git</li>
+<li>[ ] ARG/ENV properly configured</li>
+<li>[ ] Image &lt; 1GB (if possible &lt; 500MB)</li>
+<li>[ ] Layer caching optimized (requirements first)</li>
+<li>[ ] No hardcoded secrets</li>
+<li>[ ] Tested locally (docker run, curl endpoints)</li>
+<li>[ ] Image can start in &lt; 60 seconds</li>
+</ul>
+<hr />
+<h2 id="interview-cheat-sheet">Interview Cheat Sheet</h2>
+<ol>
+<li>
+<p><strong>Multi-stage builds</strong>: Separate compile stage from runtime. Smaller final image, no build tools in prod.</p>
+</li>
+<li>
+<p><strong>Layer caching</strong>: Change requirements → rebuild from that step. Change code → only rebuild code layer. Save 10s of minutes.</p>
+</li>
+<li>
+<p><strong>Non-root user</strong>: Never run as root in container. Attack surface, file ownership issues.</p>
+</li>
+<li>
+<p><strong>Health checks</strong>: Docker uses HTTP calls to /health to know if container is alive. Enables auto-restart.</p>
+</li>
+<li>
+<p><strong>.dockerignore</strong>: Exclude large files (data/, models/) and secrets (.env). Image optimization.</p>
+</li>
+</ol>
+<hr />
+<h2 id="10-review-questions">10 Review Questions</h2>
+<ol>
+<li>Why is multi-stage build better than single-stage?</li>
+<li>What does COPY --chown do?</li>
+<li>How does layer caching work? What's the best order?</li>
+<li>What's the difference between ARG and ENV?</li>
+<li>Why should you never run as root?</li>
+<li>What does HEALTHCHECK tell Kubernetes?</li>
+<li>Why is .dockerignore important?</li>
+<li>What happens if CMD fails?</li>
+<li>How do you pass secrets into a container (safely)?</li>
+<li>Why should models be downloaded at runtime, not build time?</li>
+</ol>
+<hr />
+<h2 id="10-flashcards">10 Flashcards</h2>
+<p><strong>Q1:</strong> Best base image for AI service?
+<strong>A:</strong> python:X-slim (small, no bloat, essentials included)</p>
+<p><strong>Q2:</strong> Container takes 10 min to build. How to speed up?
+<strong>A:</strong> Multi-stage build, move COPY . . near end, add to .dockerignore</p>
+<p><strong>Q3:</strong> Health check keeps failing. Why?
+<strong>A:</strong> Endpoint doesn't exist, wrong port, response is 500</p>
+<p><strong>Q4:</strong> ARG used for?
+<strong>A:</strong> Build-time arguments (--build-arg). Change how image is built.</p>
+<p><strong>Q5:</strong> ENV used for?
+<strong>A:</strong> Runtime environment variables. Available inside container.</p>
+<p><strong>Q6:</strong> Why multi-stage?
+<strong>A:</strong> Dev deps (build tools) not in final image. Smaller, more secure.</p>
+<p><strong>Q7:</strong> How does --chown work?
+<strong>A:</strong> COPY --chown=user:group file . Changes file owner after copy.</p>
+<p><strong>Q8:</strong> Running as root risk?
+<strong>A:</strong> Attacker gets root access to host. Security vulnerability.</p>
+<p><strong>Q9:</strong> .dockerignore does?
+<strong>A:</strong> Excludes files from COPY . . Smaller image, no secrets.</p>
+<p><strong>Q10:</strong> docker run -m 2g does?
+<strong>A:</strong> Allocates 2GB max memory to container. Prevents OOMKill.</p>
+<hr />
+<h2 id="teach-it-back-prompt">Teach-It-Back Prompt</h2>
+<p><strong>Explain to a colleague:</strong></p>
+<p>"Here's why you use multi-stage builds. Your app needs NumPy. NumPy needs GCC to compile. So in stage 1, you install GCC, build NumPy wheels, then in stage 2, you take ONLY the wheels and throw away GCC. Your final image is 1GB instead of 3GB because GCC is gone. The app still works because all the compiled code is in the wheels."</p>
+<hr />
+<h2 id="1-week-docker-checklist">1-Week Docker Checklist</h2>
+<ul>
+<li>[ ] Day 1: Write Dockerfile for your Phase 1 app, test locally</li>
+<li>[ ] Day 2: Optimize image size (multi-stage, .dockerignore)</li>
+<li>[ ] Day 3: Add health check endpoint and HEALTHCHECK</li>
+<li>[ ] Day 4: Test with environment variables, secrets strategy</li>
+<li>[ ] Day 5: Create user, verify non-root works</li>
+<li>[ ] Day 6: Push to ECR (AWS container registry)</li>
+<li>[ ] Day 7: Document Dockerfile decisions, create docker-compose for local stack</li>
+</ul>
+<hr />
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://docs.docker.com/develop/dev-best-practices/">Docker Best Practices</a></li>
+<li><a href="https://docs.docker.com/compose/networking/">Docker Compose Networking</a></li>
+<li><a href="https://docs.docker.com/build/buildkit/">BuildKit Documentation</a></li>
+</ul>
+<p>→ <strong><a href="../compose/">Docker Compose for Local Stack →</a></strong></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.integrate"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3490 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive 6-phase learning roadmap from Python foundations to production ML systems">
+      
+      
+        <meta name="author" content="AI Engineering Community">
+      
+      
+      
+        <link rel="prev" href="../fastapi/">
+      
+      
+        <link rel="next" href="../linux/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>Databases (SQL + NoSQL + Redis) - AI Full Stack Engineer Roadmap</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#databases-for-ai-postgresql-mongodb-redis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-header__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Full Stack Engineer Roadmap
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Databases (SQL + NoSQL + Redis)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        
+  
+    
+  
+  Setup Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  Phase 0 — Foundation Warmup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase1/overview/" class="md-tabs__link">
+          
+  
+  Phase 1 — AI Systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase2/overview/" class="md-tabs__link">
+          
+  
+  Phase 2 — Docker & Cloud
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase3/overview/" class="md-tabs__link">
+          
+  
+  Phase 3 — MLOps Tooling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase4/overview/" class="md-tabs__link">
+          
+  
+  Phase 4 — Scaling & Kubernetes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase5/overview/" class="md-tabs__link">
+          
+  
+  Phase 5 — Portfolio & Job Readiness
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../appendix/math-lite/" class="md-tabs__link">
+          
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Full Stack Engineer Roadmap" class="md-nav__button md-logo" aria-label="AI Full Stack Engineer Roadmap" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    AI Full Stack Engineer Roadmap
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 0 — Foundation Warmup
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 0 — Foundation Warmup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Mastery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fastapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI Deep Dive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Databases (SQL + NoSQL + Redis)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Databases (SQL + NoSQL + Redis)
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-why-this-matters-in-production" class="md-nav__link">
+    1. Why This Matters in Production
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-conceptual-explanation-the-ai-data-stack" class="md-nav__link">
+    2. Conceptual Explanation: The AI Data Stack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-code-examples" class="md-nav__link">
+    3. Code Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Code Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-postgresql-schema-for-ai-documents" class="md-nav__link">
+    3.1 PostgreSQL Schema for AI Documents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-sqlalchemy-20-async-orm" class="md-nav__link">
+    3.2 SQLAlchemy 2.0 Async ORM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-alembic-migrations" class="md-nav__link">
+    3.3 Alembic Migrations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-mongodb-for-unstructured-data" class="md-nav__link">
+    3.4 MongoDB for Unstructured Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-redis-for-caching" class="md-nav__link">
+    3.5 Redis for Caching
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-architecture-diagram-ai-data-flow" class="md-nav__link">
+    4. Architecture Diagram: AI Data Flow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-tools-section-database-comparison" class="md-nav__link">
+    5. Tools Section: Database Comparison
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-decision-framework-when-to-use-each" class="md-nav__link">
+    6. Decision Framework: When to Use Each
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-step-by-step-setting-up-ai-database-stack" class="md-nav__link">
+    7. Step-by-Step: Setting Up AI Database Stack
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Step-by-Step: Setting Up AI Database Stack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-install-docker-compose" class="md-nav__link">
+    Step 1: Install Docker Compose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-start-services" class="md-nav__link">
+    Step 2: Start Services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-run-alembic-migrations" class="md-nav__link">
+    Step 3: Run Alembic Migrations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-test-connections" class="md-nav__link">
+    Step 4: Test Connections
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-practical-project-complete-rag-database-schema" class="md-nav__link">
+    8. Practical Project: Complete RAG Database Schema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-debugging-playbook-10-database-errors" class="md-nav__link">
+    9. Debugging Playbook: 10 Database Errors
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Debugging Playbook: 10 Database Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-1-error-extension-vector-does-not-exist" class="md-nav__link">
+    Error 1: "ERROR: extension "vector" does not exist"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-2-fatal-remaining-connection-slots-are-reserved" class="md-nav__link">
+    Error 2: "FATAL: remaining connection slots are reserved"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-3-relation-does-not-exist" class="md-nav__link">
+    Error 3: "relation does not exist"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-4-duplicate-key-value-violates-unique-constraint" class="md-nav__link">
+    Error 4: "duplicate key value violates unique constraint"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-5-asyncsessionexecute-requires-an-awaitable" class="md-nav__link">
+    Error 5: "AsyncSession.execute() requires an awaitable"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-6-no-module-named-asyncpg" class="md-nav__link">
+    Error 6: "No module named 'asyncpg'"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-7-vector-indexes-are-not-being-used" class="md-nav__link">
+    Error 7: "Vector indexes are not being used"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-8-connection-timeout" class="md-nav__link">
+    Error 8: "Connection timeout"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-9-no_such_table" class="md-nav__link">
+    Error 9: "NO_SUCH_TABLE"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-10-redis-connection-error" class="md-nav__link">
+    Error 10: "Redis connection error"
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-common-mistakes-database-design" class="md-nav__link">
+    10. Common Mistakes: Database Design
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Common Mistakes: Database Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mistake-1-no-indexes-everything-is-slow" class="md-nav__link">
+    Mistake 1: No Indexes (Everything is Slow)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-2-storing-embeddings-as-json" class="md-nav__link">
+    Mistake 2: Storing Embeddings as JSON
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-3-not-using-connection-pooling" class="md-nav__link">
+    Mistake 3: Not Using Connection Pooling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-4-synchronous-database-calls-in-async-code" class="md-nav__link">
+    Mistake 4: Synchronous Database Calls in Async Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-5-loading-entire-collections-before-filtering" class="md-nav__link">
+    Mistake 5: Loading Entire Collections Before Filtering
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-production-realism-schema-evolution" class="md-nav__link">
+    11. Production Realism: Schema Evolution
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Production Realism: Schema Evolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tutorial-schema" class="md-nav__link">
+    Tutorial Schema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#production-schema" class="md-nav__link">
+    Production Schema
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-cost-performance-scaling-considerations" class="md-nav__link">
+    12. Cost &amp; Performance: Scaling Considerations
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Cost & Performance: Scaling Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query-performance" class="md-nav__link">
+    Query Performance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage-costs" class="md-nav__link">
+    Storage Costs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-pool-sizing" class="md-nav__link">
+    Connection Pool Sizing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-security-considerations" class="md-nav__link">
+    13. Security Considerations
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Security Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sql-injection-prevented-by-sqlalchemy" class="md-nav__link">
+    SQL Injection (Prevented by SQLAlchemy)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encryption-at-rest" class="md-nav__link">
+    Encryption at Rest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#row-level-security-postgresql" class="md-nav__link">
+    Row-Level Security (PostgreSQL)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-case-study-notions-database-design" class="md-nav__link">
+    14. Case Study: Notion's Database Design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-interview-cheat-sheet-databases" class="md-nav__link">
+    15. Interview Cheat Sheet: Databases
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Interview Cheat Sheet: Databases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concept-1-indexing" class="md-nav__link">
+    Concept 1: Indexing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-2-acid-properties" class="md-nav__link">
+    Concept 2: ACID Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-3-vector-distance-metrics" class="md-nav__link">
+    Concept 3: Vector Distance Metrics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-4-connection-pooling" class="md-nav__link">
+    Concept 4: Connection Pooling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-5-n1-query-problem" class="md-nav__link">
+    Concept 5: N+1 Query Problem
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-review-questions" class="md-nav__link">
+    16. Review Questions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-flashcards" class="md-nav__link">
+    17. Flashcards
+  </a>
+  
+    <nav class="md-nav" aria-label="17. Flashcards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#card-1" class="md-nav__link">
+    Card 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-2" class="md-nav__link">
+    Card 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-3" class="md-nav__link">
+    Card 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-4" class="md-nav__link">
+    Card 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-5" class="md-nav__link">
+    Card 5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-6" class="md-nav__link">
+    Card 6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-7" class="md-nav__link">
+    Card 7
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-8" class="md-nav__link">
+    Card 8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-9" class="md-nav__link">
+    Card 9
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-10" class="md-nav__link">
+    Card 10
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-teach-it-back-prompt" class="md-nav__link">
+    18. Teach-It-Back Prompt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-1-week-review-checklist" class="md-nav__link">
+    19. 1-Week Review Checklist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-resources" class="md-nav__link">
+    20. Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-next-linux-operations" class="md-nav__link">
+    21. Next: Linux &amp; Operations
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux & Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 0 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 1 — AI Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 1 — AI Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/llm-apis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM APIs & Prompt Engineering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/embeddings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embeddings & Vector Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/rag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RAG Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Agents & Tool Use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/fine-tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fine-Tuning (LoRA & PEFT)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluation & Benchmarking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security & Prompt Injection Defense
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/cost-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cost & Performance Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase1/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 1 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 2 — Docker & Cloud
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 2 — Docker & Cloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose for AI Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Deployment (EC2 + S3 + ECS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/secrets-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secrets Management & Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase2/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 2 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 3 — MLOps Tooling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 3 — MLOps Tooling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/mlflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLflow Experiment Tracking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/dvc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DVC Data Versioning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/wandb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weights & Biases (W&B)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/cicd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI/CD for AI Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase3/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 3 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 4 — Scaling & Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 4 — Scaling & Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes Core Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/ai-on-k8s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying AI Services on K8s
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autoscaling & Observability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase4/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 4 Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phase 5 — Portfolio & Job Readiness
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Phase 5 — Portfolio & Job Readiness
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Portfolio Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/resume/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resume & LinkedIn Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/system-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI System Design Interviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/mock-interviews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mock Interview Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/salary-negotiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Salary & Negotiation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase5/milestone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Milestone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/math-lite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math-Lite Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/tooling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tooling & Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/study-planner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Study Planner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/project-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Showcase Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/whats-next/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What's Next (Post-Roadmap)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="databases-for-ai-postgresql-mongodb-redis">Databases for AI: PostgreSQL, MongoDB, Redis</h1>
+<p>Database choice shapes your entire architecture. Pick the wrong database, and you're rewriting months of code later.</p>
+<hr />
+<h2 id="1-why-this-matters-in-production">1. Why This Matters in Production</h2>
+<p>A startup built a document search system. They stored everything in PostgreSQL text columns. After 6 months with 100M documents, searches took 45 seconds. Unacceptable.</p>
+<p>Root cause: Their schema wasn't optimized for AI. They needed:
+- Vector search (pgvector) for semantic similarity
+- Proper indexing for full-text search
+- Denormalized data for fast retrieval</p>
+<p>They rewrite the entire schema. 2 weeks of downtime. $200k in lost business.</p>
+<p><strong>Production reality:</strong>
+- Schema design is permanent. Wrong schema = rewrite costs.
+- Indexes make or break performance. Some queries are 100x slower without them.
+- AI data is unstructured. PostgreSQL + MongoDB hybrid is common.
+- Caching (Redis) is not optional. It's load survival.</p>
+<hr />
+<h2 id="2-conceptual-explanation-the-ai-data-stack">2. Conceptual Explanation: The AI Data Stack</h2>
+<p>AI systems deal with 3 types of data:</p>
+<p><strong>Structured Data</strong> (PostgreSQL)
+- User accounts, sessions, metadata
+- Queries with exact matches (user_id = 123)
+- ACID transactions required</p>
+<p><strong>Unstructured Data</strong> (MongoDB)
+- Raw documents, conversations, logs
+- Queries with pattern matching (text contains "market")
+- Schema flexibility needed</p>
+<p><strong>Cached Data</strong> (Redis)
+- Session state, conversation history
+- LLM responses (expensive, cache for 1h)
+- Temporary computations</p>
+<p><strong>Vector Data</strong> (PostgreSQL + pgvector)
+- Embeddings (1536-dim vectors)
+- Semantic search (cosine similarity)
+- Hybrid: text search + vector search</p>
+<p><strong>The architecture:</strong>
+<div class="highlight"><pre><span></span><code>User Request
+    ↓
+FastAPI (validation)
+    ↓ (structured lookup)
+PostgreSQL (user metadata)
+    ↓ (cache check)
+Redis (LLM response cache)
+    ↓ (if not cached, compute)
+MongoDB (fetch documents)
+    ↓ (create embeddings)
+OpenAI API / Local Model
+    ↓ (store embeddings)
+PostgreSQL + pgvector (vector search)
+    ↓
+Return to user
+</code></pre></div></p>
+<p>Each database has one job. Mixing them kills performance.</p>
+<hr />
+<h2 id="3-code-examples">3. Code Examples</h2>
+<h3 id="31-postgresql-schema-for-ai-documents">3.1 PostgreSQL Schema for AI Documents</h3>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Create pgvector extension</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">EXTENSION</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">vector</span><span class="p">;</span>
+
+<span class="c1">-- Users table</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">SERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">    </span><span class="n">api_key</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">created_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+<span class="w">    </span><span class="n">updated_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span>
+<span class="p">);</span>
+
+<span class="c1">-- Documents table (structured metadata)</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">documents</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">SERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">user_id</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">users</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">256</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">    </span><span class="n">content</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">    </span><span class="n">source_url</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">2048</span><span class="p">),</span>
+<span class="w">    </span><span class="n">created_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+<span class="w">    </span><span class="n">updated_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+<span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">valid_title</span><span class="w"> </span><span class="k">CHECK</span><span class="w"> </span><span class="p">(</span><span class="k">LENGTH</span><span class="p">(</span><span class="n">title</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="c1">-- Document chunks (for RAG, search within documents)</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">chunks</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">SERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">document_id</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">documents</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">chunk_num</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">  </span><span class="c1">-- Which chunk in the document</span>
+<span class="w">    </span><span class="n">content</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">    </span><span class="n">start_char</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">  </span><span class="c1">-- Position in original document</span>
+<span class="w">    </span><span class="n">created_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span>
+<span class="p">);</span>
+
+<span class="c1">-- Embeddings (vectors for semantic search)</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">embeddings</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">SERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">chunk_id</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">chunks</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">embedding</span><span class="w"> </span><span class="n">vector</span><span class="p">(</span><span class="mi">1536</span><span class="p">),</span><span class="w">  </span><span class="c1">-- OpenAI text-embedding-3-small dimension</span>
+<span class="w">    </span><span class="n">created_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span>
+<span class="p">);</span>
+
+<span class="c1">-- Chat sessions</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">sessions</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">SERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">user_id</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">users</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">created_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+<span class="w">    </span><span class="n">last_interaction</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span>
+<span class="p">);</span>
+
+<span class="c1">-- Chat messages (conversation history)</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">messages</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">SERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">session_id</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">sessions</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">,</span>
+<span class="w">    </span><span class="k">role</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">  </span><span class="c1">-- &#39;user&#39; or &#39;assistant&#39;</span>
+<span class="w">    </span><span class="n">content</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">    </span><span class="n">created_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span>
+<span class="p">);</span>
+
+<span class="c1">-- Indexes (critical for performance)</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_documents_user_id</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">documents</span><span class="p">(</span><span class="n">user_id</span><span class="p">);</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_chunks_document_id</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">chunks</span><span class="p">(</span><span class="n">document_id</span><span class="p">);</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_embeddings_chunk_id</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">embeddings</span><span class="p">(</span><span class="n">chunk_id</span><span class="p">);</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_messages_session_id</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">messages</span><span class="p">(</span><span class="n">session_id</span><span class="p">);</span>
+
+<span class="c1">-- Vector index for semantic search (HNSW = Hierarchical Navigable Small World)</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_embeddings_vector</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">embeddings</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="n">hnsw</span><span class="w"> </span><span class="p">(</span><span class="n">embedding</span><span class="w"> </span><span class="n">vector_cosine_ops</span><span class="p">);</span>
+
+<span class="c1">-- Full-text search index (for text search)</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">documents</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">search_tsvector</span><span class="w"> </span><span class="n">tsvector</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_documents_fts</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">documents</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="n">gin</span><span class="p">(</span><span class="n">search_tsvector</span><span class="p">);</span>
+
+<span class="c1">-- Update trigger to keep search vector current</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">documents_update_search</span><span class="p">()</span>
+<span class="k">RETURNS</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">$$</span>
+<span class="k">BEGIN</span>
+<span class="w">    </span><span class="k">NEW</span><span class="p">.</span><span class="n">search_tsvector</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">to_tsvector</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">title</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">content</span><span class="p">);</span>
+<span class="w">    </span><span class="k">RETURN</span><span class="w"> </span><span class="k">NEW</span><span class="p">;</span>
+<span class="k">END</span><span class="p">;</span>
+<span class="err">$$</span><span class="w"> </span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">documents_search_trigger</span>
+<span class="k">BEFORE</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">documents</span>
+<span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span><span class="w"> </span><span class="k">EXECUTE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">documents_update_search</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="32-sqlalchemy-20-async-orm">3.2 SQLAlchemy 2.0 Async ORM</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span><span class="p">,</span> <span class="n">select</span><span class="p">,</span> <span class="n">insert</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.ext.asyncio</span> <span class="kn">import</span> <span class="n">create_async_engine</span><span class="p">,</span> <span class="n">AsyncSession</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">declarative_base</span><span class="p">,</span> <span class="n">relationship</span><span class="p">,</span> <span class="n">sessionmaker</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">Text</span><span class="p">,</span> <span class="n">DateTime</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">,</span> <span class="n">TIMESTAMP</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+
+<span class="n">Base</span> <span class="o">=</span> <span class="n">declarative_base</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s2">&quot;users&quot;</span>
+
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">email</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">api_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">created_at</span><span class="p">:</span> <span class="n">datetime</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">TIMESTAMP</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">)</span>
+
+    <span class="c1"># Relationships</span>
+    <span class="n">documents</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="s2">&quot;Document&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span>
+        <span class="s2">&quot;Document&quot;</span><span class="p">,</span>
+        <span class="n">back_populates</span><span class="o">=</span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
+        <span class="n">cascade</span><span class="o">=</span><span class="s2">&quot;all, delete-orphan&quot;</span>
+    <span class="p">)</span>
+    <span class="n">sessions</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="s2">&quot;Session&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span>
+        <span class="s2">&quot;Session&quot;</span><span class="p">,</span>
+        <span class="n">back_populates</span><span class="o">=</span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
+        <span class="n">cascade</span><span class="o">=</span><span class="s2">&quot;all, delete-orphan&quot;</span>
+    <span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Document</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s2">&quot;documents&quot;</span>
+
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s2">&quot;users.id&quot;</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">256</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">content</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Text</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">created_at</span><span class="p">:</span> <span class="n">datetime</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">TIMESTAMP</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">)</span>
+
+    <span class="c1"># Relationships</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;User&quot;</span><span class="p">,</span> <span class="n">back_populates</span><span class="o">=</span><span class="s2">&quot;documents&quot;</span><span class="p">)</span>
+    <span class="n">chunks</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="s2">&quot;Chunk&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span>
+        <span class="s2">&quot;Chunk&quot;</span><span class="p">,</span>
+        <span class="n">back_populates</span><span class="o">=</span><span class="s2">&quot;document&quot;</span><span class="p">,</span>
+        <span class="n">cascade</span><span class="o">=</span><span class="s2">&quot;all, delete-orphan&quot;</span>
+    <span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Chunk</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s2">&quot;chunks&quot;</span>
+
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">document_id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s2">&quot;documents.id&quot;</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">chunk_num</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">content</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Text</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="c1"># Relationships</span>
+    <span class="n">document</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;Document&quot;</span><span class="p">,</span> <span class="n">back_populates</span><span class="o">=</span><span class="s2">&quot;chunks&quot;</span><span class="p">)</span>
+    <span class="n">embeddings</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="s2">&quot;Embedding&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span>
+        <span class="s2">&quot;Embedding&quot;</span><span class="p">,</span>
+        <span class="n">back_populates</span><span class="o">=</span><span class="s2">&quot;chunk&quot;</span><span class="p">,</span>
+        <span class="n">cascade</span><span class="o">=</span><span class="s2">&quot;all, delete-orphan&quot;</span>
+    <span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Embedding</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s2">&quot;embeddings&quot;</span>
+
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">chunk_id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s2">&quot;chunks.id&quot;</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">embedding</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="s2">&quot;embedding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>  <span class="c1"># Vector type, specialized</span>
+
+    <span class="c1"># Relationships</span>
+    <span class="n">chunk</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;Chunk&quot;</span><span class="p">,</span> <span class="n">back_populates</span><span class="o">=</span><span class="s2">&quot;embeddings&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Message</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s2">&quot;messages&quot;</span>
+
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">session_id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s2">&quot;sessions.id&quot;</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">role</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># &#39;user&#39; or &#39;assistant&#39;</span>
+    <span class="n">content</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Text</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">created_at</span><span class="p">:</span> <span class="n">datetime</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">TIMESTAMP</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Session</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s2">&quot;sessions&quot;</span>
+
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s2">&quot;users.id&quot;</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">created_at</span><span class="p">:</span> <span class="n">datetime</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">TIMESTAMP</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">)</span>
+
+    <span class="c1"># Relationships</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;User&quot;</span><span class="p">,</span> <span class="n">back_populates</span><span class="o">=</span><span class="s2">&quot;sessions&quot;</span><span class="p">)</span>
+    <span class="n">messages</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Message</span><span class="p">]</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span>
+        <span class="s2">&quot;Message&quot;</span><span class="p">,</span>
+        <span class="n">cascade</span><span class="o">=</span><span class="s2">&quot;all, delete-orphan&quot;</span>
+    <span class="p">)</span>
+
+<span class="c1"># Database setup</span>
+<span class="n">DATABASE_URL</span> <span class="o">=</span> <span class="s2">&quot;postgresql+asyncpg://user:password@localhost:5432/aiapp&quot;</span>
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_async_engine</span><span class="p">(</span>
+    <span class="n">DATABASE_URL</span><span class="p">,</span>
+    <span class="n">echo</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>  <span class="c1"># Set to True for SQL debugging</span>
+    <span class="n">pool_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">max_overflow</span><span class="o">=</span><span class="mi">10</span>
+<span class="p">)</span>
+
+<span class="n">async_session</span> <span class="o">=</span> <span class="n">sessionmaker</span><span class="p">(</span>
+    <span class="n">engine</span><span class="p">,</span>
+    <span class="n">class_</span><span class="o">=</span><span class="n">AsyncSession</span><span class="p">,</span>
+    <span class="n">expire_on_commit</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
+
+<span class="c1"># Dependency for FastAPI</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_db</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">AsyncSession</span><span class="p">:</span>
+    <span class="k">async</span> <span class="k">with</span> <span class="n">async_session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">session</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">session</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1"># Usage examples</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">save_document</span><span class="p">(</span>
+    <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">content</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">db</span><span class="p">:</span> <span class="n">AsyncSession</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Document</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Save document (and return it).&quot;&quot;&quot;</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">Document</span><span class="p">(</span>
+        <span class="n">user_id</span><span class="o">=</span><span class="n">user_id</span><span class="p">,</span>
+        <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span>
+        <span class="n">content</span><span class="o">=</span><span class="n">content</span>
+    <span class="p">)</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">await</span> <span class="n">db</span><span class="o">.</span><span class="n">refresh</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>  <span class="c1"># Reload with auto-generated ID</span>
+    <span class="k">return</span> <span class="n">doc</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">search_similar_documents</span><span class="p">(</span>
+    <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">query_embedding</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span>
+    <span class="n">limit</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="n">db</span><span class="p">:</span> <span class="n">AsyncSession</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Chunk</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Find chunks similar to query embedding using cosine distance.</span>
+<span class="sd">    Lower distance = more similar.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">func</span><span class="p">,</span> <span class="n">text</span>
+
+    <span class="c1"># Vector similarity search using PostgreSQL cosine distance</span>
+    <span class="n">stmt</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span><span class="n">Chunk</span><span class="p">)</span><span class="o">.</span><span class="n">from_statement</span><span class="p">(</span>
+        <span class="n">text</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            SELECT c.* FROM chunks c</span>
+<span class="s2">            JOIN embeddings e ON e.chunk_id = c.id</span>
+<span class="s2">            WHERE (e.embedding &lt;-&gt; :query) &lt; 0.5  -- Cosine distance &lt; 0.5</span>
+<span class="s2">            ORDER BY e.embedding &lt;-&gt; :query</span>
+<span class="s2">            LIMIT :limit</span>
+<span class="s2">        &quot;&quot;&quot;</span><span class="p">)</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">param</span><span class="p">(</span>
+        <span class="n">query</span><span class="o">=</span><span class="n">query_embedding</span><span class="p">,</span>
+        <span class="n">limit</span><span class="o">=</span><span class="n">limit</span>
+    <span class="p">)</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">stmt</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">scalars</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">bulk_insert_chunks</span><span class="p">(</span>
+    <span class="n">document_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">chunks</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+    <span class="n">db</span><span class="p">:</span> <span class="n">AsyncSession</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Efficiently insert many chunks.&quot;&quot;&quot;</span>
+    <span class="n">chunk_rows</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">Chunk</span><span class="p">(</span>
+            <span class="n">document_id</span><span class="o">=</span><span class="n">document_id</span><span class="p">,</span>
+            <span class="n">chunk_num</span><span class="o">=</span><span class="n">i</span><span class="p">,</span>
+            <span class="n">content</span><span class="o">=</span><span class="n">chunk_text</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">chunk_text</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">chunks</span><span class="p">)</span>
+    <span class="p">]</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">add_all</span><span class="p">(</span><span class="n">chunk_rows</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="33-alembic-migrations">3.3 Alembic Migrations</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Initialize Alembic</span>
+alembic<span class="w"> </span>init<span class="w"> </span>alembic
+
+<span class="c1"># Create a migration</span>
+alembic<span class="w"> </span>revision<span class="w"> </span>--autogenerate<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Create initial schema&quot;</span>
+
+<span class="c1"># Apply migrations</span>
+alembic<span class="w"> </span>upgrade<span class="w"> </span>head
+
+<span class="c1"># Rollback one migration</span>
+alembic<span class="w"> </span>downgrade<span class="w"> </span>-1
+</code></pre></div>
+<p><strong>alembic/env.py</strong> (for async):
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">pool</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.ext.asyncio</span> <span class="kn">import</span> <span class="n">create_async_engine</span>
+
+<span class="k">def</span> <span class="nf">run_async_migrations</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run migrations in async context.&quot;&quot;&quot;</span>
+    <span class="n">connectable</span> <span class="o">=</span> <span class="n">AsyncEngine</span><span class="p">(</span>
+        <span class="n">create_async_engine</span><span class="p">(</span>
+            <span class="n">config</span><span class="o">.</span><span class="n">get_main_option</span><span class="p">(</span><span class="s2">&quot;sqlalchemy.url&quot;</span><span class="p">),</span>
+            <span class="n">poolclass</span><span class="o">=</span><span class="n">pool</span><span class="o">.</span><span class="n">NullPool</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="k">with</span> <span class="n">connectable</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span> <span class="k">as</span> <span class="n">connection</span><span class="p">:</span>
+        <span class="n">context</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="n">connection</span><span class="o">=</span><span class="n">connection</span><span class="p">,</span> <span class="n">target_metadata</span><span class="o">=</span><span class="n">target_metadata</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="n">context</span><span class="o">.</span><span class="n">begin_transaction</span><span class="p">():</span>
+            <span class="n">context</span><span class="o">.</span><span class="n">run_migrations</span><span class="p">()</span>
+</code></pre></div></p>
+<h3 id="34-mongodb-for-unstructured-data">3.4 MongoDB for Unstructured Data</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">motor.motor_asyncio</span> <span class="kn">import</span> <span class="n">AsyncClient</span><span class="p">,</span> <span class="n">AsyncDatabase</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Any</span>
+
+<span class="k">class</span> <span class="nc">MongoDBClient</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">connection_string</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="n">AsyncClient</span><span class="p">(</span><span class="n">connection_string</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="p">:</span> <span class="n">AsyncDatabase</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="p">[</span><span class="s1">&#39;aiapp&#39;</span><span class="p">]</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">save_raw_document</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">content</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">metadata</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Save document without schema constraints.&quot;&quot;&quot;</span>
+        <span class="n">doc</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;user_id&#39;</span><span class="p">:</span> <span class="n">user_id</span><span class="p">,</span>
+            <span class="s1">&#39;content&#39;</span><span class="p">:</span> <span class="n">content</span><span class="p">,</span>
+            <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="n">metadata</span><span class="p">,</span>
+            <span class="s1">&#39;created_at&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span>
+        <span class="p">}</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="p">[</span><span class="s1">&#39;raw_documents&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">insert_one</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">inserted_id</span><span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">search_documents</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">query</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Full-text search across documents.&quot;&quot;&quot;</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="p">[</span><span class="s1">&#39;raw_documents&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">find</span><span class="p">(</span>
+            <span class="p">{</span>
+                <span class="s1">&#39;user_id&#39;</span><span class="p">:</span> <span class="n">user_id</span><span class="p">,</span>
+                <span class="s1">&#39;$text&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;$search&#39;</span><span class="p">:</span> <span class="n">query</span><span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">to_list</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">results</span>
+
+<span class="c1"># Usage</span>
+<span class="n">mongo</span> <span class="o">=</span> <span class="n">MongoDBClient</span><span class="p">(</span><span class="s2">&quot;mongodb+srv://user:pass@cluster.mongodb.net/&quot;</span><span class="p">)</span>
+<span class="n">doc_id</span> <span class="o">=</span> <span class="k">await</span> <span class="n">mongo</span><span class="o">.</span><span class="n">save_raw_document</span><span class="p">(</span>
+    <span class="n">user_id</span><span class="o">=</span><span class="mi">123</span><span class="p">,</span>
+    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
+    <span class="n">metadata</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;source&#39;</span><span class="p">:</span> <span class="s1">&#39;api&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="p">)</span>
+</code></pre></div>
+<h3 id="35-redis-for-caching">3.5 Redis for Caching</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">redis.asyncio</span> <span class="k">as</span> <span class="nn">redis</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
+
+<span class="k">class</span> <span class="nc">RedisCache</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">redis_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;redis://localhost:6379&quot;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis_url</span> <span class="o">=</span> <span class="n">redis_url</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span> <span class="o">=</span> <span class="k">await</span> <span class="n">redis</span><span class="o">.</span><span class="n">from_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">redis_url</span><span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">cache_llm_response</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">prompt</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">response</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">ttl_hours</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Cache LLM response to avoid recomputation.&quot;&quot;&quot;</span>
+        <span class="c1"># Use deterministic hash of prompt as key</span>
+        <span class="kn">import</span> <span class="nn">hashlib</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;llm:</span><span class="si">{</span><span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="n">prompt</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span>
+
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">setex</span><span class="p">(</span>
+            <span class="n">key</span><span class="p">,</span>
+            <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="n">ttl_hours</span><span class="p">),</span>
+            <span class="n">response</span>
+        <span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_cached_response</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prompt</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieve cached LLM response.&quot;&quot;&quot;</span>
+        <span class="kn">import</span> <span class="nn">hashlib</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;llm:</span><span class="si">{</span><span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="n">prompt</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span> <span class="k">if</span> <span class="n">result</span> <span class="k">else</span> <span class="kc">None</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">save_session_state</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">session_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">conversation</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Store conversation in Redis.&quot;&quot;&quot;</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;session:</span><span class="si">{</span><span class="n">session_id</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">setex</span><span class="p">(</span>
+            <span class="n">key</span><span class="p">,</span>
+            <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">24</span><span class="p">),</span>  <span class="c1"># Expire after 24 hours</span>
+            <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">conversation</span><span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="p">:</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1"># Usage</span>
+<span class="n">cache</span> <span class="o">=</span> <span class="n">RedisCache</span><span class="p">()</span>
+<span class="k">await</span> <span class="n">cache</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+
+<span class="c1"># Cache expensive operation</span>
+<span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">fetch_from_llm</span><span class="p">(</span><span class="s2">&quot;What is AI?&quot;</span><span class="p">)</span>
+<span class="k">await</span> <span class="n">cache</span><span class="o">.</span><span class="n">cache_llm_response</span><span class="p">(</span><span class="s2">&quot;What is AI?&quot;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+<span class="c1"># Later, avoid re-fetching</span>
+<span class="n">cached</span> <span class="o">=</span> <span class="k">await</span> <span class="n">cache</span><span class="o">.</span><span class="n">get_cached_response</span><span class="p">(</span><span class="s2">&quot;What is AI?&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">cached</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">cached</span>  <span class="c1"># Use cached, don&#39;t call API</span>
+</code></pre></div>
+<hr />
+<h2 id="4-architecture-diagram-ai-data-flow">4. Architecture Diagram: AI Data Flow</h2>
+<pre class="mermaid"><code>graph TB
+    A["FastAPI Request"] --&gt; B{"Data Type?"}
+    B --&gt;|"Structured"| C["PostgreSQL&lt;br/&gt;User, Sessions"]
+    B --&gt;|"Raw Documents"| D["MongoDB&lt;br/&gt;Raw content"]
+    B --&gt;|"Embeddings"| E["PostgreSQL + pgvector&lt;br/&gt;Semantic search"]
+    B --&gt;|"Cache"| F["Redis&lt;br/&gt;LLM responses, sessions"]
+    C --&gt; G["Async Queries&lt;br/&gt;SQLAlchemy ORM"]
+    D --&gt; H["Full-text search&lt;br/&gt;Aggregation pipelines"]
+    E --&gt; I["Vector similarity&lt;br/&gt;Cosine distance"]
+    F --&gt; J["TTL expiration&lt;br/&gt;One-liner caching"]
+    G --&gt; K["Return to user"]
+    H --&gt; K
+    I --&gt; K
+    J --&gt; K</code></pre>
+<hr />
+<h2 id="5-tools-section-database-comparison">5. Tools Section: Database Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>PostgreSQL</th>
+<th>MongoDB</th>
+<th>Redis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data Type</strong></td>
+<td>Structured (rows)</td>
+<td>Unstructured (docs)</td>
+<td>Key-value</td>
+</tr>
+<tr>
+<td><strong>Queries</strong></td>
+<td>SQL (JOINs)</td>
+<td>MongoDB Query Lang</td>
+<td>Simple get/set</td>
+</tr>
+<tr>
+<td><strong>ACID</strong></td>
+<td>Full ACID</td>
+<td>Multi-doc ACID</td>
+<td>None (cache)</td>
+</tr>
+<tr>
+<td><strong>Scaling</strong></td>
+<td>Vertical (bigger server)</td>
+<td>Horizontal (sharding)</td>
+<td>Replication</td>
+</tr>
+<tr>
+<td><strong>Schema</strong></td>
+<td>Rigid</td>
+<td>Flexible</td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Vector Search</strong></td>
+<td>pgvector extension</td>
+<td>MongoDB Atlas Search</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Full-text Search</strong></td>
+<td>GiST/GIN indexes</td>
+<td>Full-text search</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Persistence</strong></td>
+<td>On disk</td>
+<td>On disk</td>
+<td>Optional (RDB/AOF)</td>
+</tr>
+<tr>
+<td><strong>Latency</strong></td>
+<td>10-100ms</td>
+<td>10-100ms</td>
+<td>&lt;1ms</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-decision-framework-when-to-use-each">6. Decision Framework: When to Use Each</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Database</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User authentication, transactions</td>
+<td>PostgreSQL</td>
+<td>ACID guarantees</td>
+</tr>
+<tr>
+<td>Vector semantic search</td>
+<td>PostgreSQL + pgvector</td>
+<td>Native support, indexes</td>
+</tr>
+<tr>
+<td>Raw documents, logs</td>
+<td>MongoDB</td>
+<td>Schema flexibility</td>
+</tr>
+<tr>
+<td>Conversation history (temp)</td>
+<td>Redis</td>
+<td>Speed, automatic expiry</td>
+</tr>
+<tr>
+<td>LLM response cache</td>
+<td>Redis</td>
+<td>Sub-millisecond lookups</td>
+</tr>
+<tr>
+<td>Analytical queries (aggregation)</td>
+<td>MongoDB</td>
+<td>Aggregation pipeline</td>
+</tr>
+<tr>
+<td>Full-text search</td>
+<td>PostgreSQL GIN index</td>
+<td>Fast phrase search</td>
+</tr>
+<tr>
+<td>Session state (temporary)</td>
+<td>Redis</td>
+<td>Distributed sessions</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-step-by-step-setting-up-ai-database-stack">7. Step-by-Step: Setting Up AI Database Stack</h2>
+<h3 id="step-1-install-docker-compose">Step 1: Install Docker Compose</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># docker-compose.yml</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.8&#39;</span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">postgres</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:15</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">POSTGRES_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">aiengineuser</span>
+<span class="w">      </span><span class="nt">POSTGRES_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
+<span class="w">      </span><span class="nt">POSTGRES_DB</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">aiapp</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;5432:5432&quot;</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pgdata:/var/lib/postgresql/data</span>
+
+<span class="w">  </span><span class="nt">postgres-init</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:15</span>
+<span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
+<span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no">sh -c &#39;psql -h postgres -U aiengineuser -d aiapp -c &quot;CREATE EXTENSION IF NOT EXISTS vector;&quot;&#39;</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">PGPASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
+
+<span class="w">  </span><span class="nt">mongodb</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongo:6</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;27017:27017&quot;</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">MONGO_INITDB_ROOT_USERNAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">admin</span>
+<span class="w">      </span><span class="nt">MONGO_INITDB_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongodata:/data/db</span>
+
+<span class="w">  </span><span class="nt">redis</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis:7-alpine</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;6379:6379&quot;</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redisdata:/data</span>
+
+<span class="nt">volumes</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">pgdata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mongodata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">redisdata</span><span class="p">:</span>
+</code></pre></div>
+<h3 id="step-2-start-services">Step 2: Start Services</h3>
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>up<span class="w"> </span>-d
+<span class="c1"># Wait 10 seconds for postgres to initialize</span>
+
+<span class="c1"># Verify PostgreSQL</span>
+psql<span class="w"> </span>postgres://aiengineuser:password@localhost:5432/aiapp<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;SELECT version();&quot;</span>
+
+<span class="c1"># Verify MongoDB</span>
+mongosh<span class="w"> </span>mongodb://admin:password@localhost:27017/
+
+<span class="c1"># Verify Redis</span>
+redis-cli<span class="w"> </span>ping<span class="w">  </span><span class="c1"># Should output &quot;PONG&quot;</span>
+</code></pre></div>
+<h3 id="step-3-run-alembic-migrations">Step 3: Run Alembic Migrations</h3>
+<div class="highlight"><pre><span></span><code>alembic<span class="w"> </span>upgrade<span class="w"> </span>head
+</code></pre></div>
+<h3 id="step-4-test-connections">Step 4: Test Connections</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">from</span> <span class="nn">databases</span> <span class="kn">import</span> <span class="n">Database</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+    <span class="c1"># PostgreSQL</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="n">Database</span><span class="p">(</span><span class="s2">&quot;postgresql://aiengineuser:password@localhost/aiapp&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">db</span><span class="o">.</span><span class="n">fetch_one</span><span class="p">(</span><span class="s2">&quot;SELECT 1;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;PostgreSQL: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">db</span><span class="o">.</span><span class="n">disconnect</span><span class="p">()</span>
+
+    <span class="c1"># MongoDB</span>
+    <span class="kn">from</span> <span class="nn">motor.motor_asyncio</span> <span class="kn">import</span> <span class="n">AsyncClient</span>
+    <span class="n">mongo</span> <span class="o">=</span> <span class="n">AsyncClient</span><span class="p">(</span><span class="s2">&quot;mongodb://admin:password@localhost:27017/&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MongoDB: </span><span class="si">{</span><span class="k">await</span><span class="w"> </span><span class="n">mongo</span><span class="o">.</span><span class="n">server_info</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">mongo</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="c1"># Redis</span>
+    <span class="kn">import</span> <span class="nn">redis.asyncio</span> <span class="k">as</span> <span class="nn">redis</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="k">await</span> <span class="n">redis</span><span class="o">.</span><span class="n">from_url</span><span class="p">(</span><span class="s2">&quot;redis://localhost:6379&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">r</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Redis: </span><span class="si">{</span><span class="k">await</span><span class="w"> </span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">r</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">test</span><span class="p">())</span>
+</code></pre></div>
+<hr />
+<h2 id="8-practical-project-complete-rag-database-schema">8. Practical Project: Complete RAG Database Schema</h2>
+<p><strong>Goal:</strong> Build a document storage system ready for RAG (Retrieval-Augmented Generation).</p>
+<p><strong>Full implementation:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">select</span><span class="p">,</span> <span class="n">and_</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">class</span> <span class="nc">DocumentStore</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Handle document storage and retrieval for RAG.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">db</span><span class="p">:</span> <span class="n">AsyncSession</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">db</span> <span class="o">=</span> <span class="n">db</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">create_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">api_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">User</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create a user.&quot;&quot;&quot;</span>
+        <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">email</span><span class="o">=</span><span class="n">email</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">refresh</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">user</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">store_document_with_embeddings</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">title</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">content</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">embeddings</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Document</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Store document and its chunk embeddings.&quot;&quot;&quot;</span>
+        <span class="c1"># Create document</span>
+        <span class="n">doc</span> <span class="o">=</span> <span class="n">Document</span><span class="p">(</span><span class="n">user_id</span><span class="o">=</span><span class="n">user_id</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="n">content</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>  <span class="c1"># Get auto-ID without committing yet</span>
+
+        <span class="c1"># Split content into chunks</span>
+        <span class="n">chunk_size</span> <span class="o">=</span> <span class="mi">512</span>
+        <span class="n">chunks_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">content</span><span class="p">),</span> <span class="n">chunk_size</span><span class="p">):</span>
+            <span class="n">chunk</span> <span class="o">=</span> <span class="n">Chunk</span><span class="p">(</span>
+                <span class="n">document_id</span><span class="o">=</span><span class="n">doc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                <span class="n">chunk_num</span><span class="o">=</span><span class="n">i</span> <span class="o">//</span> <span class="n">chunk_size</span><span class="p">,</span>
+                <span class="n">content</span><span class="o">=</span><span class="n">content</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">chunk_size</span><span class="p">],</span>
+                <span class="n">start_char</span><span class="o">=</span><span class="n">i</span>
+            <span class="p">)</span>
+            <span class="n">chunks_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+
+        <span class="c1"># Store embeddings</span>
+        <span class="k">for</span> <span class="n">chunk</span><span class="p">,</span> <span class="n">embedding</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">chunks_list</span><span class="p">,</span> <span class="n">embeddings</span><span class="p">):</span>
+            <span class="n">emb</span> <span class="o">=</span> <span class="n">Embedding</span><span class="p">(</span>
+                <span class="n">chunk_id</span><span class="o">=</span><span class="n">chunk</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                <span class="n">embedding</span><span class="o">=</span><span class="n">embedding</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">emb</span><span class="p">)</span>
+
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">doc</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">semantic_search</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">query_embedding</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span>
+        <span class="n">limit</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Chunk</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Find most similar chunks using vector distance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">func</span><span class="p">,</span> <span class="n">text</span>
+
+        <span class="c1"># Use PostgreSQL cosine similarity</span>
+        <span class="n">stmt</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span><span class="n">Chunk</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">Embedding</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+            <span class="n">Chunk</span><span class="o">.</span><span class="n">document</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="n">Document</span><span class="o">.</span><span class="n">user_id</span> <span class="o">==</span> <span class="n">user_id</span><span class="p">)</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span>
+            <span class="n">func</span><span class="o">.</span><span class="n">l2_distance</span><span class="p">(</span><span class="n">Embedding</span><span class="o">.</span><span class="n">embedding</span><span class="p">,</span> <span class="n">query_embedding</span><span class="p">)</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="n">limit</span><span class="p">)</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">stmt</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">scalars</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">hybrid_search</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">keyword_query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">query_embedding</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span>
+        <span class="n">limit</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Chunk</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Combine keyword search + semantic search.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Keyword match</span>
+        <span class="n">keyword_stmt</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span><span class="n">Chunk</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">Document</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+            <span class="n">and_</span><span class="p">(</span>
+                <span class="n">Document</span><span class="o">.</span><span class="n">user_id</span> <span class="o">==</span> <span class="n">user_id</span><span class="p">,</span>
+                <span class="n">Chunk</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">ilike</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;%</span><span class="si">{</span><span class="n">keyword_query</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">keyword_results</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">keyword_stmt</span><span class="p">)</span>
+        <span class="n">keyword_chunks</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">keyword_results</span><span class="o">.</span><span class="n">scalars</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">())</span>
+
+        <span class="c1"># Semantic match</span>
+        <span class="n">semantic_chunks</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">semantic_search</span><span class="p">(</span>
+            <span class="n">user_id</span><span class="p">,</span>
+            <span class="n">query_embedding</span><span class="p">,</span>
+            <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="o">*</span><span class="mi">2</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Union, then rank by relevance</span>
+        <span class="n">combined</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">keyword_chunks</span> <span class="o">|</span> <span class="nb">set</span><span class="p">(</span><span class="n">semantic_chunks</span><span class="p">))[:</span><span class="n">limit</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">combined</span>
+</code></pre></div>
+<hr />
+<h2 id="9-debugging-playbook-10-database-errors">9. Debugging Playbook: 10 Database Errors</h2>
+<h3 id="error-1-error-extension-vector-does-not-exist">Error 1: "ERROR: extension "vector" does not exist"</h3>
+<p><strong>Symptom:</strong> CREATE TABLE with <code>vector</code> column fails.</p>
+<p><strong>Explanation:</strong> pgvector extension not installed.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="n">EXTENSION</span><span class="w"> </span><span class="n">vector</span><span class="p">;</span>
+<span class="c1">-- Then create table</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Use database initialization script that installs extension first.</p>
+<hr />
+<h3 id="error-2-fatal-remaining-connection-slots-are-reserved">Error 2: "FATAL: remaining connection slots are reserved"</h3>
+<p><strong>Symptom:</strong> Can't connect to PostgreSQL.</p>
+<p><strong>Explanation:</strong> All 100 default connections exhausted.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Increase pool size</span>
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_async_engine</span><span class="p">(</span>
+    <span class="n">DATABASE_URL</span><span class="p">,</span>
+    <span class="n">pool_size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>  <span class="c1"># Larger pool</span>
+    <span class="n">max_overflow</span><span class="o">=</span><span class="mi">20</span>  <span class="c1"># Allow extra under load</span>
+<span class="p">)</span>
+
+<span class="c1"># Also configure PostgreSQL max_connections</span>
+<span class="n">ALTER</span> <span class="n">SYSTEM</span> <span class="n">SET</span> <span class="n">max_connections</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Monitor connection count. Adjust pool size based on concurrent users.</p>
+<hr />
+<h3 id="error-3-relation-does-not-exist">Error 3: "relation does not exist"</h3>
+<p><strong>Symptom:</strong> Query fails: "ERROR: relation 'documents' does not exist"</p>
+<p><strong>Explanation:</strong> Table not created (migration not run).</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code>alembic<span class="w"> </span>upgrade<span class="w"> </span>head
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Run migrations in deployment script before starting app.</p>
+<hr />
+<h3 id="error-4-duplicate-key-value-violates-unique-constraint">Error 4: "duplicate key value violates unique constraint"</h3>
+<p><strong>Symptom:</strong> Insert fails on unique field.</p>
+<p><strong>Explanation:</strong> Value already exists (e.g., duplicate email).</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check before insert</span>
+<span class="n">existing</span> <span class="o">=</span> <span class="k">await</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span>
+    <span class="n">select</span><span class="p">(</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">User</span><span class="o">.</span><span class="n">email</span> <span class="o">==</span> <span class="n">email</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="k">if</span> <span class="n">existing</span><span class="o">.</span><span class="n">scalars</span><span class="p">()</span><span class="o">.</span><span class="n">first</span><span class="p">():</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Email already exists&quot;</span><span class="p">)</span>
+
+<span class="c1"># Or use upsert</span>
+<span class="n">stmt</span> <span class="o">=</span> <span class="n">insert</span><span class="p">(</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">(</span><span class="n">email</span><span class="o">=</span><span class="n">email</span><span class="p">)</span><span class="o">.</span><span class="n">on_conflict_do_update</span><span class="p">(</span>
+    <span class="n">index_elements</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">],</span>
+    <span class="n">set_</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">email</span><span class="o">=</span><span class="n">email</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Validate unique constraints in application logic.</p>
+<hr />
+<h3 id="error-5-asyncsessionexecute-requires-an-awaitable">Error 5: "AsyncSession.execute() requires an awaitable"</h3>
+<p><strong>Symptom:</strong> Forgot <code>await</code> on database call.</p>
+<p><strong>Explanation:</strong> AsyncSession methods return coroutines, need <code>await</code>.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">select</span><span class="p">(</span><span class="o">...</span><span class="p">))</span>
+
+<span class="c1"># Right</span>
+<span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">select</span><span class="p">(</span><span class="o">...</span><span class="p">))</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Type hints catch this (mypy warns).</p>
+<hr />
+<h3 id="error-6-no-module-named-asyncpg">Error 6: "No module named 'asyncpg'"</h3>
+<p><strong>Symptom:</strong> <code>ImportError: No module named 'asyncpg'</code></p>
+<p><strong>Explanation:</strong> Missing async PostgreSQL driver.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>asyncpg
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Install full dependencies: <code>pip install -e ".[dev]"</code></p>
+<hr />
+<h3 id="error-7-vector-indexes-are-not-being-used">Error 7: "Vector indexes are not being used"</h3>
+<p><strong>Symptom:</strong> Vector search is slow (full table scan).</p>
+<p><strong>Explanation:</strong> Index not created or query doesn't match index.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Create HNSW index (better than default)</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_embeddings_hnsw</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">embeddings</span><span class="w"> </span>
+<span class="k">USING</span><span class="w"> </span><span class="n">hnsw</span><span class="w"> </span><span class="p">(</span><span class="n">embedding</span><span class="w"> </span><span class="n">vector_cosine_ops</span><span class="p">);</span>
+
+<span class="c1">-- For exact nearest neighbor (slower but accurate)</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_embeddings_ivfflat</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">embeddings</span><span class="w"> </span>
+<span class="k">USING</span><span class="w"> </span><span class="n">ivfflat</span><span class="w"> </span><span class="p">(</span><span class="n">embedding</span><span class="w"> </span><span class="n">vector_cosine_ops</span><span class="p">)</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="p">(</span><span class="n">lists</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Monitor EXPLAIN ANALYZE output to see if index is used.</p>
+<hr />
+<h3 id="error-8-connection-timeout">Error 8: "Connection timeout"</h3>
+<p><strong>Symptom:</strong> Queries hang, then timeout after 30 seconds.</p>
+<p><strong>Explanation:</strong> Database server unreachable or overloaded.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Add timeout to connection</span>
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_async_engine</span><span class="p">(</span>
+    <span class="n">DATABASE_URL</span><span class="p">,</span>
+    <span class="n">connect_args</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;timeout&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>  <span class="c1"># Timeout after 10 seconds</span>
+<span class="p">)</span>
+
+<span class="c1"># Check database is running</span>
+<span class="n">docker</span> <span class="n">ps</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">postgres</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Implement health checks. Monitor database responsiveness.</p>
+<hr />
+<h3 id="error-9-no_such_table">Error 9: "NO_SUCH_TABLE"</h3>
+<p><strong>Symptom:</strong> MongoDB query returns no documents from non-existent collection.</p>
+<p><strong>Explanation:</strong> MongoDB creates collections on first write, but query assumes it exists.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check collection exists before querying</span>
+<span class="n">collections</span> <span class="o">=</span> <span class="k">await</span> <span class="n">db</span><span class="o">.</span><span class="n">list_collection_names</span><span class="p">()</span>
+<span class="k">if</span> <span class="s1">&#39;documents&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">collections</span><span class="p">:</span>
+    <span class="c1"># Create with validation schema</span>
+    <span class="k">await</span> <span class="n">db</span><span class="o">.</span><span class="n">create_collection</span><span class="p">(</span><span class="s1">&#39;documents&#39;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Initialize collections on app startup.</p>
+<hr />
+<h3 id="error-10-redis-connection-error">Error 10: "Redis connection error"</h3>
+<p><strong>Symptom:</strong> <code>redis.ConnectionError: Connection refused</code></p>
+<p><strong>Explanation:</strong> Redis not running or wrong URL.</p>
+<p><strong>Fix:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check Redis is running</span>
+redis-cli<span class="w"> </span>ping<span class="w">  </span><span class="c1"># Should return PONG</span>
+
+<span class="c1"># Check URL format</span>
+<span class="c1"># Should be: redis://localhost:6379 (not redis://localhost:6379:6379)</span>
+</code></pre></div></p>
+<p><strong>Prevention:</strong> Use environment variables for connection strings with defaults.</p>
+<hr />
+<h2 id="10-common-mistakes-database-design">10. Common Mistakes: Database Design</h2>
+<h3 id="mistake-1-no-indexes-everything-is-slow">Mistake 1: No Indexes (Everything is Slow)</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong: query without index</span>
+<span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">documents</span> <span class="n">WHERE</span> <span class="n">user_id</span> <span class="o">=</span> <span class="mi">123</span><span class="p">;</span>  <span class="c1"># Scans entire table</span>
+
+<span class="c1"># Right: create index</span>
+<span class="n">CREATE</span> <span class="n">INDEX</span> <span class="n">idx_documents_user_id</span> <span class="n">ON</span> <span class="n">documents</span><span class="p">(</span><span class="n">user_id</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>Impact:</strong> Queries 100x slower without indexes.</p>
+<hr />
+<h3 id="mistake-2-storing-embeddings-as-json">Mistake 2: Storing Embeddings as JSON</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong: embeddings as JSON string</span>
+<span class="n">embedding</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;[0.1, 0.2, 0.3]&quot;</span>  <span class="c1"># Stored as text</span>
+
+<span class="c1"># Right: native vector type</span>
+<span class="n">embedding</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Vector</span><span class="p">(</span><span class="mi">1536</span><span class="p">))</span>  <span class="c1"># pgvector extension</span>
+</code></pre></div>
+<p><strong>Impact:</strong> Vector search impossible. Can't use indexes.</p>
+<hr />
+<h3 id="mistake-3-not-using-connection-pooling">Mistake 3: Not Using Connection Pooling</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong: create new connection per query</span>
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_async_engine</span><span class="p">(</span><span class="n">DATABASE_URL</span><span class="p">,</span> <span class="n">pool_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Right: pool connections</span>
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_async_engine</span><span class="p">(</span>
+    <span class="n">DATABASE_URL</span><span class="p">,</span>
+    <span class="n">pool_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">max_overflow</span><span class="o">=</span><span class="mi">10</span>
+<span class="p">)</span>
+</code></pre></div>
+<p><strong>Impact:</strong> 10x slower under concurrent load.</p>
+<hr />
+<h3 id="mistake-4-synchronous-database-calls-in-async-code">Mistake 4: Synchronous Database Calls in Async Code</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong: blocks event loop</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_docs</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>  <span class="c1"># Synchronous!</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT ...&quot;</span><span class="p">)</span>
+
+<span class="c1"># Right: async throughout</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_docs</span><span class="p">():</span>
+    <span class="k">async</span> <span class="k">with</span> <span class="n">AsyncSession</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">session</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">select</span><span class="p">(</span><span class="o">...</span><span class="p">))</span>
+</code></pre></div>
+<p><strong>Impact:</strong> One slow query blocks all other requests.</p>
+<hr />
+<h3 id="mistake-5-loading-entire-collections-before-filtering">Mistake 5: Loading Entire Collections Before Filtering</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong: load all, filter in Python</span>
+<span class="n">chunks</span> <span class="o">=</span> <span class="k">await</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">select</span><span class="p">(</span><span class="n">Chunk</span><span class="p">))</span>
+<span class="n">relevant</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">chunks</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">content</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">]</span>
+
+<span class="c1"># Right: filter in database</span>
+<span class="n">stmt</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span><span class="n">Chunk</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="n">Chunk</span><span class="o">.</span><span class="n">content</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">relevant</span> <span class="o">=</span> <span class="k">await</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">stmt</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Impact:</strong> Tons of data transfer. Out-of-memory errors.</p>
+<hr />
+<h2 id="11-production-realism-schema-evolution">11. Production Realism: Schema Evolution</h2>
+<h3 id="tutorial-schema">Tutorial Schema</h3>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Document</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s2">&quot;documents&quot;</span>
+
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Text</span><span class="p">)</span>
+    <span class="c1"># No metadata, timestamps, or versioning</span>
+</code></pre></div>
+<h3 id="production-schema">Production Schema</h3>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Document</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s2">&quot;documents&quot;</span>
+
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">user_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s2">&quot;users.id&quot;</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">256</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Text</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="c1"># Metadata</span>
+    <span class="n">source_url</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">2048</span><span class="p">))</span>
+    <span class="n">source_type</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>  <span class="c1"># &#39;api&#39;, &#39;upload&#39;, &#39;web&#39;</span>
+
+    <span class="c1"># Versioning</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># previous_version_id = Column(Integer)  # Track changes</span>
+
+    <span class="c1"># Audit trail</span>
+    <span class="n">created_at</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">TIMESTAMP</span><span class="p">,</span> <span class="n">server_default</span><span class="o">=</span><span class="n">func</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
+    <span class="n">updated_at</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">TIMESTAMP</span><span class="p">,</span> <span class="n">server_default</span><span class="o">=</span><span class="n">func</span><span class="o">.</span><span class="n">now</span><span class="p">(),</span> <span class="n">onupdate</span><span class="o">=</span><span class="n">func</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
+    <span class="n">created_by</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s2">&quot;users.id&quot;</span><span class="p">))</span>
+    <span class="n">updated_by</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s2">&quot;users.id&quot;</span><span class="p">))</span>
+
+    <span class="c1"># Soft deletes (don&#39;t actually delete, mark as deleted)</span>
+    <span class="n">is_deleted</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Boolean</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">deleted_at</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">TIMESTAMP</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Differences:</strong>
+- Audit columns (who, when)
+- Soft deletes (compliance, recovery)
+- Metadata field
+- Versioning support
+- Foreign key for user (authorization)</p>
+<hr />
+<h2 id="12-cost-performance-scaling-considerations">12. Cost &amp; Performance: Scaling Considerations</h2>
+<h3 id="query-performance">Query Performance</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># BAD: O(N) full table scan</span>
+<span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">documents</span> <span class="n">WHERE</span> <span class="n">content</span> <span class="n">ILIKE</span> <span class="s1">&#39;%keyword%&#39;</span><span class="p">;</span>
+
+<span class="c1"># GOOD: O(1) with full-text index</span>
+<span class="n">CREATE</span> <span class="n">INDEX</span> <span class="n">idx_documents_fts</span> <span class="n">ON</span> <span class="n">documents</span> <span class="n">USING</span> <span class="n">gin</span><span class="p">(</span><span class="n">search_tsvector</span><span class="p">);</span>
+<span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">documents</span> <span class="n">WHERE</span> <span class="n">search_tsvector</span> <span class="o">@@</span> <span class="n">to_tsquery</span><span class="p">(</span><span class="s1">&#39;keyword&#39;</span><span class="p">);</span>
+
+<span class="c1"># BEST: For billions of rows, use Elasticsearch or Apache Solr</span>
+</code></pre></div>
+<h3 id="storage-costs">Storage Costs</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Vector storage is expensive (1M vectors × 1536 dim × 4 bytes = 6GB)</span>
+<span class="n">embedding_size</span> <span class="o">=</span> <span class="mi">1536</span>
+<span class="n">num_vectors</span> <span class="o">=</span> <span class="mi">1_000_000</span>
+<span class="n">storage_mb</span> <span class="o">=</span> <span class="p">(</span><span class="n">num_vectors</span> <span class="o">*</span> <span class="n">embedding_size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1024</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Storage needed: </span><span class="si">{</span><span class="n">storage_mb</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> MB (~$</span><span class="si">{</span><span class="n">storage_mb</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.02</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1000</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>  <span class="c1"># ~$0.12/month</span>
+</code></pre></div>
+<h3 id="connection-pool-sizing">Connection Pool Sizing</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Rule of thumb: pool_size = (workers × connections_per_worker) + buffer</span>
+<span class="c1"># If 8 CPU workers, each using 5 connections: 8 × 5 + 20 = 60</span>
+<span class="n">pool_size</span> <span class="o">=</span> <span class="mi">60</span>
+<span class="n">max_overflow</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># Allow temporary spikes</span>
+</code></pre></div>
+<hr />
+<h2 id="13-security-considerations">13. Security Considerations</h2>
+<h3 id="sql-injection-prevented-by-sqlalchemy">SQL Injection (Prevented by SQLAlchemy)</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong: string formatting (vulnerable)</span>
+<span class="n">query</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;SELECT * FROM users WHERE email = &#39;</span><span class="si">{</span><span class="n">email</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+
+<span class="c1"># Right: parameterized (safe)</span>
+<span class="n">stmt</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">User</span><span class="o">.</span><span class="n">email</span> <span class="o">==</span> <span class="n">email</span><span class="p">)</span>
+<span class="c1"># SQLAlchemy handles escaping</span>
+</code></pre></div>
+<h3 id="encryption-at-rest">Encryption at Rest</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Sensitive fields should be encrypted</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">Text</span>
+<span class="kn">from</span> <span class="nn">cryptography.fernet</span> <span class="kn">import</span> <span class="n">Fernet</span>
+
+<span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="c1"># Encrypt API keys before storing</span>
+    <span class="n">api_key_encrypted</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Text</span><span class="p">)</span>
+
+<span class="c1"># On save</span>
+<span class="n">cipher</span> <span class="o">=</span> <span class="n">Fernet</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="n">encrypted</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">api_key</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
+<span class="n">user</span><span class="o">.</span><span class="n">api_key_encrypted</span> <span class="o">=</span> <span class="n">encrypted</span>
+
+<span class="c1"># On retrieve</span>
+<span class="n">decrypted</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">api_key_encrypted</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="row-level-security-postgresql">Row-Level Security (PostgreSQL)</h3>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Users can only see their own documents</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">POLICY</span><span class="w"> </span><span class="n">user_documents</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">documents</span>
+<span class="w">    </span><span class="k">USING</span><span class="w"> </span><span class="p">(</span><span class="n">user_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current_user_id</span><span class="p">);</span>
+
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">documents</span><span class="w"> </span><span class="n">ENABLE</span><span class="w"> </span><span class="k">ROW</span><span class="w"> </span><span class="k">LEVEL</span><span class="w"> </span><span class="k">SECURITY</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h2 id="14-case-study-notions-database-design">14. Case Study: Notion's Database Design</h2>
+<p><strong>Why Notion matters:</strong> Stores billions of documents flexibly.</p>
+<p><strong>Their patterns:</strong>
+- MongoDB for document flexibility
+- PostgreSQL for transactions (user billing)
+- Redis for real-time sync
+- Elasticsearch for search</p>
+<p><strong>Lesson:</strong> Hybrid database approach. Each DB does one thing well.</p>
+<hr />
+<h2 id="15-interview-cheat-sheet-databases">15. Interview Cheat Sheet: Databases</h2>
+<h3 id="concept-1-indexing">Concept 1: Indexing</h3>
+<p><strong>Q:</strong> Why is indexing important?</p>
+<p><strong>A:</strong> Indexes make lookups O(log N) instead of O(N). For 1M rows, difference between 1ms and 1 second.</p>
+<hr />
+<h3 id="concept-2-acid-properties">Concept 2: ACID Properties</h3>
+<p><strong>Q:</strong> What are ACID properties?</p>
+<p><strong>A:</strong>
+- <strong>Atomicity:</strong> Transaction all-or-nothing
+- <strong>Consistency:</strong> Data valid before/after
+- <strong>Isolation:</strong> Concurrent txns don't interfere
+- <strong>Durability:</strong> Committed data survives failures</p>
+<hr />
+<h3 id="concept-3-vector-distance-metrics">Concept 3: Vector Distance Metrics</h3>
+<p><strong>Q:</strong> What's cosine distance in embeddings?</p>
+<p><strong>A:</strong> Measures angle between two vectors. 0 = identical, 1 = orthogonal. Use for semantic search.</p>
+<hr />
+<h3 id="concept-4-connection-pooling">Concept 4: Connection Pooling</h3>
+<p><strong>Q:</strong> Why use connection pooling?</p>
+<p><strong>A:</strong> Creating DB connections is expensive. Reuse them. Pool holds N ready-to-use connections.</p>
+<hr />
+<h3 id="concept-5-n1-query-problem">Concept 5: N+1 Query Problem</h3>
+<p><strong>Q:</strong> What's the N+1 problem?</p>
+<p><strong>A:</strong> Loading 100 users, then looping to load each user's documents = 101 queries. Use JOINs or eager loading.</p>
+<hr />
+<h2 id="16-review-questions">16. Review Questions</h2>
+<ol>
+<li>Design a PostgreSQL schema for storing documents and embeddings. Include indexes.</li>
+<li>What's the difference between <code>pool_size</code> and <code>max_overflow</code> in SQLAlchemy?</li>
+<li>Write an async function that searches documents by embedding similarity.</li>
+<li>Explain why MongoDB is better than PostgreSQL for unstructured data.</li>
+<li>How do you prevent SQL injection in SQLAlchemy?</li>
+<li>What's a full-text search index? When would you use it?</li>
+<li>Write a migration that adds a <code>vector</code> column to an embeddings table.</li>
+<li>Explain row-level security in PostgreSQL.</li>
+<li>What's the N+1 query problem? How do you fix it?</li>
+<li>Design a Redis caching strategy for an LLM API.</li>
+</ol>
+<hr />
+<h2 id="17-flashcards">17. Flashcards</h2>
+<h3 id="card-1">Card 1</h3>
+<p><strong>Front:</strong> What should <code>pool_size</code> be for a production app?</p>
+<p><strong>Back:</strong> <code>pool_size = (number_of_workers × connections_per_worker) + buffer</code>. Example: 8 workers × 5 connections = 40 + 20 buffer = 60.</p>
+<hr />
+<h3 id="card-2">Card 2</h3>
+<p><strong>Front:</strong> When should you use MongoDB over PostgreSQL?</p>
+<p><strong>Back:</strong> When data is unstructured and schema changes frequently. Documents, logs, messy JSON. PostgreSQL for transactions and relationships.</p>
+<hr />
+<h3 id="card-3">Card 3</h3>
+<p><strong>Front:</strong> What is cosine similarity in embeddings?</p>
+<p><strong>Back:</strong> Measure of angle between vectors. 0 = identical direction, 1 = perpendicular. Used for semantic search.</p>
+<hr />
+<h3 id="card-4">Card 4</h3>
+<p><strong>Front:</strong> How do you prevent N+1 queries in SQLAlchemy?</p>
+<p><strong>Back:</strong> Use <code>selectinload</code> or <code>joinedload</code> to eager-load relationships. Or write a single JOIN query instead of looping.</p>
+<hr />
+<h3 id="card-5">Card 5</h3>
+<p><strong>Front:</strong> Why is Full-Text Search (GIN index) better than ILIKE?</p>
+<p><strong>Back:</strong> ILIKE is O(N) full table scan. FTS with GIN is O(log N) + phrase matching, stemming, etc. Much faster.</p>
+<hr />
+<h3 id="card-6">Card 6</h3>
+<p><strong>Front:</strong> What does <code>await db.refresh(obj)</code> do?</p>
+<p><strong>Back:</strong> Reloads object from database. Needed to get auto-generated IDs after insert.</p>
+<hr />
+<h3 id="card-7">Card 7</h3>
+<p><strong>Front:</strong> When should Redis cache expire?</p>
+<p><strong>Back:</strong> Depends on data. LLM responses: 1 hour. Session state: 24 hours. Temporary state: 5 minutes.</p>
+<hr />
+<h3 id="card-8">Card 8</h3>
+<p><strong>Front:</strong> Why use Redis instead of application memory cache?</p>
+<p><strong>Back:</strong> Redis is distributed. Multiple app instances share cache. App memory cache is lost on restart.</p>
+<hr />
+<h3 id="card-9">Card 9</h3>
+<p><strong>Front:</strong> What's an HNSW index in postgresql?</p>
+<p><strong>Back:</strong> Hierarchical Navigable Small World. Fast approximate nearest neighbor search for vectors. Better than brute force.</p>
+<hr />
+<h3 id="card-10">Card 10</h3>
+<p><strong>Front:</strong> How do you handle connection timeouts?</p>
+<p><strong>Back:</strong> Use <code>connect_args={"timeout": 10}</code>. If DB doesn't respond in 10s, raise exception. Prevents hanging requests.</p>
+<hr />
+<h2 id="18-teach-it-back-prompt">18. Teach-It-Back Prompt</h2>
+<p>Explain to a junior engineer why a vector database is necessary for RAG systems.</p>
+<p><strong>Model Answer:</strong></p>
+<p>"RAG retrieves relevant documents for context. If you query 'What is AI?' you need documents semantically similar to that phrase, not just exact word matches. Vectors represent meaning in a mathematical space. Similar meaning = close vectors. Vector databases like pgvector let you find nearest neighbors efficiently. Without it, you'd search every document (slow) or miss relevant docs (bad answers)."</p>
+<hr />
+<h2 id="19-1-week-review-checklist">19. 1-Week Review Checklist</h2>
+<ul>
+<li>[ ] Set up PostgreSQL + pgvector locally</li>
+<li>[ ] Create a schema with users, documents, chunks, embeddings</li>
+<li>[ ] Write async SQLAlchemy queries with relationships</li>
+<li>[ ] Create a Alembic migration</li>
+<li>[ ] Store and search embeddings using cosine similarity</li>
+</ul>
+<hr />
+<h2 id="20-resources">20. Resources</h2>
+<ul>
+<li><a href="https://www.postgresql.org/docs/">PostgreSQL Documentation</a></li>
+<li><a href="https://github.com/pgvector/pgvector">pgvector GitHub</a></li>
+<li><a href="https://docs.sqlalchemy.org/en/20/orm/extensions/asyncio.html">SQLAlchemy 2.0 Async</a></li>
+<li><a href="https://alembic.sqlalchemy.org/">Alembic Migrations</a></li>
+<li><a href="https://motor.readthedocs.io/">MongoDB Async Motor</a></li>
+<li><a href="https://redis-py.readthedocs.io/">Redis Async</a></li>
+<li><a href="https://use-the-index-luke.com/">Database Optimization</a></li>
+</ul>
+<hr />
+<h2 id="21-next-linux-operations">21. Next: Linux &amp; Operations</h2>
+<p>Databases run on servers. Time to learn how to manage them.</p>
+<p>→ <strong><a href="../linux/">Linux &amp; Networking (next) →</a></strong></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.integrate"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>
